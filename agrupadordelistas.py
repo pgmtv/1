@@ -1,6 +1,6 @@
 import requests
 
-repo_urls = [    "https://api.github.com/repos/strikeinthehouse/M3UPT/contents",    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",   "https://api.github.com/repos/ipstreet312/freeiptv/contents"]
+repo_urls = [    "https://api.github.com/repos/strikeinthehouse/M3UPT/contents",    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents"]
 
 lists = []
 for url in repo_urls:
