@@ -1,6 +1,6 @@
 import requests
 
-repo_urls = [    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",    "https://api.github.com/repos/strikeinthehouse/M3UPT/contents",   "https://api.github.com/repos/ipstreet312/freeiptv/contents",  "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents"]
+repo_urls = [    "https://github.com/strikeinthehouse/M3UPT/raw/main/M3U/M3UPT.m3u",    "https://api.github.com/repos/strikeinthehouse/M3UPT/contents",   "https://api.github.com/repos/ipstreet312/freeiptv/contents",  "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents"]
 
 lists = []
 for url in repo_urls:
