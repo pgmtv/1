@@ -15,7 +15,8 @@ for url in repo_urls:
         if url.endswith(".m3u"):
             lists.append((url.split("/")[-1], response.text))
         else:
-            contents = response.content.decode('utf-8')
+            contents = response.json()
+
             m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
 
             for m3u_file in m3u_files:
