@@ -15,16 +15,19 @@ for url in repo_urls:
         if url.endswith(".m3u"):
             lists.append((url.split("/")[-1], response.text))
         else:
-            contents = response.json()
+            try:
+                contents = response.json()
 
-            m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
+                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
 
-            for m3u_file in m3u_files:
-                m3u_url = m3u_file["download_url"]
-                m3u_response = requests.get(m3u_url)
+                for m3u_file in m3u_files:
+                    m3u_url = m3u_file["download_url"]
+                    m3u_response = requests.get(m3u_url)
 
-                if m3u_response.status_code == 200:
-                    lists.append((m3u_file["name"], m3u_response.text))
+                    if m3u_response.status_code == 200:
+                        lists.append((m3u_file["name"], m3u_response.text))
+            except requests.exceptions.JSONDecodeError:
+                print(f"Error parsing JSON from {url}")
     else:
         print(f"Error retrieving contents from {url}")
 
