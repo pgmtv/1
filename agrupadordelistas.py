@@ -1,7 +1,6 @@
 import requests
 
 repo_urls = [
-    "https://raw.githubusercontent.com/guiworldtv2/STR-YT/main/lista3argentina.m3u",
     "https://github.com/strikeinthehouse/M3UPT/raw/main/M3U/M3UPT.m3u",
     "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
     "https://api.github.com/repos/strikeinthehouse3/3/contents",
