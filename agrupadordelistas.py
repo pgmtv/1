@@ -7,7 +7,8 @@ repo_urls = [
     "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
     "https://api.github.com/repos/strikeinthehouse3/3/contents",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-    "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents"
+    "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
 ]
 
 lists = []
