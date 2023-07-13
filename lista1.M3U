@@ -1,202 +1,748 @@
-﻿#EXTM3U x-tvg-url="https://github.com/luisms123/tdt/raw/master/guiaxmltv.xml.gz"
-
-###########################################################################
-#                                                                         #
-#                                  >> https://github.com/cqcbrasil        #
-###########################################################################
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.4.1)
+Collecting selenium_profiles
+  Downloading selenium_profiles-2.2.7.2.tar.gz (30 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: selenium in /usr/local/lib/python3.10/dist-packages (from selenium_profiles) (4.10.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from selenium_profiles) (2.27.1)
+Collecting selenium-interceptor (from selenium_profiles)
+  Downloading selenium_interceptor-1.0.2.tar.gz (6.3 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting undetected-chromedriver (from selenium_profiles)
+  Downloading undetected-chromedriver-3.5.0.tar.gz (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 5.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting selenium-wire (from selenium_profiles)
+  Downloading selenium_wire-5.1.0-py3-none-any.whl (239 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.6/239.6 kB 15.1 MB/s eta 0:00:00
+Requirement already satisfied: webdriver-manager in /usr/local/lib/python3.10/dist-packages (from selenium_profiles) (3.8.6)
+Collecting selenium-injector>=2.2 (from selenium_profiles)
+  Downloading selenium_injector-2.2.tar.gz (17 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting websockets (from selenium-injector>=2.2->selenium_profiles)
+  Downloading websockets-11.0.3-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.9/129.9 kB 12.9 MB/s eta 0:00:00
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->selenium_profiles) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->selenium_profiles) (2023.5.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests->selenium_profiles) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->selenium_profiles) (3.4)
+Requirement already satisfied: trio~=0.17 in /usr/local/lib/python3.10/dist-packages (from selenium->selenium_profiles) (0.22.2)
+Requirement already satisfied: trio-websocket~=0.9 in /usr/local/lib/python3.10/dist-packages (from selenium->selenium_profiles) (0.10.3)
+Collecting requests (from selenium_profiles)
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 6.5 MB/s eta 0:00:00
+Collecting pillow~=9.4 (from selenium-interceptor->selenium_profiles)
+  Downloading Pillow-9.5.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 34.6 MB/s eta 0:00:00
+Collecting blinker>=1.4 (from selenium-wire->selenium_profiles)
+  Downloading blinker-1.6.2-py3-none-any.whl (13 kB)
+Collecting brotli>=1.0.9 (from selenium-wire->selenium_profiles)
+  Downloading Brotli-1.0.9-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 52.1 MB/s eta 0:00:00
+Collecting kaitaistruct>=0.7 (from selenium-wire->selenium_profiles)
+  Downloading kaitaistruct-0.10-py2.py3-none-any.whl (7.0 kB)
+Requirement already satisfied: pyasn1>=0.3.1 in /usr/local/lib/python3.10/dist-packages (from selenium-wire->selenium_profiles) (0.5.0)
+Collecting pyOpenSSL>=22.0.0 (from selenium-wire->selenium_profiles)
+  Downloading pyOpenSSL-23.2.0-py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.0/59.0 kB 5.2 MB/s eta 0:00:00
+Requirement already satisfied: pyparsing>=2.4.2 in /usr/local/lib/python3.10/dist-packages (from selenium-wire->selenium_profiles) (3.1.0)
+Requirement already satisfied: pysocks>=1.7.1 in /usr/local/lib/python3.10/dist-packages (from selenium-wire->selenium_profiles) (1.7.1)
+Requirement already satisfied: wsproto>=0.14 in /usr/local/lib/python3.10/dist-packages (from selenium-wire->selenium_profiles) (1.2.0)
+Collecting zstandard>=0.14.1 (from selenium-wire->selenium_profiles)
+  Downloading zstandard-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 69.3 MB/s eta 0:00:00
+Collecting h2>=4.0 (from selenium-wire->selenium_profiles)
+  Downloading h2-4.1.0-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 7.7 MB/s eta 0:00:00
+Collecting hyperframe>=6.0 (from selenium-wire->selenium_profiles)
+  Downloading hyperframe-6.0.1-py3-none-any.whl (12 kB)
+Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from webdriver-manager->selenium_profiles) (1.0.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from webdriver-manager->selenium_profiles) (4.65.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from webdriver-manager->selenium_profiles) (23.1)
+Collecting hpack<5,>=4.0 (from h2>=4.0->selenium-wire->selenium_profiles)
+  Downloading hpack-4.0.0-py3-none-any.whl (32 kB)
+Collecting cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0 (from pyOpenSSL>=22.0.0->selenium-wire->selenium_profiles)
+  Downloading cryptography-41.0.2-cp37-abi3-manylinux_2_28_x86_64.whl (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 79.1 MB/s eta 0:00:00
+Requirement already satisfied: attrs>=20.1.0 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium->selenium_profiles) (23.1.0)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium->selenium_profiles) (2.4.0)
+Requirement already satisfied: outcome in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium->selenium_profiles) (1.2.0)
+Requirement already satisfied: sniffio in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium->selenium_profiles) (1.3.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc9 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium->selenium_profiles) (1.1.2)
+Requirement already satisfied: h11<1,>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from wsproto>=0.14->selenium-wire->selenium_profiles) (0.14.0)
+Requirement already satisfied: cffi>=1.12 in /usr/local/lib/python3.10/dist-packages (from cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0->pyOpenSSL>=22.0.0->selenium-wire->selenium_profiles) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.10/dist-packages (from cffi>=1.12->cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0->pyOpenSSL>=22.0.0->selenium-wire->selenium_profiles) (2.21)
+Building wheels for collected packages: selenium_profiles, selenium-injector, selenium-interceptor, undetected-chromedriver
+  Building wheel for selenium_profiles (pyproject.toml) ... done
+  Created wheel for selenium_profiles: filename=selenium_profiles-2.2.7.2-py3-none-any.whl size=34027 sha256=3f60bd1ef14f0ae28452815282261e044c98b2ee8ab3fcca89f4e643ad2b7080
+  Stored in directory: /root/.cache/pip/wheels/c7/de/8c/34c229fbacf13fe3d93ebde8a9af632260e574bab7be8badb6
+  Building wheel for selenium-injector (pyproject.toml) ... done
+  Created wheel for selenium-injector: filename=selenium_injector-2.2-py3-none-any.whl size=27998 sha256=87e8d6f5edcc416d80a4109783fc9e7f585ae960f666fb5713f1564e0d7d8493
+  Stored in directory: /root/.cache/pip/wheels/c7/36/44/cdb2728d5e6367c42ecc866fb33a77d5d2b586f5bcc6c9ec42
+  Building wheel for selenium-interceptor (pyproject.toml) ... done
+  Created wheel for selenium-interceptor: filename=selenium_interceptor-1.0.2-py3-none-any.whl size=6687 sha256=82a7a6fff9af680460680028a692d5ac756257633931a72c821fbfa7fbc477f2
+  Stored in directory: /root/.cache/pip/wheels/f9/c1/56/1c5e4933c2cf160a95ebe1c732f11a642fb0d2496a8dd2d592
+  Building wheel for undetected-chromedriver (setup.py) ... done
+  Created wheel for undetected-chromedriver: filename=undetected_chromedriver-3.5.0-py3-none-any.whl size=45155 sha256=b4f095157b1b0a018b0f5ee057445e3cabd3dd1bc303f70c2ee7e05f57982eb9
+  Stored in directory: /root/.cache/pip/wheels/54/4a/ba/5912509dd11b521b9cb2b633cf81936ad47cc92d9668da017f
+Successfully built selenium_profiles selenium-injector selenium-interceptor undetected-chromedriver
+Installing collected packages: brotli, zstandard, websockets, requests, pillow, kaitaistruct, hyperframe, hpack, blinker, h2, cryptography, pyOpenSSL, undetected-chromedriver, selenium-wire, selenium-interceptor, selenium-injector, selenium_profiles
+  Attempting uninstall: requests
+    Found existing installation: requests 2.27.1
+    Uninstalling requests-2.27.1:
+      Successfully uninstalled requests-2.27.1
+  Attempting uninstall: pillow
+    Found existing installation: Pillow 8.4.0
+    Uninstalling Pillow-8.4.0:
+      Successfully uninstalled Pillow-8.4.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+google-colab 1.0.0 requires requests==2.27.1, but you have requests 2.31.0 which is incompatible.
+Successfully installed blinker-1.6.2 brotli-1.0.9 cryptography-41.0.2 h2-4.1.0 hpack-4.0.0 hyperframe-6.0.1 kaitaistruct-0.10 pillow-9.5.0 pyOpenSSL-23.2.0 requests-2.31.0 selenium-injector-2.2 selenium-interceptor-1.0.2 selenium-wire-5.1.0 selenium_profiles-2.2.7.2 undetected-chromedriver-3.5.0 websockets-11.0.3 zstandard-0.21.0
+WARNING: The following packages were previously imported in this runtime:
+  [PIL,requests]
+You must restart the runtime in order to use newly installed versions.
+Get:1 https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/ InRelease [3,622 B]
+Get:2 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64  InRelease [1,581 B]
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://ppa.launchpad.net/c2d4u.team/c2d4u4.0+/ubuntu focal InRelease
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Hit:8 http://ppa.launchpad.net/cran/libgit2/ubuntu focal InRelease
+Get:9 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64  Packages [1,083 kB]
+Hit:10 http://ppa.launchpad.net/deadsnakes/ppa/ubuntu focal InRelease
+Hit:11 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu focal InRelease
+Hit:12 http://ppa.launchpad.net/ubuntugis/ppa/ubuntu focal InRelease
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [2,677 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,347 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,370 kB]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [2,536 kB]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.3 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,071 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,866 kB]
+Fetched 15.4 MB in 4s (4,271 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libdbus-glib-1-2 libdbusmenu-glib4 libdbusmenu-gtk3-4 libxtst6
+  xul-ext-ubufox
+Suggested packages:
+  fonts-lyx
+The following NEW packages will be installed:
+  firefox libdbus-glib-1-2 libdbusmenu-glib4 libdbusmenu-gtk3-4 libxtst6
+  xul-ext-ubufox
+0 upgraded, 6 newly installed, 0 to remove and 15 not upgraded.
+Need to get 61.3 MB of archives.
+After this operation, 246 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libdbus-glib-1-2 amd64 0.110-5fakssync1 [59.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 firefox amd64 115.0.2+build1-0ubuntu0.20.04.1 [61.1 MB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libdbusmenu-glib4 amd64 16.04.1+18.10.20180917-0ubuntu6 [41.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 libdbusmenu-gtk3-4 amd64 16.04.1+18.10.20180917-0ubuntu6 [27.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 xul-ext-ubufox all 3.4-0ubuntu1.17.10.1 [3,320 B]
+Fetched 61.3 MB in 1s (59.2 MB/s)
+Selecting previously unselected package libdbus-glib-1-2:amd64.
+(Reading database ... 123105 files and directories currently installed.)
+Preparing to unpack .../0-libdbus-glib-1-2_0.110-5fakssync1_amd64.deb ...
+Unpacking libdbus-glib-1-2:amd64 (0.110-5fakssync1) ...
+Selecting previously unselected package libxtst6:amd64.
+Preparing to unpack .../1-libxtst6_2%3a1.2.3-1_amd64.deb ...
+Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package firefox.
+Preparing to unpack .../2-firefox_115.0.2+build1-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking firefox (115.0.2+build1-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libdbusmenu-glib4:amd64.
+Preparing to unpack .../3-libdbusmenu-glib4_16.04.1+18.10.20180917-0ubuntu6_amd64.deb ...
+Unpacking libdbusmenu-glib4:amd64 (16.04.1+18.10.20180917-0ubuntu6) ...
+Selecting previously unselected package libdbusmenu-gtk3-4:amd64.
+Preparing to unpack .../4-libdbusmenu-gtk3-4_16.04.1+18.10.20180917-0ubuntu6_amd64.deb ...
+Unpacking libdbusmenu-gtk3-4:amd64 (16.04.1+18.10.20180917-0ubuntu6) ...
+Selecting previously unselected package xul-ext-ubufox.
+Preparing to unpack .../5-xul-ext-ubufox_3.4-0ubuntu1.17.10.1_all.deb ...
+Unpacking xul-ext-ubufox (3.4-0ubuntu1.17.10.1) ...
+Setting up libxtst6:amd64 (2:1.2.3-1) ...
+Setting up libdbusmenu-glib4:amd64 (16.04.1+18.10.20180917-0ubuntu6) ...
+Setting up libdbus-glib-1-2:amd64 (0.110-5fakssync1) ...
+Setting up xul-ext-ubufox (3.4-0ubuntu1.17.10.1) ...
+Setting up libdbusmenu-gtk3-4:amd64 (16.04.1+18.10.20180917-0ubuntu6) ...
+Setting up firefox (115.0.2+build1-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/bin/firefox to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/firefox to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+Please restart all running instances of firefox, or you will experience problems.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Requirement already satisfied: webdriver-manager in /usr/local/lib/python3.10/dist-packages (3.8.6)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (2.31.0)
+Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (1.0.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (4.65.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (23.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (2023.5.7)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.4.1)
+Requirement already satisfied: webdriver_manager in /usr/local/lib/python3.10/dist-packages (3.8.6)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from webdriver_manager) (2.31.0)
+Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from webdriver_manager) (1.0.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from webdriver_manager) (4.65.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from webdriver_manager) (23.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver_manager) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver_manager) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver_manager) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver_manager) (2023.5.7)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.4.1)
+Requirement already satisfied: selenium in /usr/local/lib/python3.10/dist-packages (4.10.0)
+Requirement already satisfied: urllib3[socks]<3,>=1.26 in /usr/local/lib/python3.10/dist-packages (from selenium) (1.26.16)
+Requirement already satisfied: trio~=0.17 in /usr/local/lib/python3.10/dist-packages (from selenium) (0.22.2)
+Requirement already satisfied: trio-websocket~=0.9 in /usr/local/lib/python3.10/dist-packages (from selenium) (0.10.3)
+Requirement already satisfied: certifi>=2021.10.8 in /usr/local/lib/python3.10/dist-packages (from selenium) (2023.5.7)
+Requirement already satisfied: attrs>=20.1.0 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (23.1.0)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (2.4.0)
+Requirement already satisfied: idna in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (3.4)
+Requirement already satisfied: outcome in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (1.2.0)
+Requirement already satisfied: sniffio in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (1.3.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc9 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17->selenium) (1.1.2)
+Requirement already satisfied: wsproto>=0.14 in /usr/local/lib/python3.10/dist-packages (from trio-websocket~=0.9->selenium) (1.2.0)
+Requirement already satisfied: PySocks!=1.5.7,<2.0,>=1.5.6 in /usr/local/lib/python3.10/dist-packages (from urllib3[socks]<3,>=1.26->selenium) (1.7.1)
+Requirement already satisfied: h11<1,>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from wsproto>=0.14->trio-websocket~=0.9->selenium) (0.14.0)
+Requirement already satisfied: webdriver-manager in /usr/local/lib/python3.10/dist-packages (3.8.6)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (2.31.0)
+Requirement already satisfied: python-dotenv in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (1.0.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (4.65.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from webdriver-manager) (23.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->webdriver-manager) (2023.5.7)
 #EXTM3U
-
-
-#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",America TV | Argentina - TDA 2.1
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52488.ts
-
-#EXTINF:-1 tvg-logo="https://scontent.fepa11-1.fna.fbcdn.net/v/t1.6435-9/206638151_10223169123710059_3666810289391430657_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=825194&_nc_eui2=AeGxugJ54qa7RhgKBnLTrHOu14OonvQq8lrXg6ie9CryWkCQzaYyrufVmZGkiprZVM0&_nc_ohc=dbLCQPiMFxEAX9X0jrT&_nc_ht=scontent.fepa11-1.fna&oh=afeef92e5377cb7720df7b2f4afc60c8&oe=6127F95F" group-title="Argentina",SSIPTV ARG TV - TDA 6.2
-http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5df265697ec3510009df1ef0/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=bff1d530-6307-11eb-b3fa-019cb96f121b&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=ec2383fd-6e28-4df5-9d1c-b66eee7000c&userId=&serverSideAds=true
-
-#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://i.imgur.com/04nIdpc.png" group-title="Argentina",Television Publica | Argentina - TDA 7.1
-https://cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
-
-
-
-#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/0a/Logo_Televisi%C3%B3n_P%C3%BAblica_Argentina.png" group-title="Argentina",TV PUBLICA - SINAL ORIGINAL 2 - TDA 7.1
-https://s@cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/800px-Telefe_%28nuevo_logo%29.png" group-title="Argentina",TELECOLORMUX - TDA 8.1
-https://live.obslivestream.com/telecolormux/tracks-v1a1/mono.m3u8
-
-
-
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/telefe_argentina.png" group-title="Argentina",Telefe | Argentina - TDA 11.1
-https://cdn2.eco.cdn.moderntv.eu/econocable/stream/TELEFE/40-hls/live-media.m3u8?_cdn_attrs=account%3Deconocable%2Cresource%3DTELEFE_stream_te&_cdn_session=932321571&_cdn_timestamp=1688435981&_cdn_token=eb657393320d61ba109ce5db6d52a3ce8017e904
-
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/telefe_argentina.png" group-title="Argentina",Telefe | Argentina - TDA 11.1
-https://v3.playerlatino.live/stream/m3u8/771
-
-
-
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://telefe-static.akamaized.net/media/18154476/logo-telefe-twitter.png" group-title="Argentina", Telefe (VPN) - TDA 11.1
-https://mitelefe.com/Api/Videos/GetSourceUrl/694564/0/HLS
-
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-country="AR" tvg-logo="http://x.playerlatino.live/telefe.png" group-title="Argentina", Telefe (VPN) 2 - TDA 11.1
-https://telefe.com/Api/Videos/GetSourceUrl/694564/0/HLS?.m3u8
-
-#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/45/Eltrece_logotipo_2018.png" group-title="Argentina", El Trece - TDA 13.1
-https://livetrx01.vodgc.net/eltrecetv/index.m3u8
-
-#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16044_dark_360w_270h.png" group-title="Argentina", El Trece 2 - TDA 13.1
-https://v3.playerlatino.live/stream/m3u8/767
-
-#EXTINF:-1 tvg-id="El Nueve AR" tvg-name="El Nueve AR" tvg-country="AR" tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/f/f7/Canal-nueve-ar2017.png" group-title="Argentina", CANAL 9 35.1 - TDA 35.1
-https://2a1773fcc0c94a639b422d1cf7ba14b7.mediatailor.us-east-1.amazonaws.com/v1/master/4c8323052bc3dbd9aa2eba0b638d8495561e8377/JW-Octubre-Channel09/live/channel09/live.isml/.m3u8
-#EXTM3U https://00475e6934d74fe48a80427567a45918.mediatailor.us-east-1.amazonaws.com/v1/manifest/4c8323052bc3dbd9aa2eba0b638d8495561e8377/JW-Octubre-Channel09/0df6d88d-304a-4d15-9cf8-eab1bc9b5e45/3.m3u8
-#EXTM3U https://00475e6934d74fe48a80427567a45918.mediatailor.us-east-1.amazonaws.com/v1/master/4c8323052bc3dbd9aa2eba0b638d8495561e8377/JW-Octubre-Channel09/live/channel09/live.isml/b00d164f-be51-473e-a47c-b33aa1f44186.m3u8
-
-
-
-
-#EXTINF:-1 tvg-logo="https://image.winudf.com/v2/image1/Y29tLmExMjNmcmVlYXBwcy5mcmVlLmFwcDVkNWVjMWY4ODliOThfaWNvbl8xNTY3NjE5OTcxXzAxNw/icon.png?w=170&fakeurl=1" group-title="Argentina",CANAL 4 TELEAIRE SAN MARTIN - TDA 21.1
-https://stmvideo2.livecastv.com/canal4/canal4/playlist.m3u8
-
-#EXTINF:-1 tvg-name="Cronica TV" tvg-name="Cronica TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16258_dark_360w_270h.png" group-title="Argentina",Cronica TV | Argentina - TDA 22.1
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52503.ts
-
-
-
-#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",MILENIO TV
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52487.ts
-
-#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodistica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg/260px-Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg.png" group-title="Argentina",Informacion Periodistica | Argentina - TDA 24.5
-https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=4499968.m3u8
-
-#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodística" tvg-logo="https://i.imgur.com/SQSu9M5.png" group-title="Argentina",Informacion Periodística | Argentina - TDA 24.5
-https://octubre-live.cdn.vustreams.com/live/ip/live.isml/live-audio_1=128000-video=2800000.m3u8
-
-#EXTINF:-1 tvg-id="IP" tvg-name="IP" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQ4CbRDh4Wgxt0o_pw9V-kw9Vz6T0Re2Q_RD62jp7cZMO0uWvSKSUN6sZ2vjYcbn5fAs&usqp=CAU" group-title="Argentina",IP | Argentina - TDA 24.5
-https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=729984.m3u8
-
-#EXTINF:-1 tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/unife.png" group-title="Argentina",UNIFE 25.1 - TDA 25.1
-https://dacastmmd.mmdlive.lldns.net/dacastmmd/fafa592f5b7b4212928307608b85bdf7/chunklist_b4628000.m3u8
-
-#EXTINF:-1 tvg-id="C5N" tvg-name="C5N" tvg-logo="https://cdn.mitvstatic.com/channels/ar_c5n_m.png" group-title="Argentina",C5N | Argentina - TDA 26.1
-https://ythls.onrender.com/channel/UCFgk2Q2mVO1BklRQhSv6p0w.m3u8
-
-#EXTINF:-1 tvg-id="A24" tvg-name="America 24" tvg-logo="https://cdn.mitvstatic.com/channels/ar_america-24_m.png" group-title="Argentina",America 24 | Argentina - TDA 27.1
-https://ythls.onrender.com/channel/UCR9120YBAqMfntqgRTKmkjQ.m3u8
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Net_TV_logo.png/120px-Net_TV_logo.png" group-title="Argentina",NET TV 27.2 - TDA 27.2
-https://unlimited1-us.dps.live/nettv/nettv.smil/nettv/livestream1/playlist.m3u8
-
-
-
-
-
-
-#EXTINF:-1 tvg-logo="https://cmmusica.com.ar/images/logo.png" group-title="Argentina",CM TV | Argentina - TDA 33.1
-https://g5.proy-hor.transport.edge-access.net/a09/ngrp:CM_CanaldelaMusica-100044_all/CM_CanaldelaMusica-100044_540p.m3u8
-
-
-
-
-
-
-
-
-
-
-#EXTINF:-1 tvg-id="Glitz" tvg-name="Glitz" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Glitzlogo.png" group-title="Argentina",Glitz | Argentina
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52509.ts
-
-
-
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/RDZ6VWFjHEMFm_QcmCCf-yG_UiGo9YWXEmVRuiHSC8SvP02dgeBEtAjd4CnEKGLo0V2gGdIRDQ=s68-c-k-c0x00ffffff-no-rj" tvg-id="", COACHELLA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/gCklb7Bo3XDM4aS_a1-Ta91LsGZtkGlb1IMQwLri3ureUeABTKqXYr-LZGET-Or4J_U4TI_uRq4=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TV Pública
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225899/ei/SzavZKaEDcaj_9EPju6h6AY/ip/172.177.25.13/id/9ZnNiRwJ4Ng.1/source/yt_live_broadcast/requiressl/yes/hfr/1/maudio/1/spc/Ul2Sq6IR-77U7kfycyjN0fGNhArLcY9Ov6LvK-t6yg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246/beids/24350017/dover/11/itag/0/playlist_type/LIVE/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgPO5qb2Lrn6LidAs41xzdVHBp5X8dTQXG21c_9nrP5osCIQDcxGQyu1B3-zMaUTA6klA4c3reB8Nik_jDkH81Fzv3ig%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/gCklb7Bo3XDM4aS_a1-Ta91LsGZtkGlb1IMQwLri3ureUeABTKqXYr-LZGET-Or4J_U4TI_uRq4=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Televisión Pública 2
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225899/ei/SzavZMLvKsTt8wS2pqKgAg/ip/172.177.25.13/id/9ZnNiRwJ4Ng.1/source/yt_live_broadcast/requiressl/yes/tx/24691745/txs/24691743%2C24691744%2C24691745%2C24691746/hfr/1/maudio/1/spc/Ul2SqzC8e-CR73o7xRa5HTpRvEc_ShOnv-d6ys_2og/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000022/dover/11/itag/0/playlist_type/LIVE/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIgWrZq9DVZiiUgNjNZHrS46J4tog5HefS0HfYiQUiE1g8CICZSFFFatvErKO-wP4qW4KQSISI3VqbEI8ae6IU-O7kM/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQylk1Pg1iz872BeKPel5iEkdEGbXFV4-_c2x0n=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 12 Televisión Pública Regional
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225900/ei/TDavZPGyDsub_9EPqOSsyAY/ip/172.177.25.13/id/WVvSCx6tSRQ.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq87dmyD_eRIcRhNV0tZPJh0WVLHHCwjuRpPIRg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24363392/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRgIhALoLL5Nr4qLy5GdbjNB29cZN7sBSj0Xg9E2yn1VvWJDCAiEAj09EpoMLL8bIHFIXGtcP4H9TKAiZTWaO4KH7E6MHX74%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/i213N_VQVyD9cIhh1zRP9OFW60ege6nchMkw4SzEiy6YznGacsKto8GKsFoye12LcV4pskI__w=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Crónica TV
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225900/ei/TDavZKbmKoXs8wTs8qHwDw/ip/172.177.25.13/id/avly0uwZzOE.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq76s9rbTOzqiVD0_DsvYXG-fkKLIjyYnWFBIwg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24362685%2C51000023/beids/24350017/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIhAOEu1EcUQED99MFSV4BROvwCpvVkltEh_P2kFFiEfosJAiBvKjRwpYDVfq0I2Dsi7-322GYFfsVo2p6n7peI28JZjA%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTqGg2bWg02R5un1pFAeuYDMGAVCmna52i__wapvw=s88-c-k-c0x00ffffff-no-rj" tvg-id="", C5N
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225901/ei/TTavZI78EIzr8wTqz4K4Ag/ip/172.177.25.13/id/GQRnbfobCB0.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq5Jc_jJKXFxbRyDWrxIKYNW7E4pjmW6jZdV43w/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24363393/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIhAPEx5lu4Et4Q5SkA7zOJGq5XaCsrJFA4WMkgAlZhQMAOAiAMGyWiO5fjF1NTQdtZqnmens1iObMnYDMypgxU2_a0CA%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://i.ytimg.com/vi/zcWXboTnous/hqdefault_live.jpg" tvg-id="", América TV
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225902/ei/TjavZN6uBo3Q8wSMzLfQAQ/ip/172.177.25.13/id/zcWXboTnous.3/source/yt_live_broadcast/requiressl/yes/tx/24384773/txs/24384770%2C24384771%2C24384772%2C24384773%2C24384774%2C24384775%2C24384776/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/gcr/us/spc/Ul2Sq0Nu3rketoEJVnc7-kCxllNsPVVKmLWMJjTcqA/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000013%2C51000022/beids/24350018/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cgcr%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIgfrYYM9IyZve5cZbgHxhar7XiFfmMCgJNWkV5PJaUfScCIFF4WmvV4PLfUCZJ8PATr77-nUiMlnuk4hvFnTmMO5iV/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSYzA3huV-HI91MDWQCaz6y5IjfDpj8sQTqNHLSmg=s68-c-k-c0x00ffffff-no-rj" tvg-id="", LN+
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLT_2vc9G9uQ63H-T7ju-WzsmqbBPyXTw4l-irVbaA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE CÓRDOBA
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225903/ei/TzavZKLmBInq8wStnbCABg/ip/172.177.25.13/id/tQybLOVfbEo.1/source/yt_live_broadcast/requiressl/yes/tx/24360282/txs/24360280%2C24360281%2C24360282/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq3H_rWEKgenMtAX2gCVdUx5pRIhq07DCFSeZtg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24362687%2C24363393/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIgA1-u_Q5NRGjO3LOibZtFqdCwR-_zcJtx9bDLOLCwS3cCIBqA_3YTYzFzn3Ai6cpebYV4BZM3-n7QOp0LGk0icfjX/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRJLMbep2bJrLLuIAyi6-TXc3qnQCUXLbztYkoo=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE ROSARIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225903/ei/TzavZPW3IaSn_9EP1o-quAM/ip/172.177.25.13/id/K7zFCeKgwsw.1/source/yt_live_broadcast/requiressl/yes/tx/24384784/txs/24384784%2C24384785%2C24384786%2C24384787%2C24384788%2C24384789%2C24384790/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq5f6p4jS1s4CH1V7NizC8KhGbG69SSr2LOin9Q/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24363392/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIgPuCS5-GtxK-EtN-c011gFy1-f1YhJr-aIp1PqKnFTmgCIDKRox930lvhBztXzABkzPVPWLqEtgt4E11I2m38zrX-/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTQ0CHvwUkhFXB2UyejrJl0KVeBjhtrORfIweTQXg=s88-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE SALTA
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225904/ei/UDavZPDEBIWd8wTvm4rIBQ/ip/172.177.25.13/id/4dWLr52LLH0.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq9LBRCcHm9YUfUwChqr2UPvc1N1CedkMgrILcQ/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000014%2C51000024/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIhAPZNML4CbG4R_TAmO5RtJcoMGkFLFhYVB9cnHt_ntBfdAiB3xMQWb2qsWpZb9ZkxhqMMMy0tea_L3tSaVVfBtKOLeQ%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQaYsAXWJNpiduF7CfZckAt76XcPWwTeM4qkKiI=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Informacion Periodística
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRVONiJPqnYI_ETrMgVqqBLCerU8RXnRRp-xF79LA=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Todo Noticias
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225905/ei/UTavZN33CtDm8wTi7K6QCw/ip/172.177.25.13/id/HPiv1pzIPRc.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq6hRRwdxb_v8MCI6wpnNn0QU5y_REvlijijjvg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000024/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgHYOp3oDmMOM8CZDh87B6BVXyF8-2GgC7fjP3NJDBTWwCIQC5rbYN-O0wU9R9DRlb19lKP3ch_dFy5cOUN_Pn_uxJDA%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSYU51c8SbrkWZeNBRMFeCnGv0YXPpXuEGBNq-X5g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal Encuentro
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/8H8tnhLLSm3kDuxUgOOqeiV3zsdo4UmaSQEsDDBTUbAI6GbJX_O54XXSQryos1vY9hcjqSfQNw=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TEC TV
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRJ0_-IzGm_c5e-Kn5iNrIrba2th4gJsjIt-JHSXg=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Hipódromo de Palermo
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/Ehgzljg8T8lsiCG4M6CjOp-G1P7nizvlRKNaDd_rqEnAYn3nG5jbNHXQ7ljcjvDvXjojGC6Lyw=s88-c-k-c0x00ffffff-no-rj" tvg-id="", A24
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225907/ei/UzavZPGqK4KbkAP7vpSoDg/ip/172.177.25.13/id/QGpHLgRnrx4.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/bui/AYlvQAsQ5K03s3yM7FkWf199a10zbb04XtOjSOJnZOL_8zVDps6Ogrq9cNmk2W5j8rye9qZluM1S0bFsIzc90XxKGMlWq50K/spc/Ul2Sq7wpsKRUEads1l5NV30tyZRhsuCtzvJvBPVIiA/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000022/beids/24350017/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cbui%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgVFWzOday276REbPvhhiPKOACgGYomBgdRES2WNjzzAYCIQCmsO7JvYGe-NCt-At8WL7_0QTXP2sg7xOIQZI6aZ3EhQ%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/kg5vrdz7shjKha3N3I7ed5MhzGv3_LwVfNj1vtZfW9OFSGDArcvMD0wmtYhq9yLkkVuRCcuK6g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 7 Mendoza AR
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225908/ei/VDavZPHvEOeg_9EP38qcCA/ip/172.177.25.13/id/Vh8xmLBJtR8.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq6548aF5AfNo4v1MQhddjAV2hNhbEB6lUNzbwg/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246/beids/24350018/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRgIhAJxJXeSCw2LxJNqxjn9Z8u_YsSOdap3NtPqtEUsUi0P9AiEA9NqjRMXcbW92SlHOY8o7RfB5nX0qNMtEI427WSchC_c%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/kg5vrdz7shjKha3N3I7ed5MhzGv3_LwVfNj1vtZfW9OFSGDArcvMD0wmtYhq9yLkkVuRCcuK6g=s88-c-k-c0x00ffffff-no-rj" tvg-id="", El Siete TV (AFILIADA AMERICA)
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225908/ei/VDavZML1Lein_9EPk4KcsAw/ip/172.177.25.13/id/Vh8xmLBJtR8.1/source/yt_live_broadcast/requiressl/yes/tx/24489376/txs/24489374%2C24489375%2C24489376%2C24489377%2C24489378/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sqzg883M2kJ-GovyaqPr-xylp_r7f99wWY5B-kA/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24363393/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgSW_dPpy7QO8TyUs3_a6N2lGsCRGyX6jl7ThtTMjvLqgCIQCJOuuL5HKAjdU43UTJqAfTcTb-hI-bmSLQ8VBaXtBYIg%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTCjq3swUGlbn-gss0oqSC6XZ1o__OLXOraCqJzJQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 8 San Juan (AFILIADA AMERICA)
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225909/ei/VTavZPmXCcno8wT1xbHQDw/ip/172.177.25.13/id/6AhoLP2PoLY.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq8AxuDA5lNTrVwHmzMPI0I5wqfXj7BC7sMBptw/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000012/beids/24350018/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIga9Ll1BzY-OdmMPOgG4xQK9zNq2TTzUCvGQBIBY9JqVYCICwQbF_M3Vi15eOenN7R8ko_rKzNYJepAR9qWnwomOR5/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/88bIoKxC85lXsgiRMnqbkc8UB6ScJHjx0NvqFYxudJ_Cu3_ID2XDyl_426-kKZ1NfpsfpUIGPg=s88-c-k-c0x00ffffff-no-rj" tvg-id="", EL SEIS BARILOCHE
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/SQC2152IyCYfOI2NqTpJFbFZXQCSyJkY4cWMfssJxB1TaH6mccq472cjU6BZTUloKgaOAV7yUQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CANAL 26
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225910/ei/VjavZLi7CMzO8wTzjaagCQ/ip/172.177.25.13/id/OW8H-JtM9UQ.1/source/yt_live_broadcast/requiressl/yes/tx/24698588/txs/24698582%2C24698583%2C24698584%2C24698585%2C24698586%2C24698587%2C24698588/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq98fvAeIqf3dMhvhW2JGAKDCOREbD3Ugnitj2w/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24362685/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wQwIgCDZQH5nbw568U0z7M9cg_LNUl3qpHUKPZjoRrD6W5H4CHzf5dEnHv7CbFjtAIIh2Pwj7SK1mpszv4uSRctsuwwA%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTZ66m3iJOVc5mAtpdFP3OyZQNxevFmEaLt6cVwxQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", KZO
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTKUaxHAyqbEEphECYxByOgE3IrHURM18rg0Fxs7Q=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CANAL DE LA CIUDAD
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689225911/ei/VzavZKPDDcno8wT1xbHQDw/ip/172.177.25.13/id/KBnP3o_ZvUQ.1/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq7brL-JRSABOn_5gIi9Q4NpAJwZqN8_LGw0V7g/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24362685%2C24363393%2C51000012/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRgIhAIwa-E8V7l4L18g7PoAAIkCaq-WhoTy3NltDqXaByx6pAiEA1m9-ONAKYG6FYWX4_eeddzV9fe9o7AYxVg5cEvU1Bbg%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQqL9YaWAmxHUyE5OO8ByMR4QO4Vts86rTs21BP=s48-c-k-c0x00ffffff-no-rj" tvg-id="", DIARIO DEMOCRACIA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/vv_t-qa4gDb8Rn-vri7CilUzVXjg0dGbDSVYFrFoca0vQCUfwwiH1_TJn7sr1nCpD1SyfttovQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", WBSC AMERICAS SOFTBALL
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-
-
-
-#EXTINF:-1 group-title="Ytshop" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLScL1Emq0NQBV1DRDejd2qSJUXqpBTq03oerIJR7t0=s48-c-k-c0x00ffffff-no-rj" tvg-id="", QVC Live Stream
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689224709/ei/pTGvZNCOC4eikgbD34zADw/ip/13.64.10.194/id/UqFzfqlb60g.5/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq6OrEtUgp3q8nozfxuN6qUft_8NnfZTT5iPZdQ/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000011/beids/24350018/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIgM9Dzd-kOQI6VX99QHLlavCXlkvcdKHS2Embt6whHyOACICneM2GEMQEAU8X-ejOK4b5_9mFU8NuqUYuOgd1s0lP-/file/index.m3u8
-
-#EXTINF:-1 group-title="Ytshop" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLScL1Emq0NQBV1DRDejd2qSJUXqpBTq03oerIJR7t0=s48-c-k-c0x00ffffff-no-rj" tvg-id="", QVC 2 Live Stream
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689224709/ei/pTGvZK-xLoeqsfIP1MOfuAM/ip/13.64.10.194/id/_v_wMS-uACE.9/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq2ha7YTzrOGmOwVa8KKiMvbBflfykBzngqtzDA/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000022/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgC8oasMlChQ27hs44OxUA9BnatSqkpcjN54WtHRIK8aUCIQCRtcEm2-EdqVFvB2_5A25MR01aJJ_GMBIIXr5fnfdvSg%3D%3D/file/index.m3u8
-
-#EXTINF:-1 group-title="Ytshop" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQ9gvWmuywv4Ugue9aiiGGxqi5r_plbVVpQShzPJQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", HSN Live Stream
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689224710/ei/pjGvZL2UGI69kwapmbCYAQ/ip/13.64.10.194/id/1ph8qQnjXts.9/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/bui/AYlvQAszcBZ6jz1A7VQDh4wBX4mGsLeNVRn70VbcQPpJo7BMZj0smxroWss31hC38dunrAB2h9O51tJIOUp_7VJ4zBgAkSoh/spc/Ul2Sq8mpBw21KsL3Nf-y3CFz-MBNeOcjc3OdC2hNXw/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C51000011/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cbui%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRAIfNsUXakiMwERmFDbDPSv8mm8kwRKXqBnQR5AT6X_AogIhAPcsGyRI_R1YRfaIuipi1Fzo0Crz7Zzub4PC-zqjUBMR/file/index.m3u8
-
-#EXTINF:-1 group-title="Ytshop" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQ9gvWmuywv4Ugue9aiiGGxqi5r_plbVVpQShzPJQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", HSN2 Live Stream
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1689224711/ei/pjGvZNGPPIytkwaOh6-ABw/ip/13.64.10.194/id/q-BvtDrTnxc.4/source/yt_live_broadcast/requiressl/yes/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/Ul2Sq6TBJLeEkPsmyedcR5hO8OSypbnBma6ujGOemQ/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246%2C24363393/beids/24350018/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIhAL2_1exPjqFrQh2IaAw3m5cUt6mn3GkFhVND3HflCYoDAiAH1vRBMc2XJrYjThFElqaaN8MrLDZ07iz9-NWILmyG7w%3D%3D/file/index.m3u8
+#EXTINF:-1 tvg-name="WIFR-LD 10pm News -February 27- 2023-.mp4" tvg-logo="",WIFR-LD 10pm News -February 27- 2023-.mp4
+https://archive.org/download/wifr-ld-10pm-news-february-27-2023/WIFR-LD%2010pm%20News%20-February%2027-%202023-.mp4
+#EXTINF:-1 tvg-name="WTVM 6pm News -February 27- 2023-.mp4" tvg-logo="",WTVM 6pm News -February 27- 2023-.mp4
+https://archive.org/download/wtvm-6pm-news-february-27-2023/WTVM%206pm%20News%20-February%2027-%202023-.mp4
+#EXTINF:-1 tvg-name="KVLY 6pm News -February 23- 2023-.mp4" tvg-logo="",KVLY 6pm News -February 23- 2023-.mp4
+https://archive.org/download/kvly-6pm-news-february-23-2023/KVLY%206pm%20News%20-February%2023-%202023-.mp4
+#EXTINF:-1 tvg-name="WVVA 11pm News -February 22- 2023-.mp4" tvg-logo="",WVVA 11pm News -February 22- 2023-.mp4
+https://archive.org/download/wvva-11pm-news-february-22-2023/WVVA%2011pm%20News%20-February%2022-%202023-.mp4
+#EXTINF:-1 tvg-name="WTIC 11pm News -February 15- 2023-.mp4" tvg-logo="",WTIC 11pm News -February 15- 2023-.mp4
+https://archive.org/download/wtic-11pm-news-february-15-2023/WTIC%2011pm%20News%20-February%2015-%202023-.mp4
+#EXTINF:-1 tvg-name="WIFR 6pm News -May 28- 2003-.mp4" tvg-logo="",WIFR 6pm News -May 28- 2003-.mp4
+https://archive.org/download/wifr-6pm-news-may-28-2003/WIFR%206pm%20News%20-May%2028-%202003-.mp4
+#EXTINF:-1 tvg-name="WTVO 5pm News -May 28- 2003-.mp4" tvg-logo="",WTVO 5pm News -May 28- 2003-.mp4
+https://archive.org/download/wtvo-5pm-news-may-28-2003/WTVO%205pm%20News%20-May%2028-%202003-.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 190.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 190.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-190/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20190.mp4
+#EXTINF:-1 tvg-name="WVUT 5pm News (October 13, 1999).ia.mp4" tvg-logo="",WVUT 5pm News (October 13, 1999).ia.mp4
+https://archive.org/download/wvut-5pm-news-october-13-1999/WVUT%205pm%20News%20%28October%2013%2C%201999%29.ia.mp4
+#EXTINF:-1 tvg-name="WVUT 5pm News (October 13, 1999).mp4" tvg-logo="",WVUT 5pm News (October 13, 1999).mp4
+https://archive.org/download/wvut-5pm-news-october-13-1999/WVUT%205pm%20News%20%28October%2013%2C%201999%29.mp4
+#EXTINF:-1 tvg-name="KCRG-TV 10pm News -February 9- 2023-.mp4" tvg-logo="",KCRG-TV 10pm News -February 9- 2023-.mp4
+https://archive.org/download/kcrg-tv-10pm-news-february-9-2023/KCRG-TV%2010pm%20News%20-February%209-%202023-.mp4
+#EXTINF:-1 tvg-name="KGMB 6pm News -February 9- 2023-.mp4" tvg-logo="",KGMB 6pm News -February 9- 2023-.mp4
+https://archive.org/download/kgmb-6pm-news-february-9-2023/KGMB%206pm%20News%20-February%209-%202023-.mp4
+#EXTINF:-1 tvg-name="WALB 6pm News -February 9- 2023-.mp4" tvg-logo="",WALB 6pm News -February 9- 2023-.mp4
+https://archive.org/download/walb-6pm-news-february-9-2023/WALB%206pm%20News%20-February%209-%202023-.mp4
+#EXTINF:-1 tvg-name="FSN Pittsburgh SportsBeat -July 13- 2009-.mp4" tvg-logo="",FSN Pittsburgh SportsBeat -July 13- 2009-.mp4
+https://archive.org/download/fsn-pittsburgh-sports-beat-july-13-2009/FSN%20Pittsburgh%20SportsBeat%20-July%2013-%202009-.mp4
+#EXTINF:-1 tvg-name="WNKY 6pm News -February 8- 2023-.mp4" tvg-logo="",WNKY 6pm News -February 8- 2023-.mp4
+https://archive.org/download/wnky-6pm-news-february-8-2023/WNKY%206pm%20News%20-February%208-%202023-.mp4
+#EXTINF:-1 tvg-name="WMUR 730pm News -February 3- 2023-.mp4" tvg-logo="",WMUR 730pm News -February 3- 2023-.mp4
+https://archive.org/download/wmur-730pm-news-february-3-2023/WMUR%20730pm%20News%20-February%203-%202023-.mp4
+#EXTINF:-1 tvg-name="CIII-TV 6pm News -November 3- 2010-.mp4" tvg-logo="",CIII-TV 6pm News -November 3- 2010-.mp4
+https://archive.org/download/ciii-tv-6pm-news-november-3-2010/CIII-TV%206pm%20News%20-November%203-%202010-.mp4
+#EXTINF:-1 tvg-name="WFOR 7pm News -May 30- 2023-.mp4" tvg-logo="",WFOR 7pm News -May 30- 2023-.mp4
+https://archive.org/download/wfor-7pm-news-may-30-2023/WFOR%207pm%20News%20-May%2030-%202023-.mp4
+#EXTINF:-1 tvg-name="WBZ-TV 11pm News -May 29- 2023-.mp4" tvg-logo="",WBZ-TV 11pm News -May 29- 2023-.mp4
+https://archive.org/download/wbz-tv-11pm-news-may-29-2023/WBZ-TV%2011pm%20News%20-May%2029-%202023-.mp4
+#EXTINF:-1 tvg-name="KTVT 6pm News -May 25- 2023-.mp4" tvg-logo="",KTVT 6pm News -May 25- 2023-.mp4
+https://archive.org/download/ktvt-6pm-news-may-25-2023/KTVT%206pm%20News%20-May%2025-%202023-.mp4
+#EXTINF:-1 tvg-name="WOIO 6pm News -February 6- 2023-.mp4" tvg-logo="",WOIO 6pm News -February 6- 2023-.mp4
+https://archive.org/download/woio-6pm-news-february-6-2023/WOIO%206pm%20News%20-February%206-%202023-.mp4
+#EXTINF:-1 tvg-name="WCTI 6pm News -February 6- 2023-.mp4" tvg-logo="",WCTI 6pm News -February 6- 2023-.mp4
+https://archive.org/download/wcti-6pm-news-february-6-2023/WCTI%206pm%20News%20-February%206-%202023-.mp4
+#EXTINF:-1 tvg-name="KAVU 6pm News -February 1- 2023-.mp4" tvg-logo="",KAVU 6pm News -February 1- 2023-.mp4
+https://archive.org/download/kavu-6pm-news-february-1-2023/KAVU%206pm%20News%20-February%201-%202023-.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 189.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 189.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-189/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20189.mp4
+#EXTINF:-1 tvg-name="WEWS 11pm News -March 6- 2004-.mp4" tvg-logo="",WEWS 11pm News -March 6- 2004-.mp4
+https://archive.org/download/wews-11pm-news-march-6-2004/WEWS%2011pm%20News%20-March%206-%202004-.mp4
+#EXTINF:-1 tvg-name="WKYC 6pm News -December 29- 2000-.mp4" tvg-logo="",WKYC 6pm News -December 29- 2000-.mp4
+https://archive.org/download/wkyc-6pm-news-december-29-2000/WKYC%206pm%20News%20-December%2029-%202000-.mp4
+#EXTINF:-1 tvg-name="WBIR-TV 6pm News -February 3- 2003-.mp4" tvg-logo="",WBIR-TV 6pm News -February 3- 2003-.mp4
+https://archive.org/download/wbir-tv-6pm-news-february-3-2003/WBIR-TV%206pm%20News%20-February%203-%202003-.mp4
+#EXTINF:-1 tvg-name="Fox Sports Net Pittsburgh Pittsburgh Sports Tonight Postgame -January 12- 2004-.mp4" tvg-logo="",Fox Sports Net Pittsburgh Pittsburgh Sports Tonight Postgame -January 12- 2004-.mp4
+https://archive.org/download/fox-sports-net-pittsburgh-pittsburgh-sports-tonight-postgame-january-12-2004/Fox%20Sports%20Net%20Pittsburgh%20Pittsburgh%20Sports%20Tonight%20Postgame%20-January%2012-%202004-.mp4
+#EXTINF:-1 tvg-name="Fox Sports Net West Southern CA Sports Report Postgame -November 26- 2003-.mp4" tvg-logo="",Fox Sports Net West Southern CA Sports Report Postgame -November 26- 2003-.mp4
+https://archive.org/download/fox-sports-net-west-southern-ca-sports-report-postgame-november-26-2003/Fox%20Sports%20Net%20West%20Southern%20CA%20Sports%20Report%20Postgame%20-November%2026-%202003-.mp4
+#EXTINF:-1 tvg-name="WVPX-TV 630pm News -June 4- 2004-.mp4" tvg-logo="",WVPX-TV 630pm News -June 4- 2004-.mp4
+https://archive.org/download/wvpx-tv-630pm-news-june-4-2004/WVPX-TV%20630pm%20News%20-June%204-%202004-.mp4
+#EXTINF:-1 tvg-name="WVPX-TV 630pm News -June- 2001-.mp4" tvg-logo="",WVPX-TV 630pm News -June- 2001-.mp4
+https://archive.org/download/wvpx-tv-630pm-news-june-2001/WVPX-TV%20630pm%20News%20-June-%202001-.mp4
+#EXTINF:-1 tvg-name="WFMY 6pm News -January 31- 2023-.mp4" tvg-logo="",WFMY 6pm News -January 31- 2023-.mp4
+https://archive.org/download/wfmy-6pm-news-january-31-2023/WFMY%206pm%20News%20-January%2031-%202023-.mp4
+#EXTINF:-1 tvg-name="WXII 6pm News -January 31- 2023-.mp4" tvg-logo="",WXII 6pm News -January 31- 2023-.mp4
+https://archive.org/download/wxii-6pm-news-january-31-2023/WXII%206pm%20News%20-January%2031-%202023-.mp4
+#EXTINF:-1 tvg-name="WXLV 11pm News -January 30- 2023-.mp4" tvg-logo="",WXLV 11pm News -January 30- 2023-.mp4
+https://archive.org/download/wxlv-11pm-news-january-30-2023/WXLV%2011pm%20News%20-January%2030-%202023-.mp4
+#EXTINF:-1 tvg-name="KPTH 9pm News -May 1- 2023-.mp4" tvg-logo="",KPTH 9pm News -May 1- 2023-.mp4
+https://archive.org/download/kpth-9pm-news-may-1-2023/KPTH%209pm%20News%20-May%201-%202023-.mp4
+#EXTINF:-1 tvg-name="KSTP 10pm News -January 27- 2023-.mp4" tvg-logo="",KSTP 10pm News -January 27- 2023-.mp4
+https://archive.org/download/kstp-10pm-news-january-27-2023/KSTP%2010pm%20News%20-January%2027-%202023-.mp4
+#EXTINF:-1 tvg-name="WHBQ-TV 10pm News -January 26- 2023-.mp4" tvg-logo="",WHBQ-TV 10pm News -January 26- 2023-.mp4
+https://archive.org/download/whbq-tv-10pm-news-january-26-2023/WHBQ-TV%2010pm%20News%20-January%2026-%202023-.mp4
+#EXTINF:-1 tvg-name="WDIO 10pm News -January 20- 2023-.mp4" tvg-logo="",WDIO 10pm News -January 20- 2023-.mp4
+https://archive.org/download/wdio-10pm-news-january-20-2023/WDIO%2010pm%20News%20-January%2020-%202023-.mp4
+#EXTINF:-1 tvg-name="WRGB 630pm News -January 20- 2023-.mp4" tvg-logo="",WRGB 630pm News -January 20- 2023-.mp4
+https://archive.org/download/wrgb-630pm-news-january-20-2023/WRGB%20630pm%20News%20-January%2020-%202023-.mp4
+#EXTINF:-1 tvg-name="WSOC-TV 6pm News -January 19- 2023-.mp4" tvg-logo="",WSOC-TV 6pm News -January 19- 2023-.mp4
+https://archive.org/download/wsoc-tv-6pm-news-january-19-2023/WSOC-TV%206pm%20News%20-January%2019-%202023-.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 188.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 188.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-188/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20188.mp4
+#EXTINF:-1 tvg-name="WLWT 12pm News -April 27- 2023-.mp4" tvg-logo="",WLWT 12pm News -April 27- 2023-.mp4
+https://archive.org/download/wlwt-12pm-news-april-27-2023/WLWT%2012pm%20News%20-April%2027-%202023-.mp4
+#EXTINF:-1 tvg-name="WPIX 10pm News -April 23- 2023-.mp4" tvg-logo="",WPIX 10pm News -April 23- 2023-.mp4
+https://archive.org/download/wpix-10pm-news-april-23-2023/WPIX%2010pm%20News%20-April%2023-%202023-.mp4
+#EXTINF:-1 tvg-name="KBAK-TV 11pm News -March 10- 2023-.mp4" tvg-logo="",KBAK-TV 11pm News -March 10- 2023-.mp4
+https://archive.org/download/kbak-tv-11pm-news-march-10-2023/KBAK-TV%2011pm%20News%20-March%2010-%202023-.mp4
+#EXTINF:-1 tvg-name="KERO 6pm News -February 28- 2023-.mp4" tvg-logo="",KERO 6pm News -February 28- 2023-.mp4
+https://archive.org/download/kero-6pm-news-february-28-2023/KERO%206pm%20News%20-February%2028-%202023-.mp4
+#EXTINF:-1 tvg-name="Part 187.ia.mp4" tvg-logo="",Part 187.ia.mp4
+https://archive.org/download/part-187/Part%20187.ia.mp4
+#EXTINF:-1 tvg-name="Part 187.mp4" tvg-logo="",Part 187.mp4
+https://archive.org/download/part-187/Part%20187.mp4
+#EXTINF:-1 tvg-name="KYW-TV 6pm News -April 12- 2023-.mp4" tvg-logo="",KYW-TV 6pm News -April 12- 2023-.mp4
+https://archive.org/download/kyw-tv-6pm-news-april-12-2023/KYW-TV%206pm%20News%20-April%2012-%202023-.mp4
+#EXTINF:-1 tvg-name="KECI-TV 6pm News -January 20- 2023-.mp4" tvg-logo="",KECI-TV 6pm News -January 20- 2023-.mp4
+https://archive.org/download/keci-tv-6pm-news-january-20-2023/KECI-TV%206pm%20News%20-January%2020-%202023-.mp4
+#EXTINF:-1 tvg-name="WCIV 11pm News -January 17- 2023-.mp4" tvg-logo="",WCIV 11pm News -January 17- 2023-.mp4
+https://archive.org/download/wciv-11pm-news-january-17-2023/WCIV%2011pm%20News%20-January%2017-%202023-.mp4
+#EXTINF:-1 tvg-name="WCSC 11pm News -January 16- 2023-.mp4" tvg-logo="",WCSC 11pm News -January 16- 2023-.mp4
+https://archive.org/download/wcsc-11pm-news-january-16-2023/WCSC%2011pm%20News%20-January%2016-%202023-.mp4
+#EXTINF:-1 tvg-name="WQAD 6pm News -December 20- 2022-.mp4" tvg-logo="",WQAD 6pm News -December 20- 2022-.mp4
+https://archive.org/download/wqad-6pm-news-december-20-2022/WQAD%206pm%20News%20-December%2020-%202022-.mp4
+#EXTINF:-1 tvg-name="WECT 11pm News -January 16- 2023-.mp4" tvg-logo="",WECT 11pm News -January 16- 2023-.mp4
+https://archive.org/download/wect-11pm-news-january-16-2023/WECT%2011pm%20News%20-January%2016-%202023-.mp4
+#EXTINF:-1 tvg-name="WWAY 6pm News (January 16, 2023).ia.mp4" tvg-logo="",WWAY 6pm News (January 16, 2023).ia.mp4
+https://archive.org/download/wway-6pm-news-january-16-2023/WWAY%206pm%20News%20%28January%2016%2C%202023%29.ia.mp4
+#EXTINF:-1 tvg-name="WWAY 6pm News (January 16, 2023).mp4" tvg-logo="",WWAY 6pm News (January 16, 2023).mp4
+https://archive.org/download/wway-6pm-news-january-16-2023/WWAY%206pm%20News%20%28January%2016%2C%202023%29.mp4
+#EXTINF:-1 tvg-name="WVTM 6pm News -January 13- 2023-.mp4" tvg-logo="",WVTM 6pm News -January 13- 2023-.mp4
+https://archive.org/download/wvtm-6pm-news-january-13-2023/WVTM%206pm%20News%20-January%2013-%202023-.mp4
+#EXTINF:-1 tvg-name="WBRC 10pm News -January 12- 2023-.mp4" tvg-logo="",WBRC 10pm News -January 12- 2023-.mp4
+https://archive.org/download/wbrc-10pm-news-january-12-2023/WBRC%2010pm%20News%20-January%2012-%202023-.mp4
+#EXTINF:-1 tvg-name="KSLA-TV 6pm News -January 12- 2023-.mp4" tvg-logo="",KSLA-TV 6pm News -January 12- 2023-.mp4
+https://archive.org/download/ksla-tv-6pm-news-january-12-2023/KSLA-TV%206pm%20News%20-January%2012-%202023-.mp4
+#EXTINF:-1 tvg-name="KEYT 6pm News -January 11- 2023-.mp4" tvg-logo="",KEYT 6pm News -January 11- 2023-.mp4
+https://archive.org/download/keyt-6pm-news-january-11-2023/KEYT%206pm%20News%20-January%2011-%202023-.mp4
+#EXTINF:-1 tvg-name="WNEP 6pm News (January 10, 2023).ia.mp4" tvg-logo="",WNEP 6pm News (January 10, 2023).ia.mp4
+https://archive.org/download/wnep-6pm-news-january-10-2023/WNEP%206pm%20News%20%28January%2010%2C%202023%29.ia.mp4
+#EXTINF:-1 tvg-name="WNEP 6pm News (January 10, 2023).mp4" tvg-logo="",WNEP 6pm News (January 10, 2023).mp4
+https://archive.org/download/wnep-6pm-news-january-10-2023/WNEP%206pm%20News%20%28January%2010%2C%202023%29.mp4
+#EXTINF:-1 tvg-name="WXYZ 11pm News (March 15, 2023).ia.mp4" tvg-logo="",WXYZ 11pm News (March 15, 2023).ia.mp4
+https://archive.org/download/wxyz-11pm-news-march-15-2023/WXYZ%2011pm%20News%20%28March%2015%2C%202023%29.ia.mp4
+#EXTINF:-1 tvg-name="WXYZ 11pm News (March 15, 2023).mp4" tvg-logo="",WXYZ 11pm News (March 15, 2023).mp4
+https://archive.org/download/wxyz-11pm-news-march-15-2023/WXYZ%2011pm%20News%20%28March%2015%2C%202023%29.mp4
+#EXTINF:-1 tvg-name="WVEC 11pm News -January 9- 2023-.mp4" tvg-logo="",WVEC 11pm News -January 9- 2023-.mp4
+https://archive.org/download/wvec-11pm-news-january-9-2023/WVEC%2011pm%20News%20-January%209-%202023-.mp4
+#EXTINF:-1 tvg-name="KXTV 630pm News (January 10, 2023).ia.mp4" tvg-logo="",KXTV 630pm News (January 10, 2023).ia.mp4
+https://archive.org/download/kxtv-630pm-news-january-10-2023/KXTV%20630pm%20News%20%28January%2010%2C%202023%29.ia.mp4
+#EXTINF:-1 tvg-name="KXTV 630pm News (January 10, 2023).mp4" tvg-logo="",KXTV 630pm News (January 10, 2023).mp4
+https://archive.org/download/kxtv-630pm-news-january-10-2023/KXTV%20630pm%20News%20%28January%2010%2C%202023%29.mp4
+#EXTINF:-1 tvg-name="WMBF-TV 7pm News (January 4, 2023).ia.mp4" tvg-logo="",WMBF-TV 7pm News (January 4, 2023).ia.mp4
+https://archive.org/download/wmbf-tv-7pm-news-january-4-2023/WMBF-TV%207pm%20News%20%28January%204%2C%202023%29.ia.mp4
+#EXTINF:-1 tvg-name="WMBF-TV 7pm News (January 4, 2023).mp4" tvg-logo="",WMBF-TV 7pm News (January 4, 2023).mp4
+https://archive.org/download/wmbf-tv-7pm-news-january-4-2023/WMBF-TV%207pm%20News%20%28January%204%2C%202023%29.mp4
+#EXTINF:-1 tvg-name="WFXB 10pm News -January 3- 2023-.mp4" tvg-logo="",WFXB 10pm News -January 3- 2023-.mp4
+https://archive.org/download/wfxb-10pm-news-january-3-2023/WFXB%2010pm%20News%20-January%203-%202023-.mp4
+#EXTINF:-1 tvg-name="WPDE 6pm News -January 2- 2023-.mp4" tvg-logo="",WPDE 6pm News -January 2- 2023-.mp4
+https://archive.org/download/wpde-6pm-news-january-2-2023/WPDE%206pm%20News%20-January%202-%202023-.mp4
+#EXTINF:-1 tvg-name="KHQ-TV 630pm News -December 30- 2022-.mp4" tvg-logo="",KHQ-TV 630pm News -December 30- 2022-.mp4
+https://archive.org/download/khq-tv-630pm-news-december-30-2022/KHQ-TV%20630pm%20News%20-December%2030-%202022-.mp4
+#EXTINF:-1 tvg-name="KREM 6pm News -December 30- 2022-.mp4" tvg-logo="",KREM 6pm News -December 30- 2022-.mp4
+https://archive.org/download/krem-6pm-news-december-30-2022/KREM%206pm%20News%20-December%2030-%202022-.mp4
+#EXTINF:-1 tvg-name="KYW-TV 11pm News -May 3- 1994-.mp4" tvg-logo="",KYW-TV 11pm News -May 3- 1994-.mp4
+https://archive.org/download/kyw-tv-11pm-news-may-3-1994/KYW-TV%2011pm%20News%20-May%203-%201994-.mp4
+#EXTINF:-1 tvg-name="WBBJ-TV 10pm News -December 29- 2022-.mp4" tvg-logo="",WBBJ-TV 10pm News -December 29- 2022-.mp4
+https://archive.org/download/wbbj-tv-10pm-news-december-29-2022/WBBJ-TV%2010pm%20News%20-December%2029-%202022-.mp4
+#EXTINF:-1 tvg-name="KLAX-TV 10pm News -December 27- 2022-.mp4" tvg-logo="",KLAX-TV 10pm News -December 27- 2022-.mp4
+https://archive.org/download/klax-tv-10pm-news-december-27-2022/KLAX-TV%2010pm%20News%20-December%2027-%202022-.mp4
+#EXTINF:-1 tvg-name="WHTM News Update (August 1, 1984).mp4" tvg-logo="",WHTM News Update (August 1, 1984).mp4
+https://archive.org/download/whtm-news-update-august-1-1984/WHTM%20News%20Update%20%28August%201%2C%201984%29.mp4
+#EXTINF:-1 tvg-name="WGAL-TV 11pm News (November 17, 1984).ia.mp4" tvg-logo="",WGAL-TV 11pm News (November 17, 1984).ia.mp4
+https://archive.org/download/wgal-tv-11pm-news-november-17-1984/WGAL-TV%2011pm%20News%20%28November%2017%2C%201984%29.ia.mp4
+#EXTINF:-1 tvg-name="WGAL-TV 11pm News (November 17, 1984).mp4" tvg-logo="",WGAL-TV 11pm News (November 17, 1984).mp4
+https://archive.org/download/wgal-tv-11pm-news-november-17-1984/WGAL-TV%2011pm%20News%20%28November%2017%2C%201984%29.mp4
+#EXTINF:-1 tvg-name="WGRZ 6pm News (December 26, 2022).ia.mp4" tvg-logo="",WGRZ 6pm News (December 26, 2022).ia.mp4
+https://archive.org/download/wgrz-6pm-news-december-26-2022/WGRZ%206pm%20News%20%28December%2026%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WGRZ 6pm News (December 26, 2022).mp4" tvg-logo="",WGRZ 6pm News (December 26, 2022).mp4
+https://archive.org/download/wgrz-6pm-news-december-26-2022/WGRZ%206pm%20News%20%28December%2026%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WBNG 6pm News (December 26, 2022).ia.mp4" tvg-logo="",WBNG 6pm News (December 26, 2022).ia.mp4
+https://archive.org/download/wbng-6pm-news-december-26-2022/WBNG%206pm%20News%20%28December%2026%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WBNG 6pm News (December 26, 2022).mp4" tvg-logo="",WBNG 6pm News (December 26, 2022).mp4
+https://archive.org/download/wbng-6pm-news-december-26-2022/WBNG%206pm%20News%20%28December%2026%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WSBT 6pm News (December 21, 2022).ia.mp4" tvg-logo="",WSBT 6pm News (December 21, 2022).ia.mp4
+https://archive.org/download/wsbt-6pm-news-december-21-2022/WSBT%206pm%20News%20%28December%2021%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WSBT 6pm News (December 21, 2022).mp4" tvg-logo="",WSBT 6pm News (December 21, 2022).mp4
+https://archive.org/download/wsbt-6pm-news-december-21-2022/WSBT%206pm%20News%20%28December%2021%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WAND 10pm News (December 20, 2022).ia.mp4" tvg-logo="",WAND 10pm News (December 20, 2022).ia.mp4
+https://archive.org/download/wand-10pm-news-december-20-2022/WAND%2010pm%20News%20%28December%2020%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WAND 10pm News (December 20, 2022).mp4" tvg-logo="",WAND 10pm News (December 20, 2022).mp4
+https://archive.org/download/wand-10pm-news-december-20-2022/WAND%2010pm%20News%20%28December%2020%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="KWQC-TV 10pm News (December 20, 2022).ia.mp4" tvg-logo="",KWQC-TV 10pm News (December 20, 2022).ia.mp4
+https://archive.org/download/kwqc-tv-10pm-news-december-20-2022/KWQC-TV%2010pm%20News%20%28December%2020%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KWQC-TV 10pm News (December 20, 2022).mp4" tvg-logo="",KWQC-TV 10pm News (December 20, 2022).mp4
+https://archive.org/download/kwqc-tv-10pm-news-december-20-2022/KWQC-TV%2010pm%20News%20%28December%2020%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WPBN 6pm News (December 19, 2022).ia.mp4" tvg-logo="",WPBN 6pm News (December 19, 2022).ia.mp4
+https://archive.org/download/wpbn-6pm-news-december-19-2022/WPBN%206pm%20News%20%28December%2019%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WPBN 6pm News (December 19, 2022).mp4" tvg-logo="",WPBN 6pm News (December 19, 2022).mp4
+https://archive.org/download/wpbn-6pm-news-december-19-2022/WPBN%206pm%20News%20%28December%2019%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WKYC 6pm News (December 19, 2022).ia.mp4" tvg-logo="",WKYC 6pm News (December 19, 2022).ia.mp4
+https://archive.org/download/wkyc-6pm-news-december-19-2022/WKYC%206pm%20News%20%28December%2019%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WKYC 6pm News (December 19, 2022).mp4" tvg-logo="",WKYC 6pm News (December 19, 2022).mp4
+https://archive.org/download/wkyc-6pm-news-december-19-2022/WKYC%206pm%20News%20%28December%2019%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="KFYR 9pm News (December 16, 2022).ia.mp4" tvg-logo="",KFYR 9pm News (December 16, 2022).ia.mp4
+https://archive.org/download/kfyr-9pm-news-december-16-2022/KFYR%209pm%20News%20%28December%2016%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KFYR 9pm News (December 16, 2022).mp4" tvg-logo="",KFYR 9pm News (December 16, 2022).mp4
+https://archive.org/download/kfyr-9pm-news-december-16-2022/KFYR%209pm%20News%20%28December%2016%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WFLX 630pm News -December 16- 2022-.mp4" tvg-logo="",WFLX 630pm News -December 16- 2022-.mp4
+https://archive.org/download/wflx-630pm-news-december-16-2022/WFLX%20630pm%20News%20-December%2016-%202022-.mp4
+#EXTINF:-1 tvg-name="KBTX 6pm News (December 16, 2022).ia.mp4" tvg-logo="",KBTX 6pm News (December 16, 2022).ia.mp4
+https://archive.org/download/kbtx-6pm-news-december-16-2022/KBTX%206pm%20News%20%28December%2016%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KBTX 6pm News (December 16, 2022).mp4" tvg-logo="",KBTX 6pm News (December 16, 2022).mp4
+https://archive.org/download/kbtx-6pm-news-december-16-2022/KBTX%206pm%20News%20%28December%2016%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="KAIT 6pm News (December 16, 2022).ia.mp4" tvg-logo="",KAIT 6pm News (December 16, 2022).ia.mp4
+https://archive.org/download/kait-6pm-news-december-16-2022/KAIT%206pm%20News%20%28December%2016%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KAIT 6pm News (December 16, 2022).mp4" tvg-logo="",KAIT 6pm News (December 16, 2022).mp4
+https://archive.org/download/kait-6pm-news-december-16-2022/KAIT%206pm%20News%20%28December%2016%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WPEC 11pm News -December 15- 2022-.mp4" tvg-logo="",WPEC 11pm News -December 15- 2022-.mp4
+https://archive.org/download/wpec-11pm-news-december-15-2022/WPEC%2011pm%20News%20-December%2015-%202022-.mp4
+#EXTINF:-1 tvg-name="R News Evening -February 21- 2008-.mp4" tvg-logo="",R News Evening -February 21- 2008-.mp4
+https://archive.org/download/r-news-evening-february-21-2008/R%20News%20Evening%20-February%2021-%202008-.mp4
+#EXTINF:-1 tvg-name="CFCF 6pm News -February 20- 2008-.mp4" tvg-logo="",CFCF 6pm News -February 20- 2008-.mp4
+https://archive.org/download/cfcf-6pm-news-february-20-2008/CFCF%206pm%20News%20-February%2020-%202008-.mp4
+#EXTINF:-1 tvg-name="WBZ 11pm 2-19-08.mp4" tvg-logo="",WBZ 11pm 2-19-08.mp4
+https://archive.org/download/wbz-11pm-2-19-08/WBZ%2011pm%202-19-08.mp4
+#EXTINF:-1 tvg-name="WWJ-TV 11pm News (January 23, 2023) Reupload.ia.mp4" tvg-logo="",WWJ-TV 11pm News (January 23, 2023) Reupload.ia.mp4
+https://archive.org/download/wwj-tv-11pm-news-january-23-2023-reupload/WWJ-TV%2011pm%20News%20%28January%2023%2C%202023%29%20Reupload.ia.mp4
+#EXTINF:-1 tvg-name="WWJ-TV 11pm News (January 23, 2023) Reupload.mp4" tvg-logo="",WWJ-TV 11pm News (January 23, 2023) Reupload.mp4
+https://archive.org/download/wwj-tv-11pm-news-january-23-2023-reupload/WWJ-TV%2011pm%20News%20%28January%2023%2C%202023%29%20Reupload.mp4
+#EXTINF:-1 tvg-name="CLTV 5pm News (June 2008).ia.mp4" tvg-logo="",CLTV 5pm News (June 2008).ia.mp4
+https://archive.org/download/cltv-5pm-news-june-2008/CLTV%205pm%20News%20%28June%202008%29.ia.mp4
+#EXTINF:-1 tvg-name="CLTV 5pm News (June 2008).mp4" tvg-logo="",CLTV 5pm News (June 2008).mp4
+https://archive.org/download/cltv-5pm-news-june-2008/CLTV%205pm%20News%20%28June%202008%29.mp4
+#EXTINF:-1 tvg-name="WCNC 6pm News (December 9, 2022).ia.mp4" tvg-logo="",WCNC 6pm News (December 9, 2022).ia.mp4
+https://archive.org/download/wcnc-6pm-news-december-9-2022/WCNC%206pm%20News%20%28December%209%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WCNC 6pm News (December 9, 2022).mp4" tvg-logo="",WCNC 6pm News (December 9, 2022).mp4
+https://archive.org/download/wcnc-6pm-news-december-9-2022/WCNC%206pm%20News%20%28December%209%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WCCB 10pm News -December 8- 2022-.mp4" tvg-logo="",WCCB 10pm News -December 8- 2022-.mp4
+https://archive.org/download/wccb-10pm-news-december-8-2022/WCCB%2010pm%20News%20-December%208-%202022-.mp4
+#EXTINF:-1 tvg-name="WTOC 11pm News -December 7- 2022-.mp4" tvg-logo="",WTOC 11pm News -December 7- 2022-.mp4
+https://archive.org/download/wtoc-11pm-news-december-7-2022/WTOC%2011pm%20News%20-December%207-%202022-.mp4
+#EXTINF:-1 tvg-name="WJCL 7pm News -December 7- 2022-.mp4" tvg-logo="",WJCL 7pm News -December 7- 2022-.mp4
+https://archive.org/download/wjcl-7pm-news-december-7-2022/WJCL%207pm%20News%20-December%207-%202022-.mp4
+#EXTINF:-1 tvg-name="WBKB-TV 11pm News -December 5- 2022-.mp4" tvg-logo="",WBKB-TV 11pm News -December 5- 2022-.mp4
+https://archive.org/download/wbkb-tv-11pm-news-december-5-2022/WBKB-TV%2011pm%20News%20-December%205-%202022-.mp4
+#EXTINF:-1 tvg-name="KDLT 630pm News -December 5- 2022-.mp4" tvg-logo="",KDLT 630pm News -December 5- 2022-.mp4
+https://archive.org/download/kdlt-630pm-news-december-5-2022/KDLT%20630pm%20News%20-December%205-%202022-.mp4
+#EXTINF:-1 tvg-name="WJLA-TV 6pm News June 2008.mp4" tvg-logo="",WJLA-TV 6pm News June 2008.mp4
+https://archive.org/download/wjla-tv-6pm-news-june-2008/WJLA-TV%206pm%20News%20June%202008.mp4
+#EXTINF:-1 tvg-name="Nightline (March 30, 1987).ia.mp4" tvg-logo="",Nightline (March 30, 1987).ia.mp4
+https://archive.org/download/nightline-march-30-1987/Nightline%20%28March%2030%2C%201987%29.ia.mp4
+#EXTINF:-1 tvg-name="Nightline (March 30, 1987).mp4" tvg-logo="",Nightline (March 30, 1987).mp4
+https://archive.org/download/nightline-march-30-1987/Nightline%20%28March%2030%2C%201987%29.mp4
+#EXTINF:-1 tvg-name="The Barbara Walters Special -March 30- 1987-.mp4" tvg-logo="",The Barbara Walters Special -March 30- 1987-.mp4
+https://archive.org/download/the-barbara-walters-special-march-30-1987/The%20Barbara%20Walters%20Special%20-March%2030-%201987-.mp4
+#EXTINF:-1 tvg-name="WRAL 6pm News 12-5-22.ia.mp4" tvg-logo="",WRAL 6pm News 12-5-22.ia.mp4
+https://archive.org/download/wral-6pm-news-12-5-22/WRAL%206pm%20News%2012-5-22.ia.mp4
+#EXTINF:-1 tvg-name="WRAL 6pm News 12-5-22.mp4" tvg-logo="",WRAL 6pm News 12-5-22.mp4
+https://archive.org/download/wral-6pm-news-12-5-22/WRAL%206pm%20News%2012-5-22.mp4
+#EXTINF:-1 tvg-name="The Tragic Deaths of Alison Parker & Adam Ward (2015).ia.mp4" tvg-logo="",The Tragic Deaths of Alison Parker & Adam Ward (2015).ia.mp4
+https://archive.org/download/the-tragic-deaths-of-alison-parker-adam-ward-2015/The%20Tragic%20Deaths%20of%20Alison%20Parker%20%26%20Adam%20Ward%20%282015%29.ia.mp4
+#EXTINF:-1 tvg-name="The Tragic Deaths of Alison Parker & Adam Ward (2015).mp4" tvg-logo="",The Tragic Deaths of Alison Parker & Adam Ward (2015).mp4
+https://archive.org/download/the-tragic-deaths-of-alison-parker-adam-ward-2015/The%20Tragic%20Deaths%20of%20Alison%20Parker%20%26%20Adam%20Ward%20%282015%29.mp4
+#EXTINF:-1 tvg-name="WCBS 11pm News (December 24, 2020).ia.mp4" tvg-logo="",WCBS 11pm News (December 24, 2020).ia.mp4
+https://archive.org/download/wcbs-11pm-news-december-24-2020/WCBS%2011pm%20News%20%28December%2024%2C%202020%29.ia.mp4
+#EXTINF:-1 tvg-name="WCBS 11pm News (December 24, 2020).mp4" tvg-logo="",WCBS 11pm News (December 24, 2020).mp4
+https://archive.org/download/wcbs-11pm-news-december-24-2020/WCBS%2011pm%20News%20%28December%2024%2C%202020%29.mp4
+#EXTINF:-1 tvg-name="WPVI-TV 6pm News (December 21, 2022).ia.mp4" tvg-logo="",WPVI-TV 6pm News (December 21, 2022).ia.mp4
+https://archive.org/download/wpvi-tv-6pm-news-december-21-2022/WPVI-TV%206pm%20News%20%28December%2021%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WPVI-TV 6pm News (December 21, 2022).mp4" tvg-logo="",WPVI-TV 6pm News (December 21, 2022).mp4
+https://archive.org/download/wpvi-tv-6pm-news-december-21-2022/WPVI-TV%206pm%20News%20%28December%2021%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WMFD-DT 11pm News- August 4- 2008.mp4" tvg-logo="",WMFD-DT 11pm News- August 4- 2008.mp4
+https://archive.org/download/wmfd-dt-11pm-news-august-4-2008/WMFD-DT%2011pm%20News-%20August%204-%202008.mp4
+#EXTINF:-1 tvg-name="KRWG 630pm News- March 12- 2004.mp4" tvg-logo="",KRWG 630pm News- March 12- 2004.mp4
+https://archive.org/download/krwg-630pm-news-march-12-2004/KRWG%20630pm%20News-%20March%2012-%202004.mp4
+#EXTINF:-1 tvg-name="KTTC 5pm News- August 2017.mp4" tvg-logo="",KTTC 5pm News- August 2017.mp4
+https://archive.org/download/kttc-5pm-news-august-2017/KTTC%205pm%20News-%20August%202017.mp4
+#EXTINF:-1 tvg-name="WILX 6pm 11-21-22.ia.mp4" tvg-logo="",WILX 6pm 11-21-22.ia.mp4
+https://archive.org/download/wilx-6pm-11-21-22/WILX%206pm%2011-21-22.ia.mp4
+#EXTINF:-1 tvg-name="WILX 6pm 11-21-22.mp4" tvg-logo="",WILX 6pm 11-21-22.mp4
+https://archive.org/download/wilx-6pm-11-21-22/WILX%206pm%2011-21-22.mp4
+#EXTINF:-1 tvg-name="KVIA 10pm News 11-18-22.ia.mp4" tvg-logo="",KVIA 10pm News 11-18-22.ia.mp4
+https://archive.org/download/kvia-10pm-news-11-18-22/KVIA%2010pm%20News%2011-18-22.ia.mp4
+#EXTINF:-1 tvg-name="KVIA 10pm News 11-18-22.mp4" tvg-logo="",KVIA 10pm News 11-18-22.mp4
+https://archive.org/download/kvia-10pm-news-11-18-22/KVIA%2010pm%20News%2011-18-22.mp4
+#EXTINF:-1 tvg-name="KMVT 10pm News 11-17-22.ia.mp4" tvg-logo="",KMVT 10pm News 11-17-22.ia.mp4
+https://archive.org/download/kmvt-10pm-news-11-17-22/KMVT%2010pm%20News%2011-17-22.ia.mp4
+#EXTINF:-1 tvg-name="KMVT 10pm News 11-17-22.mp4" tvg-logo="",KMVT 10pm News 11-17-22.mp4
+https://archive.org/download/kmvt-10pm-news-11-17-22/KMVT%2010pm%20News%2011-17-22.mp4
+#EXTINF:-1 tvg-name="WABI 6pm News 11-17-22.ia.mp4" tvg-logo="",WABI 6pm News 11-17-22.ia.mp4
+https://archive.org/download/wabi-6pm-news-11-17-22/WABI%206pm%20News%2011-17-22.ia.mp4
+#EXTINF:-1 tvg-name="WABI 6pm News 11-17-22.mp4" tvg-logo="",WABI 6pm News 11-17-22.mp4
+https://archive.org/download/wabi-6pm-news-11-17-22/WABI%206pm%20News%2011-17-22.mp4
+#EXTINF:-1 tvg-name="WBRC 12pm 5-22-02.mp4" tvg-logo="",WBRC 12pm 5-22-02.mp4
+https://archive.org/download/wbrc-12pm-5-22-02/WBRC%2012pm%205-22-02.mp4
+#EXTINF:-1 tvg-name="KESQ 11pm News 11-15-22.ia.mp4" tvg-logo="",KESQ 11pm News 11-15-22.ia.mp4
+https://archive.org/download/kesq-11pm-news-11-15-22/KESQ%2011pm%20News%2011-15-22.ia.mp4
+#EXTINF:-1 tvg-name="KESQ 11pm News 11-15-22.mp4" tvg-logo="",KESQ 11pm News 11-15-22.mp4
+https://archive.org/download/kesq-11pm-news-11-15-22/KESQ%2011pm%20News%2011-15-22.mp4
+#EXTINF:-1 tvg-name="WBTV 11pm 11-10-22.ia.mp4" tvg-logo="",WBTV 11pm 11-10-22.ia.mp4
+https://archive.org/download/wbtv-11pm-11-10-22/WBTV%2011pm%2011-10-22.ia.mp4
+#EXTINF:-1 tvg-name="WBTV 11pm 11-10-22.mp4" tvg-logo="",WBTV 11pm 11-10-22.mp4
+https://archive.org/download/wbtv-11pm-11-10-22/WBTV%2011pm%2011-10-22.mp4
+#EXTINF:-1 tvg-name="WJHL 5pm 10-3-03.mp4" tvg-logo="",WJHL 5pm 10-3-03.mp4
+https://archive.org/download/wjhl-5pm-10-3-03/WJHL%205pm%2010-3-03.mp4
+#EXTINF:-1 tvg-name="WCYB 5pm News 10-1-03.mp4" tvg-logo="",WCYB 5pm News 10-1-03.mp4
+https://archive.org/download/wcyb-5pm-news-10-1-03/WCYB%205pm%20News%2010-1-03.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 186.ia.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 186.ia.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-186/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20186.ia.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 186.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 186.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-186/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20186.mp4
+#EXTINF:-1 tvg-name="KTUU 10pm 11-1-22.ia.mp4" tvg-logo="",KTUU 10pm 11-1-22.ia.mp4
+https://archive.org/download/ktuu-10pm-11-1-22/KTUU%2010pm%2011-1-22.ia.mp4
+#EXTINF:-1 tvg-name="KTUU 10pm 11-1-22.mp4" tvg-logo="",KTUU 10pm 11-1-22.mp4
+https://archive.org/download/ktuu-10pm-11-1-22/KTUU%2010pm%2011-1-22.mp4
+#EXTINF:-1 tvg-name="KMSB 9pm News -January 6- 2004-.mp4" tvg-logo="",KMSB 9pm News -January 6- 2004-.mp4
+https://archive.org/download/kmsb-9pm-news-january-6-2004/KMSB%209pm%20News%20-January%206-%202004-.mp4
+#EXTINF:-1 tvg-name="KLTV 5pm 11-26-03.mp4" tvg-logo="",KLTV 5pm 11-26-03.mp4
+https://archive.org/download/kltv-5pm-11-26-03/KLTV%205pm%2011-26-03.mp4
+#EXTINF:-1 tvg-name="Johnny Palmer A Tribute -1992-.mp4" tvg-logo="",Johnny Palmer A Tribute -1992-.mp4
+https://archive.org/download/johnny-palmer-a-tribute-1992/Johnny%20Palmer%20A%20Tribute%20-1992-.mp4
+#EXTINF:-1 tvg-name="WTWO Skywarn -76.mp4" tvg-logo="",WTWO Skywarn -76.mp4
+https://archive.org/download/wtwo-skywarn-76/WTWO%20Skywarn%20-76.mp4
+#EXTINF:-1 tvg-name="KGW 11pm News- March 19- 2005.mp4" tvg-logo="",KGW 11pm News- March 19- 2005.mp4
+https://archive.org/download/kgw-11pm-news-march-19-2005/KGW%2011pm%20News-%20March%2019-%202005.mp4
+#EXTINF:-1 tvg-name="ABC World News Now- August 9- 1995.mp4" tvg-logo="",ABC World News Now- August 9- 1995.mp4
+https://archive.org/download/abc-world-news-now-august-9-1995/ABC%20World%20News%20Now-%20August%209-%201995.mp4
+#EXTINF:-1 tvg-name="WWLP 6pm News- July 24- 2008.mp4" tvg-logo="",WWLP 6pm News- July 24- 2008.mp4
+https://archive.org/download/wwlp-6pm-news-july-24-2008/WWLP%206pm%20News-%20July%2024-%202008.mp4
+#EXTINF:-1 tvg-name="KMGH 5pm News- April 26- 2010.mp4" tvg-logo="",KMGH 5pm News- April 26- 2010.mp4
+https://archive.org/download/kmgh-5pm-news-april-26-2010/KMGH%205pm%20News-%20April%2026-%202010.mp4
+#EXTINF:-1 tvg-name="KWGN 7pm News- October 21- 2009.mp4" tvg-logo="",KWGN 7pm News- October 21- 2009.mp4
+https://archive.org/download/kwgn-7pm-news-october-21-2009/KWGN%207pm%20News-%20October%2021-%202009.mp4
+#EXTINF:-1 tvg-name="KWGN-TV 9pm News- September 16- 2008.mp4" tvg-logo="",KWGN-TV 9pm News- September 16- 2008.mp4
+https://archive.org/download/kwgn-tv-9pm-news-september-16-2008/KWGN-TV%209pm%20News-%20September%2016-%202008.mp4
+#EXTINF:-1 tvg-name="KUSA 6pm News- April 27- 2010.mp4" tvg-logo="",KUSA 6pm News- April 27- 2010.mp4
+https://archive.org/download/kusa-6pm-news-april-27-2010/KUSA%206pm%20News-%20April%2027-%202010.mp4
+#EXTINF:-1 tvg-name="WXIA-TV 6pm News- July 14- 2000.mp4" tvg-logo="",WXIA-TV 6pm News- July 14- 2000.mp4
+https://archive.org/download/wxia-tv-6pm-news-july-14-2000/WXIA-TV%206pm%20News-%20July%2014-%202000.mp4
+#EXTINF:-1 tvg-name="WXIA-TV 11pm News- April 13- 1980.mp4" tvg-logo="",WXIA-TV 11pm News- April 13- 1980.mp4
+https://archive.org/download/wxia-tv-11pm-news-april-13-1980/WXIA-TV%2011pm%20News-%20April%2013-%201980.mp4
+#EXTINF:-1 tvg-name="Columbine High School Shootings -April 20- 1999-.mp4" tvg-logo="",Columbine High School Shootings -April 20- 1999-.mp4
+https://archive.org/download/columbine-high-school-shootings-april-20-1999/Columbine%20High%20School%20Shootings%20-April%2020-%201999-.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 185.ia.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 185.ia.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-185/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20185.ia.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 185.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 185.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-185/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20185.mp4
+#EXTINF:-1 tvg-name="WCIV 430am News -August 3- 2022-.mp4" tvg-logo="",WCIV 430am News -August 3- 2022-.mp4
+https://archive.org/download/wciv-430am-news-august-3-2022/WCIV%20430am%20News%20-August%203-%202022-.mp4
+#EXTINF:-1 tvg-name="WNBC 830am News -September 10- 2022-.mp4" tvg-logo="",WNBC 830am News -September 10- 2022-.mp4
+https://archive.org/download/wnbc-830am-news-september-10-2022/WNBC%20830am%20News%20-September%2010-%202022-.mp4
+#EXTINF:-1 tvg-name="KABB 9pm News 8-18-03.mp4" tvg-logo="",KABB 9pm News 8-18-03.mp4
+https://archive.org/download/kabb-9pm-news-8-18-03/KABB%209pm%20News%208-18-03.mp4
+#EXTINF:-1 tvg-name="WSMV 5pm News September 7, 1992.mp4" tvg-logo="",WSMV 5pm News September 7, 1992.mp4
+https://archive.org/download/wsmv-5pm-news-september-7-1992/WSMV%205pm%20News%20September%207%2C%201992.mp4
+#EXTINF:-1 tvg-name="Classic Commercials 11.mp4" tvg-logo="",Classic Commercials 11.mp4
+https://archive.org/download/classic-commercials-11/Classic%20Commercials%2011.mp4
+#EXTINF:-1 tvg-name="WBBM-TV 6am News- May 28- 2020.mp4" tvg-logo="",WBBM-TV 6am News- May 28- 2020.mp4
+https://archive.org/download/wbbm-tv-6am-news-may-28-2020/WBBM-TV%206am%20News-%20May%2028-%202020.mp4
+#EXTINF:-1 tvg-name="WGN-TV 9pm News- September 28- 2019.mp4" tvg-logo="",WGN-TV 9pm News- September 28- 2019.mp4
+https://archive.org/download/wgn-tv-9pm-news-september-28-2019/WGN-TV%209pm%20News-%20September%2028-%202019.mp4
+#EXTINF:-1 tvg-name="WFLD 9pm News- May 29- 2009.mp4" tvg-logo="",WFLD 9pm News- May 29- 2009.mp4
+https://archive.org/download/wfld-9pm-news-may-29-2009/WFLD%209pm%20News-%20May%2029-%202009.mp4
+#EXTINF:-1 tvg-name="WGN-TV 9pm News- June 20- 2008.mp4" tvg-logo="",WGN-TV 9pm News- June 20- 2008.mp4
+https://archive.org/download/wgn-tv-9pm-news-june-20-2008/WGN-TV%209pm%20News-%20June%2020-%202008.mp4
+#EXTINF:-1 tvg-name="WFLD 9pm News- September 19- 2005.mp4" tvg-logo="",WFLD 9pm News- September 19- 2005.mp4
+https://archive.org/download/wfld-9pm-news-september-19-2005/WFLD%209pm%20News-%20September%2019-%202005.mp4
+#EXTINF:-1 tvg-name="WMAQ-TV 10pm News- June 3- 1998.mp4" tvg-logo="",WMAQ-TV 10pm News- June 3- 1998.mp4
+https://archive.org/download/wmaq-tv-10pm-news-june-3-1998/WMAQ-TV%2010pm%20News-%20June%203-%201998.mp4
+#EXTINF:-1 tvg-name="WMAQ-TV 10pm News- May 4- 1996.mp4" tvg-logo="",WMAQ-TV 10pm News- May 4- 1996.mp4
+https://archive.org/download/wmaq-tv-10pm-news-may-4-1996/WMAQ-TV%2010pm%20News-%20May%204-%201996.mp4
+#EXTINF:-1 tvg-name="WBBM-TV 6pm News- September 16- 1985.mp4" tvg-logo="",WBBM-TV 6pm News- September 16- 1985.mp4
+https://archive.org/download/wbbm-tv-6pm-news-september-16-1985/WBBM-TV%206pm%20News-%20September%2016-%201985.mp4
+#EXTINF:-1 tvg-name="WLS-TV 4pm News- May 18- 1993.mp4" tvg-logo="",WLS-TV 4pm News- May 18- 1993.mp4
+https://archive.org/download/wls-tv-4pm-news-may-18-1993/WLS-TV%204pm%20News-%20May%2018-%201993.mp4
+#EXTINF:-1 tvg-name="WCVB 11pm News (November 15, 1983).ia.mp4" tvg-logo="",WCVB 11pm News (November 15, 1983).ia.mp4
+https://archive.org/download/wcvb-11pm-news-november-15-1983/WCVB%2011pm%20News%20%28November%2015%2C%201983%29.ia.mp4
+#EXTINF:-1 tvg-name="WCVB 11pm News (November 15, 1983).mp4" tvg-logo="",WCVB 11pm News (November 15, 1983).mp4
+https://archive.org/download/wcvb-11pm-news-november-15-1983/WCVB%2011pm%20News%20%28November%2015%2C%201983%29.mp4
+#EXTINF:-1 tvg-name="WNYW 7am News (February 11, 1999).ia.mp4" tvg-logo="",WNYW 7am News (February 11, 1999).ia.mp4
+https://archive.org/download/wnyw-7am-news-february-11-1999/WNYW%207am%20News%20%28February%2011%2C%201999%29.ia.mp4
+#EXTINF:-1 tvg-name="WNYW 7am News (February 11, 1999).mp4" tvg-logo="",WNYW 7am News (February 11, 1999).mp4
+https://archive.org/download/wnyw-7am-news-february-11-1999/WNYW%207am%20News%20%28February%2011%2C%201999%29.mp4
+#EXTINF:-1 tvg-name="WHNS 11pm News -April 26- 2022-.mp4" tvg-logo="",WHNS 11pm News -April 26- 2022-.mp4
+https://archive.org/download/whns-11pm-news-april-26-2022/WHNS%2011pm%20News%20-April%2026-%202022-.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 184.ia.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 184.ia.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-184/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20184.ia.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 184.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 184.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-184/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20184.mp4
+#EXTINF:-1 tvg-name="WPIX 630pm News (November 20, 2009).ia.mp4" tvg-logo="",WPIX 630pm News (November 20, 2009).ia.mp4
+https://archive.org/download/wpix-630pm-news-november-20-2009/WPIX%20630pm%20News%20%28November%2020%2C%202009%29.ia.mp4
+#EXTINF:-1 tvg-name="WPIX 630pm News (November 20, 2009).mp4" tvg-logo="",WPIX 630pm News (November 20, 2009).mp4
+https://archive.org/download/wpix-630pm-news-november-20-2009/WPIX%20630pm%20News%20%28November%2020%2C%202009%29.mp4
+#EXTINF:-1 tvg-name="NOTICIERO TELEMUNDO 11-27-09.mp4" tvg-logo="",NOTICIERO TELEMUNDO 11-27-09.mp4
+https://archive.org/download/noticiero-telemundo-11-27-09/NOTICIERO%20TELEMUNDO%2011-27-09.mp4
+#EXTINF:-1 tvg-name="KINC 6pm News, 11-27-09.mp4" tvg-logo="",KINC 6pm News, 11-27-09.mp4
+https://archive.org/download/kinc-6pm-news-11-27-09/KINC%206pm%20News%2C%2011-27-09.mp4
+#EXTINF:-1 tvg-name="CKPG-TV 5pm News- September 20- 2006.mp4" tvg-logo="",CKPG-TV 5pm News- September 20- 2006.mp4
+https://archive.org/download/ckpg-tv-5pm-news-september-20-2006/CKPG-TV%205pm%20News-%20September%2020-%202006.mp4
+#EXTINF:-1 tvg-name="Breaking News Mile High Stories -1999-.mp4" tvg-logo="",Breaking News Mile High Stories -1999-.mp4
+https://archive.org/download/breaking-news-mile-high-stories-1999/Breaking%20News%20Mile%20High%20Stories%20-1999-.mp4
+#EXTINF:-1 tvg-name="Breaking News Swimming To Miami -1999-.mp4" tvg-logo="",Breaking News Swimming To Miami -1999-.mp4
+https://archive.org/download/breaking-news-swimming-to-miami-1999/Breaking%20News%20Swimming%20To%20Miami%20-1999-.mp4
+#EXTINF:-1 tvg-name="Breaking News -1998-.mp4" tvg-logo="",Breaking News -1998-.mp4
+https://archive.org/download/breaking-news-1998/Breaking%20News%20-1998-.mp4
+#EXTINF:-1 tvg-name="WNDS 7pm News 1-6-05.mp4" tvg-logo="",WNDS 7pm News 1-6-05.mp4
+https://archive.org/download/wnds-7pm-news-1-6-05/WNDS%207pm%20News%201-6-05.mp4
+#EXTINF:-1 tvg-name="KETK 5pm 9-30-09.mp4" tvg-logo="",KETK 5pm 9-30-09.mp4
+https://archive.org/download/ketk-5pm-9-30-09/KETK%205pm%209-30-09.mp4
+#EXTINF:-1 tvg-name="WSBK-TV 7am News (January 18, 2005).ia.mp4" tvg-logo="",WSBK-TV 7am News (January 18, 2005).ia.mp4
+https://archive.org/download/wsbk-tv-7am-news-january-18-2005/WSBK-TV%207am%20News%20%28January%2018%2C%202005%29.ia.mp4
+#EXTINF:-1 tvg-name="WSBK-TV 7am News (January 18, 2005).mp4" tvg-logo="",WSBK-TV 7am News (January 18, 2005).mp4
+https://archive.org/download/wsbk-tv-7am-news-january-18-2005/WSBK-TV%207am%20News%20%28January%2018%2C%202005%29.mp4
+#EXTINF:-1 tvg-name="WSBK 10pm (January 16, 2005).mp4" tvg-logo="",WSBK 10pm (January 16, 2005).mp4
+https://archive.org/download/wsbk-10pm-january-16-2005/WSBK%2010pm%20%28January%2016%2C%202005%29.mp4
+#EXTINF:-1 tvg-name="WEEK-25.2 10pm News (July 29, 2022).ia.mp4" tvg-logo="",WEEK-25.2 10pm News (July 29, 2022).ia.mp4
+https://archive.org/download/week-25.2-10pm-news-july-29-2022/WEEK-25.2%2010pm%20News%20%28July%2029%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WEEK-25.2 10pm News (July 29, 2022).mp4" tvg-logo="",WEEK-25.2 10pm News (July 29, 2022).mp4
+https://archive.org/download/week-25.2-10pm-news-july-29-2022/WEEK-25.2%2010pm%20News%20%28July%2029%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WPTA-21.2 11pm News -July 6- 2022-.mp4" tvg-logo="",WPTA-21.2 11pm News -July 6- 2022-.mp4
+https://archive.org/download/wpta-21.2-11pm-news-july-6-2022/WPTA-21.2%2011pm%20News%20-July%206-%202022-.mp4
+#EXTINF:-1 tvg-name="WANE 6pm News (July 6, 2022).ia.mp4" tvg-logo="",WANE 6pm News (July 6, 2022).ia.mp4
+https://archive.org/download/wane-6pm-news-july-6-2022/WANE%206pm%20News%20%28July%206%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WANE 6pm News (July 6, 2022).mp4" tvg-logo="",WANE 6pm News (July 6, 2022).mp4
+https://archive.org/download/wane-6pm-news-july-6-2022/WANE%206pm%20News%20%28July%206%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="The Diet America Challenge (April 28, 1989).ia.mp4" tvg-logo="",The Diet America Challenge (April 28, 1989).ia.mp4
+https://archive.org/download/the-diet-america-challenge-april-28-1989/The%20Diet%20America%20Challenge%20%28April%2028%2C%201989%29.ia.mp4
+#EXTINF:-1 tvg-name="The Diet America Challenge (April 28, 1989).mp4" tvg-logo="",The Diet America Challenge (April 28, 1989).mp4
+https://archive.org/download/the-diet-america-challenge-april-28-1989/The%20Diet%20America%20Challenge%20%28April%2028%2C%201989%29.mp4
+#EXTINF:-1 tvg-name="PBS NewsHour (May 6, 2011).mp4" tvg-logo="",PBS NewsHour (May 6, 2011).mp4
+https://archive.org/download/pbs-news-hour-may-6-2011/PBS%20NewsHour%20%28May%206%2C%202011%29.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 183.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 183.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-183/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20183.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 182.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 182.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-182/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20182.mp4
+#EXTINF:-1 tvg-name="KTUU-TV 530pm News (January 26, 1983) Reupload.ia.mp4" tvg-logo="",KTUU-TV 530pm News (January 26, 1983) Reupload.ia.mp4
+https://archive.org/download/ktuu-tv-530pm-news-january-26-1983-reupload/KTUU-TV%20530pm%20News%20%28January%2026%2C%201983%29%20Reupload.ia.mp4
+#EXTINF:-1 tvg-name="KTUU-TV 530pm News (January 26, 1983) Reupload.mp4" tvg-logo="",KTUU-TV 530pm News (January 26, 1983) Reupload.mp4
+https://archive.org/download/ktuu-tv-530pm-news-january-26-1983-reupload/KTUU-TV%20530pm%20News%20%28January%2026%2C%201983%29%20Reupload.mp4
+#EXTINF:-1 tvg-name="KING 11pm News, May 29, 2022.mp4" tvg-logo="",KING 11pm News, May 29, 2022.mp4
+https://archive.org/download/king-11pm-news-may-29-2022/KING%2011pm%20News%2C%20May%2029%2C%202022.mp4
+#EXTINF:-1 tvg-name="KOMO 11pm News (May 18, 2022).ia.mp4" tvg-logo="",KOMO 11pm News (May 18, 2022).ia.mp4
+https://archive.org/download/komo-11pm-news-may-18-2022/KOMO%2011pm%20News%20%28May%2018%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KOMO 11pm News (May 18, 2022).mp4" tvg-logo="",KOMO 11pm News (May 18, 2022).mp4
+https://archive.org/download/komo-11pm-news-may-18-2022/KOMO%2011pm%20News%20%28May%2018%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="KIRO 6pm News -May 9- 2022-.mp4" tvg-logo="",KIRO 6pm News -May 9- 2022-.mp4
+https://archive.org/download/kiro-6pm-news-may-9-2022/KIRO%206pm%20News%20-May%209-%202022-.mp4
+#EXTINF:-1 tvg-name="KCPQ 11pm News (April 11, 2022).ia.mp4" tvg-logo="",KCPQ 11pm News (April 11, 2022).ia.mp4
+https://archive.org/download/kcpq-11pm-news-april-11-2022/KCPQ%2011pm%20News%20%28April%2011%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="KCPQ 11pm News (April 11, 2022).mp4" tvg-logo="",KCPQ 11pm News (April 11, 2022).mp4
+https://archive.org/download/kcpq-11pm-news-april-11-2022/KCPQ%2011pm%20News%20%28April%2011%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="KSNV 6pm News, October 18, 2021.mp4" tvg-logo="",KSNV 6pm News, October 18, 2021.mp4
+https://archive.org/download/ksnv-6pm-news-october-18-2021/KSNV%206pm%20News%2C%20October%2018%2C%202021.mp4
+#EXTINF:-1 tvg-name="CBC-The National (September 8, 2011).mp4" tvg-logo="",CBC-The National (September 8, 2011).mp4
+https://archive.org/download/cbc-the-national-september-8-2011/CBC-The%20National%20%28September%208%2C%202011%29.mp4
+#EXTINF:-1 tvg-name="CFRN-TV 6pm News (August 5, 2011).ia.mp4" tvg-logo="",CFRN-TV 6pm News (August 5, 2011).ia.mp4
+https://archive.org/download/cfrn-tv-6pm-news-august-5-2011/CFRN-TV%206pm%20News%20%28August%205%2C%202011%29.ia.mp4
+#EXTINF:-1 tvg-name="CFRN-TV 6pm News (August 5, 2011).mp4" tvg-logo="",CFRN-TV 6pm News (August 5, 2011).mp4
+https://archive.org/download/cfrn-tv-6pm-news-august-5-2011/CFRN-TV%206pm%20News%20%28August%205%2C%202011%29.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 181.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 181.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-181/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20181.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens- Promos- and Station IDs- Part 180.mp4" tvg-logo="",Various TV Newscast Opens- Promos- and Station IDs- Part 180.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-180/Various%20TV%20Newscast%20Opens-%20Promos-%20and%20Station%20IDs-%20Part%20180.mp4
+#EXTINF:-1 tvg-name="CFJC-TV 11pm News, August 3, 2011.mp4" tvg-logo="",CFJC-TV 11pm News, August 3, 2011.mp4
+https://archive.org/download/cfjc-tv-11pm-news-august-3-2011/CFJC-TV%2011pm%20News%2C%20August%203%2C%202011.mp4
+#EXTINF:-1 tvg-name="CICT 11pm News (July 13, 2011).mp4" tvg-logo="",CICT 11pm News (July 13, 2011).mp4
+https://archive.org/download/cict-11pm-news-july-13-2011/CICT%2011pm%20News%20%28July%2013%2C%202011%29.mp4
+#EXTINF:-1 tvg-name="WTHR 6pm News (May 13, 2022).ia.mp4" tvg-logo="",WTHR 6pm News (May 13, 2022).ia.mp4
+https://archive.org/download/wthr-6pm-news-may-13-2022/WTHR%206pm%20News%20%28May%2013%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WTHR 6pm News (May 13, 2022).mp4" tvg-logo="",WTHR 6pm News (May 13, 2022).mp4
+https://archive.org/download/wthr-6pm-news-may-13-2022/WTHR%206pm%20News%20%28May%2013%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WKYT 10pm News (April 28, 2022).mp4" tvg-logo="",WKYT 10pm News (April 28, 2022).mp4
+https://archive.org/download/wkyt-10pm-news-april-28-2022/WKYT%2010pm%20News%20%28April%2028%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WTVQ 9pm News (April 27, 2022).mp4" tvg-logo="",WTVQ 9pm News (April 27, 2022).mp4
+https://archive.org/download/wtvq-9pm-news-april-27-2022/WTVQ%209pm%20News%20%28April%2027%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 179.ia.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 179.ia.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-179/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20179.ia.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 179.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 179.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-179/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20179.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 178.ia.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 178.ia.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-178/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20178.ia.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 178.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 178.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-178/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20178.mp4
+#EXTINF:-1 tvg-name="WLEX 7pm News (April 27, 2022).mp4" tvg-logo="",WLEX 7pm News (April 27, 2022).mp4
+https://archive.org/download/wlex-7pm-news-april-27-2022/WLEX%207pm%20News%20%28April%2027%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WDKY 630pm News -April 27- 2022-.mp4" tvg-logo="",WDKY 630pm News -April 27- 2022-.mp4
+https://archive.org/download/wdky-630pm-news-april-27-2022/WDKY%20630pm%20News%20-April%2027-%202022-.mp4
+#EXTINF:-1 tvg-name="WYMT 6pm News (April 27, 2022).mp4" tvg-logo="",WYMT 6pm News (April 27, 2022).mp4
+https://archive.org/download/wymt-6pm-news-april-27-2022/WYMT%206pm%20News%20%28April%2027%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WHNS-1.mp4" tvg-logo="",WHNS-1.mp4
+https://archive.org/download/whns-1/WHNS-1.mp4
+#EXTINF:-1 tvg-name="WYFF 11pm News (April 25, 2022).mp4" tvg-logo="",WYFF 11pm News (April 25, 2022).mp4
+https://archive.org/download/wyff-11pm-news-april-25-2022/WYFF%2011pm%20News%20%28April%2025%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WSPA 7pm News (April 25, 2022).ia.mp4" tvg-logo="",WSPA 7pm News (April 25, 2022).ia.mp4
+https://archive.org/download/wspa-7pm-news-april-25-2022/WSPA%207pm%20News%20%28April%2025%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WSPA 7pm News (April 25, 2022).mp4" tvg-logo="",WSPA 7pm News (April 25, 2022).mp4
+https://archive.org/download/wspa-7pm-news-april-25-2022/WSPA%207pm%20News%20%28April%2025%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WLOS 6pm News, April 25, 2022.mp4" tvg-logo="",WLOS 6pm News, April 25, 2022.mp4
+https://archive.org/download/wlos-6pm-news-april-25-2022/WLOS%206pm%20News%2C%20April%2025%2C%202022.mp4
+#EXTINF:-1 tvg-name="WCAU-TV 11pm News (April 28, 1989).ia.mp4" tvg-logo="",WCAU-TV 11pm News (April 28, 1989).ia.mp4
+https://archive.org/download/wcau-tv-11pm-news-april-28-1989/WCAU-TV%2011pm%20News%20%28April%2028%2C%201989%29.ia.mp4
+#EXTINF:-1 tvg-name="WCAU-TV 11pm News (April 28, 1989).mp4" tvg-logo="",WCAU-TV 11pm News (April 28, 1989).mp4
+https://archive.org/download/wcau-tv-11pm-news-april-28-1989/WCAU-TV%2011pm%20News%20%28April%2028%2C%201989%29.mp4
+#EXTINF:-1 tvg-name="Classic Commercials 10.mp4" tvg-logo="",Classic Commercials 10.mp4
+https://archive.org/download/classic-commercials-10/Classic%20Commercials%2010.mp4
+#EXTINF:-1 tvg-name="CBS News Republican Convention Preview (August 13, 1988).mp4" tvg-logo="",CBS News Republican Convention Preview (August 13, 1988).mp4
+https://archive.org/download/cbs-news-republican-convention-preview-august-13-1988/CBS%20News%20Republican%20Convention%20Preview%20%28August%2013%2C%201988%29.mp4
+#EXTINF:-1 tvg-name="WBBM-TV 530pm News (April 13, 1986).ia.mp4" tvg-logo="",WBBM-TV 530pm News (April 13, 1986).ia.mp4
+https://archive.org/download/wbbm-tv-530pm-news-april-13-1986/WBBM-TV%20530pm%20News%20%28April%2013%2C%201986%29.ia.mp4
+#EXTINF:-1 tvg-name="WBBM-TV 530pm News (April 13, 1986).mp4" tvg-logo="",WBBM-TV 530pm News (April 13, 1986).mp4
+https://archive.org/download/wbbm-tv-530pm-news-april-13-1986/WBBM-TV%20530pm%20News%20%28April%2013%2C%201986%29.mp4
+#EXTINF:-1 tvg-name="CBS Evening News (April 13, 1986).ia.mp4" tvg-logo="",CBS Evening News (April 13, 1986).ia.mp4
+https://archive.org/download/cbs-evening-news-april-13-1986/CBS%20Evening%20News%20%28April%2013%2C%201986%29.ia.mp4
+#EXTINF:-1 tvg-name="CBS Evening News (April 13, 1986).mp4" tvg-logo="",CBS Evening News (April 13, 1986).mp4
+https://archive.org/download/cbs-evening-news-april-13-1986/CBS%20Evening%20News%20%28April%2013%2C%201986%29.mp4
+#EXTINF:-1 tvg-name="Various TV Newscast Opens, Promos, and Station IDs, Part 177.mp4" tvg-logo="",Various TV Newscast Opens, Promos, and Station IDs, Part 177.mp4
+https://archive.org/download/various-tv-newscast-opens-promos-and-station-ids-part-177/Various%20TV%20Newscast%20Opens%2C%20Promos%2C%20and%20Station%20IDs%2C%20Part%20177.mp4
+#EXTINF:-1 tvg-name="WEHT 10pm News (April 24, 2022).ia.mp4" tvg-logo="",WEHT 10pm News (April 24, 2022).ia.mp4
+https://archive.org/download/weht-10pm-news-april-24-2022/WEHT%2010pm%20News%20%28April%2024%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WEHT 10pm News (April 24, 2022).mp4" tvg-logo="",WEHT 10pm News (April 24, 2022).mp4
+https://archive.org/download/weht-10pm-news-april-24-2022/WEHT%2010pm%20News%20%28April%2024%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WEVV 6pm News (April 21, 2022).ia.mp4" tvg-logo="",WEVV 6pm News (April 21, 2022).ia.mp4
+https://archive.org/download/wevv-6pm-news-april-21-2022/WEVV%206pm%20News%20%28April%2021%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WEVV 6pm News (April 21, 2022).mp4" tvg-logo="",WEVV 6pm News (April 21, 2022).mp4
+https://archive.org/download/wevv-6pm-news-april-21-2022/WEVV%206pm%20News%20%28April%2021%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WFIE 10pm News (April 20, 2022).ia.mp4" tvg-logo="",WFIE 10pm News (April 20, 2022).ia.mp4
+https://archive.org/download/wfie-10pm-news-april-20-2022/WFIE%2010pm%20News%20%28April%2020%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WFIE 10pm News (April 20, 2022).mp4" tvg-logo="",WFIE 10pm News (April 20, 2022).mp4
+https://archive.org/download/wfie-10pm-news-april-20-2022/WFIE%2010pm%20News%20%28April%2020%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WXIX 10pm News (April 21, 2022).ia.mp4" tvg-logo="",WXIX 10pm News (April 21, 2022).ia.mp4
+https://archive.org/download/wxix-10pm-news-april-21-2022/WXIX%2010pm%20News%20%28April%2021%2C%202022%29.ia.mp4
+#EXTINF:-1 tvg-name="WXIX 10pm News (April 21, 2022).mp4" tvg-logo="",WXIX 10pm News (April 21, 2022).mp4
+https://archive.org/download/wxix-10pm-news-april-21-2022/WXIX%2010pm%20News%20%28April%2021%2C%202022%29.mp4
+#EXTINF:-1 tvg-name="WKRC 11pm News, April 19, 2022.ia.mp4" tvg-logo="",WKRC 11pm News, April 19, 2022.ia.mp4
+https://archive.org/download/wkrc-11pm-news-april-19-2022/WKRC%2011pm%20News%2C%20April%2019%2C%202022.ia.mp4
+#EXTINF:-1 tvg-name="WKRC 11pm News, April 19, 2022.mp4" tvg-logo="",WKRC 11pm News, April 19, 2022.mp4
+https://archive.org/download/wkrc-11pm-news-april-19-2022/WKRC%2011pm%20News%2C%20April%2019%2C%202022.mp4
