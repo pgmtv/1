@@ -6,6 +6,7 @@ repo_urls = [
     "https://github.com/iptv-org/iptv/raw/master/streams/mx_multimedios.m3u",
     "https://github.com/strikeinthehouse/M3UPT/raw/main/M3U/M3UPT.m3u",
     "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
+    "https://api.github.com/repos/strikeinthehouse3/3/contents",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
     "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents",
     "https://api.github.com/repos/cqcbrasil/YouTube_to_m3u/contents"
@@ -38,5 +39,7 @@ for url in repo_urls:
 lists = sorted(lists, key=lambda x: x[0])
 
 with open("lista1.M3U", "w") as f:
-    for l in lists[:200]:  # Write only the first 200 lines
+    for l in lists:
         f.write(l[1])
+        if len(f.readlines()) >= 200:  # Stop writing after 200 lines
+            break
