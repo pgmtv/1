@@ -1,39 +1,32 @@
-import requests
+from github import Github
 
-repo_urls = [
-    "https://api.github.com/repos/iptv-org/iptv/contents"
-]
+# Token de acesso pessoal do GitHub (opcional)
+# Caso você esteja acessando um repositório privado, será necessário um token de acesso válido.
+# Caso contrário, deixe a variável 'access_token' como uma string vazia.
+access_token = ''
 
-lists = []
-for url in repo_urls:
-    response = requests.get(url)
+# URL do diretório do GitHub
+github_url = 'https://github.com/iptv-org/iptv/tree/master/streams'
 
-    if response.status_code == 200:
-        if url.endswith(".m3u"):
-            lists.append((url.split("/")[-1], response.text))
-        else:
-            try:
-                contents = response.json()
+# Extrai o nome do usuário e do repositório do URL
+github_user, github_repo = github_url.split('/')[3], github_url.split('/')[4]
 
-                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
+# Cria uma instância do objeto Github
+if access_token:
+    g = Github(access_token)
+else:
+    g = Github()
 
-                for m3u_file in m3u_files:
-                    m3u_url = m3u_file["download_url"]
-                    m3u_response = requests.get(m3u_url)
+# Obtém o repositório e o branch (ramo) principal
+repo = g.get_repo(f'{github_user}/{github_repo}')
+branch = repo.get_branch(repo.default_branch)
 
-                    if m3u_response.status_code == 200:
-                        lists.append((m3u_file["name"], m3u_response.text))
-            except requests.exceptions.JSONDecodeError:
-                print(f"Error parsing JSON from {url}")
-    else:
-        print(f"Error retrieving contents from {url}")
+# Obtém o conteúdo do diretório
+contents = repo.get_contents('', ref=branch.name)
 
-lists = sorted(lists, key=lambda x: x[0])
+# Percorre o conteúdo do diretório
+for item in contents:
+    if item.type == 'file' and item.name.endswith('.m3u'):
+        playlist_url = item.download_url
+        print(playlist_url)
 
-line_count = 0
-with open("lista1.M3U", "w") as f:
-    for l in lists:
-        f.write(l[1])
-        line_count += l[1].count("\n")
-        if line_count >= 2000:  # Stop writing after 2000 lines
-            break
