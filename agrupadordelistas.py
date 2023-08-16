@@ -84,7 +84,7 @@ for url in repo_urls:
 lists = sorted(lists, key=lambda x: x[0])
 
 line_count = 0
-with open("lista1.M3U", "w") as f:
+with open("lista1.M3U", "a") as f:
     for l in lists:
         f.write(l[1])
         line_count += l[1].count("\n")
