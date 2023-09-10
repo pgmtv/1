@@ -1,23 +1,23 @@
-#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-vodafone-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-meo-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz"
-
-# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
-
-# 📺 TV
-
-#EXTINF:-1 group-title="TV" tvg-id="rtp1hd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
-#EXTVLCOPT:http-user-agent=Firefox
-https://streaming-live-app.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="TV" tvg-id="rtp2hd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
-#EXTVLCOPT:http-user-agent=Firefox
-https://streaming-live-app.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="TV" tvg-id="sichd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
-
-#EXTINF:-1 group-title="TV" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OS8xMC8yMDIzIDU6MDo1NCBQTSZoYXNoX3ZhbHVlPTNUVEdydW9sUk1TTkkzVDR6eElTZ1E9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD1iOWZlNDVmNy0wMGJmLTQzOGQtYjMwOC0xMjRjNTI1M2I1ZjQ=/
+#EXTM3U
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-1
+https://archive.org/download/lhdp_20210505/jl.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-2
+https://archive.org/download/lhdp_20210505/jl1x2.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-3
+https://archive.org/download/lhdp_20210505/jl1x3.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-4
+https://archive.org/download/lhdp_20210505/jl1x4.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-5
+https://archive.org/download/lhdp_20210505/jl1x5.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-6
+https://archive.org/download/lhdp_20210505/jl1x6.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-7
+https://archive.org/download/lhdp_20210505/jl1x7.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://pics.filmaffinity.com/Jupiter_s_Legacy_Serie_de_TV-221976610-large.jpg", JUPITER'S LEGACY 1-8
+https://archive.org/download/lhdp_20210505/jl1x8.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://i.imgur.com/sGNuhkT.jpg?1", EL JUEGO DEL CALAMAR 1-1
+https://archive.org/download/ztdg_20210202/ejdc%201x1.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://i.imgur.com/sGNuhkT.jpg?1", EL JUEGO DEL CALAMAR 1-2
+https://archive.org/download/ztdg_20210202/ejdc%201x2.mp4
+#EXTINF:-1 group="NETFLIX SERIES" logo="https://i.imgur.com/sGNuhkT.jpg?1", EL JUEGO DEL CALAMAR 1-3
+https://archive.org/download/ztdg_20210202/ejdc%201x3.mp4
