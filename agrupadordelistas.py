@@ -17,7 +17,7 @@ if is_within_time_range(start_time_br, end_time_br):
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
-        m3upt_lines = m3upt_response.text.split('\n')[:10]
+        m3upt_lines = m3upt_response.text.split('\n')[:23]
 
         with open("lista1.M3U", "w") as f:
             for line in m3upt_lines:
