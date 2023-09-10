@@ -1,13 +1,15 @@
 import requests
 from datetime import datetime, timezone, timedelta
 
+# Defina o fuso horário do Brasil
+brazil_timezone = timezone(timedelta(hours=-3))
+
 def is_within_time_range(start_time, end_time):
-    brazil_timezone = timezone(timedelta(hours=-3))  # Fuso horário do Brasil
     current_time = datetime.now(brazil_timezone)
     return start_time <= current_time <= end_time
 
 # Horários locais do Brasil para 17h30 e 23h00
-start_time_br = datetime.now(brazil_timezone).replace(hour=14, minute=30, second=0, microsecond=0)
+start_time_br = datetime.now(brazil_timezone).replace(hour=17, minute=30, second=0, microsecond=0)
 end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=0, second=0, microsecond=0)
 
 if is_within_time_range(start_time_br, end_time_br):
@@ -20,7 +22,6 @@ if is_within_time_range(start_time_br, end_time_br):
         with open("lista1.M3U", "w") as f:
             for line in m3upt_lines:
                 f.write(line + '\n')
-
 
 
 
@@ -61,7 +62,7 @@ for url in repo_urls:
 lists = sorted(lists, key=lambda x: x[0])
 
 line_count = 0
-with open("lista1.M3U", "w") as f:
+with open("lista1.M3U", "a") as f:
     for l in lists:
         f.write(l[1])
         line_count += l[1].count("\n")
