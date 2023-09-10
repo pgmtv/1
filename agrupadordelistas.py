@@ -40,10 +40,16 @@ for url in repo_urls:
 
 lists = sorted(lists, key=lambda x: x[0])
 
+lists = sorted(lists, key=lambda x: x[0])
+
 line_count = 0
 with open("lista1.M3U", "a") as f:
     for l in lists:
-        f.write(l[1])
-        line_count += l[1].count("\n")
-        if line_count >= 100:  # Stop writing after 2023 lines
+        lines = l[1].split("\n")
+        for line in lines:
+            if line_count >= 100:
+                break
+            f.write(line + "\n")
+            line_count += 1
+        if line_count >= 100:  # Stop writing after 100 lines
             break
