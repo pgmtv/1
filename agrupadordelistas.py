@@ -12,6 +12,9 @@ def is_within_time_range(start_time, end_time):
 start_time_br = datetime.now(brazil_timezone).replace(hour=11, minute=30, second=0, microsecond=0)
 end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=0, second=0, microsecond=0)
 
+# Nome do arquivo de saída
+output_file = "lista1.M3U"
+
 if is_within_time_range(start_time_br, end_time_br):
     m3upt_url = "https://github.com/LITUATUI/M3UPT/raw/main/M3U/M3UPT.m3u"
     m3upt_response = requests.get(m3upt_url)
@@ -19,6 +22,11 @@ if is_within_time_range(start_time_br, end_time_br):
     if m3upt_response.status_code == 200:
         m3upt_lines = m3upt_response.text.split('\n')[:23]
 
-        with open("lista1.M3U", "w") as f:
+        with open(output_file, "w") as f:
             for line in m3upt_lines:
                 f.write(line + '\n')
+else:
+    with open(output_file, "w") as f:
+        f.write("#EXTM3U\n")
+        f.write("# This file is outside of the specified time range\n")
+        f.write("# No content available\n")
