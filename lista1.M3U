@@ -4,6 +4,10 @@
 
 # 📺 TV
 
+#EXTINF:-1 tvg-id="Chilevision" tvg-name="Chilevision" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/chilevision.png" group-title="Reality Show's Live",GH EN VIVO
+#EXTVLCOPT:http-user-agent=Firefox
+https://directos.mediaset.es/orilinear14/live/linear14/main/main.isml/main-audio_spa=128000-video=4000000.m3u8
+
 #EXTINF:-1 group-title="TV" tvg-id="rtp1hd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
 #EXTVLCOPT:http-user-agent=Firefox
 https://streaming-live-app.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
