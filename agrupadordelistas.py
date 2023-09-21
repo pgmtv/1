@@ -130,5 +130,5 @@ with open("lista1.M3U", "a") as f:
                 break
             f.write(line + "\n")
             line_count += 1
-        if line_count >= 410:  # Stop writing after 410 lines
+        if line_count >= 610:  # Stop writing after 610 lines
             break
