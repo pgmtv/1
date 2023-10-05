@@ -71,7 +71,7 @@ with open("lista1.M3U", "a") as f:
     for l in lists:
         f.write(l[1])
         line_count += l[1].count("\n")
-        if line_count >= 100:  # Stop writing after 2023 lines
+        if line_count >= 120:  # Stop writing after 2023 lines
             break
 
 
