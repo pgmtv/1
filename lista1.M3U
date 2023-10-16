@@ -1,352 +1,395 @@
+#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-vodafone-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-meo-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz"
+
+# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
+
+# 📺 TV
+
+#EXTINF:-1 group-title="TV" tvg-id="rtp1hd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live-app.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="rtp2hd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live-app.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="sichd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTYvMjAyMyA5OjA6NDUgUE0maGFzaF92YWx1ZT0zVW1DRmVLdTByTVJveERtNFNlTTNBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NGFkMzlhNmUtNjhkYi00ZmFkLTk2ZGEtNjNmYzEyZDE4YTQ4/
+
+#EXTM3U 
+﻿#EXTM3U x-tvg-url="https://github.com/luisms123/tdt/raw/master/guiaxmltv.xml.gz"
+#EXTM3U url-tvg="https://i.mjh.nz/PlutoTV/us.xml.gz"
+
+#EXTINF:-1,Centre Court UHD A
+https://ve-uhd-push-uk.live.cf.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:uhd_stream_01/iptv_uhd_v1.mpd
+
+#EXTINF:-1,Centre Court UHD B
+https://ve-uhd-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uhd_stream_01/iptv_uhd_v1.mpd
+
+#EXTINF:-1,BBC One
+https://vs-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_one_hd/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,BBC Two
+https://vs-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_two_hd/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,BBC Three
+https://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_three_hd/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Wimbledon Extra (Red Button Feed)
+https://vs-hls-pushb-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:red_button_one/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Centre Court
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_01/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 1
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_02/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 2
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_03/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 3
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_04/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 4
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_12/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 5
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_13/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 6
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_14/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 7
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_15/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 8
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_07/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 9
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_16/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 10
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_17/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 11
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_18/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 14
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_08/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 15
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_09/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 16
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_10/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 17
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_11/t=3840/v=pv14/b=5070016/main.m3u8
+
+#EXTINF:-1,Court 18
+https://ve-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_06/t=3840/v=pv14/b=5070016/main.m3u8
+
+
+
+#EXTINF:-1,BBC One
+https://vs-cmaf-push-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_one_hd/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,BBC Two
+https://vs-cmaf-push-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_two_hd/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,BBC Three
+https://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_three_hd/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Wimbledon Extra (Red Button Feed)
+https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:red_button_one/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Centre Court
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_01/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 1
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_02/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 2
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_03/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 3
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_04/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 4
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_12/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 5
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_13/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 6
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_14/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 7
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_15/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 8
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_07/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 9
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_16/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 10
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_17/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 11
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_18/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 14
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_08/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 15
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_09/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 16
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_10/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 17
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_11/pc_hd_abr_v2.mpd
+
+#EXTINF:-1,Court 18
+https://ve-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uk_sport_stream_06/pc_hd_abr_v2.mpd
+
+
+#EXTINF:-1 tvg-id="" tvg-name="UK: ITV 2" tvg-logo="http://smartntv.pro/logokanali/ukiusa/itv2.png" group-title="★ ENGLISH-UK Channels",UK: ITV 2
+http://localiptv.site:85/UniversalIptvDisc/Qsfrorv45JDIJSjseZdhx/362
+
+#EXTINF:-1 group-title="🇬🇧 - ANH" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/ITV2_logo_2022.svg/1920px-ITV2_logo_2022.svg.png",ITV2
+http://stream.cvmtv.site/ITV2?token=live
+
+#EXTINF:-1 tvg-logo="http://graph.facebook.com/tele5/picture?width=320&height=320" group-title="Reality Show's Live",TELECINCO HD 
+http://149.62.177.102:8000/play/a02j
+
+#EXTINF:-1 tvg-logo="http://graph.facebook.com/tele5/picture?width=320&height=320" group-title="Reality Show's Live",TELECINCO HD 2
+http://149.62.177.102:8000/play/a02f
+
+#EXTINF:-1 group-title="Tây Bán Nhà" logo="http://ahm.red/tdt/logos/Telecinco.png" tvg-id="bf55102a9b2bd5e07e9353fb05495046" tvg-chno="5",Telecinco 3
+http://79.117.18.176:9981/stream/channelid/705713599?profile=pass
+#EXTINF:-1 group-title="Tây Bán Nhà" logo="http://ahm.red/tdt/logos/Telecinco.png" tvg-id="5df7e231a755b5404c39cb90247d5d44" tvg-chno="5",Telecinco 4
+http://79.117.18.176:9981/stream/channelid/836958045?profile=pass
+
+#EXTINF:-1 tvg-id="Chilevision" tvg-name="Chilevision" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/chilevision.png" group-title="Reality Show's Live",CHILEVISION
+http://tv.nousiptv.com:8080/AR10465/10465R/1155835
+
+
+#EXTINF:-1 tvg-id="tvireality.tv.vodafone.pt" group-title="Reality Show's Live" tvg-logo="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64f8a935d34e371fc0b75aed/",TVI REALITY
+https://video-auth6.iol.pt/live_tvi_reality/live_tvi_reality/edge_servers/tvireality-720_passthrough/chunks.m3u8
+
+#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://images.pluto.tv/channels/645505747cb4b10008492e03/thumbnail.jpg",GRAN HERMANO CHILE 
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/645505747cb4b10008492e03/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+
+
+
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/141621315-19d48d33-4056-4cd1-98bb-aa02ef330bc5.jpg",GRANDE FRATELLO 1 
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b7)/index.m3u8
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/141621315-19d48d33-4056-4cd1-98bb-aa02ef330bc5.jpg",GRANDE FRATELLO 1 - 2
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b7)/stream04/streamPlaylist.m3u8
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/161234855-c2534e23-ece4-4522-a64f-7458d0b81235.jpg",GRANDE FRATELLO 2
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b8)/index.m3u8
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/161437008-47102c5b-a276-4ba1-9534-1cdc26500b30.jpg",GRANDE FRATELLO 3
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b9)/index.m3u8
+
+
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA - BACKUP
+#EXTVLCOPT:http-user-agent=Firefox
+https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(kq)/manifest.mpd
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA - BACKUP
+#EXTVLCOPT:http-user-agent=Firefox
+https://live03-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/manifest.mpd
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/11/202629434-8966f8cd-169e-4290-ba01-6f097053d833.jpg",GRANDE FRATELLO PARTY
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b1)/index.m3u8
+
+#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/11/202629434-8966f8cd-169e-4290-ba01-6f097053d833.jpg",GRANDE FRATELLO PARTY
+#EXTVLCOPT:http-user-agent=Firefox
+https://live03-col.msf.cdn.mediaset.net/live/ch-b1/b1-clr.isml/manifest.mpd
+
+
+#EXTINF:-1 tvg-id="Canale 5" tvg-name="Canale 5" roup-title="Reality Show'S Live",Canale 5
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(c5)/index.m3u8
+
+#EXTINF:-1 tvg-id="Canale 5" tvg-name="Canale 5" roup-title="Reality Show'S Live",Canale 5
+#EXTVLCOPT:http-user-agent=Firefox
+https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(c5)/manifest.mpd
+
+
+
+
+#EXTINF:-1 tvg-id="Italia 1" tvg-name="Italia 1" roup-title="Reality Show'S Live",Italia 1
+#EXTVLCOPT:http-user-agent=Firefox
+https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(i1)/index.m3u8
+
+
+
+#EXTINF:-1 tvg-id="64a766cd798def0008734695" tvg-logo="https://images.pluto.tv/channels/64a766cd798def0008734695/colorLogoPNG.png" group-title="Reality Show's Live",BBUSAMOSAICO
+https://i.mjh.nz/PlutoTV/64a766cd798def0008734695-alt.m3u8
+#EXTINF:-1 tvg-id="64a765c04ea480000823917a" tvg-logo="https://images.pluto.tv/channels/64a765c04ea480000823917a/colorLogoPNG.png" group-title="Reality Show's Live",BBUSACamera1
+https://i.mjh.nz/PlutoTV/64a765c04ea480000823917a-alt.m3u8
+#EXTINF:-1 tvg-id="64a765fb798def0008734632" tvg-logo="https://images.pluto.tv/channels/64a765fb798def0008734632/colorLogoPNG.png" group-title="Reality Show's Live",BBUSACamera2
+https://i.mjh.nz/PlutoTV/64a765fb798def0008734632-alt.m3u8
+#EXTINF:-1 tvg-id="64a7665b902f2300085d7901" tvg-logo="https://images.pluto.tv/channels/64a7665b902f2300085d7901/colorLogoPNG.png" group-title="Reality Show's Live",BBUSACamera3
+https://i.mjh.nz/PlutoTV/64a7665b902f2300085d7901-alt.m3u8
+#EXTINF:-1 tvg-id="64a766a794635e0008626601" tvg-logo="https://images.pluto.tv/channels/64a766a794635e0008626601/colorLogoPNG.png" group-title="Reality Show's Live",BBUSACamera4
+https://i.mjh.nz/PlutoTV/64a766a794635e0008626601-alt.m3u8
+
+
+
+
+#EXTINF:-1 group-title="Reality Show's Live", Farma Sérvia
+http://d-box-iptv.navarrotv.com:8000/live:geniptvservice2/SBnBfQaHsh/597.ts
+#EXTINF:-1 group-title="Reality Show's Live", Farma Sérvia 2
+http://localiptv.site:85/UniversalIptvDisc/Qsfrorv45JDIJSjseZdhx/1305
+#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 1 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 1
+http://d-box-iptv.navarrotv.com:8000/live:geniptvservice2/SBnBfQaHsh/876.ts
+#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 2 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 2
+http://d-box-iptv.navarrotv.com:8000/live:geniptvservice2/SBnBfQaHsh/877.ts
+#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 3 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 3
+http://d-box-iptv.navarrotv.com:8000/live:geniptvservice2/SBnBfQaHsh/878.ts
+#EXTINF:-1 tvg-id="" tvg-name="SRB: PINK ZADRUGA 4 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 4
+http://d-box-iptv.navarrotv.com:8000/live:geniptvservice2/SBnBfQaHsh/879.ts
+
+
+
+#EXTINF:-1 group-title="Reality Show's Live", BIG BROTHER AUSTRALIA (VPN)
+https://csm-e-n7aus-eb.tls1.yospace.com/csm/extlive/sevenprd01,CAS07.m3u8
+#EXTINF:-1 group-title="Reality Show's Live",WHO WANT BE A MULHER DO FAZENDEIRO AUSTRALIA (VPN)
+https://csm-e-n7aus-eb.tls1.yospace.com/csm/extlive/sevenprd01,CAS14.m3u8
+
+
+
+#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://images.pluto.tv/channels/645505747cb4b10008492e03/thumbnail.jpg",GRAN HERMANO CHILE
+http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/645505747cb4b10008492e03livestitch/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT=%7BTARGETOPT%7D&deviceId=%7BPSID%7D&advertisingId=%7BPSID%7D&us_privacy=1YNY&samsung_app_domain=%7BAPP_DOMAIN%7D&samsung_app_name=%7BAPP_NAME%7D&profileLimit=&profileFloor=&embedPartner=samsung-tvplus:Chilevision%20Noticias
+
+
+
+#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://raw.githubusercontent.com/RokuIL/Live-From-Israel/master/Logos/Big%20Brother.png",BIG BROTHER ISRAEL (VPN)
+https://d2lckchr9cxrss.cloudfront.net/out/v1/c73af7694cce4767888c08a7534b503c/index.m3u8
+
+#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://raw.githubusercontent.com/RokuIL/Live-From-Israel/master/Logos/Big%20Brother.png",BIG BROTHER ISRAEL (VPN) 2
+https://cdnapisec.kaltura.com/p/2748741/sp/2748741/playManifest/entryId/1_6fr5xbw2/deliveryProfileId/672/protocol/https/format/applehttp/index_3.m3u8
+﻿#EXTM3U x-tvg-url="https://github.com/luisms123/tdt/raw/master/guiaxmltv.xml.gz"
+
+###########################################################################
+#                                                                         #
+#                                  >> https://github.com/cqcbrasil        #
+###########################################################################
 #EXTM3U
-#EXTINF:-1,Episodio 410 Video - Terra amara - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440420_18b373aecca645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Caduta libera - I migliori: Quarta puntata Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440461_18b2d4f0bd1d01/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Melaverde: Puntata del 15 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440392_18b2a90ff0ef89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Episodio 31 Video - My Home My Destiny 2 - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440212_18b19b689e6645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Terra amara: Episodio 407 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440408_18b1878734ef89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Dritto e rovescio: Puntata del 15 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439081_18b376886a1645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Episodio 406 Video - Terra amara - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1439192_18b1479b688645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Episodio 405 Video - Terra amara - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1438212_18b1471c6a4645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Episodio 409 Video - Terra amara - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440425_18b18870876f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Terra amara: Episodio 408 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440412_18b187ebc26f89/dashrcenc/hd_wv_mpl.mpd
-Link .m3u8 não encontrado para Puntata del 13 ottobre Video - Quarto Grado - Mediaset Infinity
-#EXTINF:-1,Terra amara: Episodio 404 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437818_18b1468f880645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Verissimo: Domenica 15 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440362_18b343cd146f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Terra amara: Episodio 403 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437823_18b05069078645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Anima gemella: Prima puntata Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437704_18b196f89f1f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 15 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440517_18b349c345af89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Dritto e rovescio: Puntata del 12 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438939_18b261a6f7ed01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Dalla parte degli animali: Puntata del 15 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439092_18b2e76750bd01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Episodio 30 Video - My Home My Destiny 2 - Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1436665_18b13b049fdd01/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Verissimo: Sabato 14 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440358_18b2f164e90f89/dashrcenc/hd_wv_mpl.mpd
-Link .m3u8 não encontrado para TG5: Edizione ore 08.00 del 15 ottobre Video | Mediaset Infinity
-#EXTINF:-1,Le Iene: Puntata del 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416605_18b1be43cffd01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,My Home My Destiny 2: Episodio 28 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440229_18b13e8a33bd01/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Grande Fratello: Lunedì 9 ottobre - Puntata 9 Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1435983_18b16c166e9f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Terra amara: Episodio 403 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437823_18b05069078645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Grande Fratello: Giovedì 12 ottobre - Puntata 10 Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1438252_18b263987ec645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,È sempre Cartabianca: Puntata del 10 ottobre Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1438979_18b1bcca1e3d01/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Sophie Codegoni: l'intervista integrale - Verissimo Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446894_18b2ef716aff89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Fuori dal coro: Puntata dell'11 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438952_18b20f32ff0645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,My Home My Destiny 2: Episodio 27 Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1403677_18b044923f9d01/dashrcenc/hd_wv_mpl.mpd
-Link .m3u8 não encontrado para Puntata del 10 ottobre - Le Iene
-#EXTINF:-1,Studio Aperto: Edizione ore 12.25 del 15 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438609_18b330580f6645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Quarta Repubblica: Lunedì 9 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437074_18b16a9edfd645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,12 ottobre 2023 Video - Striscia la notizia - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438195_18b2573ea78f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Enrica Bonaccorti: l'intervista integrale - Verissimo Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1447252_18b3435f1d3f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 14 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440521_18b2f799dde645/dashrcclean/hd_no_mpl.mpd
-Link .m3u8 não encontrado para My home my destiny 2, la puntata del 16 ottobre in streaming
-#EXTINF:-1,X-Style: Puntata del 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438217_18b1dbab2ded01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Selin Genç e Aras Senol: l'intervista integrale - Verissimo Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446856_18b2eb81452f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Elisabetta Gregoraci: l'intervista integrale - Verissimo Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446908_18b2f0bf7e2f89/dashrcclean/hd_no_mpl.mpd
-Link .m3u8 não encontrado para SportMediaset: Edizione ore 13.05 del 15 ottobre Video
-#EXTINF:-1,TG5: Edizione ore 13.00 del 15 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440504_18b331da20b645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,E-Planet: Puntata del 15 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438601_18b33433562645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Caduta libera: Giovedì 12 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1438257_18b24dfa598d01/dashrcenc/hd_wv_mpl.mpd
-Link .m3u8 não encontrado para Replica Terra Amara in streaming, puntata del 16 ottobre 2023
-#EXTINF:-1,SportMediaset: Edizione ore 13.20 del 16 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1445679_18b385e6552f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 13.00 del 13 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439161_18b28d60f89f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 18.30 del 14 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416890_18b2f24ad1e645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Alessandra Celentano: l'intervista integrale - Verissimo Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1447206_18b33d74802f89/dashrcclean/hd_no_mpl.mpd
-Link .m3u8 não encontrado para My Home My Destiny, replica puntata in streaming del 16 ...
-Link .m3u8 não encontrado para Alessandra Celentano: l'intervista integrale - Verissimo Video
-#EXTINF:-1,Super Partes: Puntata del 15 ottobre, Rete 4 Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439063_18b324ddbb0f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Pomeriggio Cinque: Lunedì 9 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1436087_18b154e81c6645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 08.00 del 16 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440496_18b373ce19bd01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 13.00 del 16 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440508_18b3844ab37f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Striscia la notizia: 11 ottobre 2023 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437778_18b2047e869d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 12.25 del 14 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416882_18b2de1e009d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437843_18b1add3223f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Le bugie di Alessia Pifferi - Quarto Grado Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446662_18b2b0b6fdf645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto Mag: Domenica 15 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438597_18b3462bb2df89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 18.30 del 15 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438613_18b3443fcfbf89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Forum: Martedì 10 ottobre, Canale 5 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437822_18b1851b75cf89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 13.00 dell'11 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437854_18b1e864175645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 12 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438232_18b253115e2d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Stasera Italia Weekend: Domenica 15 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439100_18b34ca14cbf89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 dell'11 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437863_18b2006757f645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Mattino Cinque News: Lunedì 16 ottobre Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1440366_18b37b2db8ed01/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 12.25 dell'11 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416866_18b1e689ebcd01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 13.00 del 12 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438227_18b23ae2858d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 9 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1436239_18b15b63af6645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Oasi africane: Seconda puntata Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/06/1353258_188be8e504a645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 08.00 del 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437834_18b184e821cf89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 20.00 del 13 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439165_18b2a519ec7f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Oasi africane: Prima puntata Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/06/1349895_1889a7cfa3d645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 13.00 del 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1437838_18b195fbe8ef89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Il coraggio di Maria Antonietta, bruciata dall'ex marito
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1447356_18b37849d2d645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Bianca Berlinguer intervista Ignazio La Russa - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1441261_18b1b6b3364d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Pomeriggio Cinque: Mercoledì 11 ottobre Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437786_18b1fa1b90b645/dashrcenc/hd_wv_mpl.mpd
-Link .m3u8 não encontrado para Replica Terra Amara in streaming, puntata del 13 ottobre 2023
-#EXTINF:-1,Pomeriggio Cinque: Giovedì 12 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1438199_18b24c06694645/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,SportMediaset: Edizione ore 13.00 del 14 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416830_18b2e13c5b2d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 202 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378408_18a89a8fde2645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,La sfida tra Gianpaolo Gambi e Ambra Romani - I migliori Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446721_18b2d71775ed01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Striscia la notizia: 13 ottobre 2023 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439121_18b2a8c316b645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Pomeriggio Cinque: Venerdì 13 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1439188_18b29e94c76f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 1 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375429_18a69877aab645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,SportMediaset: Edizione ore 13.20 del 10 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416814_18b19779d6ef89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 3 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375431_18a6989bdbe645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 2 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375430_18a6988cd75645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 8.00 del 14 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1440488_18b2cebac89d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Stasera Italia Weekend: Sabato 14 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1439096_18b2fa7d5b1d01/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Alessandra Matteuzzi: le registrazioni sospette di Giovanni
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1446672_18b2b3aa9aa645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,TG5: Edizione ore 08.00 del 12 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1438221_18b22a415e6645/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto Mag: Martedì 10 ottobre Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416796_18b1a9ff6f3f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 18.30 del 10 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416854_18b1a846ffef89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Mattino Cinque News: Martedì 10 ottobre Video
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437798_18b18cd5759f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 6 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375435_18a69aaef00645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 8 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375437_18a69ad3f70645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 19 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375449_18a69b9d05b645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 7 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375436_18a69abb93e645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 7 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375436_18a69abb93e645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 16 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375446_18a69b59f10645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 15 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375445_18a69b3bb6a645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 18 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375448_18a69b90b97645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Studio Aperto: Edizione ore 12.25 del 10 ottobre Video
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/10/1416850_18b19468113f89/dashrcclean/hd_no_mpl.mpd
-#EXTINF:-1,Episodio 20 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375450_18a69bb1c0b645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 17 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375447_18a69b82114645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 5 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375434_18a69a9c88a645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 37 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375542_18a6ac08d67f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 53 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375562_18a6ae642d8645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 5 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375434_18a69a9c88a645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 37 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375542_18a6ac08d67f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 53 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375562_18a6ae642d8645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 23 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375525_18a69bec286645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 57 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375566_18a6aedab6f645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 64 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375574_18a73e0c49df89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 60 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375569_18a6af1a97e645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 13 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375442_18a69b223cf645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 58 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375567_18a6aeebace645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 128 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377635_18a8ebe87b3f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 4 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375432_18a69a8d6ab645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 9 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375438_18a69ae00df645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 79 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375589_18a742787bff89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 107 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377599_18a8dd05a55f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 87 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375601_18a84b0e8ef645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 179 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378428_18ab6d2437a645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 200 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378407_18a89882226645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 77 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375587_18a74252985f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 71 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375581_18a740dd572f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 14 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375443_18a69b2eeed645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 71 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375581_18a740dd572f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 14 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375443_18a69b2eeed645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 10 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375439_18a69aee32b645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 186 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378439_18ab7afe401f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 206 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378460_18ab729aed9f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 184 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378430_18ab7aa347ef89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 80 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375590_18a84a0a33f645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 86 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375600_18a84ad024b645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 42 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375550_18a6acc4634645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 91 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375606_18a896ee7e4645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 48 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375556_18a6ad8dd4f645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 221 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378458_18ab6ed285ff89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 85 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375599_18a84ab0f5c645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 105 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377596_18a8dcea128f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 24 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375526_18a69bfda52645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 30 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375533_18a6a90ba59f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 12 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375441_18a69b164b3645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 81 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375594_18a84a17343645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 21 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375523_18a69bbf6a2645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 52 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375561_18a6ae40170645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 160 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377676_18ab29c21abf89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 172 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378426_18ab2adf7f2f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 74 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375584_18a741e97f4f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 44 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375552_18a6ad06ab9645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Episodio 27 Video - CentoVetrine 5 - Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375530_18a6a850071f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 155 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377671_18ab1eb8a84f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 63 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375573_18a73dec16af89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,Pomeriggio Cinque: Martedì 10 ottobre Video | Mediaset Infinity
-https://vod06.msf.cdn.mediaset.net/farmunica/2023/10/1437819_18b1a747aa6f89/dashrcenc/hd_wv_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 75 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375585_18a742128b9f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 95 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375610_18a89727c28645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 95 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375610_18a89727c28645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 106 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377598_18a8dcf93c0f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 65 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375575_18a73e2999cf89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 189 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378419_18ab7b5a203f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 59 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375568_18a6af0aa63645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 149 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377665_18aad68aa63d01/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 54 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375563_18a6ae89313645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 73 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375583_18a741d61a3f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 185 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378438_18ab7af2d93f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 159 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377675_18ab29603d1f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 88 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375602_18a84b28e4b645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 97 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375612_18a89748560645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 180 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1378418_18ab6d30272645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 90 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375605_18a896d25e6645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 104 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377593_18a8dcdd504f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 141 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377651_18aad5eb06dd01/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 99 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375614_18a89762abd645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 83 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375597_18a84a54fdb645/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 38 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1375543_18a6ac22a83f89/dashrcclean/sd_no_mpl.mpd
-#EXTINF:-1,CentoVetrine 5: Episodio 113 Video | Mediaset Infinity
-https://vod05.msf.cdn.mediaset.net/farmunica/2023/09/1377620_18a8e9f4b72f89/dashrcclean/sd_no_mpl.mpd
+
+
+#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (Av. 3 y 104)
+http://cam104y3.gesell.com.ar/playlist.m3u8
+#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (Buenos Aires y Playa)
+http://cambsasyplaya.gesell.com.ar/playlist.m3u8
+#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (La Pinocha)
+http://camlapinocha.gesell.com.ar/playlist.m3u8
+
+
+#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",America TV | Argentina - TDA 2.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184378
+
+#EXTINF:-1 tvg-logo="https://scontent.fepa11-1.fna.fbcdn.net/v/t1.6435-9/206638151_10223169123710059_3666810289391430657_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=825194&_nc_eui2=AeGxugJ54qa7RhgKBnLTrHOu14OonvQq8lrXg6ie9CryWkCQzaYyrufVmZGkiprZVM0&_nc_ohc=dbLCQPiMFxEAX9X0jrT&_nc_ht=scontent.fepa11-1.fna&oh=afeef92e5377cb7720df7b2f4afc60c8&oe=6127F95F" group-title="Argentina",SSIPTV ARG TV - TDA 6.2
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5df265697ec3510009df1ef0/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=bff1d530-6307-11eb-b3fa-019cb96f121b&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=ec2383fd-6e28-4df5-9d1c-b66eee7000c&userId=&serverSideAds=true
+
+#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://i.imgur.com/04nIdpc.png" group-title="Argentina",Television Publica | Argentina - TDA 7.1
+https://cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
+
+
+
+#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/0a/Logo_Televisi%C3%B3n_P%C3%BAblica_Argentina.png" group-title="Argentina",TV PUBLICA - SINAL ORIGINAL 2 - TDA 7.1
+https://s@cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/800px-Telefe_%28nuevo_logo%29.png" group-title="Argentina",TELECOLORMUX - TDA 8.1
+https://live.obslivestream.com/telecolormux/tracks-v1a1/mono.m3u8
+
+
+
+#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/telefe_argentina.png" group-title="Argentina",Telefe | Argentina - TDA 11.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184384
+
+#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/telefe_argentina.png" group-title="Argentina",Telefe | Argentina - TDA 11.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184383
+
+#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/telefe_argentina.png" group-title="Argentina",Telefe INTERNACIONAL | Argentina - TDA 11.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184385
+
+
+#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://telefe-static.akamaized.net/media/18154476/logo-telefe-twitter.png" group-title="Argentina", Telefe (VPN) - TDA 11.1
+https://mitelefe.com/Api/Videos/GetSourceUrl/694564/0/HLS
+
+#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-country="AR" tvg-logo="http://x.playerlatino.live/telefe.png" group-title="Argentina", Telefe (VPN) 2 - TDA 11.1
+https://telefe.com/Api/Videos/GetSourceUrl/694564/0/HLS?.m3u8
+
+#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/45/Eltrece_logotipo_2018.png" group-title="Argentina", El Trece - TDA 13.1
+https://livetrx01.vodgc.net/eltrecetv/index.m3u8
+
+#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16044_dark_360w_270h.png" group-title="Argentina", El Trece 2 - TDA 13.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184387
+#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16044_dark_360w_270h.png" group-title="Argentina", El Trece 2 - TDA 13.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184388
+
+#EXTINF:-1 tvg-id="El Nueve AR" tvg-name="El Nueve AR" tvg-country="AR" tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/f/f7/Canal-nueve-ar2017.png" group-title="Argentina", CANAL 9 35.1 - TDA 35.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184380
+
+
+
+
+#EXTINF:-1 tvg-logo="https://image.winudf.com/v2/image1/Y29tLmExMjNmcmVlYXBwcy5mcmVlLmFwcDVkNWVjMWY4ODliOThfaWNvbl8xNTY3NjE5OTcxXzAxNw/icon.png?w=170&fakeurl=1" group-title="Argentina",CANAL 4 TELEAIRE SAN MARTIN - TDA 21.1
+https://stmvideo2.livecastv.com/canal4/canal4/playlist.m3u8
+
+#EXTINF:-1 tvg-name="Cronica TV" tvg-name="Cronica TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16258_dark_360w_270h.png" group-title="Argentina",Cronica TV | Argentina - TDA 22.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184396
+
+
+
+#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",MILENIO TV
+http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52487.ts
+
+#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodistica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg/260px-Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg.png" group-title="Argentina",Informacion Periodistica | Argentina - TDA 24.5
+https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=4499968.m3u8
+
+#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodística" tvg-logo="https://i.imgur.com/SQSu9M5.png" group-title="Argentina",Informacion Periodística | Argentina - TDA 24.5
+https://octubre-live.cdn.vustreams.com/live/ip/live.isml/live-audio_1=128000-video=2800000.m3u8
+
+#EXTINF:-1 tvg-id="IP" tvg-name="IP" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQ4CbRDh4Wgxt0o_pw9V-kw9Vz6T0Re2Q_RD62jp7cZMO0uWvSKSUN6sZ2vjYcbn5fAs&usqp=CAU" group-title="Argentina",IP | Argentina - TDA 24.5
+https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=729984.m3u8
+
+#EXTINF:-1 tvg-name="TN" tvg-id="NTN24" tvg-logo="http://www.radiosargentina.com.ar/png/VI----TN.png" group-title="Argentina",TN Todo Noticias - TDA 20.1
+http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184400
+
+#EXTINF:-1 tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/unife.png" group-title="Argentina",UNIFE 25.1 - TDA 25.1
+https://dacastmmd.mmdlive.lldns.net/dacastmmd/fafa592f5b7b4212928307608b85bdf7/chunklist_b4628000.m3u8
+
+#EXTINF:-1 tvg-id="C5N" tvg-name="C5N" tvg-logo="https://cdn.mitvstatic.com/channels/ar_c5n_m.png" group-title="Argentina",C5N | Argentina - TDA 26.1
+https://ythls.onrender.com/channel/UCFgk2Q2mVO1BklRQhSv6p0w.m3u8
+
+#EXTINF:-1 tvg-id="A24" tvg-name="America 24" tvg-logo="https://cdn.mitvstatic.com/channels/ar_america-24_m.png" group-title="Argentina",America 24 | Argentina - TDA 27.1
+https://ythls.onrender.com/channel/UCR9120YBAqMfntqgRTKmkjQ.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Net_TV_logo.png/120px-Net_TV_logo.png" group-title="Argentina",NET TV 27.2 - TDA 27.2
+https://unlimited1-us.dps.live/nettv/nettv.smil/nettv/livestream1/playlist.m3u8
