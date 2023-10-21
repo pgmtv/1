@@ -124,11 +124,11 @@ lists = sorted(lists, key=lambda x: x[0])
 line_count = 0
 with open("lista1.M3U", "a") as f:
     for l in lists:
-        lines = l[1].split("\r\n")  # Use "\r\n" para listas de reprodução M3U
+        lines = l[1].split("\n")
         for line in lines:
             if line_count >= 610:
                 break
-            if line.strip():  # Pule linhas vazias
+            if line.strip():  # Pule linhas em branco
                 f.write(line + "\n")
                 line_count += 1
         if line_count >= 610:
