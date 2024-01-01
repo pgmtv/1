@@ -1,4 +1,15 @@
 #EXTM3U
+
+#EXTINF:-1, Nova
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"wrdz9cCVWeWK1yyQFKVMdg","k":"MqcK7LoIGRdNnUxC2+rTHw"},{"kty":"oct","kid":"RC3OaBzyVp+abdX9g8oH0Q","k":"a8eIY6TONiKORSbwe7N/fQ"},{"kty":"oct","kid":"UDYY+Cl4Xe+8SkDaHDUMjQ","k":"78RbZPmjrwqVWPq6rF+vow"}]}
+https://tvup-live.secure2.footprint.net/nova6/nova6.mpd
+
+#EXTINF:-1, Mega
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"yUTRFbc5Wc2kHzMGaph3uA","k":"97yGTG06pv+SUl1/7Z7ItA"},{"kty":"oct","kid":"AQDd8vXrVrudEVU68GaSAw","k":"JqIlkSWD1zDjV5Gr/lE3kA"}]}
+https://tvup-live.secure2.footprint.net/mega6/mega6.mpd
+
 #EXTINF:-1 group-title="ᴘoʀᴛᴜɢᴀʟ" tvg-id="cubavi.tv.vodafone.pt" tvg-logo="https://media.tvup.cloud/canales/color_lg_61f7b07144278f00213e4772.png",Cubavisión Internacionalᴴᴰ 🇨🇺
 #EXTVLCOPT:http-referrer=https://mediasync.tvup.cloud
 #EXTVLCOPT:network-caching=1000
