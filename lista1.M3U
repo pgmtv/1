@@ -1,5 +1,37 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/yvzm6iP.png", NBC California
+https://v-ca.mybtv.net/live/121.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/yvzm6iP.png", NBC Nueva York
+https://v-ny.mybtv.net/live/548.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PoeKjKs.png", Univision New York
+https://v-ny.mybtv.net/live/643.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/PoeKjKs.png", Univision Phoenix
+https://v-px.mybtv.net/live/28.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/8ndIwt0.png", Unimas California
+https://v-ca.mybtv.net/live/147.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/8ndIwt0.png", Unimas Los Angeles
+https://v-la.mybtv.net/live/168.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/v7zcQxT.png", La 1 España
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"EDMcSqASkkZXJhpPkI+sIw","kid":"gycXR1sqURW3+VsAWgzgpw"},{"kty":"oct","k":"43f2pxhvIro1sLVrr2XQ9Q","kid":"ouM52dqBV9+QsE6xKw7wgg"},{"kty":"oct","k":"CJFMPdStFajMbqqlqy6spg","kid":"6LmGYdzuVwa6PpwxnaXu/A"}],"type":"temporary"}
+https://tvup-live.secure.footprint.net/la1-neutra/la1-neutra.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/olpi62x.png", La 2 España
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"832717475b2a5115b7f95b005a0ce0a7":"10331c4aa012924657261a4f908fac23","a2e339d9da8157df90b04eb12b0ef082":"e377f6a7186f22ba35b0b56baf65d0f5","e8b98661dcee5706ba3e9c319da5eefc":"08914c3dd4ad15a8cc6eaaa5ab2eaca6"}
+https://tvup-live.secure2.footprint.net/la2/la2.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
+
 #EXTINF:-1 tvg-id=" group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="https://www.antena3.com/public/img/a3com/favicon/icon160.webp",Antena 3 🇪🇸
 http://168.227.22.18:1935/live/mobile-008/playlist.m3u8
 #EXTINF:-1 group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="http://graph.facebook.com/tele5/picture?width=320&height=320",Telecincoᴴᴰ 🇪🇸
