@@ -1,5 +1,53 @@
 #EXTM3U
 
+#EXTINF:-1,La 1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a3abc44525eef3b0a7af9138a9dbe34a:7740f8ae4223ce5ba293028f7f78f1c1
+https://ott.zapitv.com/live/eds_c2/la1_4k/dash_live_enc/la1_4k.mpd
+
+#EXTINF:-1,La 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ecd7ee75e0e88f267ace6bd7d9d70d83:eb196d2b2dc28418f465532c5d1182c0
+https://ott.zapitv.com/live/eds_c2/la_2/dash_live_enc/la_2.mpd
+
+#EXTINF:-1, Antena 3
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=482da6ac92db4c088952884fd2e61b83:11182ac8c4b669c6bd70312dad50c66c
+http://live.euskaltel.tv/Content/DASH_MDRM/Live/Channel(ANTENA3HD)/manifest.mpd
+
+#EXTINF:-1, Cuatro
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=257fafffad77ccb5b8224d8fac6c9d62:81ebfc96640b0c8446c232f198b97dec
+https://ott.zapitv.com/live/eds_c2/cuatro/dash_live_enc/cuatro.mpd
+
+#EXTINF:-1, Telecinco
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6e1dbacf4b932a11cd6cecb741def23d:0375536d6e512003972d1d6ea1f4d7c0
+https://ott.zapitv.com/live/eds_c2/telecinco/dash_live_enc/telecinco.mpd
+
+#EXTINF:-1, La Sexta
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=239e5526ecb62d7b41c97641ea486549:93bfa21ee2211c271b7f0e1944a87818
+https://ott.zapitv.com/live/eds_c2/la_sexta/dash_live_enc/la_sexta.mpd
+
+#EXTINF:-1 ,Castilla la Mancha TV
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9be0461082e289bb7991a92e96b4acdd:d8cc8fef100a446b75cd08b93f724980
+https://ott.zapitv.com/live/eds_c2/cmt_hd/dash_live_enc/cmt_hd.mpd
+
+#EXTINF:-1, Telemadrid
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3abf39227e2b2ccacd2854730faaf8e2:64a402f23216e311c38ca990e8792f2a
+https://ott.zapitv.com/live/eds_c2/tele_madrid_hd/dash_live_enc/tele_madrid_hd.mpd
+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fifaivan/TV/main/IMG_20230915_151833.png" ,GH VIP 24H Señal PLUS
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0abdd163b0a44ce3a81cb06b38396d9e:a8a2e2554a0e18d2245b520eba50cdd0
+https://directos.mediaset.es/oripremium05/live/premium05/mpd-cenc/mpd-cenc.isml/.mpd
+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fifaivan/TV/main/IMG_20230915_151833.png" ,GH VIP 24H Señal 1
+https://granhermanonline.ddns.net/hls/stream1.m3u8
+
 #EXTINF:-1, Nova
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"wrdz9cCVWeWK1yyQFKVMdg","k":"MqcK7LoIGRdNnUxC2+rTHw"},{"kty":"oct","kid":"RC3OaBzyVp+abdX9g8oH0Q","k":"a8eIY6TONiKORSbwe7N/fQ"},{"kty":"oct","kid":"UDYY+Cl4Xe+8SkDaHDUMjQ","k":"78RbZPmjrwqVWPq6rF+vow"}]}
