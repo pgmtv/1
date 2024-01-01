@@ -1,11 +1,15 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4edrIQg.png", La Sexta España
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key={"da34f7ba51495627b5e78a56fe263ce6":"2e984786ede5f201dca69f9322e0e382","14df1a00d89f5d89a24d883de1c6a4c5":"2ad506e0bf9e3344f4df2cc673d728f6","a217bce8fa71550f9ad12cb0827517b6":"85e998af299b4dd66cbe8ab4542f5978"}
-https://tvup-live.secure2.footprint.net/lasexta/lasexta.mpd|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
+#EXTINF:-1 tvg-id=" group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="https://www.antena3.com/public/img/a3com/favicon/icon160.webp",Antena 3 🇪🇸
+http://168.227.22.18:1935/live/mobile-008/playlist.m3u8
+#EXTINF:-1 group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="http://graph.facebook.com/tele5/picture?width=320&height=320",Telecincoᴴᴰ 🇪🇸
+http://xcm.budtv-ultra.com:25461/live/eventosiptv/mnyuHhAMk4zS/14911.ts
+#EXTINF:-1 group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/m3u/live/Logos/La%20Sexta.png",La Sextaᴴᴰ 🇪🇸
+https://bit.ly/3NbhtVf?/manifest.m3u8
+#EXTINF:-1 group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="https://graph.facebook.com/novatdt/picture?width=200&height=200",Nova 🇪🇸
+https://fibergy.cdn.masmediatv.es/SVoriginOperatorDistrib001/smil:280_HD.smil/index.m3u8
+#EXTINF:-1 group-title="ᴇsᴘᴀɴʜᴀ" tvg-logo="https://graph.facebook.com/megaTDT/picture?width=200&height=200",Megaᴴᴰ 🇪🇸
+https://bit.ly/3WBbnR1?/manifest.m3u8
 
 #EXTINF:-1,Evento deportivo 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 11; M2103K19G Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36
