@@ -1,8 +1,6 @@
-from datetime import datetime, timedelta
-import pytz
-import requests
 
-brazil_timezone = pytz.timezone('America/Sao_Paulo')
+import requests
+from datetime import datetime, timezone, timedelta
 
 # Defina o fuso horário do Brasil
 brazil_timezone = timezone(timedelta(hours=-3))
