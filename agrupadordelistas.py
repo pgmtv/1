@@ -1,6 +1,8 @@
-
+from datetime import datetime, timedelta
+import pytz
 import requests
-from datetime import datetime, timezone, timedelta
+
+brazil_timezone = pytz.timezone('America/Sao_Paulo')
 
 # Defina o fuso horário do Brasil
 brazil_timezone = timezone(timedelta(hours=-3))
@@ -35,18 +37,31 @@ else:
 
 
 #GLOBO
+
+
 def is_within_time_range(start_time, end_time):
     current_time = datetime.now(brazil_timezone)
     return start_time <= current_time <= end_time
 
+# Horários locais do Brasil para 11h30 e 13h30
+start_time_br_morning = datetime.now(brazil_timezone).replace(hour=11, minute=30, second=0, microsecond=0)
+end_time_br_morning = datetime.now(brazil_timezone).replace(hour=13, minute=30, second=0, microsecond=0)
+
+# Horários locais do Brasil para 19h00 e 19h45
+start_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=0, second=0, microsecond=0)
+end_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=45, second=0, microsecond=0)
+
 # Horários locais do Brasil para 17h30 e 23h00
-start_time_br = datetime.now(brazil_timezone).replace(hour=05, minute=30, second=0, microsecond=0)
-end_time_br = datetime.now(brazil_timezone).replace(hour=08, minute=40, second=0, microsecond=0)
+start_time_br = datetime.now(brazil_timezone).replace(hour=5, minute=30, second=0, microsecond=0)
+end_time_br = datetime.now(brazil_timezone).replace(hour=8, minute=40, second=0, microsecond=0)
 
 # Nome do arquivo de saída
 output_file = "lista1.M3U"
 
-if is_within_time_range(start_time_br, end_time_br):
+if (is_within_time_range(start_time_br_morning, end_time_br_morning) or 
+    is_within_time_range(start_time_br_evening, end_time_br_evening) or
+    is_within_time_range(start_time_br, end_time_br)):
+
     m3upt_url = "https://github.com/7PlusREPO/ServerPobre/raw/master/LISTA-14.txt"
     m3upt_response = requests.get(m3upt_url)
 
@@ -59,6 +74,7 @@ if is_within_time_range(start_time_br, end_time_br):
 else:
     with open(output_file, "a") as f:
         f.write("#EXTM3U\n")
+
 
 
 import requests
