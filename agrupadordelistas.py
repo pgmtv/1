@@ -81,6 +81,7 @@ repo_urls = [
     "https://github.com/punkstarbr/STR-YT/raw/main/REALITY'SLIVE.m3u",
     "https://github.com/iptv-org/iptv/raw/master/streams/mx_multimedios.m3u",    
     "https://github.com/Free-TV/IPTV/raw/d73bdee9b9ba0a5716e4371ce4ce33dbb2b3ba39/playlists/playlist_japan.m3u8",
+    "https://github.com/strikeinthehouse/YT2M3U/raw/main/youtube.m3u",
 ]
 
 
