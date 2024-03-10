@@ -119,12 +119,12 @@ with open("lista1.M3U", "a") as f:
     for l in lists:
         lines = l[1].split("\n")
         for line in lines:
-            if line_count >= 102:
+            if line_count >= 202:
                 break
             if line.strip():  # Pule linhas em branco
                 f.write(line + "\n")
                 line_count += 1
-        if line_count >= 100:
+        if line_count >= 200:
             break
 
 
@@ -235,10 +235,10 @@ with open("lista1.M3U", "a") as f:
     for l in lists:
         lines = l[1].split("\n")
         for line in lines:
-            if line_count >= 102:
+            if line_count >= 202:
                 break
             if line.strip():  # Pule linhas em branco
                 f.write(line + "\n")
                 line_count += 1
-        if line_count >= 100:
+        if line_count >= 200:
             break
