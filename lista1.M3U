@@ -1,428 +1,2393 @@
+
+
+Requirement already satisfied: streamlink in /usr/local/lib/python3.10/dist-packages (6.8.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.10/dist-packages (from streamlink) (2024.6.2)
+Requirement already satisfied: isodate in /usr/local/lib/python3.10/dist-packages (from streamlink) (0.6.1)
+Requirement already satisfied: lxml<6,>=4.6.4 in /usr/local/lib/python3.10/dist-packages (from streamlink) (4.9.4)
+Requirement already satisfied: pycountry in /usr/local/lib/python3.10/dist-packages (from streamlink) (24.6.1)
+Requirement already satisfied: pycryptodome<4,>=3.4.3 in /usr/local/lib/python3.10/dist-packages (from streamlink) (3.20.0)
+Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.10/dist-packages (from streamlink) (1.7.1)
+Requirement already satisfied: requests<3,>=2.26.0 in /usr/local/lib/python3.10/dist-packages (from streamlink) (2.31.0)
+Requirement already satisfied: trio<1,>=0.22.0 in /usr/local/lib/python3.10/dist-packages (from streamlink) (0.26.0)
+Requirement already satisfied: trio-websocket<1,>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from streamlink) (0.11.1)
+Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.10/dist-packages (from streamlink) (4.12.2)
+Requirement already satisfied: urllib3<3,>=1.26.0 in /usr/local/lib/python3.10/dist-packages (from streamlink) (2.0.7)
+Requirement already satisfied: websocket-client<2,>=1.2.1 in /usr/local/lib/python3.10/dist-packages (from streamlink) (1.8.0)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from streamlink) (1.2.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.26.0->streamlink) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.26.0->streamlink) (3.7)
+Requirement already satisfied: attrs>=23.2.0 in /usr/local/lib/python3.10/dist-packages (from trio<1,>=0.22.0->streamlink) (23.2.0)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (from trio<1,>=0.22.0->streamlink) (2.4.0)
+Requirement already satisfied: outcome in /usr/local/lib/python3.10/dist-packages (from trio<1,>=0.22.0->streamlink) (1.3.0.post0)
+Requirement already satisfied: sniffio>=1.3.0 in /usr/local/lib/python3.10/dist-packages (from trio<1,>=0.22.0->streamlink) (1.3.1)
+Requirement already satisfied: wsproto>=0.14 in /usr/local/lib/python3.10/dist-packages (from trio-websocket<1,>=0.9.0->streamlink) (1.2.0)
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from isodate->streamlink) (1.16.0)
+Requirement already satisfied: h11<1,>=0.9.0 in /usr/local/lib/python3.10/dist-packages (from wsproto>=0.14->trio-websocket<1,>=0.9.0->streamlink) (0.14.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (2.31.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.12.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2024.6.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.5)
+Could not access https://vimeo.com/970954493: 403 Client Error: Forbidden for url: https://vimeo.com/970954493
+Could not access https://vimeo.com/970953774: 403 Client Error: Forbidden for url: https://vimeo.com/970953774
 #EXTM3U
+
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (2.31.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.12.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2024.6.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.5)
 #EXTM3U
-#EXTM3U 
-#EXTINF:-1 tvg-id="cnn.brasil.br" group-title="Bʀᴀzɪʟ" tvg-logo="https://raw.githubusercontent.com/inspirationlinks/inspiration-1/5f9d3fdfa54d566601cc39893f153d9fbf12f136/CNN_Brasil.svg",CNN Brasilᴴᴰ 🇧🇷
-https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8
-#EXTINF:-1  tvg-id="WKAQDT1.us" group-title="NEWS WORLD" tvg-logo="https://media.telemundopr.com/2020/12/Telemundo-Puerto-Rico-Julio-2020.png?resize=850%2C478&quality=85&strip=all",Telemundo Puerto Rico (WKAQ)
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="data:image/jpeg;base64,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",Telemundo Puerto Rico (WKAQ) 2
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream2/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://media.telemundo31.com/2022/01/WTMO-31.png?resize=400%2C225&quality=85&strip=all",Telemundo Orlando FL
-https://nbculocallive.akamaized.net/hls/live/2037602/orlando/stream1/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Miami FL
-https://nbculocallive.akamaized.net/hls/live/2037498/miami/stream6/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Atlanta GA
-https://dai2-playlistserver.aws.syncbak.com/cpl/20475903/dai2v5/1.0/7b2264657669636554797065223a387d/master.m3u8?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdyYXkyMDE2MDgyOSJ9.eyJtaWQiOiIyMDQ3NTkwMyIsImNpZCI6MjA5NzQsInNpZCI6MTU4LCJtZDUiOiJiMTgwM2ExYTIxMzA5ZTEwNzNlOGJjMDQyOGU5NDkzOCIsImlhdCI6MTY1Mjg5MjgyMSwiZXhwIjoxNjg0NDI4ODIxLCJpc3MiOiJTeW5jYmFrIChURykifQ.ngWlxw_iUrju6oMpQl73BYHMCl7c6reypSqqP5nLbL8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Fresno CA
-https://nbculocallive.akamaized.net/hls/live/2037601/fresno/stream1/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Las Vegas NV
-https://nbculocallive.akamaized.net/hls/live/2037093/lasvegas/stream1/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Los Angeles CA
-https://nbculocallive.akamaized.net/hls/live/2037084/losangeles/stream6/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo San Diego CA
-https://nbculocallive.akamaized.net/hls/live/2037098/sandiego/stream3/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Washington DC
-https://nbculocallive.akamaized.net/hls/live/2037099/washingtondc/stream4/master.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="https://www.telemundo51.com/wp-content/themes/nbc-station/static/images/TelemundoLiveTV-Desktop.png",Telemundo Wisconsin (WDJT/WYTU-LD) [NOT 24/7]
-https://video.cbs58.com:443/live/wdjt/live4/live4_720p.m3u8
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="N/A",NOTÍCIAS TELEMUNDO - SERVIÇO
-https://telemundolive.akamaized.net/hls/live/2093200/NEWS105/master_main105.m3u8
-#EXTINF:-1 channel-id="samsung-USBC4400020H7" tvg-id="USBC4400020H7" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBC4400020H7_20230322T000014SQUARE.png_20230322000014.png" group-title="NEWS WORLD", Telemundo California
-https://d3i0aurg3nyoct.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-25zej4uwofrfd/playlist.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.us_privacy=1YNY&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.ssai=SSSLIVE
-#EXTINF:-1  group-title="N/A",Telemundo
-http://45.160.73.129:8888/play/a04p/index.m3u8
-#EXTINF:-1,Telemundo 2
-http://45.189.108.58:10000/play/a00q/index.m3u8
-http://alv.encohd.co:39591/live/j0roNAC/n3XT33/337.m3u8
-#EXTINF:-1  group-title="N/A",Telemundo Chicago
-http://alv.encohd.co:39591/live/j0roNAC/n3XT33/338.m3u8
-#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/rede-globo-logopedia/images/2/21/Globo_2000_clear.png/revision/latest/scale-to-width-down/200?cb=20190413001619" group-title="GLOBOPLAY",BBB 2 Telas
-http://khtro2.com/live/69754975141604/526502448518/493846.ts
-#EXTINF:-1 tvg-id="Telecinco.es" tvg-logo="https://estaticos.tdt1.com/canales/logotelecinco.jpg" group-title="Reality Show'S Live" tvg-chno="5",Telecinco
-http://167.114.156.136:25461/INFINITV/ZX89NM22/203
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-logo="http://graph.facebook.com/tele5/picture?width=320&height=320",Telecincoᴴᴰ 🇪🇸
-http://xcm.budtv-ultra.com:25461/live/eventosiptv/mnyuHhAMk4zS/14911.ts
-#EXTINF:-1 group-title="Reality Show'S Live",[ES] TELECINCO HD
-http://supersonictv.live:8080/019534/410974/85861
-#EXTINF:-1 tvg-name="" tvg-id="" group-title="Reality Show'S Live" tvg-logo="", GF VIP
-http://144.217.72.24/mediasetextra/mono.m3u8
-#EXTINF:-1 tvg-name="" tvg-id="" group-title="Reality Show'S Live" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",BBB24ᴴᴰ 🇧🇷 
-http://voz.one:80/live/alexfnt/vTFBGKdUYq/254732.m3u8
-#EXTINF:-1 tvg-name="" tvg-id="" group-title="Reality Show'S Live" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/44/Logo_Big_Brother_Brasil.png",BBB24ᴴᴰ 🇧🇷 
-http://khtro2.com/live/69754975141604/526502448518/493844.ts
-#EXTINF:-1 tvg-id="" tvg-name="AL: Klan Kosova HD" tvg-logo="" group-title="Albania",AL: Klan Kosova HD
-http://premium-ks.vip:2082/live/Haxhi/fw5tFaRs3Ta9/80868.ts
-#EXTINF:-1 tvg-id="" tvg-name="AL: B Vip Kosova 1 ᴴᴰ" tvg-logo="" group-title="Reality Show's Live",AL: BB Vip Kosova 1
-http://premium-ks.vip:2082/live/Haxhi/fw5tFaRs3Ta9/80866.ts
-#EXTINF:-1 tvg-id="" tvg-name="AL: B Vip Kosova 2 ᴴᴰ" tvg-logo="" group-title="Reality Show's Live",AL: BB Vip Kosova 2
-http://premium-ks.vip:2082/live/Haxhi/fw5tFaRs3Ta9/80032.ts
-#EXTINF:-1 tvg-id="pink-plus" tvg-name="Pink Plus" tvg-logo="https://tvprofil.com/cdn/400x200/4/img/kanali-logo/PinkPlus.png" group-title="Pink",Pink Plus
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8751
-#EXTINF:-1 tvg-id="" tvg-name="Zadruga 1" tvg-logo="http://ikonice.zvjerka.com/ikonice/IKONICE%20KOJE%20NEDOSTAJU/PINK%20ZADRUGA.png" group-title="Pink",Zadruga 1
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8736
-#EXTINF:-1 tvg-id="" tvg-name="Zadruga 2" tvg-logo="http://ikonice.zvjerka.com/ikonice/IKONICE%20KOJE%20NEDOSTAJU/PINK%20ZADRUGA.png" group-title="Pink",Zadruga 2
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8737
-#EXTINF:-1 tvg-id="" tvg-name="Zadruga 3" tvg-logo="http://ikonice.zvjerka.com/ikonice/IKONICE%20KOJE%20NEDOSTAJU/PINK%20ZADRUGA.png" group-title="Pink",Zadruga 3
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8738
-#EXTINF:-1 tvg-id="" tvg-name="Zadruga 4" tvg-logo="http://ikonice.zvjerka.com/ikonice/IKONICE%20KOJE%20NEDOSTAJU/PINK%20ZADRUGA.png" group-title="Pink",Zadruga 4
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8739
-#EXTINF:-1 tvg-id="Top Channel HD" tvg-name="AL: Top Channel HD" tvg-logo="http://hs-iptv.net:88/images/ef36e05b9eefee782fff22376a2bebdf.png" group-title="Reality Show's Live",AL: Top Channel HD 1
-http://premium-ks.vip:2082/live/Haxhi/fw5tFaRs3Ta9/1401.ts
-##EXTINF:-1 tvg-id="Top Channel HD" tvg-name="AL: Top Channel HD" tvg-logo="http://static.iptv-epg.com/al/TopChannel.al.png" group-title="Reality Show's Live",AL: Top Channel HD 2
-http://premium-ks.vip:2082/live/Haxhi/fw5tFaRs3Ta9/17178.ts
-##EXTINF:-1 tvg-id="Top Channel HD" tvg-name="AL: Top Channel HD" tvg-logo="http://hs-iptv.net:88/images/ef36e05b9eefee782fff22376a2bebdf.png" group-title="Albania",AL: Top Channel HD 3
-http://premium-ks.vip:2082/live/muminiptv/FRQT2rUpXv@96521ffghjkkloj9654786321/1401.ts
-##EXTINF:-1 tvg-id="Top Channel HD" tvg-name="AL: Top Channel HD" tvg-logo="http://static.iptv-epg.com/al/TopChannel.al.png" group-title="Albania",AL: Top Channel HD 4
-http://premium-ks.vip:2082/live/muminiptv/FRQT2rUpXv@96521ffghjkkloj9654786321/17178.ts
-##EXTINF:-1 tvg-id="" tvg-name="Top Channel" tvg-logo="https://repo.ottshow.net/pikoni/konacno/albanija/topchannel.gif" group-title="Albania",AL: Top Channel HD 5
-http://ottshow.net:80/live/xplanet739fdh/n5nRtOasjk0askd0a/69457.ts
-#EXTINF:-1 tvg-id="tvireality.tv.vodafone.pt" group-title="Reality Show's Live" tvg-logo="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64f8a935d34e371fc0b75aed/",TVI REALITY
-https://video-auth6.iol.pt/live_tvi_reality/live_tvi_reality/edge_servers/tvireality-720_passthrough/chunks.m3u8
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/141621315-19d48d33-4056-4cd1-98bb-aa02ef330bc5.jpg",GRANDE FRATELLO 1 (VPN)
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live03-col.msf.cdn.mediaset.net/live/ch-b7/b7-clr.isml/manifest_hr.mpd
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/161234855-c2534e23-ece4-4522-a64f-7458d0b81235.jpg",GRANDE FRATELLO 2 (VPN)
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live03-col.msf.cdn.mediaset.net/live/ch-b8/b8-clr.isml/manifest_hr.mpd
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/161437008-47102c5b-a276-4ba1-9534-1cdc26500b30.jpg",GRANDE FRATELLO 3 (VPN)
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live03-col.msf.cdn.mediaset.net/live/ch-b9/b9-clr.isml/manifest_hr.mpd
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA - BACKUP
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live3.msf.cdn.mediaset.net/content/dash_d0_clr_vos/live/channel(kq)/manifest.mpd
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/08/162147028-be9e6411-6b5b-44d3-b135-e0109797cc09.jpg",GRANDE FRATELLO EXTRA - BACKUP
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live03-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/manifest.mpd
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/11/202629434-8966f8cd-169e-4290-ba01-6f097053d833.jpg",GRANDE FRATELLO PARTY
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live2-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(b1)/index.m3u8
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-id=""  tvg-logo="https://static2.mediasetplay.mediaset.it/mam/2023/09/11/202629434-8966f8cd-169e-4290-ba01-6f097053d833.jpg",GRANDE FRATELLO PARTY
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=
-https://live03-col.msf.cdn.mediaset.net/live/ch-b1/b1-clr.isml/manifest.mpd
-#EXTINF:-1 tvg-id="pink-reality" tvg-name="Pink Reality" tvg-logo="https://tvprofil.com/cdn/400x200/4/img/kanali-logo/pinkReality.png" group-title="Reality Show's Live",Farma Sérvia
-http://bntvs.com:2052/mojvps/svWEB7CXPT/8753
-#EXTINF:-1,Pink TV
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3
-http://strimer3.iptv-max.com:89/live?channelId=12&uid=16869&deviceMac=00:1A:79:40:93:C5&deviceSn=d603a6f342deb&token=513787671443
-#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 1 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3
-http://strimer1.iptv-max.com:91/live?channelId=1343&uid=16869&deviceMac=00:1A:79:40:93:C5&deviceSn=d603a6f342deb&token=513787671443
-#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 2 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3
-http://strimer5.ddstream.info:7097/live?channelId=1601&uid=16869&deviceMac=00:1A:79:40:93:C5&deviceSn=d603a6f342deb&token=513787671443
-#EXTINF:-1 tvg-id="" tvg-name="SR: PINK ZADRUGA 3 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3
-http://strimer3.iptv-max.com:99/live?channelId=724&uid=16869&deviceMac=00:1A:79:40:93:C5&deviceSn=d603a6f342deb&token=513787671443
-#EXTINF:-1 tvg-id="" tvg-name="SRB: PINK ZADRUGA 4 - 24/7" tvg-logo="http://smartntv.pro/logokanali/pink/zadruga1.png" group-title="Reality Show's Live",ZADRUGA 4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3
-http://strimer3.iptv-max.com:109/live?channelId=727&uid=16869&deviceMac=00:1A:79:40:93:C5&deviceSn=d603a6f342deb&token=513787671443
-#EXTINF:-1 group-title="Reality Show's Live", BIG BROTHER AUSTRALIA (VPN)
-https://csm-e-n7aus-eb.tls1.yospace.com/csm/extlive/sevenprd01,CAS07.m3u8
-#EXTINF:-1 group-title="Reality Show's Live",WHO WANT BE A MULHER DO FAZENDEIRO AUSTRALIA (VPN)
-https://csm-e-n7aus-eb.tls1.yospace.com/csm/extlive/sevenprd01,CAS14.m3u8
-#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://raw.githubusercontent.com/RokuIL/Live-From-Israel/master/Logos/Big%20Brother.png",BIG BROTHER ISRAEL (VPN)
-https://d2lckchr9cxrss.cloudfront.net/out/v1/c73af7694cce4767888c08a7534b503c/index.m3u8
-#EXTINF:-1 group-title="Reality Show's Live" tvg-logo="https://raw.githubusercontent.com/RokuIL/Live-From-Israel/master/Logos/Big%20Brother.png",BIG BROTHER ISRAEL (VPN) 2
-https://cdnapisec.kaltura.com/p/2748741/sp/2748741/playManifest/entryId/1_6fr5xbw2/deliveryProfileId/672/protocol/https/format/applehttp/index_3.m3u8
-#EXTM3U
-#EXTINF:-1 tvg-id="MilenioTelevision.mx",Milenio Televisión (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/610178c7db32a4112d994650.m3u8
-#EXTINF:-1 tvg-id="MultimediosBajio.mx",Multimedios Bajío (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5d4b0fec848918070128c8cb.m3u8
-#EXTINF:-1 tvg-id="MultimediosCDMX.mx",Multimedios CDMX (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8
-#EXTINF:-1 tvg-id="MultimediosCiudadJuarez.mx",Multimedios Ciudad Juárez (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5d9e440d675235586a92be7f.m3u8
-#EXTINF:-1 tvg-id="MultimediosGuadalajara.mx",Multimedios Guadalajara (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5c54d38ca392a5119bb0aa0d.m3u8
-#EXTINF:-1 tvg-id="MultimediosLaguna.mx",Multimedios Laguna (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/57bf686a61ff39e1085d43e1.m3u8
-#EXTINF:-1 tvg-id="MultimediosMonterrey.mx",Multimedios Monterrey (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
-#EXTINF:-1 tvg-id="MultimediosPuebla.mx",Multimedios Puebla (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5d56ed29c92dd106ff01543b.m3u8
-#EXTINF:-1 tvg-id="MultimediosSaltillo.mx",Multimedios Saltillo (720p) [Not 24/7]
-https://mdstrm.com/live-stream-playlist/5d5d51a4e9a40e25f4a0332c.m3u8
-#EXTM3U x-tvg-url="https://github.com/botallen/epg/releases/download/latest/epg.xml"
-#########################################################################
-#      ____            _           _   __  __                           #
-#     |  _ \ _ __ ___ (_) ___  ___| |_|  \/  | ___   ___  ___  ___      #
-#     | |_) | '__/ _ \| |/ _ \/ __| __| |\/| |/ _ \ / _ \/ __|/ _ \     #
-#     |  __/| | | (_) | |  __/ (__| |_| |  | | (_) | (_) \__ \  __/     #
-#     |_|   |_|  \___// |\___|\___|\__|_|  |_|\___/ \___/|___/\___|     #
-#                   |__/                                                #
-#                                  >> https://github.com/vijay6672      #
-#########################################################################
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLT5SVvlAQfKftqWVzeOs-8vyiy4HQaeK_57h0f_-A=s48-c-k-c0x00ffffff-no-rj" tvg-id="", The Global Prayer Room
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437599/ei/_3aLZoLADOa0sfIP796osAc/ip/52.234.40.17/id/0uaZ30NEHLU.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAYsXMVPw9sBB60pK5VvPzLNV4L4yOy8SQ6ofR_Uv9p63tDXetDhcPL3S_lk/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgfLd2Vi8Rd6LRpTVZ-sr3z4eN6_mdJ8u6JpxwQm2t-3QCIAaM_SHUXHb2bcWr5mWlhQlutMcSvy6bAm0rAVa6EkbV/file/index.m3u8
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTzpN8YCpuGzvSsggwQitoHX_EwEvUd05pmfEer=s48-c-k-c0x00ffffff-no-rj-mo" tvg-id="", REVERE - 24/7 Worship
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437599/ei/_3aLZvitJYuxsfIP4v6luAE/ip/52.234.40.17/id/Btabs0sLQmc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAU38oMtBCcULiJqkXWEH591KqB1lQ1QyJshi9pcMcHnEDZDkDBBAVrXP4ss/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhALE6WODpSXnrcRC-U5DdHTqrgQVG_g274kj2pfahII1dAiEApRChojXdcTni1ehY2SFKF4CdyBkiWtyEe3KfOO6Ng4E%3D/file/index.m3u8
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSW13YN_olchdGSjC59K4VQiZHPO0rq6PlCCWZLTA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", RIT TV
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRbFUrNuqtwnOu-x1dmYehCHn_TzFzix2MCNu1F=s48-c-k-c0x00ffffff-no-rj" tvg-id="", REDE BOAS NOVAS
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRbFUrNuqtwnOu-x1dmYehCHn_TzFzix2MCNu1F=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TV VERDADE
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/BKuSCC60GobYrgO3lFbWqxLsrPbV6HuKR5e7Ig9cEeCBQPWuhf2B_Yvdf4DorB_1nY1s75DjLA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Aparecida do Norte
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTcmInFx-BRSCvIU5N-DYDj2DUHLX5nF9OKA8QLtA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Vatican News
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437601/ei/AXeLZrr8Ns-usfIPzdSrsA4/ip/52.234.40.17/id/M_W3ppj-Umg.5/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bATc6JYM6iGQY38qYZGQC-tm5ZxAZ2wHe8rPsazN5DAoK7VXGZ0ZcJ0nTXpU/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhANHW43SHERSCBiKXHQVp4HVK6plVqpUZVpFkcT7tKEQRAiEA4zeROpuj4VYoNuoP-Vlz4-ROkVNEzbCeTFXo8aw5_ew%3D/file/index.m3u8
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQeD4dlDV_dBGnZhUR5QG5S1y_MQBrmjagMcjjVJg=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Santuário de Fátima
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437602/ei/AneLZuXiF4SZsfIP88WugAQ/ip/52.234.40.17/id/WkhCfPPgqWc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181253/txs/51181249%2C51181250%2C51181251%2C51181252%2C51181253%2C51181254/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bARxzugAYetbk96B64uEw4O2pmRJV1CZ0BkLmaZfqIbqtZCKAgjRbDgNqrLw/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAIhEJKCsypYm6WVlwQH1A-h7LAG-mXGqTcQg7i4hnWxXAiEA8wefKOLns4Duo_vlFp23BYUSmq-NsyGktffzLxvTq18%3D/file/index.m3u8
-#EXTINF:-1 group-title="RELIGIOSO" tvg-logo="https://yt3.ggpht.com/WSq_VxcqTx-9jF4UrPdqKUJk0dx5l94JGAzMPBLuinbzrzntRaWvra0u82y1HYAW_gOMpQQjDjA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Santuário Notre-Dame de Lourdes
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437602/ei/AneLZpmINdGpsfIPwdaacA/ip/52.234.40.17/id/smCojiGkYeg.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51198107/txs/51198104%2C51198105%2C51198106%2C51198107%2C51198108/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bATQibGOToQZt8mlvYrmBEjm0mti7U2AXLLz1-ysSSDzueUhWmJbj5jhfefg/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgDwNbzK17djUmzYQNzM2prcNSeemhz9d7bmEPFvz3zu8CIQC7QCTvWW9n0MgE7upbOa_K_m7iviOe_lWGxMQgdAdD6A%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="TV ABERTA" tvg-logo="https://yt3.ggpht.com/6BaRqJWUjuo7U91NMsuY0aH0vXzgWsUaKGFvvME1SYK8v9aBCRcWq0wSJ10mtLqFtltG08q5=s88-c-k-c0x00ffffff-no-rj" tvg-id="", TV A Crítica
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="TV ABERTA" tvg-logo="https://yt3.ggpht.com/ceeFdb0sjuvZduGwQBGO_TGn-OxBz-XjZzEROGB7fYm2oevikEZ2ljxmfTOUN-qPLAyapO0iq_g=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Diário TV Teresópolis
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="NEWS WORLD" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTxhMhXkfzEQeuUOmBGYbiUwQx05-jYqfs97ARu=s48-c-k-c0x00ffffff-no-rj" tvg-id="", BM&C NEWS
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="NEWS WORLD" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRmHywtWtGPiLXqxLQsy_DH-z9qdtZXngz_R2aZ5A=s48-c-k-c0x00ffffff-no-rj" tvg-id="", JOVEM PAN NEWS
-https://archive.org/download/blink182documentary2004/blink182lostdocumentary.ia.mp4
-#EXTINF:-1 group-title="NEWS WORLD" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQO8AU5ZfG6zOWepfSOd_gGSWD7nzE7q43Po_Q-Qg=s48-c-k-c0x00ffffff-no-rj" tvg-id="", RECORD NEWS
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437606/ei/BneLZtj_E8SKsfIPnqOY-AE/ip/52.234.40.17/id/G7j9YqVcs5A.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAZLZ1P8ECliWpp_hMQ4gxNGYEx72Ia6LudAJDLa1BtF4saRqMhxxSk3aAWA/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgcjZFZFnus9AuXEU50zIhCKKSX-Gco35zbikBxKdC4gMCICCQs8-qxRfg5XRFp1K2I522IujyGjhLl8PjTG-edyjn/file/index.m3u8
-#EXTINF:-1 group-title="NEWS WORLD" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQgXwqHfXaMKq30loyBjY-Cny6Ymu-YCqhn5tLbOQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CNN BRASIL
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437606/ei/BneLZo-PNPm2sfIPod6XqAc/ip/52.234.40.17/id/_BhR11WB_GU.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAaPLnaD8bwkzhWCzhY-3ZTRWEvltZ7fze8JhMMNry482BGjN4eSC8gPdizg/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAIe8rYaMCW8R9KP3I5DWqibhBg6vKJ76LJyoXLI7kP6KAiAilP-YESyXDjlMzeux5Y9rteB8tNZvB0b_iXxzinJtdQ%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="CNN's" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLS-KBRCkXSVRL6TwhcSIZExe3dbrocmFN2goR0Ceww=s88-c-k-c0x00ffffff-no-rj" tvg-id="", CNN TURK
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437607/ei/B3eLZun4Ea7bsfIP0sOioAE/ip/52.234.40.17/id/Ue9SnIpwNB4.5/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/gcr/us/spc/NO7bARVUGMS2ff_iA5TgH9DO_3ch-P53qCATkWKC0KR8OcahWf_MqHz_b3KjJjk/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cgcr%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgKcKS2WWQZZ7dQC3UVgmbHB7qF3LOB03g9QrSUF0f_yACIDCGYQ58fSkMamdOgpvSi4AjLHyZKUBDrQYFzRdrEJuW/file/index.m3u8
-#EXTM3U
-#EXTM3U
-﻿#EXTM3U x-tvg-url="https://github.com/luisms123/tdt/raw/master/guiaxmltv.xml.gz"
-###########################################################################
-#                                  >> https://github.com/cqcbrasil        #
-###########################################################################
-#EXTM3U
-#EXTM3U url-tvg="https://www.bevy.be/bevyfiles/argentina.xml"
-#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (Av. 3 y 104)
-http://cam104y3.gesell.com.ar/playlist.m3u8
-#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (Buenos Aires y Playa)
-http://cambsasyplaya.gesell.com.ar/playlist.m3u8
-#EXTINF:0 tvg-id="ext" group-title="Locales",Camaras de Villa Gesell (La Pinocha)
-http://camlapinocha.gesell.com.ar/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/xdsxNVXq/609-Canal-Ciudad.png" group-title="Argentina", CANAL DE LA CIUDAD
-https://ythlsgo.onrender.com/channel/UCOV_Vx1baZJY9Tfvgm-UI3w.m3u8
-#EXTINF:-1 tvg-id="Telemax.ar" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/telemax.png" group-title="Argentina", TELEMAX  26.3
-https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/0/playlist.m3u8
-#EXTINF:-1 tvg-id="Pakapaka.ar" tvg-country="AR" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/pakapaka.png" group-title="Argentina", PAKA PAKA  22.2
-https://538d0bde28ccf.streamlock.net/live-cont.ar/pakapaka/playlist.m3u8
-#EXTINF:-1 tvg-id="Cinear.ar" tvg-country="AR" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/cine-ar.png" group-title="Argentina", CINEAR  22.4
-https://538d0bde28ccf.streamlock.net/live-cont.ar/cinear/playlist.m3u8
-#EXTINF:-1 tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/aunar.png" group-title="Argentina", AUNAR  22.3
-https://538d0bde28ccf.streamlock.net/live-cont.ar/mirador/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://www.construirtv.com/wp-content/uploads/2020/03/Logo_300.png" group-title="Argentina", CONSTRUIR TV
-https://bvsat02.cdn.rcs.net.ar/mnp/construiriptv/output.mpd
-#EXTINF:-1 tvg-id="DeporTV.ar" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/deportv.png" group-title="Argentina", DEPORTV 24.1
-https://538d0bde28ccf.streamlock.net/live-cont.ar/deportv/playlist.m3u8
-#EXTINF:-1 tvg-id="TyCSports.ar" tvg-logo="https://pbs.twimg.com/profile_images/1571906658581856258/_Yrzet08_400x400.jpg" group-title="Argentina", TyC SPORTS 
-https://d3055hobuue3je.cloudfront.net/out/v1/188a8f3baf914a35868453bd5d0b0fd2/index_4.m3u8
-#EXTINF:-1 tvg-id="ElGarageTV.ar" tvg-logo="https://lh3.googleusercontent.com/-2gN4wEv_qPI/XjtKDwMuIQI/AAAAAAAAvrY/VTtJwZALBykDRnM8ia0Xbqi0FbREvdrZACK8BGAsYHg/s0/2020-02-05.png" group-title="Argentina", GARAGE TV
-https://stream1.sersat.com/hls/garagetv.m3u8
-#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",America TV | Argentina - TDA 2.1
-#EXTVLCOPT:http-referrer=https://vmf.edge-apps.net
-https://prepublish.f.qaotic.net/a07/americahls-100056/Playlist.m3u8
-#EXTINF:-1 tvg-id="AmericaTV.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/AMERICA.png" group-title="Argentina",America TV | Argentina - TDA 2.1
-#EXTVLCOPT:http-referrer=https://vmf.edge-apps.net
-https://prepublish.f.qaotic.net/a07/americahls-100056/Playlist.m3u8
-#EXTINF:-1 tvg-id="AmericaTV.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/AMERICA.png" group-title="Argentina",America TV | Argentina - TDA 2.1
-https://g1.proy-slo.transport.edge-access.net:443/a07/ngrp:americahls-100056_all/playlist_720p.m3u8
-#EXTINF:-1 tvg-id="AmericaTV.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/AMERICA.png" group-title="Argentina",America TV | Argentina - TDA 2.1
-https://github.com/mortal251/archivos_m3u8/raw/main/america_hls.m3u8
-#EXTINF:-1 tvg-logo="https://scontent.fepa11-1.fna.fbcdn.net/v/t1.6435-9/206638151_10223169123710059_3666810289391430657_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=825194&_nc_eui2=AeGxugJ54qa7RhgKBnLTrHOu14OonvQq8lrXg6ie9CryWkCQzaYyrufVmZGkiprZVM0&_nc_ohc=dbLCQPiMFxEAX9X0jrT&_nc_ht=scontent.fepa11-1.fna&oh=afeef92e5377cb7720df7b2f4afc60c8&oe=6127F95F" group-title="Argentina",SSIPTV ARG TV - TDA 6.2
-http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5df265697ec3510009df1ef0/master.m3u8?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientTime=0&deviceDNT=0&deviceId=bff1d530-6307-11eb-b3fa-019cb96f121b&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=ec2383fd-6e28-4df5-9d1c-b66eee7000c&userId=&serverSideAds=true
-#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://i.imgur.com/04nIdpc.png" group-title="Argentina",Television Publica | Argentina - TDA 7.1
-https://cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
-#EXTINF:-1 tvg-id="Television Publica" tvg-name="Television Publica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/0a/Logo_Televisi%C3%B3n_P%C3%BAblica_Argentina.png" group-title="Argentina",TV PUBLICA - SINAL ORIGINAL 2 - TDA 7.1
-https://s@cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
-#EXTINF:-1 tvg-id="TVPublica.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/TV_PUBLICA.jpg" group-title="Argentina",TV PUBLICA  
-https://g1.vxral-hor.transport.edge-access.net/b16/ngrp:c7_vivo01_dai_source-20001_all/c7_vivo01_dai_source-20001_720p.m3u8
-#EXTINF:-1 tvg-id="TVPublica.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/TV_PUBLICA.jpg" group-title="Argentina",TV PUBLICA  
-https://cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_1080p.m3u8
-#EXTINF:-1 tvg-id="TVPublica.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/TV_PUBLICA.jpg" group-title="Argentina",TV PUBLICA  
-https://cntlnk-main-edge-access.secure.footprint.net/entrypoint/c7_vivo01_dai_source-20001_all_720p.m3u8
-#EXTINF:-1 tvg-logo="https://i2.paste.pics/35c791e364c3adb7c6c2ef98504041a0.png" group-title="Argentina",TELECOLORMUX - TDA 8.1
-https://live.obslivestream.com/telecolormux/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="Telefe.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/telefe.jpg" group-title="Argentina",Telefe | Argentina - TDA 11.1
-https://bvsat02.cdn.rcs.net.ar/mnp/telefe/output.mpd
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-logo="https://telefe-static.akamaized.net/media/18154476/logo-telefe-twitter.png" group-title="Argentina", Telefe (VPN) - TDA 11.1
-https://mitelefe.com/Api/Videos/GetSourceUrl/694564/0/HLS
-#EXTINF:-1 tvg-id="Telefe" tvg-name="Telefe" tvg-country="AR" tvg-logo="http://x.playerlatino.live/telefe.png" group-title="Argentina", Telefe (VPN) 2 - TDA 11.1
-https://telefe.com/Api/Videos/GetSourceUrl/694564/0/HLS?.m3u8
-#EXTINF:-1 tvg-id="13 de Argentina" tvg-name="13 de Argentina" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/45/Eltrece_logotipo_2018.png" group-title="Argentina", El Trece - TDA 13.1
-https://livetrx01.vodgc.net/eltrecetv/index.m3u8
-#EXTINF:-1 tvg-id="ElTrece.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/CANAL_13.jpg" group-title="Argentina", CANAL 13 33.1 
-https://live-01-02-eltrece.vodgc.net:443/eltrecetv/tracks-v2a1/mono.m3u8
-#EXTINF:-1 tvg-id="ElTrece.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/CANAL_13.jpg" group-title="Argentina", CANAL 13 33.1 
-https://live-01-02-eltrece.vodgc.net/eltrecetv_noti/index.m3u8
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=5179017f49326d14af0a9ceec831aee6:09b4a463b029ebc28a288bed2da70a76
-#EXTINF:-1 tvg-chno="113" tvg-id="ElTrece.ar" tvg-logo="https://github.com/masterentertainment/listas/blob/main/logos/EL13.png?raw=true" group-title="Argentina", Eltrece
-https://cdn.cvattv.com.ar/live/c3eds/ArtearHD/SA_Live_dash_enc/ArtearHD.mpd
-#EXTINF:-1 tvg-id="El Nueve AR" tvg-name="El Nueve AR" tvg-country="AR" tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/f/f7/Canal-nueve-ar2017.png" group-title="Argentina", CANAL 9 35.1 - TDA 35.1
-http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184380
-#EXTINF:-1 tvg-id="ElNueve.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/CANAL_9.jpg" group-title="Argentina", CANAL 9  35.1
-https://bvsat02.cdn.rcs.net.ar/mnp/elnueve/output.mpd
-#EXTINF:-1 tvg-id="ElNueve.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/CANAL_9.jpg" group-title="Argentina", CANAL 9  35.1 
-http://lobo-tv.live:8080/Rodolfo01/Rodolfo01/210850
-#EXTINF:-1 tvg-logo="https://image.winudf.com/v2/image1/Y29tLmExMjNmcmVlYXBwcy5mcmVlLmFwcDVkNWVjMWY4ODliOThfaWNvbl8xNTY3NjE5OTcxXzAxNw/icon.png?w=170&fakeurl=1" group-title="Argentina",CANAL 4 TELEAIRE SAN MARTIN - TDA 21.1
-https://stmvideo2.livecastv.com/canal4/canal4/playlist.m3u8
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=745e7abcc90d41ab706b2ac2f4371da3:50acd9d19d1361cb4a8a13a867bdc352
-#EXTINF:-1 tvg-id="CronicaTV.ar" tvg-name="CRNHD" tvg-logo="https://s3.us-east-1.amazonaws.com/forofms.na/monthly_2024_01/large.CrnicaTV(Recreacin).png.7871999d5544935954992af8692d67af.png" group-title="Argentina",Cronica TV | Argentina - TDA 22.1
-https://chromecast.cvattv.com.ar/live/c7eds/CronicaTV/SA_Live_dash_enc_2A/CronicaTV.mpd
-#EXTINF:-1 tvg-name="Cronica TV" tvg-name="Cronica TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16258_dark_360w_270h.png" group-title="Argentina",Cronica TV | Argentina - TDA 22.1
-http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184396
-#EXTINF:-1 tvg-id="America TV Argentina" tvg-name="America TV Argentina" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/america_tv_argentina.png" group-title="Argentina",MILENIO TV
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52487.ts
-#EXTINF:-1 tvg-id="Encuentro.ar" tvg-country="AR" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/encuentro.png" group-title="Argentina",CANAL ENCUENTRO 22.1
-https://bvsat02.cdn.rcs.net.ar/mnp/encuentro/output.mpd
-#EXTINF:-1 tvg-id="Encuentro.ar" tvg-country="AR" tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/encuentro.png" group-title="Argentina", CANAL ENCUENTRO 22.1
-https://538d0bde28ccf.streamlock.net/live-cont.ar/encuentro/playlist.m3u8
-#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodistica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg/260px-Informaci%C3%B3n_Period%C3%ADstica_IP_Logo.svg.png" group-title="Argentina",Informacion Periodistica | Argentina - TDA 24.5
-https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=4499968.m3u8
-#EXTINF:-1 tvg-id="IP" tvg-name="Informacion Periodística" tvg-logo="https://i.imgur.com/SQSu9M5.png" group-title="Argentina",Informacion Periodística | Argentina - TDA 24.5
-https://octubre-live.cdn.vustreams.com/live/ip/live.isml/live-audio_1=128000-video=2800000.m3u8
-#EXTINF:-1 tvg-id="IP" tvg-name="IP" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQ4CbRDh4Wgxt0o_pw9V-kw9Vz6T0Re2Q_RD62jp7cZMO0uWvSKSUN6sZ2vjYcbn5fAs&usqp=CAU" group-title="Argentina",IP | Argentina - TDA 24.5
-https://d1nmqgphjn0y4.cloudfront.net/live/ip/live.isml/live-audio_1=128000-video=729984.m3u8
-#EXTINF:-1 tvg-name="TN" tvg-id="NTN24" tvg-logo="http://www.radiosargentina.com.ar/png/VI----TN.png" group-title="Argentina",TN Todo Noticias - TDA 20.1
-http://tutv.online:8080/f7g9h8b7/j3s7x7q8/184400
-#EXTINF:-1 tvg-logo="http://tvabierta.weebly.com/uploads/5/1/3/4/51344345/unife.png" group-title="Argentina",UNIFE 25.1 - TDA 25.1
-https://dacastmmd.mmdlive.lldns.net/dacastmmd/f512804f6e6641e38106a47f681cfffa/chunklist_b4628000.m3u8?p=79&s=1694000298&e=1694000418&h=39bea3dca2e5ba6c6e0fcda0b14067b8
-#EXTINF:-1 tvg-id="C5N" tvg-name="C5N" tvg-logo="https://cdn.mitvstatic.com/channels/ar_c5n_m.png" group-title="Argentina",C5N | Argentina - TDA 26.1
-https://ythls.onrender.com/channel/UCFgk2Q2mVO1BklRQhSv6p0w.m3u8
-#EXTINF:-1 tvg-id="A24" tvg-name="America 24" tvg-logo="https://cdn.mitvstatic.com/channels/ar_america-24_m.png" group-title="Argentina",America 24 | Argentina - TDA 27.1
-https://ythls.onrender.com/channel/UCR9120YBAqMfntqgRTKmkjQ.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Net_TV_logo.png/120px-Net_TV_logo.png" group-title="Argentina",NET TV 27.2 - TDA 27.2
-https://unlimited1-us.dps.live/nettv/nettv.smil/nettv/livestream1/playlist.m3u8
-#EXTINF:-1 tvg-id="NetTV.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/NET_TV.jpg" group-title="Argentina",NET TV 27.2 - TDA 27.2
-https://unlimited1-buenosaires.dps.live/nettv/nettv.smil/nettv/livestream1/chunks.m3u8
-#EXTINF:-1 tvg-id="NetTV.ar" tvg-country="AR" tvg-logo="https://raw.githubusercontent.com/mortal251/logos/main/NET_TV.jpg" group-title="Argentina",NET TV 27.2 - TDA 27.2
-https://unlimited1-buenosaires.dps.live/nettv/nettv.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://cmmusica.com.ar/images/logo.png" group-title="Argentina",CM TV | Argentina - TDA 33.1
-https://g5.proy-hor.transport.edge-access.net/a09/ngrp:CM_CanaldelaMusica-100044_all/CM_CanaldelaMusica-100044_540p.m3u8
-#EXTINF:-1 tvg-id="Glitz" tvg-name="Glitz" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Glitzlogo.png" group-title="Argentina",Glitz | Argentina
-http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52509.ts
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/gCklb7Bo3XDM4aS_a1-Ta91LsGZtkGlb1IMQwLri3ureUeABTKqXYr-LZGET-Or4J_U4TI_uRq4=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TV Pública
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437359/ei/D3aLZrLmCfaIkucPj5muqAg/ip/40.79.247.101/id/Gdoa0wH0TOw.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181254/txs/51181249%2C51181250%2C51181251%2C51181252%2C51181253%2C51181254/hfr/1/maudio/1/spc/NO7bActnsstAYisqGVuURPu-6uEy4EBAxUBWpbYo7ossOI3fD1ldKTC0Fm-LvGY/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/LIVE/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAKaHXvliDEck6R_H1mV5XK2eOtbfQ_72CY103eWrqB0oAiEA0jAONmU5b_4emh7mctlV6mNCOaInGd9l8BG6Dp2hev8%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/gCklb7Bo3XDM4aS_a1-Ta91LsGZtkGlb1IMQwLri3ureUeABTKqXYr-LZGET-Or4J_U4TI_uRq4=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Televisión Pública 2
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437359/ei/D3aLZvvNJ6KJkucPh62G4AY/ip/40.79.247.101/id/Gdoa0wH0TOw.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/maudio/1/spc/NO7bAZVWR8OSEyvx_rGtgbLtwy3xiLZm-AckGUKXvGwdv8IE273wnynKty_8xv8/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/LIVE/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgHTvPjwfPBOShOhBLsxN6qyUkm9O4Kb795PhdaLbFcRYCIBwJYb1azZFRNwVyP1Eo5iFMhbhsMjFE2eOhCFLUDxsC/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQylk1Pg1iz872BeKPel5iEkdEGbXFV4-_c2x0n=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 12 Televisión Pública Regional
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437360/ei/EHaLZousBcyykucP7-yh6A8/ip/40.79.247.101/id/XgqbWCsSXGY.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bATPK_sTQ70jb4UXeK3EOUhXmuuTLFYDPyA05WRXIhl7mcEVZLDV3GWCreaM/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgHqCD0wPlv_MVniF2d1GSCeXPEZGVfkZoF1SckNmqtoYCIQD9qtuk3808yBdhmbLpKX57JXQpe2I-o3BMSG5qHNvRkw%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/i213N_VQVyD9cIhh1zRP9OFW60ege6nchMkw4SzEiy6YznGacsKto8GKsFoye12LcV4pskI__w=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Crónica TV
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437360/ei/EHaLZtffJMOLkucP2dKDqAY/ip/40.79.247.101/id/avly0uwZzOE.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181297/txs/51181296%2C51181297%2C51181298/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAXQhSwNoxuF44Cy72ENqTgU8l8TtA0B_HmMXgOtvQJyD2_FHhVkwUipLdgY/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAKunXd-SIFgNTkMUwdsrn9lDIFTYSYdp36erUpqS_id6AiEAlQh-08f03D6o9aBV-aoQgh771txx-r88_B_tvbcYVfU%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTqGg2bWg02R5un1pFAeuYDMGAVCmna52i__wapvw=s88-c-k-c0x00ffffff-no-rj" tvg-id="", C5N
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437361/ei/EXaLZszWB6K2kucP6uimgAw/ip/40.79.247.101/id/Hy4UCfsE6Yk.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bASP8TWqnbTWzMuizWJ75WrbAhBybfy4q0VMl79pcRyJfSq1gMUASDX6yIjA/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgPfGg_02faMlN3FYkMnvlLjN1eP_hkzQxLxknOj-j-yYCICnLJVRpTVi6FKjHLAWIL8pI-BbGm_7SqFcFolB5EDgf/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://i.ytimg.com/vi/zcWXboTnous/hqdefault_live.jpg" tvg-id="", América TV
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437361/ei/EXaLZufAJZy2kucP0fuMwAk/ip/40.79.247.101/id/zcWXboTnous.3/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/gcr/us/spc/NO7bAYX3wTRWvrinPU7gy0Cv23jB4nXC5aqUMHsCL83KV1RFMzT0RzWXcfBvKC4/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cgcr%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAM92OYBKY81IjCoFzEh7croBF4aAL5l2duXHF3YcxLhhAiABeZaOoNAsieaQzE2veLqNdG_DSolqjF5GgIknVCGBew%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSYzA3huV-HI91MDWQCaz6y5IjfDpj8sQTqNHLSmg=s68-c-k-c0x00ffffff-no-rj" tvg-id="", LN+
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437362/ei/EXaLZr6YPL-AkucPxPiQ6AY/ip/40.79.247.101/id/ocFG3yor--M.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bATSp-7pZeQGnT3l0bSrwN22iBmH3tC1xU9TxWnkIXVZn6NhlSovAvHx5ZMw/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgVjOGcXDIdEx95IyrHigovA-c8dMFa3MAfsqPXD7LR4YCIEp1fGaeY4WT_UdAcM14ES0rvS6czm5SOUjGdBb47kp6/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLT_2vc9G9uQ63H-T7ju-WzsmqbBPyXTw4l-irVbaA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE CÓRDOBA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRJLMbep2bJrLLuIAyi6-TXc3qnQCUXLbztYkoo=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE ROSARIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437363/ei/E3aLZp3DG5uIkucPqaOvEA/ip/40.79.247.101/id/xRX_MjXN3yM.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51214391/txs/51214391%2C51214392%2C51214393%2C51214394/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAczXiGGtQ9CVOhQLoXhW0OeQdjS44hzTEuPXZ5uJKNTfCrTYNBYwhiku89s/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAKHZvJIYahyHccWPZUuZQDV4xWres81TEefcC8MDZCiIAiBNiXe8KER9rNIXs0LozVpqUjYgIFEyDI1aI5cr5GQKaA%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTQ0CHvwUkhFXB2UyejrJl0KVeBjhtrORfIweTQXg=s88-c-k-c0x00ffffff-no-rj" tvg-id="", TELEFE SALTA
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437363/ei/E3aLZp3PNoe3kucP6eaRiAg/ip/40.79.247.101/id/u_4sib115qg.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181297/txs/51181296%2C51181297%2C51181298/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bASdoqa312GIaKVRWlBGfkFOUet-M85ehLNGca3-dxMPTrevExpaGxeJ2AOg/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgOUweGubQ8oXn4pbwaxfJMmE-SKI4CGbqzQZNHElrRMoCIGrVzAWWOvDMvUZ6CO1vL6GEOMooC54dyYBaIpDpwLC6/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQaYsAXWJNpiduF7CfZckAt76XcPWwTeM4qkKiI=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Informacion Periodística
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRVONiJPqnYI_ETrMgVqqBLCerU8RXnRRp-xF79LA=s88-c-k-c0x00ffffff-no-rj" tvg-id="", Todo Noticias
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437365/ei/FXaLZpaVDb6CkucPjqyb0Ac/ip/40.79.247.101/id/cb12KmMMDJA.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAefUAwLVVeNaMk7_Uh6aCMC0oMiB9J4--7qAVYKkd5E4lLS5qPn3Le9DXIA/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAML0897aO_Z5dIQWQ33jcC_B_c9ejB_6XCtAlNA9XOzaAiEA-CQrB2GvwZ36RmoFPTx8kSs7O3p_-SdxGd4NYkVfBxg%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSYU51c8SbrkWZeNBRMFeCnGv0YXPpXuEGBNq-X5g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal Encuentro
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/8H8tnhLLSm3kDuxUgOOqeiV3zsdo4UmaSQEsDDBTUbAI6GbJX_O54XXSQryos1vY9hcjqSfQNw=s48-c-k-c0x00ffffff-no-rj" tvg-id="", TEC TV
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRJ0_-IzGm_c5e-Kn5iNrIrba2th4gJsjIt-JHSXg=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Hipódromo de Palermo
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437367/ei/F3aLZqT4FviAkucP2sC_gAc/ip/40.79.247.101/id/WezniCsAinc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAUGrkazlH8YsIq6ZOV9WJcmdEkN4RBbW-8jAvnfu5_4REfLcby6tRGib1B4/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgMHuCRiVs5mceWsnvI5-HKeew1NaWWNBmZnsVlQplKqwCIGcCkVRX7ghrr2PlIOLMNe-EUN90GYZRsb4mPKt29ruJ/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/Ehgzljg8T8lsiCG4M6CjOp-G1P7nizvlRKNaDd_rqEnAYn3nG5jbNHXQ7ljcjvDvXjojGC6Lyw=s88-c-k-c0x00ffffff-no-rj" tvg-id="", A24
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437367/ei/F3aLZrmEL8SHkucP9aGhuAc/ip/40.79.247.101/id/QGpHLgRnrx4.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAejb_cHfPvCgMsHNYCyFkSm6s51QWyw5dDvmdf8YRIsjTPIcV6c3TD5VAWM/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgMPIWOC-ILjDfPGSHNQyAFtExL_aOc7c70ebaK4X0lVICIQDeICF7JX9MltFuabctQ147fDU3FOgX-7TlGP2dqMB27w%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/kg5vrdz7shjKha3N3I7ed5MhzGv3_LwVfNj1vtZfW9OFSGDArcvMD0wmtYhq9yLkkVuRCcuK6g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 7 Mendoza AR
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437368/ei/GHaLZqTtDOO1kucPtuW5oAQ/ip/40.79.247.101/id/Vh8xmLBJtR8.210/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/gcr/us/spc/NO7bAYd3xl9hdltmP22fmO0IWjRjtwRph6iS3Z-B2bkCzweceR-u4jQHWfhKOEU/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cgcr%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgL-0ALpGeRR8lXSO8s5603lGBeDDOid6E_6azrTAkErACIQCVC3UG_M8eP9bg_N7ZivRfQTCo8r-VVfAW5LUIPsXRmg%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/kg5vrdz7shjKha3N3I7ed5MhzGv3_LwVfNj1vtZfW9OFSGDArcvMD0wmtYhq9yLkkVuRCcuK6g=s88-c-k-c0x00ffffff-no-rj" tvg-id="", El Siete TV (AFILIADA AMERICA)
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437368/ei/GHaLZveHLfOHkucPmtiruA0/ip/40.79.247.101/id/Vh8xmLBJtR8.210/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/gcr/us/spc/NO7bARURSfoyTeA729ffvwk_x0lj2BLpCro5zPhxoKprD0VdxER5pxR-IXi5Bf8/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cgcr%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAIH7N_cmqrfRMXUTT_6-aLIUqzBIDytEKMmJOpwYQLIGAiEArpG5WNAaHN-p8kbIOPgpJlYLybKXl_JbVa6R8OyegPs%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTCjq3swUGlbn-gss0oqSC6XZ1o__OLXOraCqJzJQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 8 San Juan (AFILIADA AMERICA)
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437369/ei/GXaLZqzDDMuzkucPmNm_oAk/ip/40.79.247.101/id/YGjD4PpCmdU.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAUNSWx3qqklkeJicyBoX2P7epK9A0BjmX-GgzF5qzs1GgKeduewN62qY2M8/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgFRBC-KRZVrPtv_WLOQVq6kBAlvPqFTwSO-ADjKZ0e-oCIQC-97ihj-qVafF4G2mvXmHey1ibbOMFHVdpCpyqcuNopg%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/88bIoKxC85lXsgiRMnqbkc8UB6ScJHjx0NvqFYxudJ_Cu3_ID2XDyl_426-kKZ1NfpsfpUIGPg=s88-c-k-c0x00ffffff-no-rj" tvg-id="", EL SEIS BARILOCHE
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/SQC2152IyCYfOI2NqTpJFbFZXQCSyJkY4cWMfssJxB1TaH6mccq472cjU6BZTUloKgaOAV7yUQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CANAL 26
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437369/ei/GXaLZuKIO_izkucPurm-8Ao/ip/40.79.247.101/id/RnTmtVFTSf0.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAa-aSVJj7eXkN_I5vaBblElnRJkc0q6mFZWrvXPfJSPX3heExFW-i_eqFMU/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgbpe0JKgur_qvyi8mgDVAflMF1eFck3UfQxKzv2vG9eECIQDdFkfVDxzNBfdxl2b1rEYkcD5yLogIeZA0eLNpTHQLaw%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTZ66m3iJOVc5mAtpdFP3OyZQNxevFmEaLt6cVwxQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", KZO
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTKUaxHAyqbEEphECYxByOgE3IrHURM18rg0Fxs7Q=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CANAL DE LA CIUDAD
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437371/ei/G3aLZt3rCb-BkucP4cygwA8/ip/40.79.247.101/id/meJ21sM2yJc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181296/txs/51181296%2C51181297%2C51181298/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAZSpY0Njh1PrNDiLOdVOpzE0QVD2td3foFF4NNJGjKP0-Z_ATLoYQneHjYc/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgIJttPrb7824PR_ysEwMXQrfmz9f8DJKvt9rfDyWiVBQCIQCu6GBDQdhe08YiBXodijaWnwub_ngCXIgIG26N5KWfNQ%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQqL9YaWAmxHUyE5OO8ByMR4QO4Vts86rTs21BP=s48-c-k-c0x00ffffff-no-rj" tvg-id="", DIARIO DEMOCRACIA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/vv_t-qa4gDb8Rn-vri7CilUzVXjg0dGbDSVYFrFoca0vQCUfwwiH1_TJn7sr1nCpD1SyfttovQ=s48-c-k-c0x00ffffff-no-rj" tvg-id="", WBSC AMERICAS SOFTBALL
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLThGfqhtYY9-oNcLBqlb3Viq-P0R1Mxj4v7yEpgsA=s48-c-k-c0x00ffffff-no-rj" tvg-id="", SHOW DE LA FE ARGENTINA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTKUaxHAyqbEEphECYxByOgE3IrHURM18rg0Fxs7Q=s48-c-k-c0x00ffffff-no-rj" tvg-id="", CANAL DE LA CIUDAD
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437372/ei/HHaLZtyuJ_ezkucP282v2Ac/ip/40.79.247.101/id/meJ21sM2yJc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAQhMexI4RpMy1ybvdJs-0rA8B1aJMsv7hjhIGhmh5uiiTw6_XOvA3DGZQwU/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgV2qgjDlSz3H886ay3mEeP-1iAR7XU8y04CkucFaNovsCIAmUhWf24pVxXj-jHdng7ypjyNuerjSgJtSuxFNXoKFU/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQbue1WVK5s0ne8sFBVwxf6u7-TbKAdPjK-YCHI8g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Pakapaka
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSnZ-EKL9UQCi8CSKVDUDbbcwC7BXuZJb_vF4_lbA=s176-c-k-c0x00ffffff-no-rj-mo" tvg-id="", SENADO ARGENTINA
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLSg8Q8Gj-iQ6nauQFbE8B8ygtPavdGvpkmn14gA3g=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Honorable Cámara de Diputados de la Nación
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLTojwq6lCK6vh3nOTJ6-DLKAKLyj0Pak0i4jpiK=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Cámara de Diputados de la Provincia de San Luis
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437375/ei/H3aLZtebF56NkucPx7qpKA/ip/40.79.247.101/id/PLqOXeFTnMY.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAaNsEzczPMwZZLfxoe9_ORIuImG9OfIkBvTwOcf1MSCMh0QMW4UC9AY_7gw/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAMmJVON5GawYftkp1d3Kcnsc_gcOVG7VDgCpQ1JDbMv9AiAxbZbWVf3_-nQLHyxuMp24T7MN0MBkPeXnRiLyXI_pzA%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRDFVq2CLFeGtnZhTNeRrfrnnY4Z_1AZlk2pwPn=s48-c-k-c0x00ffffff-no-rj" tvg-id="", ARGENTINA LIVE SISE
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437375/ei/H3aLZqezM8uBkucP24KNmAk/ip/40.79.247.101/id/nWFt8v34BAQ.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181297/txs/51181296%2C51181297%2C51181298/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAW03JWqw__I4Di9IXpRQ_1R1_FG7XHY5mZJRqdt-v-mLBELUeVUBHz7K4DQ/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAMwFG510jelMzbbCWkfFbvit92ym0mfJTxqDbOtG2Ar7AiEA6IqZlgDXyIvALZMGFsJsr1bmMlPeh9oqCeEDwAlb1i4%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRDFVq2CLFeGtnZhTNeRrfrnnY4Z_1AZlk2pwPn=s48-c-k-c0x00ffffff-no-rj" tvg-id="", ARGENTINA LIVE SISE 2
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437376/ei/IHaLZuSyD_a0kucP-4S3uAs/ip/40.79.247.101/id/mooQy0vUWlU.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAfn0P-MtohrjNQ7jwe4ZKy_xc1_TKE2DKYksbAHaAm3Tx-0Rfkl3-FkbWIg/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgZP260BneAO_kw9qNFE1KNy71jrkNsXSWTS-WvQ8S4MMCIQCJQbf7m94QSm2M5inI0FTdCtJNANGsdkFwLLBGxAV62A%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLQUkEUmZE-jNr1h_St0HJDSoAx7jjh3emFvCt3q=s48-c-k-c0x00ffffff-no-rj" tvg-id="", PRAIA ARGENTINA LIVE
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437376/ei/IHaLZp6UNJmLkucPk72SuAU/ip/40.79.247.101/id/wZsfE-3SkNg.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181251/txs/51181249%2C51181250%2C51181251%2C51181252%2C51181253%2C51181254/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAfNKhi2FRVmpDP-ggzKactFG2mfDC-0CLJZ6nuHdaiRb-X9U2MSuEqkaDq4/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAK03pmm7Pw7VZAioKIj4lDas6FYLLD-JOkVH-zOrci3JAiA5biQWFSaye8uWzwskyPwO6myYe50uZ5VQQEghc1GYjg%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/ytc/AKedOLRvpVL-PUtjTS-n_7yznSTpvfhQ3FfYoS7ef5b7ww=s48-c-k-c0x00ffffff-no-rj" tvg-id="", VORTERIX - RÁDIO
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/apf1ugFYL859mHuDvR8oj5A7wPI3Q7wJEFq-4bXiotsQ3JPfPoYRJHxOJo7DgulUP20AZ7IY=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Urbana Play 104.3 FM - RÁDIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437377/ei/IXaLZp6eKt-zkucPosqVyAg/ip/40.79.247.101/id/YznyYWLT3Iw.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAXVONfKj77c_K-RLSdz7_Eg1GIneX_bWVSyOxLJuqah2dwKFYg-k-qiOQic/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAKOctVUWn8P4YRgIp4HAy_gA_f4AUd2FiSXLiLVMWJHKAiEAxWPVXR0kWaf7R03P_FpSs9iYlwgWrV95AqWKtDzi93s%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/GijbirXXgwFRgUqwtlJ4bpm3hB_Xpe3xI23TnCOxiK9Xu2MVHhOAOFNm-RDDmLoQ2YqkCYHS1A=s48-c-k-c0x00ffffff-no-rj" tvg-id="", LA 100 - RÁDIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437378/ei/InaLZpf2BIqJkucPksivEA/ip/40.79.247.101/id/_aWjO2Km8YE.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181298/txs/51181296%2C51181297%2C51181298/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bATpAPk17iqHth8HxzFvfW_qQGRujNSF0pfV8dbFpma98w093Z2Ig5qi7YmI/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAPnR2I-6EJmsNiwjBGo0JfKDgHAi6TwkzmJMTAHSFH3KAiEA4oL-inGc-Fci_-hF2U_2YGvmGGBp3b3Ed4xVfCeZs5Q%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/EFM248LEd3Yz4mnTrwRKbBRWP_qBAkuIv0SGSm9u63bIoGnO3OUtc8RPP4OPwDDw07DeGxhjxBo=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Radio Santa Lucia San Juan - RÁDIO
-https://archive.org/download/lbry-8770e4ee5844471adfdbe455230483e39ea1d0e1/8770e4ee5844471adfdbe455230483e39ea1d0e1.mp4
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/wRy3AgzuKPU64ppne21ccwQU_TDcFwke4m3NRFw-1zdPgUjCBjlUoNmQDXJ5QgakwQ0tDKmC=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Radio Rivadavia AM630 - RÁDIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437379/ei/I3aLZv7AC5uykucPmbGImA4/ip/40.79.247.101/id/meJ21sM2yJc.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAayRX4U1VBmf8PrpP3vEogZXk-7n8lTYrnFpHU5jPeJ5-eyRkOaAiTB2Jf8/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRgIhAKoxXKy89FWsYPvllh1QzZXtPv6v1QQNiUKiv1d4xZrPAiEAv5div8zn5wESFEOriByNdfK2tEteo4xqim9kzpsGKYU%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/CiIegvl8wx-2EvPA6yNEUs1cpwSJZlS5DuNAkh4v2Au4mFXiyp1GazA3osHLnz2jp53RXDvH4mc=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Radio 10 - AM 710 - RÁDIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437379/ei/I3aLZuCUJPWBkucPieGm6Ao/ip/40.79.247.101/id/KBOrTIYyrPA.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51181253/txs/51181249%2C51181250%2C51181251%2C51181252%2C51181253%2C51181254/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAQt3McNdtAwTOzT8HfrKxffQCgvuUrRYzKd2yZdEjbG5au9IZYI80N8c4iY/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIgfA4HnpFgxX0KX9Pvx-frst0l-voc9FAdn_jhBMVy2FcCIQCzElcgbZ5iJYZ7kfNVa2Lb26g1IbhGG8mfFkE7XSpDSQ%3D%3D/file/index.m3u8
-#EXTINF:-1 group-title="Argentina" tvg-logo="https://yt3.ggpht.com/6-ovkJ4kVGq-byBEgD8s-7bXIX-GlS7VS86wS72wVriBOI7w8T6GsIAahiDBrO88o5Ov-q7L=s48-c-k-c0x00ffffff-no-rj" tvg-id="", Canal 30 San Juan - RÁDIO
-https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1720437380/ei/JHaLZsaoAvaJkucP_NWT4As/ip/40.79.247.101/id/gpEEBXfkQQU.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/spc/NO7bAVWasyf18MDd2RDqNCd93PLUblQNPMi5OEhAN7e7SYUmHGg9zbYllIstaX8/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAPVHdIEUtBUnqMX52T85MEa2H4VrziutOilFLTnq-jNzAiBCCnc1RvRQ-H0bWHPPlx7NI80FnCcm5dDbQLnGfNuphw%3D%3D/file/index.m3u8
-#EXTM3U
-#EXTINF:-1 tvg-id="N/A" group-title="Argentina" tvg-logo="https://fonts.gstatic.com/s/i/productlogos/lens_camera/v1/192px.svg",Canal Nueve Multivisi n (AR) - TDA 20.1
-http://panel.dattalive.com:1935/8250/8250/playlist.m3u8
-#EXTINF:-1 tvg-id="Canal 4 San Juan" tvg-name="Canal 4 San Juan" tvg-logo="http://www.canal4sanjuan.com.ar/digital/images/logo-cir.png" group-title="Argentina",Canal 4 San Juan | Argentina - TDA 22.1
-http://streamlov.alsolnet.com/canal4sanjuan/live/chunklist_w1603184235.m3u8
-#EXTINF:-1 tvg-id="N/A" group-title="Argentina" tvg-logo="https://fonts.gstatic.com/s/i/productlogos/lens_camera/v1/192px.svg",Canal 26 (San Justo-Arg.) - TDA 22.2
-http://live-edge01.telecentro.net.ar/live/smil:c26.smil/chunklist_w858131162_b414000_sleng.m3u8
-#EXTINF:-1 tvg-id="Tec TV" tvg-name="Tec TV" tvg-logo="https://www.tec.gob.ar/wp-content/uploads/2022/05/Tec-logo.png" group-title="Argentina",Tec TV | Argentina - TDA 22.4
-https://tv.initium.net.ar:3939/live/tectvmainlive.m3u8
-#EXTINF:-1 tvg-id="DeporTV Argentina" tvg-name="DeporTV Argentina" tvg-logo="https://i2.paste.pics/7b99edf751cc110abb5fd3f040e558b8.png" group-title="Argentina",DeporTV | Argentina - TDA 24.1
-https://5fb24b460df87.streamlock.net/live-cont.ar/deportv/playlist.m3u8
-#EXTINF:-1 tvg-id="N/A" group-title="Argentina" tvg-logo="https://www.cxtv.com.br/img/Tvs/Logo/webp-l/d800ee1a28bbee6769de24c5c050c40c.webp",Canal Once - TDA 24.3
-https://vivo.canaloncelive.tv/alivepkgr3/ngrp:cepro_all/playlist.m3u8
-#EXTINF:-1 tvg-id="NET TV" tvg-name="NET TV" tvg-logo="https://www.canalnet.tv/_templates/desktop/includes/img/logo.png" group-title="Argentina",NET TV | Argentina - TDA 27.2
-https://unlimited1-us.dps.live/nettv/nettv.smil/nettv/livestream2/chunks.m3u8
-#EXTINF:-1 tvg-id="Canal 4 Jujuy" tvg-name="Canal 4 Jujuy" tvg-logo="https://s3.amazonaws.com/static-c4-1/assets/img/logos/elcuatro-logo-100x124.png" group-title="Argentina",Canal 4 Jujuy | Argentina - TDA 26.1
+#EXTINF:-1,aula bônus
+https://vimeo.com/970954493
+#EXTINF:-1,aula 6 - Edição Reels
+https://vimeo.com/970953774
+#EXTINF:-1,aula 5 - Many Chat
+https://vimeo.com/970953005
+#EXTINF:-1,aula 4 - Configurando Kiwify
+https://vimeo.com/970952586
+#EXTINF:-1,Aula de Leilões
+https://vimeo.com/970900883
+#EXTINF:-1,010 - Aula 7
+https://vimeo.com/945009287
+#EXTINF:-1,009 - Aula 6 - Novas Isenções Heterônomas e COSIP
+https://vimeo.com/945006008
+#EXTINF:-1,Aula 8. 2024 - Zoom
+https://vimeo.com/970805211
+#EXTINF:-1,Aula 7. 2024 - Zoom
+https://vimeo.com/966094416
+#EXTINF:-1,Aula 6. 2024 - Zoom
+https://vimeo.com/956101976
+#EXTINF:-1,Aula 4. 2024 - Zoom
+https://vimeo.com/952656130
+#EXTINF:-1,Aula 3. 2024 - Zoom
+https://vimeo.com/949283403
+#EXTINF:-1,Vídeo raios Teresina
+https://vimeo.com/948303685
+#EXTINF:-1,Vídeo neblina Tacuarembó
+https://vimeo.com/948303645
+#EXTINF:-1,Aula 2.2024 - Zoom
+https://vimeo.com/947832517
+#EXTINF:-1,Jornada Esc. Nut. - La importancia 2 lengua
+https://vimeo.com/935585388
+#EXTINF:-1,Implications of Culture on Language Amirpooya Dardashti TEDxTAMU
+https://vimeo.com/932280864
+#EXTINF:-1,Feijoada
+https://vimeo.com/932184456
+#EXTINF:-1,“Gastronomia e Língua” IES Valle Inclán de Pontevedra(1)
+https://vimeo.com/932182251
+#EXTINF:-1,El viaje del sonido al cerebro - comprimido
+https://vimeo.com/800345227
+#EXTINF:-1,CURSO ESCUTA EMPÁTICA
+https://vimeo.com/971857244
+#EXTINF:-1,Ferenczi e a Clínica Psicanalítica- Aula 08
+https://vimeo.com/971486835
+#EXTINF:-1,live_02_fechamento
+https://vimeo.com/960355723
+#EXTINF:-1,LIVE ADOLESCÊNCIA - ABERTURA
+https://vimeo.com/960354287
+#EXTINF:-1,GPA ENCONTRO 15/06
+https://vimeo.com/959222846
+#EXTINF:-1,GRUPO PARES 14/06/24
+https://vimeo.com/958937671
+#EXTINF:-1,GPA- 08/06 - ENCONTRO EXTRA
+https://vimeo.com/955496159
+#EXTINF:-1,pdo-mhjn-avk (2024-06-07 18_56 GMT-3)
+https://vimeo.com/955199994
+#EXTINF:-1,WhatsApp Video 2024-06-06 at 15.15.57
+https://vimeo.com/954812639
+#EXTINF:-1,Apresentação
+https://vimeo.com/954433333
+#EXTINF:-1,LP VIDEO
+https://vimeo.com/954431636
+#EXTINF:-1,GRUPO PARES 24.05.24
+https://vimeo.com/950303882
+#EXTINF:-1,GRUPO DE PESQUISA- PSICANÁLISE E ADOLESCÊNCIA (2024-05-18 09_29 GMT-3)
+https://vimeo.com/948025483
+#EXTINF:-1,FERENCZI E A CLÍNICA PSICANALÍTICA (2024-05-17 18_59 GMT-3)
+https://vimeo.com/947773275
+#EXTINF:-1,GPA/NEPPA- 11/05
+https://vimeo.com/945801848
+#EXTINF:-1,FERENCZI E A CLÍNICA PSICANALÍTICA (2024-05-03 19_01 GMT-3)
+https://vimeo.com/942716671
+#EXTINF:-1,GRUPO PARES 26.04.24
+https://vimeo.com/939989286
+#EXTINF:-1,pdo-mhjn-avk (2024-04-12 19_01 GMT-3)
+https://vimeo.com/934241605
+#EXTINF:-1,TRAÇOS E PERSONALIDADES NOS DESENHOS INFANTIS- AULA 02
+https://vimeo.com/933839565
+#EXTINF:-1,37 INDIC
+https://vimeo.com/925036527
+#EXTINF:-1,36. AGRESS
+https://vimeo.com/925036032
+#EXTINF:-1,35. MAN
+https://vimeo.com/925035794
+#EXTINF:-1,34. REAL, IM, S
+https://vimeo.com/925034992
+#EXTINF:-1,33. CONSULT
+https://vimeo.com/925034424
+#EXTINF:-1,32. SETTING
+https://vimeo.com/925034234
+#EXTINF:-1,31. RESUMO
+https://vimeo.com/925033565
+#EXTINF:-1,30. LACAN
+https://vimeo.com/925033155
+#EXTINF:-1,29. W E A
+https://vimeo.com/925032537
+#EXTINF:-1,28. W E DOEN
+https://vimeo.com/925031721
+#EXTINF:-1,27. AMBIENTE SOCIAL
+https://vimeo.com/925031202
+#EXTINF:-1,26. FALSO S
+https://vimeo.com/925030503
+#EXTINF:-1,25. DES PSI
+https://vimeo.com/925025942
+#EXTINF:-1,24 AMBIENTE
+https://vimeo.com/925025388
+#EXTINF:-1,23. DEP EM REL
+https://vimeo.com/925024635
+#EXTINF:-1,22. DEP ABS
+https://vimeo.com/925024327
+#EXTINF:-1,21 EST DES
+https://vimeo.com/925023308
+#EXTINF:-1,20 S TEORICA
+https://vimeo.com/925016072
+#EXTINF:-1,19 W. HIST
+https://vimeo.com/925015055
+#EXTINF:-1,18. K FIN
+https://vimeo.com/925014122
+#EXTINF:-1,17. K P DEP
+https://vimeo.com/925013561
+#EXTINF:-1,16. PROJ E IDEN
+https://vimeo.com/925012673
+#EXTINF:-1,15. P ES EX
+https://vimeo.com/925012419
+#EXTINF:-1,14 P. ESQUI
+https://vimeo.com/925011228
+#EXTINF:-1,13. TEORIA POS
+https://vimeo.com/925010310
+#EXTINF:-1,12. SUP EG PRE
+https://vimeo.com/925009573
+#EXTINF:-1,11. BRINCAR
+https://vimeo.com/925009423
+#EXTINF:-1,10 K X F
+https://vimeo.com/925008778
+#EXTINF:-1,9. CONTROV
+https://vimeo.com/925008255
+#EXTINF:-1,08
+https://vimeo.com/925008097
+#EXTINF:-1,07
+https://vimeo.com/925007701
+#EXTINF:-1,06
+https://vimeo.com/925007438
+#EXTINF:-1,05
+https://vimeo.com/924819526
+#EXTINF:-1,04. ORIGENS
+https://vimeo.com/924816467
+#EXTINF:-1,3. INT
+https://vimeo.com/924815426
+#EXTINF:-1,02
+https://vimeo.com/924814907
+#EXTINF:-1,01
+https://vimeo.com/924814495
+#EXTINF:-1,M9A31
+https://vimeo.com/924742790
+#EXTINF:-1,M9A30
+https://vimeo.com/924742727
+#EXTINF:-1,M9A29
+https://vimeo.com/924742182
+#EXTINF:-1,M9A28
+https://vimeo.com/924741828
+#EXTINF:-1,M9A27
+https://vimeo.com/924741501
+#EXTINF:-1,M9A26
+https://vimeo.com/924741333
+#EXTINF:-1,M9A25
+https://vimeo.com/924739086
+#EXTINF:-1,M9A24
+https://vimeo.com/924739015
+#EXTINF:-1,M9A23
+https://vimeo.com/924738929
+#EXTINF:-1,M9A22
+https://vimeo.com/924738832
+#EXTINF:-1,M9A21
+https://vimeo.com/924738742
+#EXTINF:-1,M9A20
+https://vimeo.com/924738655
+#EXTINF:-1,M9A19
+https://vimeo.com/924738246
+#EXTINF:-1,M9A18
+https://vimeo.com/924737661
+#EXTINF:-1,M9A17
+https://vimeo.com/924737293
+#EXTINF:-1,M9A16
+https://vimeo.com/924737050
+#EXTINF:-1,M9A15
+https://vimeo.com/924736488
+#EXTINF:-1,M9A14
+https://vimeo.com/924736377
+#EXTINF:-1,M9A13
+https://vimeo.com/924736280
+#EXTINF:-1,M9A12
+https://vimeo.com/924736182
+#EXTINF:-1,M9A11
+https://vimeo.com/924735786
+#EXTINF:-1,M9A10
+https://vimeo.com/924735341
+#EXTINF:-1,M9A09
+https://vimeo.com/924734927
+#EXTINF:-1,M9A08
+https://vimeo.com/924734487
+#EXTINF:-1,M9A07
+https://vimeo.com/924733929
+#EXTINF:-1,M9A06
+https://vimeo.com/924733459
+#EXTINF:-1,M9A05
+https://vimeo.com/924730979
+#EXTINF:-1,M9A04
+https://vimeo.com/924730763
+#EXTINF:-1,M9A03
+https://vimeo.com/924730669
+#EXTINF:-1,M9A02
+https://vimeo.com/924730374
+#EXTINF:-1,M9A01
+https://vimeo.com/924730291
+#EXTINF:-1,M8A32
+https://vimeo.com/924725361
+#EXTINF:-1,M8A31
+https://vimeo.com/924725098
+#EXTINF:-1,M8A30
+https://vimeo.com/924724548
+#EXTINF:-1,M8A29
+https://vimeo.com/924724065
+#EXTINF:-1,M8A28
+https://vimeo.com/924723670
+#EXTINF:-1,M8A27
+https://vimeo.com/924723199
+#EXTINF:-1,M8A26
+https://vimeo.com/924722847
+#EXTINF:-1,M8A25
+https://vimeo.com/924722723
+#EXTINF:-1,M8A24
+https://vimeo.com/924722303
+#EXTINF:-1,M8A23
+https://vimeo.com/924722033
+#EXTINF:-1,M8A22
+https://vimeo.com/924721690
+#EXTINF:-1,M8A21
+https://vimeo.com/924721401
+#EXTINF:-1,M8A20
+https://vimeo.com/924720795
+#EXTINF:-1,M8A19
+https://vimeo.com/924720402
+#EXTINF:-1,M8A18
+https://vimeo.com/924719942
+#EXTINF:-1,M8A17
+https://vimeo.com/924719575
+#EXTINF:-1,M8A16
+https://vimeo.com/924719258
+#EXTINF:-1,M8A15
+https://vimeo.com/924718699
+#EXTINF:-1,M8A14
+https://vimeo.com/924718330
+#EXTINF:-1,M8A13
+https://vimeo.com/924717907
+#EXTINF:-1,M8A12
+https://vimeo.com/924717552
+#EXTINF:-1,M8A11
+https://vimeo.com/924717294
+#EXTINF:-1,M8A10
+https://vimeo.com/924715763
+#EXTINF:-1,M8A9
+https://vimeo.com/924715344
+#EXTINF:-1,M8A8
+https://vimeo.com/924714791
+#EXTINF:-1,M8A7
+https://vimeo.com/924714209
+#EXTINF:-1,M8A6
+https://vimeo.com/924713812
+#EXTINF:-1,M8A5
+https://vimeo.com/924710868
+#EXTINF:-1,M8A4
+https://vimeo.com/924710286
+#EXTINF:-1,M8A3
+https://vimeo.com/924709795
+#EXTINF:-1,M8A2
+https://vimeo.com/924709620
+#EXTINF:-1,M8A1
+https://vimeo.com/924709494
+#EXTINF:-1,M7A31
+https://vimeo.com/924358747
+#EXTINF:-1,M7A30
+https://vimeo.com/924358544
+#EXTINF:-1,M7A29
+https://vimeo.com/924358164
+#EXTINF:-1,M7A28
+https://vimeo.com/924357825
+#EXTINF:-1,M7A27
+https://vimeo.com/924357654
+#EXTINF:-1,M7A26
+https://vimeo.com/924357565
+#EXTINF:-1,M7A25
+https://vimeo.com/924357146
+#EXTINF:-1,M7A24
+https://vimeo.com/924356806
+#EXTINF:-1,M7A23
+https://vimeo.com/924356642
+#EXTINF:-1,M7A22
+https://vimeo.com/924356360
+#EXTINF:-1,M7A21
+https://vimeo.com/924356166
+#EXTINF:-1,M7A20
+https://vimeo.com/924354927
+#EXTINF:-1,M7A19
+https://vimeo.com/924354653
+#EXTINF:-1,M7A18
+https://vimeo.com/924354368
+#EXTINF:-1,M7A17
+https://vimeo.com/924354164
+#EXTINF:-1,M7A16
+https://vimeo.com/924354041
+#EXTINF:-1,M7A15
+https://vimeo.com/924353831
+#EXTINF:-1,M7A14
+https://vimeo.com/924353584
+#EXTINF:-1,M7A13
+https://vimeo.com/924353312
+#EXTINF:-1,M7A12
+https://vimeo.com/924353083
+#EXTINF:-1,M7A11
+https://vimeo.com/924352901
+#EXTINF:-1,M7A10
+https://vimeo.com/924352083
+#EXTINF:-1,M7A9
+https://vimeo.com/924351863
+#EXTINF:-1,M7A8
+https://vimeo.com/924351556
+#EXTINF:-1,M7A7
+https://vimeo.com/924351382
+#EXTINF:-1,M7A6
+https://vimeo.com/924351161
+#EXTINF:-1,M7A5
+https://vimeo.com/924348525
+#EXTINF:-1,M7A4
+https://vimeo.com/924348258
+#EXTINF:-1,M7A3
+https://vimeo.com/924348016
+#EXTINF:-1,M7A2
+https://vimeo.com/924347726
+#EXTINF:-1,M7A1
+https://vimeo.com/924347588
+#EXTINF:-1,M12A21
+https://vimeo.com/923327119
+#EXTINF:-1,M12A23
+https://vimeo.com/923327056
+#EXTINF:-1,M12A22
+https://vimeo.com/923327029
+#EXTINF:-1,M12A16
+https://vimeo.com/923326978
+#EXTINF:-1,M12A28
+https://vimeo.com/923321832
+#EXTINF:-1,M12A27
+https://vimeo.com/923321827
+#EXTINF:-1,M12A29
+https://vimeo.com/923321825
+#EXTINF:-1,M12A26
+https://vimeo.com/923321824
+#EXTINF:-1,M12A24
+https://vimeo.com/923321001
+#EXTINF:-1,M12A25
+https://vimeo.com/923320963
+#EXTINF:-1,M12A20
+https://vimeo.com/923317982
+#EXTINF:-1,M12A19
+https://vimeo.com/923317980
+#EXTINF:-1,M12A18
+https://vimeo.com/923316585
+#EXTINF:-1,M12A17
+https://vimeo.com/923316582
+#EXTINF:-1,M12A15
+https://vimeo.com/923314447
+#EXTINF:-1,M12A14
+https://vimeo.com/923314445
+#EXTINF:-1,M12A11
+https://vimeo.com/923313739
+#EXTINF:-1,M12A13
+https://vimeo.com/923070601
+#EXTINF:-1,M12A12
+https://vimeo.com/923070599
+#EXTINF:-1,M12A8
+https://vimeo.com/923067901
+#EXTINF:-1,M12A9
+https://vimeo.com/923067814
+#EXTINF:-1,M12A10
+https://vimeo.com/923067810
+#EXTINF:-1,M12A6
+https://vimeo.com/923061782
+#EXTINF:-1,M12A5
+https://vimeo.com/923061735
+#EXTINF:-1,M12A7
+https://vimeo.com/923061732
+#EXTINF:-1,M12A2
+https://vimeo.com/923060309
+#EXTINF:-1,M12A4
+https://vimeo.com/923055210
+#EXTINF:-1,M12A1
+https://vimeo.com/923054740
+#EXTINF:-1,M12A3
+https://vimeo.com/923054691
+#EXTINF:-1,M11A31
+https://vimeo.com/923052492
+#EXTINF:-1,M11A32
+https://vimeo.com/923049745
+#EXTINF:-1,M11A26
+https://vimeo.com/923049146
+#EXTINF:-1,M11A27
+https://vimeo.com/923048782
+#EXTINF:-1,M11A28
+https://vimeo.com/923048730
+#EXTINF:-1,M11A29
+https://vimeo.com/923048685
+#EXTINF:-1,M11A30
+https://vimeo.com/923048620
+#EXTINF:-1,M11A21
+https://vimeo.com/923043139
+#EXTINF:-1,M11A24
+https://vimeo.com/923042831
+#EXTINF:-1,M11A25
+https://vimeo.com/923042830
+#EXTINF:-1,M11A22
+https://vimeo.com/923042829
+#EXTINF:-1,M11A23
+https://vimeo.com/923042828
+#EXTINF:-1,M11A20
+https://vimeo.com/923040363
+#EXTINF:-1,M11A19
+https://vimeo.com/923040362
+#EXTINF:-1,M11A16
+https://vimeo.com/923039349
+#EXTINF:-1,M11A15
+https://vimeo.com/923039249
+#EXTINF:-1,M11A14
+https://vimeo.com/923039194
+#EXTINF:-1,M11A13
+https://vimeo.com/923039137
+#EXTINF:-1,M11A12
+https://vimeo.com/923039087
+#EXTINF:-1,M11A11
+https://vimeo.com/923039001
+#EXTINF:-1,M11A18
+https://vimeo.com/923038665
+#EXTINF:-1,M11A17
+https://vimeo.com/923038664
+#EXTINF:-1,M11A6
+https://vimeo.com/923029880
+#EXTINF:-1,M11A7
+https://vimeo.com/923029793
+#EXTINF:-1,M11A8
+https://vimeo.com/923029790
+#EXTINF:-1,M11A10
+https://vimeo.com/923029789
+#EXTINF:-1,M11A9
+https://vimeo.com/923029788
+#EXTINF:-1,M11A2
+https://vimeo.com/923027485
+#EXTINF:-1,M11A1
+https://vimeo.com/923027465
+#EXTINF:-1,M11A5
+https://vimeo.com/923025306
+#EXTINF:-1,M11A4
+https://vimeo.com/923025305
+#EXTINF:-1,M11A3
+https://vimeo.com/923025304
+#EXTINF:-1,M4A29
+https://vimeo.com/923013168
+#EXTINF:-1,M4A30
+https://vimeo.com/923013165
+#EXTINF:-1,M4A28
+https://vimeo.com/923013164
+#EXTINF:-1,M4A27
+https://vimeo.com/923012663
+#EXTINF:-1,M4A26
+https://vimeo.com/923012636
+#EXTINF:-1,M4A25
+https://vimeo.com/923009998
+#EXTINF:-1,M4A24
+https://vimeo.com/923009997
+#EXTINF:-1,M4A23
+https://vimeo.com/923009470
+#EXTINF:-1,M4A22
+https://vimeo.com/923009430
+#EXTINF:-1,M4A21
+https://vimeo.com/923009384
+#EXTINF:-1,M4A20
+https://vimeo.com/923003311
+#EXTINF:-1,M4A19
+https://vimeo.com/923003310
+#EXTINF:-1,M4A17
+https://vimeo.com/923003308
+#EXTINF:-1,M4A18
+https://vimeo.com/923003307
+#EXTINF:-1,M4A16
+https://vimeo.com/923002424
+#EXTINF:-1,M4A15
+https://vimeo.com/923000473
+#EXTINF:-1,M4A14
+https://vimeo.com/923000307
+#EXTINF:-1,M4A12
+https://vimeo.com/923000297
+#EXTINF:-1,M4A13
+https://vimeo.com/923000296
+#EXTINF:-1,M4A11
+https://vimeo.com/923000060
+#EXTINF:-1,M4A10
+https://vimeo.com/922999965
+#EXTINF:-1,M4A9
+https://vimeo.com/922996001
+#EXTINF:-1,M4A5
+https://vimeo.com/922995770
+#EXTINF:-1,M4A7
+https://vimeo.com/922995765
+#EXTINF:-1,M4A6
+https://vimeo.com/922995764
+#EXTINF:-1,M4A8
+https://vimeo.com/922995763
+#EXTINF:-1,M4A4
+https://vimeo.com/922995762
+#EXTINF:-1,M4A3
+https://vimeo.com/922995144
+#EXTINF:-1,M3A3
+https://vimeo.com/922991134
+#EXTINF:-1,M5A16
+https://vimeo.com/922961397
+#EXTINF:-1,M5A15
+https://vimeo.com/922961274
+#EXTINF:-1,M5A17
+https://vimeo.com/922959460
+#EXTINF:-1,M5A18
+https://vimeo.com/922958284
+#EXTINF:-1,M5A19
+https://vimeo.com/922958281
+#EXTINF:-1,M5A26
+https://vimeo.com/922955547
+#EXTINF:-1,M5A25
+https://vimeo.com/922955533
+#EXTINF:-1,M5A14
+https://vimeo.com/922953844
+#EXTINF:-1,M5A11
+https://vimeo.com/922952745
+#EXTINF:-1,M5A5
+https://vimeo.com/922952520
+#EXTINF:-1,M5A34
+https://vimeo.com/922948968
+#EXTINF:-1,M5A10
+https://vimeo.com/922948060
+#EXTINF:-1,M5A9
+https://vimeo.com/922947717
+#EXTINF:-1,M5A33
+https://vimeo.com/922946385
+#EXTINF:-1,M5A32
+https://vimeo.com/922945745
+#EXTINF:-1,M5A31
+https://vimeo.com/922943867
+#EXTINF:-1,M5A30
+https://vimeo.com/922943865
+#EXTINF:-1,M5A29
+https://vimeo.com/922943864
+#EXTINF:-1,M5A27
+https://vimeo.com/922939778
+#EXTINF:-1,M5A28
+https://vimeo.com/922939772
+#EXTINF:-1,M4A2
+https://vimeo.com/922937571
+#EXTINF:-1,M5A23
+https://vimeo.com/922937570
+#EXTINF:-1,M5A24
+https://vimeo.com/922937569
+#EXTINF:-1,M5A22
+https://vimeo.com/922935987
+#EXTINF:-1,M5A21
+https://vimeo.com/922935983
+#EXTINF:-1,M4A1
+https://vimeo.com/922935091
+#EXTINF:-1,M5A20
+https://vimeo.com/922934608
+#EXTINF:-1,M5A12
+https://vimeo.com/922926779
+#EXTINF:-1,M5A13
+https://vimeo.com/922926777
+#EXTINF:-1,M5A1
+https://vimeo.com/922923185
+#EXTINF:-1,M5A6
+https://vimeo.com/922922516
+#EXTINF:-1,M5A7
+https://vimeo.com/922922497
+#EXTINF:-1,M5A8
+https://vimeo.com/922922495
+#EXTINF:-1,M5A3
+https://vimeo.com/922920547
+#EXTINF:-1,M5A4
+https://vimeo.com/922920545
+#EXTINF:-1,M5A2
+https://vimeo.com/922920544
+#EXTINF:-1,AULA 22 DELÍRIO
+https://vimeo.com/922918632
+#EXTINF:-1,AULA 21- ALUCINAÇÃO
+https://vimeo.com/922918560
+#EXTINF:-1,AULA 37- INDICAÇOES
+https://vimeo.com/922908918
+#EXTINF:-1,AULA 36- ARTIGO
+https://vimeo.com/922908777
+#EXTINF:-1,AULA 35- SUPERVIS
+https://vimeo.com/922907539
+#EXTINF:-1,AULA 33-Autismo
+https://vimeo.com/922907538
+#EXTINF:-1,AULA 34 ANALISE
+https://vimeo.com/922907537
+#EXTINF:-1,AULA 32-Psicopatia
+https://vimeo.com/922906615
+#EXTINF:-1,AULA 31- Parafilias
+https://vimeo.com/922906523
+#EXTINF:-1,AULA 30- Frotteurismo
+https://vimeo.com/922905421
+#EXTINF:-1,AULA 29- Voyewrismo
+https://vimeo.com/922905204
+#EXTINF:-1,AULA 27- Sadomasoquismo
+https://vimeo.com/922904161
+#EXTINF:-1,AULA 28- Exibicionismo
+https://vimeo.com/922904153
+#EXTINF:-1,AULA 26-Fetichismo
+https://vimeo.com/922903439
+#EXTINF:-1,AULA 24 MELANCOLIA
+https://vimeo.com/922898975
+#EXTINF:-1,AULA 25- PERVERSÃO
+https://vimeo.com/922898964
+#EXTINF:-1,AULA 23- CIÚME
+https://vimeo.com/922898961
+#EXTINF:-1,AULA 16- NEUROSES ATUAIS
+https://vimeo.com/922894457
+#EXTINF:-1,AULA 20 PARANOIA
+https://vimeo.com/922894427
+#EXTINF:-1,AULA 18- PSICOSE
+https://vimeo.com/922894425
+#EXTINF:-1,AULA 17- OUTROS TIPOS DE NEUROSE
+https://vimeo.com/922894424
+#EXTINF:-1,AULA 19- ESQUIZOFRENIA
+https://vimeo.com/922894422
+#EXTINF:-1,AULA 15 NEUROSE
+https://vimeo.com/922889301
+#EXTINF:-1,AULA 13 NEUROSE HISTÉRICA
+https://vimeo.com/922889290
+#EXTINF:-1,AULA 14 NEUROSE OBSESSIVA
+https://vimeo.com/922889289
+#EXTINF:-1,AULA 12 NEUROSE
+https://vimeo.com/922888531
+#EXTINF:-1,AULA 11- NEUROSE, PSICOSE E PERVERSÃO
+https://vimeo.com/922888459
+#EXTINF:-1,AULA 07
+https://vimeo.com/922882249
+#EXTINF:-1,AULA 10- PSICOPATOLOGIAS
+https://vimeo.com/922882248
+#EXTINF:-1,AULA 06
+https://vimeo.com/922882247
+#EXTINF:-1,AULA 08
+https://vimeo.com/922882245
+#EXTINF:-1,AULA 09 PSICOPATOLOGIA PSICANALITICA
+https://vimeo.com/922882244
+#EXTINF:-1,AULA 05
+https://vimeo.com/922879526
+#EXTINF:-1,AULA 04
+https://vimeo.com/922879478
+#EXTINF:-1,AULA 03
+https://vimeo.com/922879183
+#EXTINF:-1,AULA 02- ESTUDO CLÍNICO
+https://vimeo.com/922879087
+#EXTINF:-1,AULA 01-APRESENTAÇÃO
+https://vimeo.com/922878798
+#EXTINF:-1,M3A28
+https://vimeo.com/922695001
+#EXTINF:-1,M3A27
+https://vimeo.com/922694919
+#EXTINF:-1,M3A26
+https://vimeo.com/922694859
+#EXTINF:-1,M3A22
+https://vimeo.com/922688270
+#EXTINF:-1,M3A25
+https://vimeo.com/922688265
+#EXTINF:-1,M3A23
+https://vimeo.com/922688264
+#EXTINF:-1,M3A21-1
+https://vimeo.com/922688257
+#EXTINF:-1,M3A24
+https://vimeo.com/922688232
+#EXTINF:-1,M3A17
+https://vimeo.com/922684437
+#EXTINF:-1,M3A20
+https://vimeo.com/922684436
+#EXTINF:-1,M3A19
+https://vimeo.com/922684435
+#EXTINF:-1,M3A18
+https://vimeo.com/922684434
+#EXTINF:-1,M3A16
+https://vimeo.com/922683704
+#EXTINF:-1,M3A15
+https://vimeo.com/922681115
+#EXTINF:-1,M3A14
+https://vimeo.com/922680219
+#EXTINF:-1,M3A13
+https://vimeo.com/922680127
+#EXTINF:-1,M3A12
+https://vimeo.com/922679997
+#EXTINF:-1,M3A11
+https://vimeo.com/922679841
+#EXTINF:-1,M3A9
+https://vimeo.com/922679730
+#EXTINF:-1,M3A10
+https://vimeo.com/922652015
+#EXTINF:-1,M3A8
+https://vimeo.com/922650052
+#EXTINF:-1,M3A7
+https://vimeo.com/922649918
+#EXTINF:-1,M3A6
+https://vimeo.com/922649796
+#EXTINF:-1,M3A6
+https://vimeo.com/922639093
+#EXTINF:-1,M3A5
+https://vimeo.com/922638969
+#EXTINF:-1,M3A4
+https://vimeo.com/922638778
+#EXTINF:-1,M3A3
+https://vimeo.com/922638375
+#EXTINF:-1,M3A2
+https://vimeo.com/922638000
+#EXTINF:-1,M3A1
+https://vimeo.com/922636947
+#EXTINF:-1,M2A33
+https://vimeo.com/922581684
+#EXTINF:-1,M2A32
+https://vimeo.com/922581682
+#EXTINF:-1,M2A31
+https://vimeo.com/922578953
+#EXTINF:-1,M2A30
+https://vimeo.com/922578815
+#EXTINF:-1,M2A29
+https://vimeo.com/922578685
+#EXTINF:-1,M2A28
+https://vimeo.com/922578596
+#EXTINF:-1,M2A27
+https://vimeo.com/922578469
+#EXTINF:-1,M2A26
+https://vimeo.com/922575287
+#EXTINF:-1,M2A23
+https://vimeo.com/922574713
+#EXTINF:-1,M2A19
+https://vimeo.com/922574711
+#EXTINF:-1,M2A24
+https://vimeo.com/922574710
+#EXTINF:-1,M2A25
+https://vimeo.com/922574706
+#EXTINF:-1,M2A22
+https://vimeo.com/922571935
+#EXTINF:-1,M2A21
+https://vimeo.com/922571621
+#EXTINF:-1,M2A20
+https://vimeo.com/922571461
+#EXTINF:-1,M2A19-1
+https://vimeo.com/922571331
+#EXTINF:-1,M2A18
+https://vimeo.com/922571221
+#EXTINF:-1,M2A17
+https://vimeo.com/922567844
+#EXTINF:-1,M2A16
+https://vimeo.com/922567841
+#EXTINF:-1,M2A15
+https://vimeo.com/922567166
+#EXTINF:-1,M2A14
+https://vimeo.com/922567031
+#EXTINF:-1,M2A13
+https://vimeo.com/922566908
+#EXTINF:-1,M2A12
+https://vimeo.com/922562937
+#EXTINF:-1,M2A11
+https://vimeo.com/922562801
+#EXTINF:-1,M2A10
+https://vimeo.com/922562703
+#EXTINF:-1,M2A9
+https://vimeo.com/922562582
+#EXTINF:-1,M2A8
+https://vimeo.com/922562459
+#EXTINF:-1,M2A7
+https://vimeo.com/922558276
+#EXTINF:-1,M2A6
+https://vimeo.com/922558134
+#EXTINF:-1,M2A3
+https://vimeo.com/922556753
+#EXTINF:-1,M2A4
+https://vimeo.com/922556752
+#EXTINF:-1,M2A5
+https://vimeo.com/922556751
+#EXTINF:-1,M2A2
+https://vimeo.com/922556017
+#EXTINF:-1,M2A1
+https://vimeo.com/922555743
+#EXTINF:-1,M1A3- ORIENTAÇÕES IMPORTANTES
+https://vimeo.com/922294925
+#EXTINF:-1,M1A4 - RETOMANDO PRODUÇÃO TEXTUAL
+https://vimeo.com/922294849
+#EXTINF:-1,M1A31
+https://vimeo.com/922292425
+#EXTINF:-1,M1A30
+https://vimeo.com/922292423
+#EXTINF:-1,M1A29
+https://vimeo.com/922292106
+#EXTINF:-1,M1A27
+https://vimeo.com/922292016
+#EXTINF:-1,M1A28
+https://vimeo.com/922292015
+#EXTINF:-1,M1A26
+https://vimeo.com/922291800
+#EXTINF:-1,M1A25
+https://vimeo.com/922291708
+#EXTINF:-1,M1A24
+https://vimeo.com/922291631
+#EXTINF:-1,M1A23
+https://vimeo.com/922291565
+#EXTINF:-1,M1A12
+https://vimeo.com/922291236
+#EXTINF:-1,M1A11
+https://vimeo.com/922291173
+#EXTINF:-1,M1A10
+https://vimeo.com/922291099
+#EXTINF:-1,M1A9
+https://vimeo.com/922291019
+#EXTINF:-1,M1A8
+https://vimeo.com/922290958
+#EXTINF:-1,M1A22
+https://vimeo.com/922290680
+#EXTINF:-1,M1A21
+https://vimeo.com/922290623
+#EXTINF:-1,M1A20
+https://vimeo.com/922290494
+#EXTINF:-1,M1A18
+https://vimeo.com/922290470
+#EXTINF:-1,M1A19
+https://vimeo.com/922290469
+#EXTINF:-1,M1A17
+https://vimeo.com/922290012
+#EXTINF:-1,M1A16
+https://vimeo.com/922289367
+#EXTINF:-1,M1A15
+https://vimeo.com/922289046
+#EXTINF:-1,M1A14
+https://vimeo.com/922288844
+#EXTINF:-1,M1A13
+https://vimeo.com/922288170
+#EXTINF:-1,M1A7
+https://vimeo.com/922281647
+#EXTINF:-1,M1A6
+https://vimeo.com/922281646
+#EXTINF:-1,M1A5
+https://vimeo.com/922281645
+#EXTINF:-1,M1A1- APRESENTAÇÃO
+https://vimeo.com/922281642
+#EXTINF:-1,12. VAMOS COMEÇAR!
+https://vimeo.com/922276935
+#EXTINF:-1,11. INDICAÇÕES
+https://vimeo.com/922179088
+#EXTINF:-1,10. O QUE NÃO É PSICANÁLISE
+https://vimeo.com/922178967
+#EXTINF:-1,9. ASPECTOS LEGAIS
+https://vimeo.com/922178619
+#EXTINF:-1,8. O PERCURSO
+https://vimeo.com/922178409
+#EXTINF:-1,7. SUPERVISÃO
+https://vimeo.com/922178334
+#EXTINF:-1,6. ANÁLISE 02
+https://vimeo.com/922178200
+#EXTINF:-1,5. ANÁLISE
+https://vimeo.com/922178047
+#EXTINF:-1,4. ESTUDO TEÓRICO
+https://vimeo.com/922177899
+#EXTINF:-1,3. CONTEÚDO DA FORMAÇÃO
+https://vimeo.com/922177506
+#EXTINF:-1,2. A EPC
+https://vimeo.com/922177218
+#EXTINF:-1,1. SEJAM BEM-VINDOS
+https://vimeo.com/922177005
+#EXTINF:-1,M1A2- O QUE NÃO É UMA FORMAÇÃO EM PSICANÁLISE
+https://vimeo.com/921171674
+#EXTINF:-1,Constelação parte 02
+https://vimeo.com/972423437
+#EXTINF:-1,Constelação parte 01
+https://vimeo.com/972282083
+#EXTINF:-1,Parte 03 dia 29
+https://vimeo.com/971726738
+#EXTINF:-1,Segunda parte dia 29
+https://vimeo.com/971663998
+#EXTINF:-1,Aula resumo TDI sábado manhã 2906
+https://vimeo.com/971569376
+#EXTINF:-1,Festa junina Soleil
+https://vimeo.com/965617672
+#EXTINF:-1,Módulo 04 - TDI PARTE 03
+https://vimeo.com/961685891
+#EXTINF:-1,Módulo 03 - TDI PARTE 2
+https://vimeo.com/961638133
+#EXTINF:-1,Módulo 03 - TDI PARTE 01
+https://vimeo.com/961591802
+#EXTINF:-1,Módulo 02 - O silêncio ensurdecedor
+https://vimeo.com/961534643
+#EXTINF:-1,Módulo 02 - Carta na manga
+https://vimeo.com/961532367
+#EXTINF:-1,Módulo 02 - Perguntas que constrangem
+https://vimeo.com/961524451
+#EXTINF:-1,Módulo 01 - Como e por que falamos
+https://vimeo.com/961362633
+#EXTINF:-1,Módulo 01 - Como as pessoas aprendem
+https://vimeo.com/961287160
+#EXTINF:-1,Módulo 01 -Códigos da mente - quem é o Ser Humano
+https://vimeo.com/961228040
+#EXTINF:-1,Módulo 01 - Boas vindas - Informações e alinhamento
+https://vimeo.com/961167803
+#EXTINF:-1,IDENTIDADE DO CONSUMIDOR
+https://vimeo.com/961131870
+#EXTINF:-1,Dinâmica de Vendas
+https://vimeo.com/960709231
+#EXTINF:-1,Dinâmica de vendas original
+https://vimeo.com/960662065
+#EXTINF:-1,Concepção do protocolo parte 1
+https://vimeo.com/960645258
+#EXTINF:-1,10 erros
+https://vimeo.com/960626070
+#EXTINF:-1,Nova gravação - 17062024, 1624
+https://vimeo.com/960613537
+#EXTINF:-1,Não pule este video
+https://vimeo.com/960571647
+#EXTINF:-1,Como imlementar a mentoria
+https://vimeo.com/960552084
+#EXTINF:-1,TDI - PARTE 3 SEM EDÇÃO
+https://vimeo.com/959766865
+#EXTINF:-1,TDI - PARTE 2 SEM EDÇÃO
+https://vimeo.com/959665041
+#EXTINF:-1,TDI - PARTE 1 SEM EDÇÃO
+https://vimeo.com/959615631
+#EXTINF:-1,Formação 02 parti 1 dia 2
+https://vimeo.com/959575640
+#EXTINF:-1,Formação 02 parte 03
+https://vimeo.com/959134681
+#EXTINF:-1,Formação 02 parte 02
+https://vimeo.com/959013354
+#EXTINF:-1,Formação 02Parte 01
+https://vimeo.com/958965611
+#EXTINF:-1,Protocolo completo
+https://vimeo.com/957244589
+#EXTINF:-1,Mentoria de Terapeuta para Terapeuta
+https://vimeo.com/956253038
+#EXTINF:-1,TerapeutaFlix
+https://vimeo.com/956111485
+#EXTINF:-1,Nova gravação - 10062024, 1446
+https://vimeo.com/956068027
+#EXTINF:-1,Estudo de caso 07-06-24
+https://vimeo.com/955075841
+#EXTINF:-1,TERAPEUTAFLIX
+https://vimeo.com/952017403
+#EXTINF:-1,FORMAÇÃO TERAPEUTA - PARTE 03
+https://vimeo.com/950531862
+#EXTINF:-1,FORMAÇÃO TERAPEUTA - PARTE 02
+https://vimeo.com/950516144
+#EXTINF:-1,FORMAÇÃO TERAPEUTA - PARTE 01
+https://vimeo.com/950494159
+#EXTINF:-1,Mentoria - 09-04-24
+https://vimeo.com/932852180
+#EXTINF:-1,Ep. 03 - Poder da Escala
+https://vimeo.com/931307871
+#EXTINF:-1,Ep. 02 - Protocolo Poderoso
+https://vimeo.com/931307631
+#EXTINF:-1,Ep. 01 - Alavancagem
+https://vimeo.com/931307208
+#EXTINF:-1,Ep. 08 - Transformação
+https://vimeo.com/931293410
+#EXTINF:-1,Ep. 07 - Desejo
+https://vimeo.com/931293298
+#EXTINF:-1,Ep. 06 - Dores
+https://vimeo.com/931293195
+#EXTINF:-1,Ep. 05 - Consumo
+https://vimeo.com/931293083
+#EXTINF:-1,Ep. 04 - Rotina
+https://vimeo.com/931292922
+#EXTINF:-1,Ep. 03 - Valores
+https://vimeo.com/931292773
+#EXTINF:-1,Ep. 02 - Definindo Cliente
+https://vimeo.com/931292629
+#EXTINF:-1,Ep. 01 - Persona
+https://vimeo.com/931292488
+#EXTINF:-1,Ep. 06 - Pronto! Protocolo Perfeito
+https://vimeo.com/931264508
+#EXTINF:-1,Ep. 05 - Cronograma
+https://vimeo.com/931264279
+#EXTINF:-1,Ep. 04 - Tema
+https://vimeo.com/931264016
+#EXTINF:-1,Ep. 03 - Benefícios
+https://vimeo.com/931263856
+#EXTINF:-1,Ep. 02 - Grande Promessa
+https://vimeo.com/931263696
+#EXTINF:-1,Ep. 01 - Método 1 para hummm
+https://vimeo.com/931263587
+#EXTINF:-1,Completo alavancar nº de clientes
+https://vimeo.com/931178739
+#EXTINF:-1,completo publico indesejado
+https://vimeo.com/931154800
+#EXTINF:-1,completo protocolo perfeito
+https://vimeo.com/931129071
+#EXTINF:-1,Ep. 07 - Governante
+https://vimeo.com/930830674
+#EXTINF:-1,Ep. 08 - Criador
+https://vimeo.com/930830137
+#EXTINF:-1,Ep. 09 - Prestativo
+https://vimeo.com/930829741
+#EXTINF:-1,Ep. 11 - Bobo da Corte
+https://vimeo.com/930829426
+#EXTINF:-1,Ep. 12 - Cara Comum
+https://vimeo.com/930829137
+#EXTINF:-1,Ep. 13 - Considerações Finais
+https://vimeo.com/930828525
+#EXTINF:-1,Ep. 10 - Amante
+https://vimeo.com/930820461
+#EXTINF:-1,Ep. 06 - Sábio
+https://vimeo.com/930819923
+#EXTINF:-1,Ep. 05 - Explorador
+https://vimeo.com/930819503
+#EXTINF:-1,Ep. 04 - Inocente
+https://vimeo.com/930819088
+#EXTINF:-1,Ep. 03 - Fora da Lei
+https://vimeo.com/930818328
+#EXTINF:-1,Ep. 02 - Herói
+https://vimeo.com/930817567
+#EXTINF:-1,Ep. 01 - Mago
+https://vimeo.com/930816382
+#EXTINF:-1,Ep. 06 - Minha Esteira
+https://vimeo.com/930800169
+#EXTINF:-1,Ep. 04 - Produto Principal
+https://vimeo.com/930797670
+#EXTINF:-1,Ep. 05 - Produto Upsell
+https://vimeo.com/930796983
+#EXTINF:-1,Ep. 03 - Produto de Entrada
+https://vimeo.com/930793607
+#EXTINF:-1,Ep. 02 - Esteira de Venda
+https://vimeo.com/930793213
+#EXTINF:-1,Ep. 01 - Planilha de Ativos
+https://vimeo.com/930785021
+#EXTINF:-1,Completo Identidade do terapeuta
+https://vimeo.com/930778681
+#EXTINF:-1,completo Funil de venda que vende
+https://vimeo.com/930751267
+#EXTINF:-1,Ep. 02 - Planilha Suprema
+https://vimeo.com/930449434
+#EXTINF:-1,Ep. 01 - Calculadora de Hora
+https://vimeo.com/930446406
+#EXTINF:-1,COMPLETO [PRECIFICAÇÃO]
+https://vimeo.com/930442906
+#EXTINF:-1,Ep. 10 - Fechamento com ou sem secretária
+https://vimeo.com/930412265
+#EXTINF:-1,Ep. 09 - Presentear para Presente
+https://vimeo.com/930410159
+#EXTINF:-1,Ep. 08 - Transformar  Elevar
+https://vimeo.com/930407395
+#EXTINF:-1,Ep. 07 - Off-line
+https://vimeo.com/930406377
+#EXTINF:-1,Ep. 06 - Comercial
+https://vimeo.com/930406096
+#EXTINF:-1,Ep. 05 - Pertencimento
+https://vimeo.com/930403214
+#EXTINF:-1,Ep. 04 - Desabafo
+https://vimeo.com/930401178
+#EXTINF:-1,Ep. 03 - História com Gancho
+https://vimeo.com/930399493
+#EXTINF:-1,Ep. 02 - Combustível Extra
+https://vimeo.com/930397731
+#EXTINF:-1,Ep. 01 - Online Storytelling
+https://vimeo.com/930397002
+#EXTINF:-1,completo (como captar clientes a custo zero)
+https://vimeo.com/930380096
+#EXTINF:-1,Ep. 06 - Terapia Grátis
+https://vimeo.com/930337893
+#EXTINF:-1,Ep. 07 - Boca a Boca
+https://vimeo.com/930336079
+#EXTINF:-1,Ep. 08 - Networking
+https://vimeo.com/930334098
+#EXTINF:-1,Ep. 03 como captar seus primeiros clientes
+https://vimeo.com/930325648
+#EXTINF:-1,Ep. 04 - Abra sua Loja Todos os Dias
+https://vimeo.com/930320629
+#EXTINF:-1,Ep. 03 - Redes Sociais
+https://vimeo.com/930281655
+#EXTINF:-1,Ep. 02 - Conteúdos Relevantes
+https://vimeo.com/930280006
+#EXTINF:-1,Ep. 01 - Presença Online
+https://vimeo.com/930276868
+#EXTINF:-1,Ep. 03 como captar seus primeiros clientes
+https://vimeo.com/930275511
+#EXTINF:-1,Ep. 05 - Parcerias Locais
+https://vimeo.com/930267034
+#EXTINF:-1,EP. 01 COMO CAPTAR SEUS PRIMEIROS CLIENTES
+https://vimeo.com/930253089
+#EXTINF:-1,Intro - Protocolo Perfeito
+https://vimeo.com/929691685
+#EXTINF:-1,Intro - Estrutura perfeita
+https://vimeo.com/929689846
+#EXTINF:-1,Intro - Esteira de produtos que vendem
+https://vimeo.com/929688039
+#EXTINF:-1,Intro - ID terapêutica
+https://vimeo.com/929618915
+#EXTINF:-1,Intro - Alavancar o número de clientes
+https://vimeo.com/929617282
+#EXTINF:-1,Intro - Precificação
+https://vimeo.com/929615535
+#EXTINF:-1,Intro - Primeiros clientes
+https://vimeo.com/929612940
+#EXTINF:-1,Intro - Alavancagem digital
+https://vimeo.com/929610293
+#EXTINF:-1,Intro - Como captar clientes a custo zero
+https://vimeo.com/929604485
+#EXTINF:-1,Intro - Eliminando ruídos na comunicação
+https://vimeo.com/929602559
+#EXTINF:-1,Intro - Hipnoterapia
+https://vimeo.com/929598210
+#EXTINF:-1,Intro - PNL para Terapeutas
+https://vimeo.com/929595723
+#EXTINF:-1,Intro - Coaching para Terapeutas
+https://vimeo.com/929593331
+#EXTINF:-1,Intro-Público indesejado
+https://vimeo.com/929589214
+#EXTINF:-1,BOAS VINDAS
+https://vimeo.com/929558715
+#EXTINF:-1,A ARTE DA FACILITAÇÃO.MOV
+https://vimeo.com/925557881
+#EXTINF:-1,TDI - PARTE 2 - 16.03.24
+https://vimeo.com/924206147
+#EXTINF:-1,TDI - Manhã -160324
+https://vimeo.com/924140082
+#EXTINF:-1,TDI 3º PARTE
+https://vimeo.com/919273302
+#EXTINF:-1,TDI - 2º PARTE
+https://vimeo.com/918734299
+#EXTINF:-1,TDI -  Parte 01
+https://vimeo.com/918680623
+#EXTINF:-1,Carta de venda .mov
+https://vimeo.com/910839882
+#EXTINF:-1,Carta de venda  (Copy)
+https://vimeo.com/910819727
+#EXTINF:-1,Carta de venda  (Copy)
+https://vimeo.com/910816442
+#EXTINF:-1,LIVE LEVEMENTE 01
+https://vimeo.com/909513321
+#EXTINF:-1,Alvancagem de clientes
+https://vimeo.com/899572257
+#EXTINF:-1,Plano Prático - Começando do absoluto zero
+https://vimeo.com/899541235
+#EXTINF:-1,Obesidade intelectual
+https://vimeo.com/899311025
+#EXTINF:-1,Comece por Aqui
+https://vimeo.com/899283873
+#EXTINF:-1,VÍDEO UPSELL VIDA FERA
+https://vimeo.com/891151217
+#EXTINF:-1,CARTA DE VENDAS VIDA FERA.mp4
+https://vimeo.com/886974890
+#EXTINF:-1,PAGINA DE VENDAS 35 REAIS
+https://vimeo.com/882123578
+#EXTINF:-1,Aula Conheça a Si .mov
+https://vimeo.com/880113918
+#EXTINF:-1,Carta pessoa especial.mov
+https://vimeo.com/879587019
+#EXTINF:-1,3. Comportamentos.mov
+https://vimeo.com/879565960
+#EXTINF:-1,2. Comportamentos que enriquecem.mov
+https://vimeo.com/879535579
+#EXTINF:-1,1. Comportamentos que Enriquecem.mov
+https://vimeo.com/879530538
+#EXTINF:-1,Somos todos Vendedores.mov
+https://vimeo.com/878610133
+#EXTINF:-1,Hipnose Nossa de Cada Dia.mov
+https://vimeo.com/878604579
+#EXTINF:-1,A Morte da Pobreza .mov
+https://vimeo.com/878596087
+#EXTINF:-1,Aula Liberada .mov
+https://vimeo.com/877693380
+#EXTINF:-1,DIMENSIONAMENTO 01.mov
+https://vimeo.com/876139089
+#EXTINF:-1,Dimensionamento2.0 .mov
+https://vimeo.com/876130699
+#EXTINF:-1,Cris Soleil - A mulher e a Inteligência Emocional
+https://vimeo.com/872971633
+#EXTINF:-1,Alex Galdino - Constância é Tudo
+https://vimeo.com/872938730
+#EXTINF:-1,LM. Alimentação saudável
+https://vimeo.com/871092921
+#EXTINF:-1,LM. Beba mais Água
+https://vimeo.com/871087769
+#EXTINF:-1,LM. Compulsão alimentar
+https://vimeo.com/871086204
+#EXTINF:-1,LM. Comendo Escondido
+https://vimeo.com/871084480
+#EXTINF:-1,LM. Ganho de Autoestima
+https://vimeo.com/871078599
+#EXTINF:-1,Gaivota
+https://vimeo.com/869248105
+#EXTINF:-1,LeveMente Intro Áudios .mov
+https://vimeo.com/866329197
+#EXTINF:-1,LeveMente Intro .mov
+https://vimeo.com/866170423
+#EXTINF:-1,LeveMente gradedemetasvideo1014684145.mp4
+https://vimeo.com/864353289
+#EXTINF:-1,LeveMente transformaçãodecrençasvideo1774606899.mp4
+https://vimeo.com/864353268
+#EXTINF:-1,LeveMente perguntaspoderosasvideo1662492461.mp4
+https://vimeo.com/864353229
+#EXTINF:-1,LeveMente introdução video .mp4
+https://vimeo.com/864353202
+#EXTINF:-1,Levemente MVEvideo1312784763 (Copy)
+https://vimeo.com/863753619
+#EXTINF:-1,Levemente HEXAGRAMAvideo1408233354.mp4
+https://vimeo.com/863730040
+#EXTINF:-1,Levemente video1161814190-sessaozero.mp4
+https://vimeo.com/863730018
+#EXTINF:-1,Levemente roadlife.mp4
+https://vimeo.com/863729991
+#EXTINF:-1,Levemente préquedavideo1872842560.mp4
+https://vimeo.com/863729947
+#EXTINF:-1,Levemente MVEvideo1312784763.mp4
+https://vimeo.com/863729922
+#EXTINF:-1,Levemente PIRAMIDEvideo1309539049.mp4
+https://vimeo.com/863729881
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654645
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654627
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654615
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654593
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654571
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654555
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654533
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654518
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654504
+#EXTINF:-1,ATENDIMENTO.mov
+https://vimeo.com/863654490
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863558044
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863558030
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863558021
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863558010
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863557996
+#EXTINF:-1,MED Legislação .mov
+https://vimeo.com/863557978
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863557963
+#EXTINF:-1,MED Legislação.mov
+https://vimeo.com/863557949
+#EXTINF:-1,Ciclo 03.mov
+https://vimeo.com/861838555
+#EXTINF:-1,Ciclo 02.mov
+https://vimeo.com/861838546
+#EXTINF:-1,Ciclo 01.mov
+https://vimeo.com/861838541
+#EXTINF:-1,MÓDULO 4/3.mov
+https://vimeo.com/861205392
+#EXTINF:-1,MÓDULO 03/2.mov
+https://vimeo.com/861205380
+#EXTINF:-1,MÓDULO 4/1.mov
+https://vimeo.com/861205369
+#EXTINF:-1,MÓDULO 4/4.mov
+https://vimeo.com/861205361
+#EXTINF:-1,MÓDULO 03.mov
+https://vimeo.com/861205350
+#EXTINF:-1,MÓDULO 4/2.mov
+https://vimeo.com/861205339
+#EXTINF:-1,MÓDULO 4/5.mov
+https://vimeo.com/861205329
+#EXTINF:-1,MÓDULO 02.mov
+https://vimeo.com/861205318
+#EXTINF:-1,MÓDULO 05.mov
+https://vimeo.com/861205309
+#EXTINF:-1,MÓDULO 05.mov
+https://vimeo.com/860953637
+#EXTINF:-1,MÓDULO 03.mov
+https://vimeo.com/860953620
+#EXTINF:-1,MÓDULO 05.1.mov
+https://vimeo.com/860953605
+#EXTINF:-1,MÓDULO 04.mov
+https://vimeo.com/860953595
+#EXTINF:-1,MÓDULO 03-B.mov
+https://vimeo.com/860953584
+#EXTINF:-1,BOAS-VINDAS AO VIDA FERA
+https://vimeo.com/860108083
+#EXTINF:-1,Regressão de Memória 2 O amor e desamor nos relacionamentos.mp4
+https://vimeo.com/858630513
+#EXTINF:-1,Regressão de Memória 1 Entendendo o Processo Terapêutico.mp4
+https://vimeo.com/858630493
+#EXTINF:-1,Parte 05.MOV
+https://vimeo.com/858623618
+#EXTINF:-1,Parte 04.MOV
+https://vimeo.com/858623604
+#EXTINF:-1,Parte 03.MOV
+https://vimeo.com/858623594
+#EXTINF:-1,Parte 02 .MOV
+https://vimeo.com/858623576
+#EXTINF:-1,Parte 01.MOV
+https://vimeo.com/858623553
+#EXTINF:-1,21 Domingo Tempo Comum A.mp4
+https://vimeo.com/858621083
+#EXTINF:-1,PRECIFICAÇÃO E PONTO DE EQUILÍBRIO
+https://vimeo.com/857558838
+#EXTINF:-1,CONTROLE FINANCEIRO
+https://vimeo.com/857533398
+#EXTINF:-1,AULA 11 - CANVAS (CUSTOS)
+https://vimeo.com/857515245
+#EXTINF:-1,AULA 10 - CANVAS (PARCERIAS)
+https://vimeo.com/857514881
+#EXTINF:-1,AULA 09 - CANVAS (ATIVIDADES CHAVES)
+https://vimeo.com/857514357
+#EXTINF:-1,AULA 08 - CANVAS (QUANTO)
+https://vimeo.com/857513744
+#EXTINF:-1,MED I.A Mod 06.mov
+https://vimeo.com/855032387
+#EXTINF:-1,MED I.A Mod 05.mov
+https://vimeo.com/855032374
+#EXTINF:-1,MED I.A Mod 04.mov
+https://vimeo.com/855032355
+#EXTINF:-1,MED I.A Mod. 03.mov
+https://vimeo.com/855032341
+#EXTINF:-1,MED I.A Mod 02.mov
+https://vimeo.com/855032329
+#EXTINF:-1,MED I.A Mod 01.mov
+https://vimeo.com/855032315
+#EXTINF:-1,MED 01 Planejamento .mov
+https://vimeo.com/854831584
+#EXTINF:-1,MED 09 Manutenção .mov
+https://vimeo.com/854831574
+#EXTINF:-1,MED 03 Tipos de piscinas.mov
+https://vimeo.com/854831564
+#EXTINF:-1,MED 00 Introdução .mov
+https://vimeo.com/854831557
+#EXTINF:-1,MED 06 Dimensionamento.mov
+https://vimeo.com/854831552
+#EXTINF:-1,MED 11 Fechamento.mov
+https://vimeo.com/854831538
+#EXTINF:-1,MED 05 Dimensionamento.mov
+https://vimeo.com/854831529
+#EXTINF:-1,MED 07 Dimensionamneto.mov
+https://vimeo.com/854831518
+#EXTINF:-1,MED 08 Manutenção .mov
+https://vimeo.com/854831508
+#EXTINF:-1,MED 10 Construção .mov
+https://vimeo.com/854831505
+#EXTINF:-1,MED 02 Planejamento .mov
+https://vimeo.com/854831491
+#EXTINF:-1,MED 04 Dimensionamento .mov
+https://vimeo.com/854831482
+#EXTINF:-1,Homilia 17 Domingo Tempo Comum A.pptx.mp4
+https://vimeo.com/854521514
+#EXTINF:-1,19 Domingo do Tempo Comum Ano A.mp4
+https://vimeo.com/854520238
+#EXTINF:-1,Relaxamento Profundo.mov
+https://vimeo.com/849969644
+#EXTINF:-1,07. Construindo um ambiente digital saudável .mov
+https://vimeo.com/849898658
+#EXTINF:-1,06. Gerenciando o tempo de uso de celular na escola.mov
+https://vimeo.com/849898643
+#EXTINF:-1,05.Desenvolvendo habilidades sociais e emocionais .mov
+https://vimeo.com/849898639
+#EXTINF:-1,04. Alternativas criativas para tempo off-line .mov
+https://vimeo.com/849898631
+#EXTINF:-1,03. Promovendo a comunicação familiar .mov
+https://vimeo.com/849898627
+#EXTINF:-1,02. Estabelecendo limites saudáveis de tempo de tela.mov
+https://vimeo.com/849898619
+#EXTINF:-1,01. Entendendo o impacto do uso excessivo de celulares nas crianças .mov
+https://vimeo.com/849898612
+#EXTINF:-1,17° Domingo do tempo Comum.mp4
+https://vimeo.com/849780245
+#EXTINF:-1,Homilia 15 Domingo Tempo Comum A.pptx.mp4
+https://vimeo.com/849779643
+#EXTINF:-1,Carta venda MM.mov
+https://vimeo.com/847613736
+#EXTINF:-1,Carta MM pré lançamento .mov
+https://vimeo.com/847607751
+#EXTINF:-1,CARTA DE VENDAS.mov
+https://vimeo.com/846314504
+#EXTINF:-1,BOAS VINDAS.mov
+https://vimeo.com/844739452
+#EXTINF:-1,Relaxamento Médio .mov
+https://vimeo.com/844248188
+#EXTINF:-1,Relaxamento Suave.mov
+https://vimeo.com/844248165
+#EXTINF:-1,AULA 07 - CANVAS (FONTES DE RECEIITAS)
+https://vimeo.com/844234992
+#EXTINF:-1,AULA 06 - CANVAS (RELACIONAMENTO)
+https://vimeo.com/844231624
+#EXTINF:-1,AULA 05 - CANVAS (QUAIS CANAIS)
+https://vimeo.com/844226308
+#EXTINF:-1,AULA 04 - CANVAS (PARA QUEM EU VU FAZER)
+https://vimeo.com/844223555
+#EXTINF:-1,AULA 03 - CANVAS (VALOR)
+https://vimeo.com/844220257
+#EXTINF:-1,AULA 02-PLANO DE NEGÓCIO X MODELO DE NEGÓCIO
+https://vimeo.com/844216757
+#EXTINF:-1,AULA 01- INTRODUÇÃO
+https://vimeo.com/844213386
+#EXTINF:-1,Novena 03.mov
+https://vimeo.com/844197273
+#EXTINF:-1,Novena 02.mov
+https://vimeo.com/844197253
+#EXTINF:-1,Novena 01.mov
+https://vimeo.com/844197236
+#EXTINF:-1,16 Domingo do Tempo Comum A
+https://vimeo.com/843964143
+#EXTINF:-1,15 Domingo do Tempo Comum A
+https://vimeo.com/843963122
+#EXTINF:-1,14 Domingo do Tempo Comum A
+https://vimeo.com/843961965
+#EXTINF:-1,Introdução aos Relaxamentos Preparatórios
+https://vimeo.com/843961236
+#EXTINF:-1,Introdução ao Som Relaxante
+https://vimeo.com/843961051
+#EXTINF:-1,Introdução à Lectio Divina
+https://vimeo.com/843960849
+#EXTINF:-1,Intodução à Oração e Novena
+https://vimeo.com/843960494
+#EXTINF:-1,VERNIZ DE ALTO BRILHO POLIDO
+https://vimeo.com/843623463
+#EXTINF:-1,TUDO SOBRE LACA
+https://vimeo.com/843623188
+#EXTINF:-1,PINTURA DE PORTAS
+https://vimeo.com/843622829
+#EXTINF:-1,LIVE PINTURA DE VASOS VITRIFICADA
+https://vimeo.com/843622375
+#EXTINF:-1,COMO ESCOLHER UMA PISTOLA ELÉTRICA
+https://vimeo.com/843621904
+#EXTINF:-1,MADEIRAS INDICADAS PARA PETISQUEIRAS E TÁBUAS DE CORTE_SERVIR (1)
+https://vimeo.com/843621352
+#EXTINF:-1,COMO MANTER O FOCO NO TRABALHO
+https://vimeo.com/843621078
+#EXTINF:-1,COMO ESTRUTURAR MINHA EMPRESA COM MARCENARIA CRIATIVA
+https://vimeo.com/843620714
+#EXTINF:-1,COMO AUMENTAR SUAS VENDAS
+https://vimeo.com/843620442
+#EXTINF:-1,04 - CONSIDERAÇÕES FINAIS
+https://vimeo.com/843558459
+#EXTINF:-1,03 - DIVERSIDADES DE TRABALHOS
+https://vimeo.com/843558287
+#EXTINF:-1,02 - PRECIFICAÇÃO
+https://vimeo.com/843558089
+#EXTINF:-1,01 - PROSPECÇÃO
+https://vimeo.com/843557861
+#EXTINF:-1,18 - BÔNUS - COMPRESSOR E PISTOLA DE PINTURA
+https://vimeo.com/843557377
+#EXTINF:-1,17 - CONSIDERAÇÕES FINAIS
+https://vimeo.com/843557166
+#EXTINF:-1,16 - APLICANDO A LACA
+https://vimeo.com/843556642
+#EXTINF:-1,15 - APRESENTAÇÃO DA TINTA
+https://vimeo.com/843556581
+#EXTINF:-1,14 - LIXANDO PARA ACABAMENTO
+https://vimeo.com/843556323
+#EXTINF:-1,13 -MASSA STUCK
+https://vimeo.com/843556185
+#EXTINF:-1,12 - LIXANDO O FUNDO PU
+https://vimeo.com/843556076
+#EXTINF:-1,11 - APLICAÇÃO DO FUNDO PU
+https://vimeo.com/843555933
+#EXTINF:-1,10 - MISTURA DO FUNDO PU
+https://vimeo.com/843555810
+#EXTINF:-1,09 - APRESENTAÇÃO DO FUNDO PU
+https://vimeo.com/843555761
+#EXTINF:-1,08 - FUNDO PU INTRODUÇÃO
+https://vimeo.com/843555675
+#EXTINF:-1,07 - LIXAMENTO DA MASSA ACRÍLICA
+https://vimeo.com/843555255
+#EXTINF:-1,06 - PREPARAÇÃO DO MDF FORMICADO
+https://vimeo.com/843555133
+#EXTINF:-1,05 - PREPARAÇÃO DO MDF CRU
+https://vimeo.com/843554952
+#EXTINF:-1,04 - APLICAÇÃO DA MASSA ACRÍLICA
+https://vimeo.com/843554821
+#EXTINF:-1,03 - LIXAMENTO DA MADEIRA
+https://vimeo.com/843554746
+#EXTINF:-1,02 - APRESENTAÇÃO DOS SBUSTRATOS (EDITADO)
+https://vimeo.com/843554689
+#EXTINF:-1,01 - INTRODUÇÃO AO CURSO
+https://vimeo.com/843554446
+#EXTINF:-1,GABARITOS
+https://vimeo.com/843551436
+#EXTINF:-1,CONSIDERAÇÕES FINAIS
+https://vimeo.com/843551388
+#EXTINF:-1,BOAS-VINDAS E GRUPOS DE ALUNOS
+https://vimeo.com/843551301
+#EXTINF:-1,AULA 11 - SELANDO A PETISQUEIRA
+https://vimeo.com/843551196
+#EXTINF:-1,AULA 10 - ARREDONDANDO AS BORDAS
+https://vimeo.com/843551105
+#EXTINF:-1,AULA 09 - REFILANDO O FUNDO DA PETISQUEIRA
+https://vimeo.com/843551019
+#EXTINF:-1,AULA 08 - COLAGEM DA PETISQUEIRA
+https://vimeo.com/843550906
+#EXTINF:-1,AULA 07 - RECORTANDO O FUNDO DA PETISQUEIRA
+https://vimeo.com/843550830
+#EXTINF:-1,AULA 06 - RECORTE DA BORDA DO REBAIXO
+https://vimeo.com/843550752
+#EXTINF:-1,AULA 05 - FAZENDO O REBAIXO DA PETISQUEIRA
+https://vimeo.com/843550661
+#EXTINF:-1,AULA 04 - COLOCANDO A FRESA
+https://vimeo.com/843550604
+#EXTINF:-1,AULA 03 - FURO GUIA E APRESENTAÇÃO DA FRESA
+https://vimeo.com/843550555
+#EXTINF:-1,AULA 02 - FIXANDO O GABARITO
+https://vimeo.com/843550507
+#EXTINF:-1,AULA 01 - INTRODUÇÃO AO GABARITO E GUIA COPIADOR
+https://vimeo.com/843550447
+#EXTINF:-1,5 - Polimento
+https://vimeo.com/843548811
+#EXTINF:-1,4 - Aplicação do verniz automotivo
+https://vimeo.com/843548545
+#EXTINF:-1,3 - Aplicação de fundo PU
+https://vimeo.com/843547261
+#EXTINF:-1,2- Preparação da madeira
+https://vimeo.com/843546511
+#EXTINF:-1,1 - Introdução
+https://vimeo.com/843546361
+#EXTINF:-1,AULA 05 - APLICAÇÃO DO VERNIZ PU ACETINADO
+https://vimeo.com/843545861
+#EXTINF:-1,AULA 04 - APRESENTAÇÃO DO VERNIZ PU ACETINADO
+https://vimeo.com/843545811
+#EXTINF:-1,AULA 03 - LIXANDO O FUNDO PU
+https://vimeo.com/843545726
+#EXTINF:-1,AULA 02 - APLICAÇÃO DO FUNDO PU
+https://vimeo.com/843545661
+#EXTINF:-1,AULA 01 - INTRODULÇAO AO ACABAMENTO E APRESENTAÇÃO DO FUNDO PU
+https://vimeo.com/843545622
+#EXTINF:-1,15. ACELERANDO O METABOLISMO.mov
+https://vimeo.com/842960663
+#EXTINF:-1,14. ABRAÇANDO SEU CORPO MAIS MAGRO.mov
+https://vimeo.com/842960655
+#EXTINF:-1,13. SE LIVRANDO DO LIXO DO PASSADO.mov
+https://vimeo.com/842960645
+#EXTINF:-1,12. USANDO O SOBREPESO COMO PROTEÇÃO.mov
+https://vimeo.com/842960632
+#EXTINF:-1,11. MOTIVAÇÃO PARA SE EXERCITAR .mov
+https://vimeo.com/842960623
+#EXTINF:-1,10. COMER A NOITE.mov
+https://vimeo.com/842960609
+#EXTINF:-1,09. FOME EMOCIONAL.mov
+https://vimeo.com/842960599
+#EXTINF:-1,08. DESFRUTE DE FRUTAS E LEGUMES.mov
+https://vimeo.com/842960590
+#EXTINF:-1,07. LIVRANDO-SE DO PESO DO PASSADO.mov
+https://vimeo.com/842960580
+#EXTINF:-1,06. COMER E BEBER MAIS DEVAGAR.mov
+https://vimeo.com/842960567
+#EXTINF:-1,05. COMENDO MENOS AÇÚCAR.mov
+https://vimeo.com/842960559
+#EXTINF:-1,04. ALIMENTAÇÃO SAUDÁVEL.mov
+https://vimeo.com/842960536
+#EXTINF:-1,03. A SALA DE CONTROLE DO EMAGRECIMENTO.mov
+https://vimeo.com/842960518
+#EXTINF:-1,02. TOMANDO A DECISÃO DE UMA VIDA SAUDÁVEL .mov
+https://vimeo.com/842957908
+#EXTINF:-1,01. START BÁSICO DE EMAGRECIMENTO .mov
+https://vimeo.com/842956228
+#EXTINF:-1,AULA 10 - LIXANDO PARA ACABAMENTO
+https://vimeo.com/842548810
+#EXTINF:-1,AULA 14 - APLICAÇÃO DA TINTA
+https://vimeo.com/842321941
+#EXTINF:-1,AULA 03 - LIXANDO A PORTA
+https://vimeo.com/842321719
+#EXTINF:-1,AULA 02 - RETIRADA DAS FERRAGENS DA PORTA
+https://vimeo.com/842321057
+#EXTINF:-1,AULA 01 - DESMONTANDO A PORTA
+https://vimeo.com/842320842
+#EXTINF:-1,AULA 05 -APRESENTAÇÃO DO VERNIZ E A APLICAÇÃO
+https://vimeo.com/842173620
+#EXTINF:-1,AULA 06 -CONSIDERAÇÕES FINAIS
+https://vimeo.com/842026159
+#EXTINF:-1,AULA 04 - PINTANDO A PLACA COM TINTA AUTOMOTIVA
+https://vimeo.com/842011243
+#EXTINF:-1,AULA 03 -PREPARAÇÃO PARA O ACABAMENTO
+https://vimeo.com/842008154
+#EXTINF:-1,AULA 02 - INTRODUÇÃO AO ACABAMENTO
+https://vimeo.com/842004303
+#EXTINF:-1,AULA 01 - BOAS- VINDAS
+https://vimeo.com/842003515
+#EXTINF:-1,AULA 06 - REBAIXANDO AS LETRAS (EFEITO 3D)
+https://vimeo.com/841996327
+#EXTINF:-1,AULA 05 - COMEÇANDO O ENTALHE (C0NTORNANDO AS LETRAS)
+https://vimeo.com/841995443
+#EXTINF:-1,AULA 04 - DESENHANDO LETRA MINÚSCULA
+https://vimeo.com/841995173
+#EXTINF:-1,AULA 03 - DESENHANDO AS LETRAS
+https://vimeo.com/841994635
+#EXTINF:-1,AULA 02 - COMO FAZER A MARCAÇÃO DAS LETRAS
+https://vimeo.com/841994239
+#EXTINF:-1,AULA 01 - INTRODUÇÃO AO CURSO
+https://vimeo.com/841993980
+#EXTINF:-1,AULA 08 - CONSIDERAÇÕES E AGRADECIMENTOS
+https://vimeo.com/841988829
+#EXTINF:-1,AULA 07 - PINTANDO AS ESCRITAS
+https://vimeo.com/841985073
+#EXTINF:-1,AULA 06 - ESCREVENDO NOME EM TÁBUAS DE CORTE
+https://vimeo.com/841978039
+#EXTINF:-1,AULA 05 - DESENHANDO NA MADEIRA CONCEITO
+https://vimeo.com/841971180
+#EXTINF:-1,AULA 04 - TRANSFERINDO O DESENHO PARA MADEIRA
+https://vimeo.com/841968954
+#EXTINF:-1,AULA 03 - CONCEITOS E COMO DESENHAR AS LETRAS
+https://vimeo.com/841966094
+#EXTINF:-1,AULA 02 - INTRODUÇÃO AO CURSO E APRESENTAÇÃO DOS EQUIPAMENTOS
+https://vimeo.com/841961562
+#EXTINF:-1,AULA 01 - BOAS-VINDAS
+https://vimeo.com/841959915
+#EXTINF:-1,AULA 05 - FINALIZANDO O ABRIDOR
+https://vimeo.com/840290415
+#EXTINF:-1,AULA 04 - FAZENDO O ENCAIXE PARA PENDURAR O ABRIDOR NA PAREDE
+https://vimeo.com/840290224
+#EXTINF:-1,AULA 03 - COLOCANDO O IMÃ
+https://vimeo.com/840290123
+#EXTINF:-1,AULA 02 - INSTALANDO O ABRIDOR
+https://vimeo.com/840290020
+#EXTINF:-1,AULA 01 - FAZENDO O ABRIDOR
+https://vimeo.com/840289901
+#EXTINF:-1,AULA 03 - SELANDO O PORTA COPOS
+https://vimeo.com/840289487
+#EXTINF:-1,AULA 02 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840289356
+#EXTINF:-1,AULA 01 - REBAIXANDO O GABARITO
+https://vimeo.com/840289114
+#EXTINF:-1,AULA 09 -  SELANDO A TÁBUA
+https://vimeo.com/840287898
+#EXTINF:-1,AULA 08 - COLOCANDO OS PÉZINHOS
+https://vimeo.com/840287720
+#EXTINF:-1,AULA 07 - LIXANDO A TÁBUA
+https://vimeo.com/840287498
+#EXTINF:-1,AULA 06 - COLOCANDO A LIXA NA LIXADEIRA
+https://vimeo.com/840287394
+#EXTINF:-1,AULA 05 - APRESENTANDO AS LIXAS
+https://vimeo.com/840287238
+#EXTINF:-1,AULA 04 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840286993
+#EXTINF:-1,AULA 03 - FAZENDO A CANALETA
+https://vimeo.com/840286761
+#EXTINF:-1,AULA 02 - AJUSTANDO A GUIA PARALELA
+https://vimeo.com/840286662
+#EXTINF:-1,AULA 01 - MARACANDO A CANALETA
+https://vimeo.com/840286526
+#EXTINF:-1,AULA 07 - COLOCANDO A FRESA
+https://vimeo.com/840286149
+#EXTINF:-1,AULA 06 - APRESENTAÇÃO DAS FRESAS
+https://vimeo.com/840285874
+#EXTINF:-1,AULA 04 - GABARITO COPIADOR
+https://vimeo.com/840285700
+#EXTINF:-1,AULA 03 - GUIA PARALELA
+https://vimeo.com/840285474
+#EXTINF:-1,AULA 02 - O QUE VEM NA CAIXA
+https://vimeo.com/840285319
+#EXTINF:-1,AULA 01 - INFORMAÇÕES IMPORTANTES NÃO PULE ESTA AULA
+https://vimeo.com/840285203
+#EXTINF:-1,KIT CHURRASQUEIRO FINAL
+https://vimeo.com/840284746
+#EXTINF:-1,CONSIDERAÇÕES FINAIS
+https://vimeo.com/840284679
+#EXTINF:-1,BOAS-VINDAS
+https://vimeo.com/840284590
+#EXTINF:-1,AULA 05 - SELANDO A TÁBUA
+https://vimeo.com/840284012
+#EXTINF:-1,AULA 04 - FURANDO O CABO
+https://vimeo.com/840283902
+#EXTINF:-1,AULA 03 - FAZENDO AS CANALETAS
+https://vimeo.com/840283710
+#EXTINF:-1,AULA 02 - REFILANDO O GABARITO
+https://vimeo.com/840283577
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840283485
+#EXTINF:-1,AULA 05 - FINALIZANDO A TÁBUA
+https://vimeo.com/840283160
+#EXTINF:-1,AULA 04 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840283029
+#EXTINF:-1,AULA 03 - FURANDO O CABO
+https://vimeo.com/840282980
+#EXTINF:-1,AULA 02 - REFILANDO O MODELO
+https://vimeo.com/840282864
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840282776
+#EXTINF:-1,AULA 04 - RESULTADO FINAL
+https://vimeo.com/840282439
+#EXTINF:-1,AULA 03 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840282347
+#EXTINF:-1,AULA 02 - REFILANDO O GABARITO
+https://vimeo.com/840282222
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840282138
+#EXTINF:-1,AULA 04 - SELANDO A TÁBUA
+https://vimeo.com/840281788
+#EXTINF:-1,AULA 03 - FAZENDO A CANALETA
+https://vimeo.com/840281669
+#EXTINF:-1,AULA 02 - REFILANDO O GABARITO
+https://vimeo.com/840281549
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840281488
+#EXTINF:-1,AULA 05 - SELANDO A TÁBUA
+https://vimeo.com/840280922
+#EXTINF:-1,AULA 04 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840280749
+#EXTINF:-1,AULA 03 - REFILANDO O CABO
+https://vimeo.com/840280505
+#EXTINF:-1,AULA 02 - CORTANDO O CABO
+https://vimeo.com/840280415
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODEO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840280266
+#EXTINF:-1,AULA 05 - SELANDO A TÁBUA
+https://vimeo.com/840279690
+#EXTINF:-1,AULA 04 - FAZENDO A CANALETA
+https://vimeo.com/840279502
+#EXTINF:-1,AULA 03 - REFILANDO O CABO
+https://vimeo.com/840279358
+#EXTINF:-1,AULA 02 - CORTANDO O GABARITO
+https://vimeo.com/840279163
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCAÇÃO DO GABARITO
+https://vimeo.com/840279047
+#EXTINF:-1,GABARITO PARA CANALETA CURVA
+https://vimeo.com/840278155
+#EXTINF:-1,AULA05 - TÁBUA FINALIZADA
+https://vimeo.com/840278052
+#EXTINF:-1,AULA 04 - FURANDO O CABO
+https://vimeo.com/840277977
+#EXTINF:-1,AULA 03 - FAZENDO A CANALETA
+https://vimeo.com/840277818
+#EXTINF:-1,AULA 02 - MODELANDO O GABARITO
+https://vimeo.com/840277529
+#EXTINF:-1,AULA 01 - APRESENTAÇÃO DO MODELO E MARCANDO O GABARITO
+https://vimeo.com/840277439
+#EXTINF:-1,AULA 10 - SELANDO A TÁBUA
+https://vimeo.com/840275093
+#EXTINF:-1,AULA 09 - LIXANDO A TÁBUA
+https://vimeo.com/840274802
+#EXTINF:-1,AULA 08 - ARREDONDANDO AS BORDAS
+https://vimeo.com/840274588
+#EXTINF:-1,AULA 07 - FAZENDO AS CANALETAS
+https://vimeo.com/840274335
+#EXTINF:-1,AULA 06 - FURANDO O CABO
+https://vimeo.com/840274220
+#EXTINF:-1,AULA 05 - REFILANDO O GABARITO
+https://vimeo.com/840273949
+#EXTINF:-1,AULA 04 - FIXANDO O GABARITO E APRESENTANDO A FRESA
+https://vimeo.com/840273857
+#EXTINF:-1,AULA 03 - RECORTANDO O MODELO
+https://vimeo.com/840273787
+#EXTINF:-1,AULA 02 - PASSANDO O GABARITO PARA TÁBUA
+https://vimeo.com/840273697
+#EXTINF:-1,AULA 01 - COMO FAZER OS GABARITOS
+https://vimeo.com/840273446
+#EXTINF:-1,BOAS-VINDAS
+https://vimeo.com/840273208
+#EXTINF:-1,AULA 10 - AGRADECIMENTOS FINAIS
+https://vimeo.com/840272685
+#EXTINF:-1,AULA 09 - MONTANDO A BASE COM A GUIA COPIADORA
+https://vimeo.com/840272455
+#EXTINF:-1,AULA 08 - FAZENDO A FURAÇÃO CENTRAL DA BASE
+https://vimeo.com/840272360
+#EXTINF:-1,AULA 06 - FIXANDO A BASE AMPLIADA
+https://vimeo.com/840272290
+#EXTINF:-1,AULA 05 - ESCARIANDO OS FUROS
+https://vimeo.com/840272156
+#EXTINF:-1,AULA 04 - FURANDO AS MARCAÇÕES DA BASE
+https://vimeo.com/840272068
+#EXTINF:-1,AULA 03 - TRANSFERINDO AS FURAÇÕES DA BASE PARA O ACRÍLICO
+https://vimeo.com/840271930
+#EXTINF:-1,AULA 02 - MEDIDA DO ACRÍLICO
+https://vimeo.com/840271864
+#EXTINF:-1,AULA 01 - BOAS VINDAS
+https://vimeo.com/840271776
+#EXTINF:-1,AULA 06 - LAVABO FINALIZADO
+https://vimeo.com/840271075
+#EXTINF:-1,AULA 05 - LIXANDO A PRIMEIRA MÃO DE POLIDECK E APLICANDO A SEGUNDA
+https://vimeo.com/840270877
+#EXTINF:-1,AULA 04 - APLICAÇÃO DA PRIMEIRA MÃO DO POLIDECK
+https://vimeo.com/840270790
+#EXTINF:-1,AULA 03 - DILUIÇÃO DO PRODUTO
+https://vimeo.com/840270673
+#EXTINF:-1,AULA 02 - APRESENTAÇÃO DO PRODUTO
+https://vimeo.com/840270604
+#EXTINF:-1,AULA 01 - PREPARAÇÃO DA MADEIRA
+https://vimeo.com/840270539
+#EXTINF:-1,AULA 26 - PENDURANDO A PORTA
+https://vimeo.com/840269343
+#EXTINF:-1,AULA 25 - APLICAÇÃO DA TINTA NO BATENTE
+https://vimeo.com/840269073
+#EXTINF:-1,AULA 24 - LIXANDO SEGUNDA MÃO DE MASSA DO FUNDO DO BATENTE
+https://vimeo.com/840265907
+#EXTINF:-1,AULA 23 - FUNDO LIXADO DO BATENTE
+https://vimeo.com/840265839
+#EXTINF:-1,AULA 22 - MASSEANDO PRIMEIRA MÃO DE FUNDO DO BATENTE
+https://vimeo.com/840265651
+#EXTINF:-1,AULA 21 - APLICANDO O FUNDO NO BATENTE
+https://vimeo.com/840265442
+#EXTINF:-1,AULA 20 - LIXANDO A MASSA DO BATENTE
+https://vimeo.com/840265151
+#EXTINF:-1,AULA 19 - MASSEANDO O BATENTE
+https://vimeo.com/840264686
+#EXTINF:-1,AULA 18 - LIXANDO O BATENTE
+https://vimeo.com/840264446
+#EXTINF:-1,AULA 17 - EMPAPELANDO O BATENTE 02
+https://vimeo.com/840263837
+#EXTINF:-1,AULA 16 - EMPAPELANDO O BATENTE 01
+https://vimeo.com/840263636
+#EXTINF:-1,AULA 15 - CHECK-UP DO BATENTE
+https://vimeo.com/840262963
+#EXTINF:-1,29 Domingo do Tempo Comum C
+https://vimeo.com/840257992
+#EXTINF:-1,27 Domingo do Tempo Comum C
+https://vimeo.com/840257900
+#EXTINF:-1,12 Domingo Tempo Comum  C
+https://vimeo.com/840251190
+#EXTINF:-1,11 Domingo do Tempo Comum A
+https://vimeo.com/840251045
+#EXTINF:-1,4 Domingo da Quaresma A
+https://vimeo.com/840250919
+#EXTINF:-1,3 Domingo do Tempo Pascal B
+https://vimeo.com/840250886
+#EXTINF:-1,3 Domingo do Tempo Comum A
+https://vimeo.com/840250761
+#EXTINF:-1,2 Domingo do Tempo Pascal B
+https://vimeo.com/840250582
+#EXTINF:-1,1 Domingo da Quaresma B
+https://vimeo.com/840250517
+#EXTINF:-1,Roteiro 6 Vivo sem viver em mim
+https://vimeo.com/840247132
+#EXTINF:-1,Roteiro 5 Gratidão
+https://vimeo.com/840247020
+#EXTINF:-1,Roteiro 4 Como és lindo
+https://vimeo.com/840246917
+#EXTINF:-1,Roteiro 3 Deus é capaz
+https://vimeo.com/840246808
+#EXTINF:-1,Roteiro 2 Deus Imenso
+https://vimeo.com/840246690
+#EXTINF:-1,Roteiro 1 Ao Eterno Amor
+https://vimeo.com/840246563
+#EXTINF:-1,Pregação sobre o dízimo
+https://vimeo.com/840245553
+#EXTINF:-1,Catequese sobre o dízimo
+https://vimeo.com/840245460
+#EXTINF:-1,CONSIDERAÇÕES FINAIS
+https://vimeo.com/839874363
+#EXTINF:-1,BOAS-VINDAS
+https://vimeo.com/839874266
+#EXTINF:-1,AULA 17 - APLICAÇÃO DO ESMALTE SINTÉTICO E VERNIZ AUTOMOTIVO
+https://vimeo.com/839873834
+#EXTINF:-1,AULA 16 - POSIÇÕES DO BICO DA PISTOLA ELÉTRICA
+https://vimeo.com/839873650
+#EXTINF:-1,AULA 15 - APRESENTAÇÃO DA PISTOLA ELÉTRICA
+https://vimeo.com/839864783
+#EXTINF:-1,AULA 14 - APRESENTAÇÃO DO ESMALTE SINTÉTICO E DO DILUNETE
+https://vimeo.com/839864309
+#EXTINF:-1,AULA 13 - IPERMEALIZAÇÃO INTERNA DO VASO
+https://vimeo.com/839863667
+#EXTINF:-1,AULA 12 - APLICAÇÃO DA TINTA E DO VERNIZ AUTOMOTIVO
+https://vimeo.com/839862683
+#EXTINF:-1,AULA 11 - DILUIÇÃO DO VERNIZ
+https://vimeo.com/839862443
+#EXTINF:-1,AULA 10 - APRESENTAÇÃO DA TINTA E DO VERNIZ
+https://vimeo.com/839861999
+#EXTINF:-1,AULA 09 - LIXANDO MASSA DO PRIME
+https://vimeo.com/839861395
+#EXTINF:-1,AULA 08 - MASSEANDO O PRIME
+https://vimeo.com/839861133
+#EXTINF:-1,AULA 07 - APLICAÇÃO DO PRIME
+https://vimeo.com/839860677
+#EXTINF:-1,AULA 06 - DILUIÇÃO DO PRIME
+https://vimeo.com/839860428
+#EXTINF:-1,AULA 05 - APRESENTAÇÃO DO PRIME E SOLVENTE
+https://vimeo.com/839860258
+#EXTINF:-1,AULA 04 - LIXANDO A SEGUNDA MÃO DE MASSA ACRÍLICA
+https://vimeo.com/839859057
+#EXTINF:-1,AULA 03 - LIXANDO A PRIMEIRA MÃO DE MASSA ACRÍLICA
+https://vimeo.com/839858522
+#EXTINF:-1,AULA 02 - APLICAÇÃO DA MASSA ACRÍLICA
+https://vimeo.com/839857903
+#EXTINF:-1,AULA 01 - INTRODUÇÃO AO ACABAMENTO (LIXANDO O VASO)
+https://vimeo.com/839857116
+#EXTINF:-1,AULA 13 - APRESENTAÇÃO DA TINTA
+https://vimeo.com/839844604
+#EXTINF:-1,AULA 12 - FIXANDO OS TACOS
+https://vimeo.com/839844023
+#EXTINF:-1,AULA 11 - APRESENTAÇÃO DOS TACOS
+https://vimeo.com/839843430
+#EXTINF:-1,AULA 09 - LIXANDO PRIMEIRA MÃO DE FUNDO
+https://vimeo.com/839842523
+#EXTINF:-1,AULA 08 - MASSEANDO O FUNDO
+https://vimeo.com/839841386
+#EXTINF:-1,AULA 07 - APLICAÇÃO DO PRIME UNIVERSAL
+https://vimeo.com/839840730
+#EXTINF:-1,AULA 06 - APRESENTAÇÃO DO PRIME UNIVERSAL
+https://vimeo.com/839840489
+#EXTINF:-1,AULA 05 - LIXANDO A MASSA ACRÍLICA
+https://vimeo.com/839839455
+#EXTINF:-1,AULA 04 - MASSEANDO A PORTA
+https://vimeo.com/839838625
+#EXTINF:-1,AULA 03 - LIXANDO A PORTA
+https://vimeo.com/839838212
+#EXTINF:-1,AULA 02 - RETIRADA DAS FERRAGENS DA PORTA
+https://vimeo.com/839837202
+#EXTINF:-1,AULA 01 - DESMONTANDO A PORTA
+https://vimeo.com/839836789
+#EXTINF:-1,Oração de Cura Interior 6 - Ilha
+https://vimeo.com/831977559
+#EXTINF:-1,Oração de Cura Interior 5 - Cura de Gerações
+https://vimeo.com/831977437
+#EXTINF:-1,Oração de Cura Interior 4 - Luz Interior
+https://vimeo.com/831977274
+#EXTINF:-1,Oração de Cura Interior 3 - Capela do Perdão
+https://vimeo.com/831977183
+#EXTINF:-1,Oração de Cura Interior 2 - Jardim
+https://vimeo.com/831977119
+#EXTINF:-1,Oração de Cura Interior 1 - Gestação e 9 portas
+https://vimeo.com/831977028
+#EXTINF:-1,Instituto Soleil - Promocional Alta Qualidade v3.mp4
+https://vimeo.com/831677633
+#EXTINF:-1,6. REM.mov
+https://vimeo.com/831647022
+#EXTINF:-1,5. Transf. Crenças.mov
+https://vimeo.com/831647018
+#EXTINF:-1,4. Emoções.mov
+https://vimeo.com/831647013
+#EXTINF:-1,3. Crença.mov
+https://vimeo.com/831647000
+#EXTINF:-1,2. PNN.mov
+https://vimeo.com/831646991
+#EXTINF:-1,1. Conexão Neural.mov
+https://vimeo.com/831646977
+#EXTINF:-1,08. ACREDITAR EM SI MESMO NÃO É OPCIONAL .mov
+https://vimeo.com/831637979
+#EXTINF:-1,04. NÃO TENHA MEDO DE CORRER RISCOS.mov
+https://vimeo.com/831637955
+#EXTINF:-1,03. NINGUÉM ANDA PRA FRENTE OLHANDO PRA TRÁS .mov
+https://vimeo.com/831637933
+#EXTINF:-1,02. O TEMPO É PRECIOSO.mov
+https://vimeo.com/831637913
+#EXTINF:-1,10. SAIBA AONDE QUER CHEGAR.mov
+https://vimeo.com/831636108
+#EXTINF:-1,09. SUCESSO É ILIMITADO .mov
+https://vimeo.com/831636101
+#EXTINF:-1,07. NÃO DE DESCULPAS.mov
+https://vimeo.com/831636088
+#EXTINF:-1,06. O EGOÍSMO NÃO COMPENSA.mov
+https://vimeo.com/831636081
+#EXTINF:-1,05. O PODER DE DOAR.mov
+https://vimeo.com/831636077
+#EXTINF:-1,01. SUCESSO E RECLAMAÇÃO NÃO COMBINAM.mov
+https://vimeo.com/831633979
+#EXTINF:-1,00. INTRO - O QUE É O SUCESSO.mov
+https://vimeo.com/831632556
+#EXTINF:-1,Relaxamento 02.mov
+https://vimeo.com/829572578
+#EXTINF:-1,Relaxamento 01.mov
+https://vimeo.com/829567058
+#EXTINF:-1,A raiz da Depressão 2023
+https://vimeo.com/828631968
+#EXTINF:-1,Rito de Entrega do Pai Nosso  - 27_08_2020
+https://vimeo.com/828625997
+#EXTINF:-1,Rito de Entrega do Creio
+https://vimeo.com/828625858
+#EXTINF:-1,16° Se alguém me quer seguir, renuncie a si mesmo
+https://vimeo.com/828625635
+#EXTINF:-1,15° Querigma  Confiança na Providência Divina
+https://vimeo.com/828625428
+#EXTINF:-1,3 Domingo Advento C
+https://vimeo.com/828616764
+#EXTINF:-1,2 Domindo Advento C
+https://vimeo.com/828616705
+#EXTINF:-1,5 Tempo Comum C
+https://vimeo.com/828615710
+#EXTINF:-1,4 Tempo Comum C
+https://vimeo.com/828615564
+#EXTINF:-1,3 Tempo Comum C
+https://vimeo.com/828615463
+#EXTINF:-1,3 Domingo da Páscoa C
+https://vimeo.com/828615405
+#EXTINF:-1,2 Domingo da Pascoa C
+https://vimeo.com/828615375
+#EXTINF:-1,6 Domingo da Pascoa B
+https://vimeo.com/828615112
+#EXTINF:-1,5 Domingo da Páscoa B
+https://vimeo.com/828615070
+#EXTINF:-1,4 Domingo da Páscoa B
+https://vimeo.com/828615044
+#EXTINF:-1,Festa de Pentecostes A,B e C
+https://vimeo.com/828614764
+#EXTINF:-1,Festa da Ascensão A
+https://vimeo.com/828614716
+#EXTINF:-1,2 Domingo de Pascoa A
+https://vimeo.com/828614679
+#EXTINF:-1,3 Advento B
+https://vimeo.com/828613606
+#EXTINF:-1,4 Domingo da Quaresma B
+https://vimeo.com/828603946
+#EXTINF:-1,2 Domingo da Quaresma B
+https://vimeo.com/828603909
+#EXTINF:-1,6ª Feira Santa A,B e C
+https://vimeo.com/828603538
+#EXTINF:-1,5 Quaresma A
+https://vimeo.com/828603489
+#EXTINF:-1,4ª Feira de Cinza A,B e C
+https://vimeo.com/828603447
+#EXTINF:-1,4 Quaresma A
+https://vimeo.com/828603407
+#EXTINF:-1,3 Tempo Comum C
+https://vimeo.com/828602098
+#EXTINF:-1,33 Tempo Comum B
+https://vimeo.com/828599981
+#EXTINF:-1,30 Tempo Comum B
+https://vimeo.com/828599833
+#EXTINF:-1,29 Tempo Comum B
+https://vimeo.com/828599715
+#EXTINF:-1,26 Tempo Comum B
+https://vimeo.com/828599664
+#EXTINF:-1,25 Tempo Comum B
+https://vimeo.com/828599550
+#EXTINF:-1,22 Tempo Comum B
+https://vimeo.com/828599499
+#EXTINF:-1,21 Tempo Comum B
+https://vimeo.com/828599384
+#EXTINF:-1,19 Tempo Comum B
+https://vimeo.com/828599335
+#EXTINF:-1,18 Tempo Comum B
+https://vimeo.com/828599276
+#EXTINF:-1,15 Tempo Comum B
+https://vimeo.com/828599231
+#EXTINF:-1,13 Tempo Comum B
+https://vimeo.com/828599184
+#EXTINF:-1,12 Tempo Comum B
+https://vimeo.com/828599116
+#EXTINF:-1,33 Tempo Comum A
+https://vimeo.com/828598126
+#EXTINF:-1,30 Tempo Comum A
+https://vimeo.com/828598048
+#EXTINF:-1,29 Tempo Comum A
+https://vimeo.com/828597967
+#EXTINF:-1,28 Tempo Comum A
+https://vimeo.com/828597877
+#EXTINF:-1,27 Tempo Comum A
+https://vimeo.com/828597828
+#EXTINF:-1,25 Tempo Comum A
+https://vimeo.com/828597792
+#EXTINF:-1,23 Tempo Comum A
+https://vimeo.com/828597744
+#EXTINF:-1,19 Tempo Comum A
+https://vimeo.com/828597701
+#EXTINF:-1,16 Tempo Comum A
+https://vimeo.com/828597665
+#EXTINF:-1,14 Tempo Comum A
+https://vimeo.com/828597631
+#EXTINF:-1,12 Tempo Comum A
+https://vimeo.com/828597597
+#EXTINF:-1,14° Querígma Envio em missão
+https://vimeo.com/828087677
+#EXTINF:-1,13° Querígma A Virgem Maria modelo de Fé
+https://vimeo.com/828086596
+#EXTINF:-1,12° Querigma - Senhor vem Salvar o teu Povo
+https://vimeo.com/828085873
+#EXTINF:-1,11° Querigma - A Salvação nos é dada pela Graça
+https://vimeo.com/828084805
+#EXTINF:-1,10° Querigma - A Salvação consiste na entrega
+https://vimeo.com/828083659
+#EXTINF:-1,9 Querigma - O pecado original e a Salvacao em Cristo
+https://vimeo.com/828082622
+#EXTINF:-1,8 Querigma - O que ouvimos, vimos, tocamos e contemplamos
+https://vimeo.com/828081582
+#EXTINF:-1,7o Querigma - Larga tua rede e vem pescar comigo
+https://vimeo.com/828080213
+#EXTINF:-1,6 Querigma - Agua que jorra para a vida eterna
+https://vimeo.com/828079108
+#EXTINF:-1,5 Querigma - Se hoje escutardes a voz do Senhor nao endurecais o coracao
+https://vimeo.com/828077593
+#EXTINF:-1,4 Querigma - _Tomai e comei, isto e o meu corpo_
+https://vimeo.com/828076543
+#EXTINF:-1,2° Querigma - O Pai rico em misericordia
+https://vimeo.com/828075144
+#EXTINF:-1,1° Querigma - O Pecado Original e a Salvação em Cristo
+https://vimeo.com/828074816
+#EXTINF:-1,VIDEO UPSELL
+https://vimeo.com/825941140
+#EXTINF:-1,VIDEO TRIPWIRE
+https://vimeo.com/825938608
+#EXTINF:-1,Aula 09 - Medindo o seu progresso
+https://vimeo.com/815779687
+#EXTINF:-1,Aula 08 - Criando suas metas na prática.mp4
+https://vimeo.com/815779414
+#EXTINF:-1,Aula 07 - Exercício de criação de futuro
+https://vimeo.com/815773435
+#EXTINF:-1,Aula 06 - Ativando o poder do emocional
+https://vimeo.com/815773313
+#EXTINF:-1,Aula 05 - Definindo seu ponto de partida
+https://vimeo.com/815773132
+#EXTINF:-1,Aula 04 - Exemplos práticos de metas específicas
+https://vimeo.com/815773055
+#EXTINF:-1,Aula 03 - Critérios para formulação de metas realizáveis
+https://vimeo.com/815772917
+#EXTINF:-1,Aula 02 - Entendendo porque as pessoas falham
+https://vimeo.com/815772721
+#EXTINF:-1,Aula 01 - A importância de ter um Quadro de Metas
+https://vimeo.com/815772467
+#EXTINF:-1,Leader Training - Convite
+https://vimeo.com/813707486
+#EXTINF:-1,CONVITE LEADER TRAINING
+https://vimeo.com/813686916
+#EXTINF:-1,3º Encontro JORNADA FIRE 12-01-23.mp4
+https://vimeo.com/788857671
+#EXTINF:-1,2º Encontro JORNADA FIRE 11-01-23.mp4
+https://vimeo.com/788498099
+#EXTINF:-1,2º ENCONTRO JORNADA FIRE 10-01-23
+https://vimeo.com/788129528
+#EXTINF:-1,1º ENCONTRO 19-12-22
+https://vimeo.com/782741711
+#EXTINF:-1,TESTE HMI
+https://vimeo.com/782697096
+#EXTINF:-1,Bio - Cris Soleil
+https://vimeo.com/760067177
+#EXTINF:-1,Bio - Anderson Soleil.mp4
+https://vimeo.com/760066911
+#EXTINF:-1,Untitled 104
+https://vimeo.com/758536092
+#EXTINF:-1,Untitled 100
+https://vimeo.com/758535809
+#EXTINF:-1,Untitled 99
+https://vimeo.com/758535716
+#EXTINF:-1,Untitled 98
+https://vimeo.com/758535521
+#EXTINF:-1,Untitled 97
+https://vimeo.com/758535175
+#EXTINF:-1,Potencial para prejudicar os outros
+https://vimeo.com/758497013
+#EXTINF:-1,Ideação Suicida
+https://vimeo.com/758496284
+#EXTINF:-1,Intervenção de Crise
+https://vimeo.com/758495812
+#EXTINF:-1,Crise de Relacionamento
+https://vimeo.com/758495421
+#EXTINF:-1,Humor
+https://vimeo.com/758493974
+#EXTINF:-1,Necessidades
+https://vimeo.com/758492670
+#EXTINF:-1,Problemas do Ponto de Vista do Cliente
+https://vimeo.com/758492063
+#EXTINF:-1,Início da Sessão
+https://vimeo.com/758491123
+#EXTINF:-1,Finalizando uma Sessão
+https://vimeo.com/758490633
+#EXTINF:-1,Provocando Pensamentos
+https://vimeo.com/758489928
+#EXTINF:-1,Liderança e Sondagem
+https://vimeo.com/758488760
+#EXTINF:-1,Dúvidas e Esclarecimento
+https://vimeo.com/758488408
+#EXTINF:-1,Avaliação da Psicose
+https://vimeo.com/758487267
+#EXTINF:-1,Perguntas de Escala
+https://vimeo.com/758486743
+#EXTINF:-1,Competência e Enfrentamento
+https://vimeo.com/758486526
+#EXTINF:-1,Perguntas de Exceção
+https://vimeo.com/758486252
+#EXTINF:-1,Definição de Meta
+https://vimeo.com/758485923
+#EXTINF:-1,Pensamento e Comportamento
+https://vimeo.com/758485292
+#EXTINF:-1,Pense no Futuro
+https://vimeo.com/758484501
+#EXTINF:-1,Sentimentos
+https://vimeo.com/758484345
+#EXTINF:-1,Mudar Foco
+https://vimeo.com/758483652
+#EXTINF:-1,AULA 17
+https://vimeo.com/758470537
+#EXTINF:-1,EXERCÍCIO 16
+https://vimeo.com/758470130
+#EXTINF:-1,EXERCÍCIO 15
+https://vimeo.com/758469789
+#EXTINF:-1,Untitled 121
+https://vimeo.com/758469674
+#EXTINF:-1,EXERCÍCIO 14
+https://vimeo.com/758469518
+#EXTINF:-1,EXERCÍCIO 13
+https://vimeo.com/758469401
+#EXTINF:-1,EXERCÍCIO 12
+https://vimeo.com/758469027
+#EXTINF:-1,EXERCÍCIO 11
+https://vimeo.com/758468833
+#EXTINF:-1,EXERCÍCIO 10
+https://vimeo.com/758468741
+#EXTINF:-1,EXERCÍCO 09
+https://vimeo.com/758468647
+#EXTINF:-1,EXERCÍCO 08
+https://vimeo.com/758468550
+#EXTINF:-1,EXERCÍCIO 07
+https://vimeo.com/758468392
+#EXTINF:-1,EXERCÍCO 06
+https://vimeo.com/758468195
+#EXTINF:-1,EXERCÍCIO 05
+https://vimeo.com/758468089
+#EXTINF:-1,EXERCÍCIO 04
+https://vimeo.com/758467947
+#EXTINF:-1,EXERCÍCIO 03
+https://vimeo.com/758467841
+#EXTINF:-1,EXERCÍCIO 02
+https://vimeo.com/758467751
+#EXTINF:-1,EXERCÍCIO 01
+https://vimeo.com/758467591
+#EXTINF:-1,Untitled 106
+https://vimeo.com/758467541
+#EXTINF:-1,BOAS VINDAS - INTRO
+https://vimeo.com/758467278
+#EXTINF:-1,4º E 5º Econtro Mentoria.mp4
+https://vimeo.com/748223711
+#EXTINF:-1,3º Encontro Mentoria.mp4
+https://vimeo.com/747872670
+#EXTINF:-1,2º Encontro Mentoria
+https://vimeo.com/747106699
+#EXTINF:-1,1º Encontro Mentoria
+https://vimeo.com/746706127
+#EXTINF:-1,Const. Presencial 01
+https://vimeo.com/735985519
+#EXTINF:-1,DIA 5.3
+https://vimeo.com/735944396
+#EXTINF:-1,DIA 5.2
+https://vimeo.com/735592697
+#EXTINF:-1,DIA 5.1
+https://vimeo.com/735592576
+#EXTINF:-1,DIA 4.3
+https://vimeo.com/735592328
+#EXTINF:-1,DIA 4.1
+https://vimeo.com/735592148
+#EXTINF:-1,DIA 4.2
+https://vimeo.com/735591839
+#EXTINF:-1,DIA 3.3
+https://vimeo.com/734757842
+#EXTINF:-1,DIA 3.2
+https://vimeo.com/734757584
+#EXTINF:-1,DIA 3.1
+https://vimeo.com/734757023
+#EXTINF:-1,DIA 2.2
+https://vimeo.com/734467318
+#EXTINF:-1,DIA 2.1
+https://vimeo.com/734465068
+#EXTINF:-1,DIA 1.2
+https://vimeo.com/734452775
+#EXTINF:-1,DIA 1.1
+https://vimeo.com/734025815
+#EXTINF:-1,VIVA EXTRAORDINÁRIAMENTE
+https://vimeo.com/731826654
+#EXTINF:-1,Vinheta Soleil Brasil
+https://vimeo.com/731826617
+#EXTINF:-1,08 - depoimento
+https://vimeo.com/731825918
+#EXTINF:-1,07 - depoimento
+https://vimeo.com/731825757
+#EXTINF:-1,06 - depoimento
+https://vimeo.com/731825633
+#EXTINF:-1,05 - depoimento
+https://vimeo.com/731825441
+#EXTINF:-1,04 - depoimento
+https://vimeo.com/731825344
+#EXTINF:-1,03 - depoimento
+https://vimeo.com/731825240
+#EXTINF:-1,02 - depoimento
+https://vimeo.com/731825184
+#EXTINF:-1,01 - depoimento
+https://vimeo.com/731825087
+#EXTINF:-1,Depoimento Victória Pedroso
+https://vimeo.com/722974858
+#EXTINF:-1,Depoimento Tiago Daniel
+https://vimeo.com/722974560
+#EXTINF:-1,Depoimento Thais Belotto Andreotti
+https://vimeo.com/722974206
+#EXTINF:-1,Depoimento Telma Moreira
+https://vimeo.com/722974013
+#EXTINF:-1,Depoimento Shirley Cristina
+https://vimeo.com/722973864
+#EXTINF:-1,Depoimento Bárbara Santos Pedroso
+https://vimeo.com/722973701
+#EXTINF:-1,Depoimento Adriana Pereira
+https://vimeo.com/722973550
+#EXTINF:-1,Sonora Vanessa de Souza Marques
+https://vimeo.com/722972945
+#EXTINF:-1,Sonora Telma
+https://vimeo.com/722972848
+#EXTINF:-1,Sonora Fernanda Aparecida Matiazzo
+https://vimeo.com/722972744
+#EXTINF:-1,Sonora Ana Paula Wenceslau
+https://vimeo.com/722972600
+#EXTINF:-1,DIA 01 PARTE 02.MOV
+https://vimeo.com/718950696
+#EXTINF:-1,DIA 01 PARTE 03.MOV
+https://vimeo.com/718856333
+#EXTINF:-1,DIA 01 PARTE 01.MOV
+https://vimeo.com/718856323
+#EXTINF:-1,DIA 06 PARTE 02.MOV
+https://vimeo.com/716860068
+#EXTINF:-1,DIA 06 PARTE 3.MOV
+https://vimeo.com/716860050
+#EXTINF:-1,DIA 05 .MOV
+https://vimeo.com/714306694
+#EXTINF:-1,DIA 04 PARTE 02.MOV
+https://vimeo.com/714286499
+#EXTINF:-1,DIA 06 PARTE 01.MOV
+https://vimeo.com/711410292
+#EXTINF:-1,DIA 04 PARTE 01.MOV
+https://vimeo.com/711375008
+#EXTINF:-1,DIA 03 PARTE 03.MOV
+https://vimeo.com/711316204
+#EXTINF:-1,DIA 02 PARTE 03.MOV
+https://vimeo.com/711280819
+#EXTINF:-1,DIA 02 PARTE 02.MOV
+https://vimeo.com/710828390
+#EXTINF:-1,DIA 01 PARTE 02.MOV
+https://vimeo.com/710785131
+#EXTINF:-1,DIA 01 PARTE 01.MOV
+https://vimeo.com/710785117
+#EXTINF:-1,DIA 03 PARTE 02.MOV
+https://vimeo.com/707033397
+#EXTINF:-1,DIA 03 PARTE 01
+https://vimeo.com/707017586
+#EXTINF:-1,IMG_5513.MOV
+https://vimeo.com/707017558
+#EXTINF:-1,DIA 02 PARTE 01
+https://vimeo.com/707017535
+#EXTINF:-1,Instituto Soleil - HMI
+https://vimeo.com/706209523
+#EXTINF:-1,Instituto Soleil - Vídeo 8 - HMI - J e P.mp4
+https://vimeo.com/706206158
+#EXTINF:-1,Instituto Soleil - HMI
+https://vimeo.com/706205252
+#EXTINF:-1,Instituto Soleil - HMI
+https://vimeo.com/706201516
+#EXTINF:-1,Instituto Soleil - HMI
+https://vimeo.com/706198259
+#EXTINF:-1,Instituto Soleil - HMI
+https://vimeo.com/706194703
+#EXTINF:-1,Plataforma HMI.mov
+https://vimeo.com/706190983
+#EXTINF:-1,Instituto Soleil - Vídeo 2 - HMI - Intro
+https://vimeo.com/706184459
+#EXTINF:-1,Instituto Soleil Brasil - Apresentação Plataforma
+https://vimeo.com/706129027
+
