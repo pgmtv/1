@@ -60,7 +60,7 @@ if (is_within_time_range(start_time_br_morning, end_time_br_morning) or
     is_within_time_range(start_time_br_evening, end_time_br_evening) or
     is_within_time_range(start_time_br, end_time_br)):
 
-    m3upt_url = "https://github.com/7PlusREPO/ServerPobre/raw/master/LISTA-14.txt"
+    m3upt_url = "https://gist.github.com/jaylinski/5e6a40b066c4bfcc310e79d9143cf741/raw/90cbf134d506d1d1dc3aa1d69d1495752c81c047/kodi_playlist"
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
