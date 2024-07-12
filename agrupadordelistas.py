@@ -28,21 +28,35 @@ end_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=45, 
 start_time_br = datetime.now(brazil_timezone).replace(hour=17, minute=30, second=0, microsecond=0)
 end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=0, second=0, microsecond=0)
 
+# Nome do arquivo de entrada
+input_file = "seu_arquivo_original.txt"
 # Nome do arquivo de saída
 output_file = "lista1.M3U"
 
-# Ler o conteúdo atual do arquivo, se existir
-existing_entries = []
-try:
-    with open(output_file, "r") as f:
-        existing_entries = f.readlines()
-except FileNotFoundError:
-    pass
-
 # Link para adicionar se estiver dentro do intervalo de tempo especificado
 m3upt_url = "https://gist.github.com/DAGT1201/98bd769feaa4d0fb38327514aea515ed/raw/48521e23b439328929c21ee1a49c6ec3944d0564/ESPORTES%2520%257C%2520CANAIS%25202"
+
+# Ler o conteúdo original do arquivo
+original_entries = []
+with open(input_file, "r") as f:
+    original_entries = f.readlines()
+
+# Lista para novas entradas
 new_entries = []
 
+# Processar cada linha do arquivo original
+for line in original_entries:
+    # Remover espaços em branco extras e quebras de linha
+    line = line.strip()
+    # Dividir a linha pela vírgula para obter nome e link
+    parts = line.split(',')
+
+    if len(parts) == 2:
+        name = parts[0].split('"')[-2]  # Extrair o nome entre as aspas
+        link = parts[1].strip()  # Link é o que vem após a vírgula, sem espaços extras
+        new_entries.append(f"#EXTINF:-1 tvg-id=\"\" tvg-name=\"{name}\" tvg-logo=\"https://images2.imgbox.com/87/74/foECtzHi_o.png\" group-title=\"SBT\",{name}\n{link}\n")
+
+# Verificar se estamos dentro do intervalo de tempo para adicionar novas entradas
 if (is_within_time_range(start_time_br_morning, end_time_br_morning) or 
     is_within_time_range(start_time_br_evening, end_time_br_evening) or
     is_within_time_range(start_time_br, end_time_br)):
@@ -53,16 +67,15 @@ if (is_within_time_range(start_time_br_morning, end_time_br_morning) or
         m3upt_lines = m3upt_response.text.split('\n')[:422]
 
         for line in m3upt_lines:
-            if line.strip() not in existing_entries:
-                new_entries.append(line.strip() + '\n')
+            new_entries.append(line.strip() + '\n')
 
 # Escrever no arquivo apenas se houver novas entradas para adicionar
 if new_entries:
     with open(output_file, "a") as f:
-        if not existing_entries or existing_entries[-1] != "#EXTM3U\n":
+        if not original_entries or original_entries[-1].strip() != "#EXTM3U":
             f.write("#EXTM3U\n")
-        for line in new_entries:
-            f.write(line)
+        for entry in new_entries:
+            f.write(entry)
 
 
 
