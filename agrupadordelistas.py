@@ -19,7 +19,7 @@ chrome_options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(options=chrome_options)
 
 # URL da página desejada
-url_youtube = "https://www.youtube.com/results?search_query=Grava%C3%A7%C3%A3o+de+Reuni%C3%A3o&sp=CAISBBABGAI%253D"
+url_youtube = "https://www.youtube.com/results?search_query=donald+trump&sp=EgJAAQ%253D%253D"
 
 # Abrir a página desejada
 driver.get(url_youtube)
@@ -28,7 +28,7 @@ driver.get(url_youtube)
 time.sleep(5)
 
 from selenium.webdriver.common.keys import Keys
-for i in range(5):
+for i in range(3):
     try:
         # Find the last video on the page
         last_video = driver.find_element_by_xpath("//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
