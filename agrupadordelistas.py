@@ -125,7 +125,7 @@ if is_within_time_range(start_time_br, end_time_br):
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
-        m3upt_lines = m3upt_response.text.split('\n')[:23]
+        m3upt_lines = m3upt_response.text.split('\n')[:25]
 
         with open(output_file, "a") as f:
             for line in m3upt_lines:
