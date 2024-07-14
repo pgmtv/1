@@ -8,7 +8,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import yt_dlp
 
 
-from pytube import YouTube
+
 
 # Configuring Chrome options
 chrome_options = Options()
