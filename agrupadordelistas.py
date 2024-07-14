@@ -1,5 +1,3 @@
-!pip install yt_dlp
-
 import subprocess
 import time
 import os
