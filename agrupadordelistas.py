@@ -91,7 +91,7 @@ try:
             thumbnail_url = info['thumbnail']
             description = info.get('description', '')[:10]
             title = info.get('title', '')
-            f.write(f"#EXTINF:-1 group-title=\"YOUTUBE1\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
+            f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
             f.write(f"{url}\n")
             f.write("\n")
 except Exception as e:
