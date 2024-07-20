@@ -1,3 +1,53 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
+from bs4 import BeautifulSoup
+
+# Configuring Chrome options
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+
+# Instantiate Chrome driver
+driver = webdriver.Chrome(options=chrome_options)
+
+# URL of the Vimeo search page
+url_vimeo = "https://vimeo.com/search/sort:latest?duration=long&q=aula"
+
+try:
+    # Open the Vimeo search page
+    driver.get(url_vimeo)
+    time.sleep(5)  # Wait for the page to load
+    
+    # Scroll to the bottom of the page to ensure all content loads
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+    
+    # Get the page source
+    html_content = driver.page_source
+    
+    # Parse the HTML with BeautifulSoup
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    # Find the specific <a> tag containing the link
+    video_link_element = soup.find("a", class_="iris_video-vital__overlay iris_link-box iris_annotation-box iris_chip-box")
+    
+    if video_link_element:
+        video_link = video_link_element.get("href")
+        print("Found video link:", video_link)
+    else:
+        print("Video link not found.")
+    
+finally:
+    # Close the driver
+    driver.quit()
 
 
 
