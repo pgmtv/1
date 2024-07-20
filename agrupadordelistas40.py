@@ -1,26 +1,31 @@
 import time
+import logging
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
-# Configuring Chrome options
+# Configurar logging para capturar saída do navegador
+logging.basicConfig(level=logging.INFO)  # Defina para DEBUG para logs mais detalhados
+
+# Configurar Chrome options
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 
-# Instantiate Chrome driver
+# Instanciar Chrome driver
 driver = webdriver.Chrome(options=chrome_options)
 
-# URL of the Vimeo search page
+# URL da página do Vimeo
 url_vimeo = "https://vimeo.com/search/sort:latest?duration=long&q=aula"
 
 try:
-    # Open the Vimeo search page
+    logging.info(f"Abrindo página: {url_vimeo}")
+    # Abrir a página do Vimeo
     driver.get(url_vimeo)
-    time.sleep(5)  # Wait for the page to load
+    time.sleep(5)  # Esperar a página carregar
     
-    # Scroll to the bottom of the page to ensure all content loads
+    # Scroll até o final da página para garantir que todo o conteúdo seja carregado
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -30,24 +35,27 @@ try:
             break
         last_height = new_height
     
-    # Get the page source
+    # Obter o conteúdo da página
     html_content = driver.page_source
     
-    # Parse the HTML with BeautifulSoup
+    # Parsear o HTML com BeautifulSoup
     soup = BeautifulSoup(html_content, "html.parser")
     
-    # Find the specific <a> tag containing the link
+    # Encontrar a tag <a> específica que contém o link
     video_link_element = soup.find("a", class_="iris_video-vital__overlay iris_link-box iris_annotation-box iris_chip-box")
     
     if video_link_element:
         video_link = video_link_element.get("href")
+        logging.info(f"Link do vídeo encontrado: {video_link}")
         print("Found video link:", video_link)
     else:
+        logging.warning("Link do vídeo não encontrado.")
         print("Video link not found.")
     
 finally:
-    # Close the driver
+    # Fechar o driver
     driver.quit()
+
 
 
 
