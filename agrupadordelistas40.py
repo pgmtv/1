@@ -2,7 +2,6 @@ import time
 import logging
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 # Configurar logging para capturar saída do navegador
@@ -55,6 +54,7 @@ try:
 finally:
     # Fechar o driver
     driver.quit()
+
 
 
 
