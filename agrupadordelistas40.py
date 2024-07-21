@@ -9,13 +9,17 @@ repo_urls = [
 
 lists = []
 
+def is_valid_m3u(content):
+    # Verifica se o conteúdo contém linhas de lista de reprodução .m3u válidas
+    return any(line.startswith("#EXTINF") for line in content.splitlines() if line.strip())
+
 for url in repo_urls:
     response = requests.get(url)
     
     if response.status_code == 200:
         if url.endswith(".m3u"):
-            # Verifica se o conteúdo é realmente uma lista .m3u
-            if "#EXTM3U" in response.text:
+            # Verifica se o conteúdo é realmente uma lista .m3u válida
+            if is_valid_m3u(response.text):
                 lists.append((url.split("/")[-1], response.text))
             else:
                 print(f"Content from {url} does not seem to be a valid .m3u playlist.")
@@ -29,7 +33,7 @@ for url in repo_urls:
                     m3u_url = m3u_file["download_url"]
                     m3u_response = requests.get(m3u_url)
                     
-                    if m3u_response.status_code == 200 and "#EXTM3U" in m3u_response.text:
+                    if m3u_response.status_code == 200 and is_valid_m3u(m3u_response.text):
                         lists.append((m3u_file["name"], m3u_response.text))
                     else:
                         print(f"Content from {m3u_url} does not seem to be a valid .m3u playlist.")
@@ -49,7 +53,7 @@ with open("lista1.m3u", "a") as f:
         for line in lines:
             if line_count >= 200:
                 break
-            if line.strip():  # Pula linhas em branco
+            if line.strip() and line.startswith("#EXTINF"):  # Apenas linhas válidas de .m3u
                 f.write(line + "\n")
                 line_count += 1
         if line_count >= 200:
