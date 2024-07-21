@@ -51,7 +51,7 @@ jobs:
       
     - name: Executar script Python
       run: |
-        python agrupadordelistas
+        python agrupadordelistas.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
           exit 1
