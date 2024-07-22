@@ -47,7 +47,8 @@ try:
             tvg_id = card.find('img', class_='search-result-card__img tw-image')['alt']
             
             # Write to file in the specified format
-            file.write(f"~~ FORMAT: {channel_name} | {group_name} | {logo_url} | {tvg_id}\n")
+            file.write(f"~~ FORMAT: {channel_name} | {group_name} | {logo_url} | 
+            {tvg_id}\n")
 
 except Exception as e:
     print(f"Error: {e}")
