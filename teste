@@ -1,6 +1,6 @@
 import requests
 
-# Lista de URLs
+# Lista de URLs dos repositórios do GitHub
 repo_urls = [
     "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
@@ -9,17 +9,42 @@ repo_urls = [
     "https://api.github.com/repos/punkstarbr/STR-YT/contents"
 ]
 
+# Função para obter os URLs dos arquivos .m3u de um repositório GitHub
+def get_m3u_urls(repo_url):
+    m3u_urls = []
+    response = requests.get(repo_url)
+    if response.status_code == 200:
+        content = response.json()
+        for item in content:
+            if item['name'].endswith('.m3u'):
+                m3u_urls.append(item['download_url'])
+    else:
+        print(f"Erro ao acessar {repo_url}: {response.status_code}")
+    return m3u_urls
+
+# Lista para armazenar todos os URLs dos arquivos .m3u
+all_m3u_urls = []
+
+# Itera sobre os URLs dos repositórios e coleta os URLs dos arquivos .m3u
+for url in repo_urls:
+    if "api.github.com" in url:
+        # Se for uma API do GitHub, obtenha os URLs dos arquivos .m3u
+        m3u_urls = get_m3u_urls(url)
+        all_m3u_urls.extend(m3u_urls)
+    elif url.endswith('.m3u'):
+        # Se for um arquivo .m3u diretamente, adiciona à lista
+        all_m3u_urls.append(url)
+
 # Lista para armazenar o conteúdo dos arquivos .m3u
 all_content = []
 
-# Itera sobre os URLs e coleta o conteúdo dos arquivos .m3u
-for url in repo_urls:
-    if url.endswith('.m3u'):
-        response = requests.get(url)
-        if response.status_code == 200:
-            all_content.append(response.text)
-        else:
-            print(f"Erro ao acessar {url}: {response.status_code}")
+# Itera sobre os URLs dos arquivos .m3u e coleta o conteúdo de cada um
+for url in all_m3u_urls:
+    response = requests.get(url)
+    if response.status_code == 200:
+        all_content.append(response.text)
+    else:
+        print(f"Erro ao acessar {url}: {response.status_code}")
 
 # Escreve todo o conteúdo coletado em um único arquivo .m3u
 with open('lista1.M3U', 'w', encoding='utf-8') as f:
@@ -28,4 +53,3 @@ with open('lista1.M3U', 'w', encoding='utf-8') as f:
         f.write(content.strip() + '\n')
 
 print('Arquivo lista1.m3u foi criado com sucesso.')
-
