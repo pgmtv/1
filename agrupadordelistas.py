@@ -2,7 +2,6 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-import requests
 
 # Configuring Chrome options
 chrome_options = Options()
@@ -29,17 +28,17 @@ try:
     soup = BeautifulSoup(page_source, 'html.parser')
 
     # Find all search result cards
-    cards = soup.find_all('div', class_='ScCoreLink-sc-1abjmm1-0')
+    cards = soup.find_all('a', class_='ScCoreLink-sc-16kq0mq-0 fPPzLm tw-link')
 
     # Open the file channel_info.txt in append mode
     with open('channel_info.txt', 'a', encoding='utf-8') as file:
         # Iterate through the found cards
         for card in cards:
             # Extract channel name
-            channel_name = card.find('p', class_='tw-c-text-alt-2').text.strip()
+            channel_name = card.find('p', class_='ScCoreLink-sc-1b6hcmi-3').text.strip()
             
-            # Extract group name
-            group_name = card.find('p', class_='tw-c-text-alt-2 tw-font-size-6 tw-semibold').text.strip()
+            # Extract group name (if available)
+            group_name = card.find('p', class_='ScCoreLink-sc-1b6hcmi-3').text.strip()
             
             # Extract logo image URL
             logo_url = card.find('img', class_='search-result-card__img tw-image')['src']
@@ -57,6 +56,7 @@ finally:
     # Close the webdriver regardless of whether there was an exception or not
     if 'driver' in locals():
         driver.quit()
+
 
 
 
