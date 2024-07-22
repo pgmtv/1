@@ -46,9 +46,12 @@ try:
             # Extract tvg-id
             tvg_id = card.find('img', class_='search-result-card__img tw-image')['alt']
             
-            # Write to file in the specified format
-            file.write(f"{channel_name} | {group_name} | {logo_url} | 
-            https://www.twitch.tv/{tvg_id}\n")
+            # Format the output in the desired style
+            output_line = f"{channel_name} | {group_name} | {logo_url} | 
+            https://www.twitch.tv/{tvg_id}"
+            
+            # Write to file
+            file.write(output_line + "\n\n")  # Adding two newlines for separation
 
 except Exception as e:
     print(f"Error: {e}")
