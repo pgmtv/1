@@ -1,55 +1,139 @@
+#!/usr/bin/python3
+
 import requests
+import os
+import sys
+import streamlink
+import logging
+from logging.handlers import RotatingFileHandler
+import json
 
-# Lista de URLs dos repositórios do GitHub
-repo_urls = [
-    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-    "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents",
-    "https://api.github.com/repos/cqcbrasil/YouTube_to_m3u/contents",
-    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
-]
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
-# Função para obter os URLs dos arquivos .m3u de um repositório GitHub
-def get_m3u_urls(repo_url):
-    m3u_urls = []
-    response = requests.get(repo_url)
-    if response.status_code == 200:
-        content = response.json()
-        for item in content:
-            if item['name'].endswith('.m3u'):
-                m3u_urls.append(item['download_url'])
-    else:
-        print(f"Erro ao acessar {repo_url}: {response.status_code}")
-    return m3u_urls
+log_file = "log.txt"
+file_handler = RotatingFileHandler(log_file)
+file_handler.setLevel(logging.DEBUG)
 
-# Lista para armazenar todos os URLs dos arquivos .m3u
-all_m3u_urls = []
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
 
-# Itera sobre os URLs dos repositórios e coleta os URLs dos arquivos .m3u
-for url in repo_urls:
-    if "api.github.com" in url:
-        # Se for uma API do GitHub, obtenha os URLs dos arquivos .m3u
-        m3u_urls = get_m3u_urls(url)
-        all_m3u_urls.extend(m3u_urls)
-    elif url.endswith('.m3u'):
-        # Se for um arquivo .m3u diretamente, adiciona à lista
-        all_m3u_urls.append(url)
+logger.addHandler(file_handler)
 
-# Lista para armazenar o conteúdo dos arquivos .m3u
-all_content = []
+banner = r'''
+#EXTM3U
+'''
 
-# Itera sobre os URLs dos arquivos .m3u e coleta o conteúdo de cada um
-for url in all_m3u_urls:
-    response = requests.get(url)
-    if response.status_code == 200:
-        all_content.append(response.text)
-    else:
-        print(f"Erro ao acessar {url}: {response.status_code}")
+def grab(url):
+    try:
+        if url.endswith('.m3u') or url.endswith('.m3u8') or ".ts" in url:
+            return url
 
-# Escreve todo o conteúdo coletado em um único arquivo .m3u
-with open('lista1.M3U', 'w', encoding='utf-8') as f:
-    f.write('#EXTM3U\n')  # Cabeçalho obrigatório para arquivos .m3u
-    for content in all_content:
-        f.write(content.strip() + '\n')
+        session = streamlink.Streamlink()
+        streams = session.streams(url)
+        logger.debug("URL Streams %s: %s", url, streams)
+        if "best" in streams:
+            return streams["best"].url
+        return None
+    except streamlink.exceptions.NoPluginError as err:
+        logger.error("URL Error No PluginError %s: %s", url, err)
+        return None
+    except streamlink.StreamlinkError as err:
+        logger.error("URL Error %s: %s", url, err)
+        return None
 
-print('Arquivo lista1.m3u foi criado com sucesso.')
+
+def check_url(url):
+    try:
+        response = requests.head(url, timeout=15)
+        if response.status_code == 200:
+            logger.debug("URL Streams %s: %s", url, response)
+            return True
+    except requests.exceptions.RequestException as err:
+        pass
+    
+    try:
+        response = requests.head(url, timeout=15, verify=False)
+        if response.status_code == 200:
+            logger.debug("URL Streams %s: %s", url, response)
+            return True
+    except requests.exceptions.RequestException as err:
+        logger.error("URL Error %s: %s", url, err)
+        return False
+    
+    return False
+
+channel_data = []
+channel_data_json = []
+
+channel_info = os.path.abspath(os.path.join(os.path.dirname(__file__), '../lista1.M3U'))
+
+with open(channel_info) as f:
+    for line in f:
+        line = line.strip()
+        if not line or line.startswith('~~'):
+            continue
+        if not line.startswith('http:') and len(line.split("|")) == 4:
+            line = line.split('|')
+            ch_name = line[0].strip()
+            grp_title = line[1].strip().title()
+            tvg_logo = line[2].strip()
+            tvg_id = line[3].strip()
+            channel_data.append({
+                'type': 'info',
+                'ch_name': ch_name,
+                'grp_title': grp_title,
+                'tvg_logo': tvg_logo,
+                'tvg_id': tvg_id
+            })
+        else:
+            link = grab(line)
+            if link and check_url(link):
+                channel_data.append({
+                    'type': 'link',
+                    'url': link
+                })
+
+with open("playlist.m3u", "w") as f:
+    f.write(banner)
+
+    prev_item = None
+
+    for item in channel_data:
+        if item['type'] == 'info':
+            prev_item = item
+        if item['type'] == 'link' and item['url']:
+            f.write(f'\n#EXTINF:-1 group-title="{prev_item["grp_title"]}" tvg-logo="{prev_item["tvg_logo"]}" tvg-id="{prev_item["tvg_id"]}", {prev_item["ch_name"]}')
+            f.write('\n')
+            f.write(item['url'])
+            f.write('\n')
+
+prev_item = None
+
+for item in channel_data:
+    if item['type'] == 'info':
+        prev_item = item
+    if item['type'] == 'link' and item['url']:
+        channel_data_json.append( {
+            "id": prev_item["tvg_id"],
+            "name": prev_item["ch_name"],
+            "alt_names": [""],
+            "network": "",
+            "owners": [""],
+            "country": "AR",
+            "subdivision": "",
+            "city": "Buenos Aires",
+            "broadcast_area": [""],
+            "languages": ["spa"],
+            "categories": [prev_item["grp_title"]],
+            "is_nsfw": False,
+            "launched": "2016-07-28",
+            "closed": "2020-05-31",
+            "replaced_by": "",
+            "website": item['url'],
+            "logo": prev_item["tvg_logo"]
+        })
+
+with open("playlist.json", "w") as f:
+    json_data = json.dumps(channel_data_json, indent=2)
+    f.write(json_data)
