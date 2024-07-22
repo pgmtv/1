@@ -1,63 +1,48 @@
-import subprocess
 import time
-import os
 from selenium import webdriver
-from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.action_chains import ActionChains
-import yt_dlp
-
-
-
+from bs4 import BeautifulSoup
+import requests
 
 # Configuring Chrome options
 chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
+chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration
 
-# Instanciando o driver do Chrome
-driver = webdriver.Chrome(options=chrome_options)
-
-# URL da página desejada
-url_youtube = "https://www.youtube.com/results?search_query=en+direct&sp=EgJAAQ%253D%253D"
-
-# Abrir a página desejada
-driver.get(url_youtube)
-
-# Aguardar alguns segundos para carregar todo o conteúdo da página
-time.sleep(5)
-
-from selenium.webdriver.common.keys import Keys
-for i in range(1):
-    try:
-        # Find the last video on the page
-        last_video = driver.find_element_by_xpath("//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
-        # Scroll to the last video
-        actions = ActionChains(driver)
-        actions.move_to_element(last_video).perform()
-        time.sleep(2)
-    except:
-        # Press the down arrow key for 50 seconds
-        driver.execute_script("window.scrollBy(0, 10000)")
-        time.sleep(2)
-        
-        
-# Get the page source again after scrolling to the bottom
-html_content = driver.page_source
-
-time.sleep(5)
-
-# Find the links and titles of the videos found
 try:
-    soup = BeautifulSoup(html_content, "html.parser")
-    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
-    links = ["https://www.youtube.com" + video.get("href") for video in videos]
-    titles = [video.get("title") for video in videos]
+    # Initialize Chrome webdriver with the configured options
+    driver = webdriver.Chrome(options=chrome_options)
+
+    # URL of the Twitch search page
+    url_twitch = "https://www.twitch.tv/search?term=GRAN%20HERMANO"
+
+    # Open the desired URL
+    driver.get(url_twitch)
+
+    # Wait for the page to load (adjust the sleep time as needed)
+    time.sleep(5)
+
+    # Get page source after waiting
+    page_source = driver.page_source
+
+    # Parse the page source using BeautifulSoup
+    soup = BeautifulSoup(page_source, 'html.parser')
+
+    # Find all <a> elements with the specified classes
+    links = soup.find_all('a', class_='ScCoreLink-sc-16kq0mq-0 fPPzLm tw-link')
+
+    # Iterate through the found links and print their text
+    for link in links:
+        print(link.text.strip())
+
 except Exception as e:
-    print(f"Erro: {e}")
+    print(f"Error: {e}")
+
 finally:
-    # Close the driver
-    driver.quit()
+    # Close the webdriver regardless of whether there was an exception or not
+    if 'driver' in locals():
+        driver.quit()
+
 
 
 import subprocess
