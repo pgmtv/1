@@ -28,12 +28,27 @@ try:
     # Parse the page source using BeautifulSoup
     soup = BeautifulSoup(page_source, 'html.parser')
 
-    # Find all <a> elements with the specified classes
-    links = soup.find_all('a', class_='ScCoreLink-sc-16kq0mq-0 fPPzLm tw-link')
+    # Find all search result cards
+    cards = soup.find_all('div', class_='ScCoreLink-sc-1abjmm1-0')
 
-    # Iterate through the found links and print their text
-    for link in links:
-        print(link.text.strip())
+    # Open the file channel_info.txt in append mode
+    with open('channel_info.txt', 'a', encoding='utf-8') as file:
+        # Iterate through the found cards
+        for card in cards:
+            # Extract channel name
+            channel_name = card.find('p', class_='tw-c-text-alt-2').text.strip()
+            
+            # Extract group name
+            group_name = card.find('p', class_='tw-c-text-alt-2 tw-font-size-6 tw-semibold').text.strip()
+            
+            # Extract logo image URL
+            logo_url = card.find('img', class_='search-result-card__img tw-image')['src']
+            
+            # Extract tvg-id
+            tvg_id = card.find('img', class_='search-result-card__img tw-image')['alt']
+            
+            # Write to file in the specified format
+            file.write(f"~~ FORMAT: {channel_name} | {group_name} | {logo_url} | {tvg_id}\n")
 
 except Exception as e:
     print(f"Error: {e}")
