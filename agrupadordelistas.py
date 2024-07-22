@@ -60,6 +60,68 @@ finally:
     driver.quit()
 
 
+import subprocess
+import time
+import os
+from selenium import webdriver
+from bs4 import BeautifulSoup
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
+import yt_dlp
+
+
+
+
+# Configuring Chrome options
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+
+# Instanciando o driver do Chrome
+driver = webdriver.Chrome(options=chrome_options)
+
+# URL da página desejada
+url_youtube = "https://www.youtube.com/results?search_query=en+direct&sp=EgJAAQ%253D%253D"
+
+# Abrir a página desejada
+driver.get(url_youtube)
+
+# Aguardar alguns segundos para carregar todo o conteúdo da página
+time.sleep(5)
+
+from selenium.webdriver.common.keys import Keys
+for i in range(1):
+    try:
+        # Find the last video on the page
+        last_video = driver.find_element_by_xpath("//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
+        # Scroll to the last video
+        actions = ActionChains(driver)
+        actions.move_to_element(last_video).perform()
+        time.sleep(2)
+    except:
+        # Press the down arrow key for 50 seconds
+        driver.execute_script("window.scrollBy(0, 10000)")
+        time.sleep(2)
+        
+        
+# Get the page source again after scrolling to the bottom
+html_content = driver.page_source
+
+time.sleep(5)
+
+# Find the links and titles of the videos found
+try:
+    soup = BeautifulSoup(html_content, "html.parser")
+    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
+    links = ["https://www.youtube.com" + video.get("href") for video in videos]
+    titles = [video.get("title") for video in videos]
+except Exception as e:
+    print(f"Erro: {e}")
+finally:
+    # Close the driver
+    driver.quit()
+
+
 
 
 # Instalando streamlink
@@ -294,4 +356,70 @@ if is_within_time_range(start_time_br, end_time_br):
 else:
     with open(output_file, "a") as f:
         f.write("#EXTM3U\n")
+
+import requests
+
+# Lista de URLs dos repositórios do GitHub
+repo_urls = [
+    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+    "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/cqcbrasil/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
+]
+
+# Função para obter os URLs dos arquivos .m3u de um repositório GitHub
+def get_m3u_urls(repo_url):
+    m3u_urls = []
+    try:
+        response = requests.get(repo_url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        content = response.json()
+        for item in content:
+            if item['name'].endswith('.m3u'):
+                m3u_urls.append(item['download_url'])
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {repo_url}: {e}")
+    return m3u_urls
+
+# Lista para armazenar todos os URLs dos arquivos .m3u
+all_m3u_urls = []
+
+# Itera sobre os URLs dos repositórios e coleta os URLs dos arquivos .m3u
+for url in repo_urls:
+    if "api.github.com" in url:
+        # Se for uma API do GitHub, obtenha os URLs dos arquivos .m3u
+        m3u_urls = get_m3u_urls(url)
+        all_m3u_urls.extend(m3u_urls)
+    elif url.endswith('.m3u'):
+        # Se for um arquivo .m3u diretamente, adiciona à lista
+        all_m3u_urls.append(url)
+
+# Lista para armazenar o conteúdo dos arquivos .m3u
+all_content = []
+
+# Itera sobre os URLs dos arquivos .m3u e coleta o conteúdo de cada um
+for url in all_m3u_urls:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        if response.status_code == 200:
+            content = response.text.strip()
+            all_content.append(content)
+            print(f"Conteúdo do arquivo {url} coletado com sucesso.")
+        else:
+            print(f"Erro ao acessar {url}: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {url}: {e}")
+
+# Verifica se há conteúdo para escrever no arquivo .m3u
+if all_content:
+    with open('lista1.M3U', 'w', encoding='utf-8') as f:
+        f.write('#EXTM3U\n')  # Cabeçalho obrigatório para arquivos .m3u
+        for content in all_content:
+            f.write(content + '\n')
+
+    print('Arquivo lista1.m3u foi criado com sucesso.')
+else:
+    print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
 
