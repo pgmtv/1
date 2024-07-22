@@ -66,7 +66,7 @@ def check_url(url):
 channel_data = []
 channel_data_json = []
 
-channel_info = os.path.abspath(os.path.join(os.path.dirname(__file__), '../lista1.M3U'))
+channel_info = os.path.abspath(os.path.join(os.path.dirname(__file__), '../lista2.M3U'))
 
 with open(channel_info) as f:
     for line in f:
