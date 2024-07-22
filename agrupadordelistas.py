@@ -47,8 +47,7 @@ try:
             tvg_id = card.find('img', class_='search-result-card__img tw-image')['alt']
             
             # Format the output in the desired style
-            output_line = f"{channel_name} | {group_name} | {logo_url} | 
-            https://www.twitch.tv/{tvg_id}"
+            output_line = f"{channel_name} | {group_name} | {logo_url} | https://www.twitch.tv/{tvg_id}"
             
             # Write to file
             file.write(output_line + "\n\n")  # Adding two newlines for separation
