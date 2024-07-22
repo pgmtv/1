@@ -1,0 +1,43 @@
+import requests
+import json
+
+# Lista de URLs do GitHub
+repo_urls = [
+    "https://api.github.com/repos/strikeinthehouse/YT2M3U/contents",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+    "https://api.github.com/repos/Nuttypro69/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/cqcbrasil/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
+]
+
+# Função para obter os links de um repositório GitHub
+def get_github_links(api_url):
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        content = response.json()
+        links = [item['download_url'] for item in content if 'download_url' in item]
+        return links
+    else:
+        print(f"Erro ao acessar {api_url}: {response.status_code}")
+        return []
+
+# Lista para armazenar todos os links coletados
+all_links = []
+
+# Itera sobre os URLs e coleta os links de cada um
+for url in repo_urls:
+    if "api.github.com" in url:
+        # Se for uma API do GitHub, obtenha os links dos arquivos
+        links = get_github_links(url)
+        all_links.extend(links)
+    else:
+        # Se for um arquivo .m3u diretamente, adiciona à lista
+        all_links.append(url)
+
+# Agora vamos escrever esses links em um arquivo .m3u
+with open('lista1.m3u', 'w', encoding='utf-8') as f:
+    f.write('#EXTM3U\n')  # Cabeçalho obrigatório para arquivos .m3u
+    for link in all_links:
+        f.write(f'{link}\n')  # Escreve cada link na lista
+
+print('Arquivo lista1.m3u foi criado com sucesso.')
