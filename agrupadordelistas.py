@@ -1,64 +1,61 @@
-import time
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
+import requests
+import subprocess
 
-# Configuring Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
-chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration
+# URL da lista IPTV
+url_lista_iptv = "https://github.com/punkstarbr/STR-YT/raw/main/OUTRA%20LISTA"
 
-try:
-    # Initialize Chrome webdriver with the configured options
-    driver = webdriver.Chrome(options=chrome_options)
+# Função para testar cada canal com FFmpeg
+def testar_canal_ffmpeg(url):
+    try:
+        # Comando FFmpeg para verificar se o canal está ativo por 7 segundos
+        comando = [
+            "ffmpeg",
+            "-loglevel", "quiet",
+            "-i", url,
+            "-t", "7",
+            "-f", "null", "-"
+        ]
+        
+        # Chama FFmpeg e verifica o retorno
+        subprocess.run(comando, check=True)
+        return True
+    except subprocess.CalledProcessError:
+        return False
 
-    # URL of the Twitch search page
-    url_twitch = "https://www.twitch.tv/search?term=GRAN%20HERMANO"
-
-    # Open the desired URL
-    driver.get(url_twitch)
-
-    # Wait for the page to load (adjust the sleep time as needed)
-    time.sleep(5)
-
-    # Get page source after waiting
-    page_source = driver.page_source
-
-    # Parse the page source using BeautifulSoup
-    soup = BeautifulSoup(page_source, 'html.parser')
-
-    # Find all search result cards
-    cards = soup.find_all('div', class_='InjectLayout-sc-1i43xsx-0 fMQokC search-result-card')
-
-    # Open the file channel_info.txt in append mode
-    with open('channel_info.txt', 'a', encoding='utf-8') as file:
-        # Iterate through the found cards
-        for card in cards:
-            # Extract channel name
-            channel_name = card.find('strong', class_='CoreText-sc-1txzju1-0 fMRfVf').text.strip()
+# Função principal para processar a lista IPTV
+def processar_lista_iptv(url_lista_iptv):
+    try:
+        # Baixa a lista IPTV
+        response = requests.get(url_lista_iptv)
+        response.raise_for_status()
+        
+        # Lista para armazenar os canais funcionando
+        canais_funcionando = []
+        
+        # Abre o arquivo para escrita do novo arquivo M3U
+        with open("OUTRA LISTA.m3u", "w", encoding="utf-8") as arquivo_saida:
+            linhas = response.text.splitlines()
             
-            # Extract group name (if available)
-            group_name = card.find('p', class_='CoreText-sc-1txzju1-0 exdYde').text.strip()
-            
-            # Extract logo image URL
-            logo_url = card.find('img', class_='search-result-card__img tw-image')['src']
-            
-            # Extract tvg-id
-            tvg_id = card.find('img', class_='search-result-card__img tw-image')['alt']
-            
-            # Format the output in the desired style
-            output_line = f"{channel_name} | {group_name} | {logo_url} | https://www.twitch.tv/{tvg_id}"
-            
-            # Write to file
-            file.write(output_line + "\n\n")  # Adding two newlines for separation
+            for linha in linhas:
+                if linha.startswith("#EXTINF"):
+                    # Testa se o canal está funcionando usando FFmpeg
+                    if testar_canal_ffmpeg(linhas[linhas.index(linha) + 1]):
+                        canais_funcionando.append(linha)
+                        arquivo_saida.write(linha + "\n")
+                        arquivo_saida.write(linhas[linhas.index(linha) + 1] + "\n")
+                elif linha.startswith("#EXTM3U") or linha.strip() == "":
+                    arquivo_saida.write(linha + "\n")
+                else:
+                    arquivo_saida.write(linha + "\n")
+        
+        print(f"Processo concluído. {len(canais_funcionando)} canais funcionando foram escritos no arquivo OUTRA LISTA.m3u.")
+    
+    except requests.RequestException as e:
+        print(f"Erro ao baixar a lista IPTV: {e}")
 
-except Exception as e:
-    print(f"Error: {e}")
+# Chamada da função principal para processar a lista IPTV
+processar_lista_iptv(url_lista_iptv)
 
-finally:
-    # Close the webdriver regardless of whether there was an exception or not
-    if 'driver' in locals():
-        driver.quit()
 
 
 
