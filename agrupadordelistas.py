@@ -2,7 +2,7 @@ import requests
 import subprocess
 
 # URL da lista IPTV
-url_lista_iptv = "https://github.com/punkstarbr/STR-YT/raw/main/OUTRA%20LISTA"
+url_lista_iptv = "https://github.com/punkstarbr/STR-YT/raw/main/RUSSIA.M4U"
 
 # Função para testar cada canal com FFmpeg
 def testar_canal_ffmpeg(url):
@@ -33,7 +33,7 @@ def processar_lista_iptv(url_lista_iptv):
         canais_funcionando = []
         
         # Abre o arquivo para escrita do novo arquivo M3U
-        with open("OUTRA LISTA.m3u", "w", encoding="utf-8") as arquivo_saida:
+        with open("RUSSIA.m3u", "w", encoding="utf-8") as arquivo_saida:
             linhas = response.text.splitlines()
             
             for linha in linhas:
