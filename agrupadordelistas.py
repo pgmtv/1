@@ -164,7 +164,7 @@ if (is_within_time_range(start_time_br_morning, end_time_br_morning) or
     is_within_time_range(start_time_br_evening, end_time_br_evening) or
     is_within_time_range(start_time_br, end_time_br)):
 
-    m3upt_url = "https://gist.github.com/GUAPACHA/ff9cf6435b379c4c550913fdadc8edc4/raw/e5a4f0cc1ebe5a9cd07aa87c9be67004596db1e0/the%2520beatles"
+    m3upt_url = "https://github.com/strikeinthehouse/1/raw/main/lista2.M3U"
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
