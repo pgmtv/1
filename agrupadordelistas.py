@@ -420,3 +420,32 @@ if all_content:
 else:
     print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
 
+
+def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=100):
+    try:
+        # Abre o arquivo M3U original para leitura
+        with open(arquivo_original, 'r') as file:
+            # Lê todas as linhas do arquivo
+            linhas = file.readlines()
+        
+        # Limita as linhas conforme o valor de limite_linhas
+        linhas_limitadas = linhas[:limite_linhas]
+        
+        # Abre o arquivo de saída para escrita
+        with open(arquivo_saida, 'w') as file:
+            # Escreve as linhas limitadas no novo arquivo
+            file.writelines(linhas_limitadas)
+        
+        print(f"O arquivo {arquivo_original} foi limitado a {limite_linhas} linhas e salvo como {arquivo_saida}.")
+    
+    except FileNotFoundError:
+        print(f"Erro: O arquivo {arquivo_original} não foi encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
+# Nome do arquivo original e do arquivo de saída
+arquivo_original = 'lista1.M3U'
+arquivo_saida = 'lista1.M3U'
+
+# Chama a função para limitar o arquivo
+limitar_arquivo_m3u(arquivo_original, arquivo_saida)
