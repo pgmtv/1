@@ -181,7 +181,7 @@ else:
 import requests
 
 repo_urls = [
-    "https://github.com/punkstarbr/STR-YT/raw/main/REALITY'SLIVE.m3u",
+    "https://github.com/punkstarbr/STR-YT/raw/main/lista1.m3u",
     "https://github.com/iptv-org/iptv/blob/master/streams/mx.m3u",    
     "https://github.com/iptv-org/iptv/raw/master/streams/jp.m3u",
     "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u",
