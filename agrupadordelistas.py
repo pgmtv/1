@@ -1,4 +1,20 @@
 import subprocess
+import sys
+
+def install_yt_dlp():
+    try:
+        # Verifica se o pip está instalado
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "yt-dlp"])
+        print("yt-dlp foi instalado com sucesso!")
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao tentar instalar yt-dlp: {e}")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
+if __name__ == "__main__":
+    install_yt_dlp()
+    
+import subprocess
 import time
 import os
 from selenium import webdriver
