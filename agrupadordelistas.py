@@ -65,7 +65,7 @@ finally:
 # Instalando streamlink
 
 subprocess.run(['pip', 'install', 'pytube'])
-subprocess.run(['pip', 'install', '--upgrade', 'yt dlp'])
+subprocess.run(['pip', 'install', '--upgrade', 'yt-dlp'])
 
 time.sleep(5)
 from pytube import YouTube
