@@ -65,7 +65,7 @@ finally:
 
 
 time.sleep(5)
-from pytube import YouTube
+
 
 # Define as opções para o youtube-dl
 ydl_opts = {
