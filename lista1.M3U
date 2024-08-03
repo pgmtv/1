@@ -1,5 +1,29 @@
 #EXTM3U
-#EXTM3U
+#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-pt.xml.xz"
+
+# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
+
+# 📺 TV
+
+#EXTINF:-1 group-title="TV" tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
+#EXTVLCOPT:http-user-agent=Firefox
+#EXTVLCOPT:http-referrer=https://rtp.pt/
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
+#EXTVLCOPT:http-user-agent=Firefox
+#EXTVLCOPT:http-referrer=https://rtp.pt/
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
+
+#EXTINF:-1 group-title="TV" tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC8zLzIwMjQgODo1OjI0IFBNJmhhc2hfdmFsdWU9QjRDRmtMa2w0Y3V1Y1kyT1hBaXl3UT09JnZhbGlkbWludXRlcz0xNDQwJmlkPTNjMzg2YWFhLTkxZWUtNDZmYS05MjM4LWU4YTQ2MGYyMDk0NQ==/
 #EXTM3U
 #EXTM3U 
 #EXTINF:-1 tvg-id="" tvg-name="UK (ITVX) World Of MorseUK (ITVX) Celebrity Big Brother: Live Stream" tvg-logo="" group-title="United Kingdom",Big Brother UK
@@ -374,27 +398,3 @@ https://unidfp-nlds155.global.ssl.fastly.net/nlds/univisionnow/univision_east2/a
 #EXTINF:-1 tvg-id="UnivisionKMEX.us" tvg-name="Univision West (Los Angeles)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_Univision_2019.svg/1200px-Logo_Univision_2019.svg.png" group-title="Live Channels",Univision West (Los Angeles)
 http://38.22.17.37:6969/stream/asd/491/master.m3u8
 #EXTINF:-1 tvg-id="UnivisionWUVG.us" tvg-name="Univision 34 Atlanta" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_Univision_2019.svg/1200px-Logo_Univision_2019.svg.png" group-title="Live Channels",Univision 34 Atlanta
-https://unidfp-nlds161.global.ssl.fastly.net/nlds/univisionnow/univision_atl2/as/live/univision_atl2_hd_pc.m3u8?t1=test_token
-#EXTINF:-1 tvg-id="UnivisionKXLN.us" tvg-name="Univision 45 Houston" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_Univision_2019.svg/1200px-Logo_Univision_2019.svg.png" group-title="Live Channels",Univision 45 Houston
-https://unidfp-nlds145.global.ssl.fastly.net/nlds/univisionnow/univision_hou2/as/live/univision_hou2_hd_pc.m3u8?t1=test_token
-#EXTINF:-1 tvg-id="UnivisionWGBO.us" tvg-name="Univision 66 Chicago" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_Univision_2019.svg/1200px-Logo_Univision_2019.svg.png" group-title="Live Channels",Univision 66 Chicago
-https://unidfp-nlds154.global.ssl.fastly.net/nlds/univisionnow/univision_chi2/as/live/univision_chi2_hd_pc.m3u8?t1=test_token
-#EXTINF:-1 tvg-id="CNBC.us" tvg-name="CNBC FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/CNBC_2023.svg" group-title="Live Channels",CNBC
-http://fl3.moveonjoy.com/CNBC/index.m3u8
-#EXTINF:-1 tvg-id="CNBCWorld.us" tvg-name="CNBC World" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/CNBC_World.svg/1200px-CNBC_World.svg.png" group-title="Live Channels",CNBC World
-http://38.22.17.37:6969/stream/asd/250/master.m3u8
-
-
-#EXTINF:-1 tvg-id="GolfChannel.us" tvg-name="NBC Golf" tvg-logo="https://www.sportsvideo.org/wp-content/uploads/2016/07/golf_render_-rgb.png" group-title="Live Channels",NBC Golf
-http://fl2.moveonjoy.com/GOLF_CHANNEL/index.m3u8
-
-#EXTINF:-1 tvg-id="Universo.us" tvg-name="NBC Universo East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Universo_2017.svg/1200px-Universo_2017.svg.png" group-title="Live Channels",NBC Universo East
-http://supersonictv.live:8080/242306/210404/22170
-#EXTINF:-1 tvg-id="UniversoPacific.us" tvg-name="NBC Universo West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Universo_2017.svg/1200px-Universo_2017.svg.png" group-title="Live Channels",NBC Universo West
-http://supersonictv.live:8080/242306/210404/22171
-#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/1200px-MTV_2021_%28brand_version%29.svg.png" group-title="Live Channels",MTV East
-https://fl2.moveonjoy.com/MTV/index.m3u8
-#EXTINF:-1 tvg-id="MTVPacific.us" tvg-name="MTV West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/1200px-MTV_2021_%28brand_version%29.svg.png" group-title="Live Channels",MTV West
-http://ufospeeds.com:2095/73622931496/7122224796/138
-#EXTINF:-1 tvg-id="MTV2.us" tvg-name="MTV2 East" tvg-logo="https://upload.wikimedia.org/wikipedia/en/2/21/MTV2_logo_2013.svg" group-title="Live Channels",MTV2 East
-https://fl2.moveonjoy.com/MTV_2/index.m3u8
