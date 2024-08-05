@@ -33,9 +33,10 @@ def extract_video_info(page_source):
 
 def get_video_metadata(video_url):
     ydl_opts = {
-        'quiet': True,  # Suprimir saída para facilitar o debug
-        'format': 'bestaudio/best',  # Tenta o melhor formato disponível
-        'noplaylist': True,
+        'format': 'best',  # Obtém a melhor qualidade
+    
+        'write_all_thumbnails': False,  # Não faz download das thumbnails
+        'skip_download': True,  # Não faz download do vídeo
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
