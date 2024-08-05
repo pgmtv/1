@@ -40,6 +40,8 @@ def get_video_metadata(video_url):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
             info = ydl.extract_info(video_url, download=False)
+            formats = info.get('formats', [])
+            best_format = max(formats, key=lambda x: (x.get('height', 0), x.get('acodec', '')), default={})
             url = best_format.get('url', '')
             title = info.get('title', 'No Title')
             description = info.get('description', '')[:10]
