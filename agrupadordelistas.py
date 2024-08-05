@@ -2,7 +2,6 @@ import time
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import yt_dlp
@@ -18,7 +17,7 @@ def initialize_driver(chrome_options):
 
 def fetch_page_source(driver, url, wait_time=5):
     driver.get(url)
-    time.sleep(wait_time)  # Better to use WebDriverWait in real scenarios
+    time.sleep(wait_time)  # Melhor usar WebDriverWait em cenários reais
     return driver.page_source
 
 def scroll_to_bottom(driver, scroll_pause_time=2, scroll_count=5):
@@ -28,45 +27,41 @@ def scroll_to_bottom(driver, scroll_pause_time=2, scroll_count=5):
 
 def extract_video_info(page_source):
     soup = BeautifulSoup(page_source, "html.parser")
-    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
-    links = ["https://www.youtube.com" + video.get("href") for video in videos]
+    video_elements = soup.find_all("a", id="video-title")
+    links = ["https://www.youtube.com" + video.get("href") for video in video_elements]
     return links
 
-def get_available_formats(video_url):
+def get_video_metadata(video_url):
     ydl_opts = {
-        'quiet': True,  # Suppress output to make debugging easier
-        'format': 'bestaudio/best',  # Default format to try
+        'quiet': True,  # Suprimir saída para facilitar o debug
+        'format': 'bestaudio/best',  # Tenta o melhor formato disponível
+        'noplaylist': True,
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
             info = ydl.extract_info(video_url, download=False)
             formats = info.get('formats', [])
-            return formats
+            best_format = max(formats, key=lambda x: x.get('height', 0), default={})
+            url = best_format.get('url', '')
+            title = info.get('title', 'No Title')
+            description = info.get('description', '')[:10]
+            thumbnail_url = info.get('thumbnail', '')
+            return {'url': url, 'title': title, 'description': description, 'thumbnail': thumbnail_url}
         except Exception as e:
             print(f"Erro ao listar formatos para o vídeo {video_url}: {e}")
-            return []
+            return None
 
-def create_m3u_playlist(links, filename='./lista1.M3U'):
-    ydl_opts = {
-        'format': 'bestaudio/best',  # Tenta o melhor formato disponível
-        'write_all_thumbnails': False,
-        'skip_download': True,
-    }
+def create_m3u_playlist(links, filename='./playlist.M3U'):
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
             for link in links:
-                formats = get_available_formats(link)
-                if not formats:
+                metadata = get_video_metadata(link)
+                if not metadata or not metadata['url']:
                     print(f"Nenhum formato disponível para o vídeo {link}")
                     continue
-                best_format = max(formats, key=lambda x: x.get('height', 0))
-                url = best_format.get('url', '')
-                thumbnail_url = best_format.get('thumbnail', '')
-                description = best_format.get('description', '')[:10]
-                title = best_format.get('title', '')
-                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
-                f.write(f"{url}\n")
+                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{metadata['thumbnail']}\",{metadata['title']} - {metadata['description']}...\n")
+                f.write(f"{metadata['url']}\n")
                 f.write("\n")
     except Exception as e:
         print(f"Erro ao criar o arquivo .m3u: {e}")
@@ -80,7 +75,7 @@ def main():
     try:
         page_source = fetch_page_source(driver, url_youtube)
         scroll_to_bottom(driver)
-        page_source = driver.page_source  # Get the page source again after scrolling
+        page_source = driver.page_source  # Obter o código-fonte da página novamente após rolar
 
         links = extract_video_info(page_source)
         create_m3u_playlist(links)
@@ -90,6 +85,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
