@@ -33,7 +33,7 @@ def extract_video_info(page_source):
 
 def get_video_metadata(video_url):
     ydl_opts = {
-        'format': 'bestaudio/best',  # Tenta o melhor formato disponível
+        'format': 'bestvideo/best',  # Tenta o melhor formato disponível
     
         'write_all_thumbnails': False,  # Não faz download das thumbnails
         'skip_download': True,  # Não faz download do vídeo
