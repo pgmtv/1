@@ -30,31 +30,34 @@ def extract_video_info(page_source):
     soup = BeautifulSoup(page_source, "html.parser")
     videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
     links = ["https://www.youtube.com" + video.get("href") for video in videos]
-    titles = [video.get("title") for video in videos]
-    return links, titles
+    return links
 
 def create_m3u_playlist(links, filename='./lista1.M3U'):
     ydl_opts = {
         'format': 'best',
         'write_all_thumbnails': False,
         'skip_download': True,
+        'noplaylist': True,  # Only extract information for a single video
     }
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
             for link in links:
                 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                    info = ydl.extract_info(link, download=False)
-                if 'url' not in info:
-                    print(f"Erro ao gravar informações do vídeo {link}: 'url'")
-                    continue
-                url = info['url']
-                thumbnail_url = info.get('thumbnail', '')
-                description = info.get('description', '')[:10]
-                title = info.get('title', '')
-                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
-                f.write(f"{url}\n")
-                f.write("\n")
+                    try:
+                        info = ydl.extract_info(link, download=False)
+                        if 'url' not in info:
+                            print(f"Erro ao gravar informações do vídeo {link}: 'url'")
+                            continue
+                        url = info['url']
+                        thumbnail_url = info.get('thumbnail', '')
+                        description = info.get('description', '')[:10]
+                        title = info.get('title', '')
+                        f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
+                        f.write(f"{url}\n")
+                        f.write("\n")
+                    except Exception as e:
+                        print(f"Erro ao processar o vídeo {link}: {e}")
     except Exception as e:
         print(f"Erro ao criar o arquivo .m3u: {e}")
 
@@ -69,7 +72,7 @@ def main():
         scroll_to_bottom(driver)
         page_source = driver.page_source  # Get the page source again after scrolling
 
-        links, _ = extract_video_info(page_source)
+        links = extract_video_info(page_source)
         create_m3u_playlist(links)
 
     finally:
@@ -77,6 +80,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
