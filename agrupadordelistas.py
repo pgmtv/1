@@ -34,7 +34,6 @@ def extract_video_info(page_source):
 def get_video_metadata(video_url):
     ydl_opts = {
         'quiet': True,  # Suprimir saída para facilitar o debug
-        'format': 'bestaudio/bestvideo',  # Tenta o melhor formato de áudio e vídeo disponível
         'noplaylist': True,
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
