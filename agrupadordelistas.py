@@ -51,7 +51,7 @@ def get_video_metadata(video_url):
             print(f"Erro ao listar formatos para o vídeo {video_url}: {e}")
             return None
 
-def create_m3u_playlist(links, filename='./playlist.M3U'):
+def create_m3u_playlist(links, filename='./lista1.M3U'):
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
