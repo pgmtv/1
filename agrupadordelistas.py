@@ -67,7 +67,7 @@ def create_m3u_playlist(links, filename='./lista1.M3U'):
         print(f"Erro ao criar o arquivo .m3u: {e}")
 
 def main():
-    url_youtube = "https://www.youtube.com/results?search_query=CNN+&sp=EgJAAQ%253D%253D"
+    url_youtube = "https://www.youtube.com/results?search_query=replay+da+tv&sp=CAI%253D"
     
     chrome_options = configure_chrome_options()
     driver = initialize_driver(chrome_options)
