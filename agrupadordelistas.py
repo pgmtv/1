@@ -32,32 +32,42 @@ def extract_video_info(page_source):
     links = ["https://www.youtube.com" + video.get("href") for video in videos]
     return links
 
+def get_available_formats(video_url):
+    ydl_opts = {
+        'quiet': True,  # Suppress output to make debugging easier
+        'format': 'bestaudio/best',  # Default format to try
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        try:
+            info = ydl.extract_info(video_url, download=False)
+            formats = info.get('formats', [])
+            return formats
+        except Exception as e:
+            print(f"Erro ao listar formatos para o vídeo {video_url}: {e}")
+            return []
+
 def create_m3u_playlist(links, filename='./lista1.M3U'):
     ydl_opts = {
-        'format': 'best',
+        'format': 'bestaudio/best',  # Tenta o melhor formato disponível
         'write_all_thumbnails': False,
         'skip_download': True,
-        'noplaylist': True,  # Only extract information for a single video
     }
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
             for link in links:
-                with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                    try:
-                        info = ydl.extract_info(link, download=False)
-                        if 'url' not in info:
-                            print(f"Erro ao gravar informações do vídeo {link}: 'url'")
-                            continue
-                        url = info['url']
-                        thumbnail_url = info.get('thumbnail', '')
-                        description = info.get('description', '')[:10]
-                        title = info.get('title', '')
-                        f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
-                        f.write(f"{url}\n")
-                        f.write("\n")
-                    except Exception as e:
-                        print(f"Erro ao processar o vídeo {link}: {e}")
+                formats = get_available_formats(link)
+                if not formats:
+                    print(f"Nenhum formato disponível para o vídeo {link}")
+                    continue
+                best_format = max(formats, key=lambda x: x.get('height', 0))
+                url = best_format.get('url', '')
+                thumbnail_url = best_format.get('thumbnail', '')
+                description = best_format.get('description', '')[:10]
+                title = best_format.get('title', '')
+                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
+                f.write(f"{url}\n")
+                f.write("\n")
     except Exception as e:
         print(f"Erro ao criar o arquivo .m3u: {e}")
 
@@ -80,6 +90,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
