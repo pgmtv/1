@@ -381,7 +381,7 @@ import requests
 # Lista de URLs dos repositórios do GitHub
 repo_urls = [
     "https://api.github.com/repos/strikeinthehouse/JCTN/contents",
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u"
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u"
 ]
 
 # Função para obter os URLs dos arquivos .m3u de um repositório GitHub
