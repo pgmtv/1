@@ -380,7 +380,7 @@ import requests
 
 # Lista de URLs dos repositórios do GitHub
 repo_urls = [
-    "https://api.github.com/repos/cqcbrasil/YouTube_to_m3u/contents",
+    "https://api.github.com/repos/strikeinthehouse/JCTN/contents",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u"
 ]
 
