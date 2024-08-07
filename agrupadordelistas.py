@@ -19,7 +19,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://archive.org/details/tvnews?query=bachelor"
+url_archive = "https://archive.org/details/tvnews?sort=-addeddate"
 
 # Open the desired page
 driver.get(url_archive)
@@ -28,7 +28,7 @@ driver.get(url_archive)
 time.sleep(5)
 
 # Scroll to the bottom of the page
-for _ in range(2):
+for _ in range(1):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(2)
 
