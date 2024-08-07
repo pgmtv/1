@@ -1,3 +1,85 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+import youtube_dl
+import concurrent.futures
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+
+
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
+
+# URL of the desired page
+url_archive = "https://archive.org/details/tvnews?sort=-addeddate"
+
+# Open the desired page
+driver.get(url_archive)
+
+# Wait for the page to load
+time.sleep(5)
+
+# Scroll to the bottom of the page
+for _ in range(2):
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(2)
+
+# Find all elements with the specified <a> tags
+elements = driver.find_elements(By.CSS_SELECTOR, 'a[title][data-event-click-tracking="GenericNonCollection|ItemTile"]')
+
+# Create a list to store the video URLs
+video_urls = []
+
+# Print the href attributes and add them to video_urls
+for element in elements:
+    href = element.get_attribute("href")
+    if href:
+        video_urls.append(href)
+        print("Adicionando URL:", href)
+
+# Close the webdriver
+driver.quit()
+
+# Function to get the direct stream URL, title, and thumbnail
+def get_stream_info(url):
+    ydl_opts = {
+        'quiet': True,
+        'format': 'best',
+        'writethumbnail': True,
+        'noplaylist': True,
+        'outtmpl': '/dev/null',
+        'geturl': True
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        info_dict = ydl.extract_info(url, download=False)
+        video_title = info_dict.get('title', 'Video Desconhecido')
+        stream_url = info_dict.get('url', '')
+        thumbnail_url = info_dict.get('thumbnail', '')
+        return video_title, stream_url, thumbnail_url
+
+# Generate the EXTINF lines with tvg-logo and URLs
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    results = list(executor.map(get_stream_info, video_urls))
+
+# Write the EXTINF formatted lines to a file
+with open('lista1.M3U', 'w') as file:
+    file.write('#EXTM3U\n')  # Add the EXT3MU header
+    for title, url, thumbnail in results:
+        if url:
+            tvg_logo = f'tvg-logo="{thumbnail}"' if thumbnail else ''
+            file.write(f'#EXTINF:-1 {tvg_logo}, {title}\n{url}\n')
+
+print("A playlist M3U foi gerada com sucesso.")
+
+
 import time
 import os
 from selenium import webdriver
@@ -53,7 +135,7 @@ def get_video_metadata(video_url):
 
 def create_m3u_playlist(links, filename='./lista1.M3U'):
     try:
-        with open(filename, 'w', encoding='utf-8') as f:
+        with open(filename, 'a', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
             for link in links:
                 metadata = get_video_metadata(link)
