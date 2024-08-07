@@ -80,7 +80,7 @@ with open('lista1.M3U', 'w') as file:
     for (url, thumbnail), (title, stream_url) in zip(video_infos, results):
         if stream_url:
             tvg_logo = f'tvg-logo="{thumbnail}"' if thumbnail else ''
-            file.write(f'#EXTINF:-1 {tvg_logo}, {title}\n{stream_url}\n')
+            file.write(f'#EXTINF:-1 {tvg_logo},{title}\n{stream_url}\n')
 
 print("A playlist M3U foi gerada com sucesso.")
 
