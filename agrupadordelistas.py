@@ -28,9 +28,9 @@ driver.get(url_archive)
 time.sleep(5)
 
 # Scroll to the bottom of the page
-for _ in range(1):
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(2)
+#for _ in range(1):
+#    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#    time.sleep(2)
 
 # Find all elements with the specified <a> tags
 elements = driver.find_elements(By.CSS_SELECTOR, 'a[title][data-event-click-tracking="GenericNonCollection|ItemTile"]')
