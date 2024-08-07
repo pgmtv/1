@@ -19,7 +19,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://archive.org/details/tvnews?sort=-date"
+url_archive = "https://archive.org/details/tvnews?query=bachelor"
 
 # Open the desired page
 driver.get(url_archive)
@@ -28,32 +28,38 @@ driver.get(url_archive)
 time.sleep(5)
 
 # Scroll to the bottom of the page
-for _ in range(1):
+for _ in range(2):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(2)
 
 # Find all elements with the specified <a> tags
 elements = driver.find_elements(By.CSS_SELECTOR, 'a[title][data-event-click-tracking="GenericNonCollection|ItemTile"]')
 
-# Create a list to store the video URLs
-video_urls = []
+# Create a list to store the video URLs and thumbnails
+video_infos = []
 
-# Print the href attributes and add them to video_urls
+# Print the href attributes, thumbnails, and add them to video_infos
 for element in elements:
     href = element.get_attribute("href")
     if href:
-        video_urls.append(href)
+        # Extract the thumbnail URL
+        img_element = element.find_element(By.XPATH, './/img')
+        thumbnail_src = img_element.get_attribute('src') if img_element else ''
+        # Ensure the thumbnail URL is absolute
+        if thumbnail_src and not thumbnail_src.startswith('http'):
+            thumbnail_src = 'https://archive.org' + thumbnail_src
+        video_infos.append((href, thumbnail_src))
         print("Adicionando URL:", href)
+        print("Thumbnail:", thumbnail_src)
 
 # Close the webdriver
 driver.quit()
 
-# Function to get the direct stream URL, title, and thumbnail
+# Function to get the direct stream URL and title
 def get_stream_info(url):
     ydl_opts = {
         'quiet': True,
         'format': 'best',
-        'writethumbnail': True,
         'noplaylist': True,
         'outtmpl': '/dev/null',
         'geturl': True
@@ -62,20 +68,19 @@ def get_stream_info(url):
         info_dict = ydl.extract_info(url, download=False)
         video_title = info_dict.get('title', 'Video Desconhecido')
         stream_url = info_dict.get('url', '')
-        thumbnail_url = info_dict.get('thumbnail', '')
-        return video_title, stream_url, thumbnail_url
+        return video_title, stream_url
 
 # Generate the EXTINF lines with tvg-logo and URLs
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    results = list(executor.map(get_stream_info, video_urls))
+    results = list(executor.map(lambda info: get_stream_info(info[0]), video_infos))
 
 # Write the EXTINF formatted lines to a file
 with open('lista1.M3U', 'w') as file:
     file.write('#EXTM3U\n')  # Add the EXT3MU header
-    for title, url, thumbnail in results:
-        if url:
+    for (url, thumbnail), (title, stream_url) in zip(video_infos, results):
+        if stream_url:
             tvg_logo = f'tvg-logo="{thumbnail}"' if thumbnail else ''
-            file.write(f'#EXTINF:-1 {tvg_logo}, {title}\n{url}\n')
+            file.write(f'#EXTINF:-1 {tvg_logo}, {title}\n{stream_url}\n')
 
 print("A playlist M3U foi gerada com sucesso.")
 
