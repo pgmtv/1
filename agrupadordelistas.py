@@ -19,7 +19,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://archive.org/details/tvarchive?query=rbd&sort=date"
+url_archive = "https://archive.org/details/tvnews?&sort=-date&and[]=languageSorter%3A%22Spanish%22"
 
 # Open the desired page
 driver.get(url_archive)
@@ -502,7 +502,7 @@ else:
     print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
 
 
-def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=900):
+def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=1000):
     try:
         # Abre o arquivo M3U original para leitura
         with open(arquivo_original, 'r') as file:
