@@ -129,6 +129,8 @@ print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
 
 
 
+
+
 import time
 import os
 from selenium import webdriver
