@@ -85,6 +85,12 @@ with open('lista1.M3U', 'w') as file:
 print("A playlist M3U foi gerada com sucesso.")
 
 import yt_dlp
+import re
+
+# Função para extrair o ID da thumbnail da URL
+def extract_thumbnail_url(url):
+    match = re.search(r'\/([^\/]+)\.(?:jpg|png)', url)
+    return url if match else ''
 
 # Definindo a URL de pesquisa
 search_query = 'https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87'
@@ -103,13 +109,15 @@ def get_video_urls(query_url, max_results=10):
         videos = info_dict.get('entries', [])
         return videos[:max_results]
 
-# Função para salvar os resultados em um arquivo M3U
+# Função para salvar os resultados em um arquivo M3U com tvg-logo
 def save_to_m3u(video_list, filename='lista1.M3U'):
     with open(filename, 'a', encoding='utf-8') as f:
         for video in video_list:
             title = video.get('title', 'Unknown Title')
             url = video.get('url', '')
-            f.write(f"#EXTINF:-1,{title}\n")
+            thumbnail = extract_thumbnail_url(video.get('thumbnail', ''))
+            # Adiciona o tvg-logo
+            f.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail}\",{title}\n")
             f.write(f"{url}\n")
 
 # Obter vídeos e salvar no arquivo M3U
@@ -117,6 +125,7 @@ videos = get_video_urls(search_query)
 save_to_m3u(videos)
 
 print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
+
 
 
 
