@@ -14,7 +14,6 @@ options.add_argument("--window-size=1280,720")
 options.add_argument("--disable-infobars")
 
 
-
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
 
