@@ -85,11 +85,11 @@ with open('lista1.M3U', 'w') as file:
 print("A playlist M3U foi gerada com sucesso.")
 
 
+import json
 import time
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import yt_dlp
 
@@ -104,7 +104,7 @@ def initialize_driver(chrome_options):
 
 def fetch_page_source(driver, url, wait_time=5):
     driver.get(url)
-    time.sleep(wait_time)  # Melhor usar WebDriverWait em cenários reais
+    time.sleep(wait_time)
     return driver.page_source
 
 def scroll_to_bottom(driver, scroll_pause_time=2, scroll_count=5):
@@ -118,11 +118,12 @@ def extract_video_info(page_source):
     links = ["https://www.youtube.com" + video.get("href") for video in video_elements]
     return links
 
-def get_video_metadata(video_url):
+def get_video_metadata(video_url, cookies_file='cookies.json'):
     ydl_opts = {
-        'quiet': True,  # Suprimir saída para facilitar o debug
-        'format': 'bestaudio/bestvideo',  # Tenta o melhor formato de áudio e vídeo disponível
+        'quiet': True,
+        'format': 'bestaudio/bestvideo',
         'noplaylist': True,
+        'cookiefile': cookies_file  # Usar cookies para autenticação
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -134,7 +135,6 @@ def get_video_metadata(video_url):
             description = info.get('description', '')[:10]
             thumbnail_url = info.get('thumbnail', '')
 
-            # Verificar se o formato selecionado contém áudio
             if not best_format.get('acodec'):
                 print(f"Vídeo {video_url} não possui áudio disponível.")
                 url = ''  # Não adicionar vídeo sem áudio
@@ -168,7 +168,7 @@ def main():
     try:
         page_source = fetch_page_source(driver, url_youtube)
         scroll_to_bottom(driver)
-        page_source = driver.page_source  # Obter o código-fonte da página novamente após rolar
+        page_source = driver.page_source
 
         links = extract_video_info(page_source)
         create_m3u_playlist(links)
