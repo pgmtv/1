@@ -84,24 +84,17 @@ with open('lista1.M3U', 'w') as file:
 print("A playlist M3U foi gerada com sucesso.")
 
 
-import subprocess
 import time
-import os
 from selenium import webdriver
-from bs4 import BeautifulSoup
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
-import yt_dlp
-from bs4 import BeautifulSoup
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import yt_dlp  # Import yt-dlp here
-import re
-from concurrent.futures import ThreadPoolExecutor
+from bs4 import BeautifulSoup
+import yt_dlp
 
-
-# Configuring Chrome options
+# Configurando opções do Chrome
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
@@ -115,52 +108,50 @@ url_youtube = "https://www.youtube.com/results?search_query=maduro&sp=EgJAAQ%253
 # Abrir a página desejada
 driver.get(url_youtube)
 
-# Aguardar alguns segundos para carregar todo o conteúdo da página
-time.sleep(5)
+# Aguardar alguns segundos para carregar o conteúdo da página
+wait = WebDriverWait(driver, 10)
 
-from selenium.webdriver.common.keys import Keys
-for i in range(1):
-    try:
-        # Find the last video on the page
-        last_video = driver.find_element(By.XPATH, "//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
-        # Scroll to the last video
-        actions = ActionChains(driver)
-        actions.move_to_element(last_video).perform()
-        time.sleep(2)
-    except:
-        # Press the down arrow key for 50 seconds
-        driver.execute_script("window.scrollBy(0, 10000)")
-        time.sleep(2)
-
-# Get the page source again after scrolling to the bottom
-html_content = driver.page_source
-
-time.sleep(5)
-
-# Find the links and titles of the videos found
 try:
-    soup = BeautifulSoup(html_content, "html.parser")
-    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
-    links = ["https://www.youtube.com" + video.get("href") for video in videos]
-    titles = [video.get("title") for video in videos]
-except Exception as e:
-    print(f"Erro: {e}")
+    # Rolagem e coleta de dados
+    for _ in range(3):  # Ajuste o número de iterações conforme necessário
+        try:
+            # Encontre o último vídeo visível
+            last_video = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@id='video-title']")))
+            actions = ActionChains(driver)
+            actions.move_to_element(last_video).perform()
+            time.sleep(2)
+        except Exception as e:
+            print(f"Erro ao rolar para o último vídeo: {e}")
+            driver.execute_script("window.scrollBy(0, 10000)")
+            time.sleep(2)
+
+    # Obter o conteúdo HTML após rolar para baixo
+    html_content = driver.page_source
+
 finally:
-    # Close the driver
+    # Fechar o driver
     driver.quit()
 
-# Define as opções para o youtube-dl
+# Parsear o HTML com BeautifulSoup
+soup = BeautifulSoup(html_content, "html.parser")
+videos = soup.find_all("a", id="video-title")
+
+# Extrair links e títulos dos vídeos
+links = ["https://www.youtube.com" + video.get("href") for video in videos]
+titles = [video.get("title") for video in videos]
+
+# Definindo opções para yt-dlp
 ydl_opts = {
-    'format': 'best',  # Obtém a melhor qualidade
-    'write_all_thumbnails': False,  # Não faz download das thumbnails
-    'skip_download': True,  # Não faz download do vídeo
+    'format': 'best',
+    'write_all_thumbnails': False,
+    'skip_download': True,
 }
 
-# Get the playlist and write to file
+# Escrevendo a playlist no arquivo
 try:
-    with open('./lista1.M3U', 'a', encoding='utf-8') as f:
+    with open('./lista1.M3U', 'w', encoding='utf-8') as f:
         f.write("#EXTM3U\n")
-        for i, link in enumerate(links):
+        for link in links:
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(link, download=False)
             if 'url' not in info:
@@ -174,7 +165,8 @@ try:
             f.write(f"{url}\n")
             f.write("\n")
 except Exception as e:
-    print(f"Erro ao criar o arquivo .m3u8: {e}")
+    print(f"Erro ao criar o arquivo .m3u: {e}")
+
 
 
 
