@@ -19,7 +19,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://archive.org/details/tvnews?query=trump&sort=-date"
+url_archive = "https://archive.org/details/tvarchive?query=late+show&sort=-date"
 
 # Open the desired page
 driver.get(url_archive)
@@ -103,10 +103,12 @@ def get_video_urls(query_url, max_results=10):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info_dict = ydl.extract_info(query_url, download=False)
         videos = info_dict.get('entries', [])
-        return videos[:max_results]
+        # Filtra apenas links de vídeos, ignorando canais e playlists
+        video_entries = [entry for entry in videos if entry.get('_type') == 'video']
+        return video_entries[:max_results]
 
 # Função para salvar os resultados em um arquivo M3U com tvg-logo
-def save_to_m3u(video_list, filename='lista1.m3u'):
+def save_to_m3u(video_list, filename='YOUTUBEPLAY1.m3u'):
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
@@ -133,6 +135,7 @@ videos = get_video_urls(search_query)
 save_to_m3u(videos)
 
 print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
+
 
 
 
