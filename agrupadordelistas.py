@@ -94,7 +94,7 @@ from bs4 import BeautifulSoup
 import yt_dlp
 import re
 from concurrent.futures import ThreadPoolExecutor
-from selenium.webdriver.chrome.options import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Configure Chrome options
