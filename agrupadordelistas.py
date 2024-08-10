@@ -92,86 +92,90 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import yt_dlp
+import re
+from concurrent.futures import ThreadPoolExecutor
+from selenium.webdriver.chrome.options import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-def configure_chrome_options():
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
-    return chrome_options
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
 
-def initialize_driver(chrome_options):
-    return webdriver.Chrome(options=chrome_options)
 
-def fetch_page_source(driver, url, wait_time=5):
-    driver.get(url)
-    time.sleep(wait_time)  # Melhor usar WebDriverWait em cenários reais
-    return driver.page_source
 
-def scroll_to_bottom(driver, scroll_pause_time=2, scroll_count=5):
-    for _ in range(scroll_count):
-        driver.execute_script("window.scrollBy(0, document.body.scrollHeight);")
-        time.sleep(scroll_pause_time)
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
 
-def extract_video_info(page_source):
-    soup = BeautifulSoup(page_source, "html.parser")
-    video_elements = soup.find_all("a", id="video-title")
-    links = ["https://www.youtube.com" + video.get("href") for video in video_elements]
-    return links
+# URL da página desejada
+url_youtube = "https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87"
 
-def get_video_metadata(video_url):
-    ydl_opts = {
-        'quiet': True,  # Suprimir saída para facilitar o debug
-        'format': 'bestaudio/bestvideo',  # Tenta o melhor formato de áudio e vídeo disponível
-        'noplaylist': True,
-    }
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        try:
-            info = ydl.extract_info(video_url, download=False)
-            formats = info.get('formats', [])
-            best_format = max(formats, key=lambda x: (x.get('height', 0), x.get('acodec', '')), default={})
-            url = best_format.get('url', '')
-            title = info.get('title', 'No Title')
+# Abrir a página desejada
+driver.get(url_youtube)
+
+# Aguardar alguns segundos para carregar todo o conteúdo da página
+time.sleep(5)
+
+from selenium.webdriver.common.keys import Keys
+for i in range(5):
+    try:
+        # Find the last video on the page
+        last_video = driver.find_element(By.XPATH, "//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
+        # Scroll to the last video
+        actions = ActionChains(driver)
+        actions.move_to_element(last_video).perform()
+        time.sleep(2)
+    except:
+        # Press the down arrow key for 50 seconds
+        driver.execute_script("window.scrollBy(0, 10000)")
+        time.sleep(2)
+
+# Get the page source again after scrolling to the bottom
+html_content = driver.page_source
+
+time.sleep(5)
+
+# Find the links and titles of the videos found
+try:
+    soup = BeautifulSoup(html_content, "html.parser")
+    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
+    links = ["https://www.youtube.com" + video.get("href") for video in videos]
+    titles = [video.get("title") for video in videos]
+except Exception as e:
+    print(f"Erro: {e}")
+finally:
+    # Close the driver
+    driver.quit()
+
+# Define as opções para o youtube-dl
+ydl_opts = {
+    'format': 'best',  # Obtém a melhor qualidade
+    'write_all_thumbnails': False,  # Não faz download das thumbnails
+    'skip_download': True,  # Não faz download do vídeo
+}
+
+# Get the playlist and write to file
+try:
+    with open('./YOUTUBEPLAY1.m3u', 'w', encoding='utf-8') as f:
+        f.write("#EXTM3U\n")
+        for i, link in enumerate(links):
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(link, download=False)
+            if 'url' not in info:
+                print(f"Erro ao gravar informações do vídeo {link}: 'url'")
+                continue
+            url = info['url']
+            thumbnail_url = info['thumbnail']
             description = info.get('description', '')[:10]
-            thumbnail_url = info.get('thumbnail', '')
-            return {'url': url, 'title': title, 'description': description, 'thumbnail': thumbnail_url}
-        except Exception as e:
-            print(f"Erro ao listar formatos para o vídeo {video_url}: {e}")
-            return None
-
-def create_m3u_playlist(links, filename='./lista1.M3U'):
-    try:
-        with open(filename, 'a', encoding='utf-8') as f:
-            f.write("#EXTM3U\n")
-            for link in links:
-                metadata = get_video_metadata(link)
-                if not metadata or not metadata['url']:
-                    print(f"Nenhum formato disponível para o vídeo {link}")
-                    continue
-                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{metadata['thumbnail']}\",{metadata['title']} - {metadata['description']}...\n")
-                f.write(f"{metadata['url']}\n")
-                f.write("\n")
-    except Exception as e:
-        print(f"Erro ao criar o arquivo .m3u: {e}")
-
-def main():
-    url_youtube = "https://www.youtube.com/results?search_query=trump&sp=EgJAAQ%253D%253D"
-    
-    chrome_options = configure_chrome_options()
-    driver = initialize_driver(chrome_options)
-    
-    try:
-        page_source = fetch_page_source(driver, url_youtube)
-        scroll_to_bottom(driver)
-        page_source = driver.page_source  # Obter o código-fonte da página novamente após rolar
-
-        links = extract_video_info(page_source)
-        create_m3u_playlist(links)
-
-    finally:
-        driver.quit()
-
-if __name__ == "__main__":
-    main()
+            title = info.get('title', '')
+            f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
+            f.write(f"{url}\n")
+            f.write("\n")
+except Exception as e:
+    print(f"Erro ao criar o arquivo .m3u8: {e}")
 
 
 
