@@ -19,7 +19,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://archive.org/details/tvnews?sort=-date"
+url_archive = "https://archive.org/details/tvnews?query=trump&sort=-date"
 
 # Open the desired page
 driver.get(url_archive)
@@ -86,21 +86,19 @@ print("A playlist M3U foi gerada com sucesso.")
 
 import yt_dlp
 
-# Definindo a URL de pesquisa
+# Define a URL de pesquisa
 search_query = 'https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87'
 
-# Configurações do yt-dlp para extrair os resultados da pesquisa
+# Define as opções para o yt-dlp
 ydl_opts = {
-    'quiet': True,
-    'extract_flat': True,  # Isso permite extrair uma lista de vídeos sem baixar o conteúdo
+    'format': 'best',  # Obtém a melhor qualidade
+    'write_all_thumbnails': False,  # Não faz download das thumbnails
+    'skip_download': True,  # Não faz download do vídeo
+    'extract_flat': True,  # Extrai apenas a informação sobre o vídeo
     'force_generic_extractor': True,
 }
 
-# Função para extrair a URL da thumbnail do YouTube
-def get_thumbnail_url(video_id):
-    return f'https://img.youtube.com/vi/{video_id}/hqdefault.jpg'
-
-# Função para extrair os vídeos da pesquisa
+# Função para obter as URLs dos vídeos a partir da pesquisa
 def get_video_urls(query_url, max_results=10):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info_dict = ydl.extract_info(query_url, download=False)
@@ -108,22 +106,34 @@ def get_video_urls(query_url, max_results=10):
         return videos[:max_results]
 
 # Função para salvar os resultados em um arquivo M3U com tvg-logo
-def save_to_m3u(video_list, filename='lista.m3u'):
-    with open(filename, 'w', encoding='utf-8') as f:
-        for video in video_list:
-            title = video.get('title', 'Unknown Title')
-            url = video.get('url', '')
-            video_id = video.get('id', '')
-            thumbnail = get_thumbnail_url(video_id)
-            # Adiciona o tvg-logo
-            f.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail}\",{title}\n")
-            f.write(f"{url}\n")
+def save_to_m3u(video_list, filename='lista1.m3u'):
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write("#EXTM3U\n")
+            for video in video_list:
+                video_id = video.get('id', '')
+                url = video.get('url', '')
+                title = video.get('title', 'Unknown Title')
+                thumbnail = f'https://img.youtube.com/vi/{video_id}/hqdefault.jpg'
+                description = video.get('description', '')[:10]
+
+                if not url:
+                    print(f"Erro ao gravar informações do vídeo {video_id}: 'url'")
+                    continue
+
+                # Grava no arquivo M3U
+                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail}\",{title} - {description}...\n")
+                f.write(f"{url}\n")
+                f.write("\n")
+    except Exception as e:
+        print(f"Erro ao criar o arquivo .m3u: {e}")
 
 # Obter vídeos e salvar no arquivo M3U
 videos = get_video_urls(search_query)
 save_to_m3u(videos)
 
 print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
+
 
 
 
