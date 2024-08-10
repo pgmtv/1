@@ -133,6 +133,12 @@ def get_video_metadata(video_url):
             title = info.get('title', 'No Title')
             description = info.get('description', '')[:10]
             thumbnail_url = info.get('thumbnail', '')
+
+            # Verificar se o formato selecionado contém áudio
+            if not best_format.get('acodec'):
+                print(f"Vídeo {video_url} não possui áudio disponível.")
+                url = ''  # Não adicionar vídeo sem áudio
+
             return {'url': url, 'title': title, 'description': description, 'thumbnail': thumbnail_url}
         except Exception as e:
             print(f"Erro ao listar formatos para o vídeo {video_url}: {e}")
