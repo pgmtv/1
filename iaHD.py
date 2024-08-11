@@ -61,7 +61,7 @@ def filter_and_write_m3u_file(details, filename='lista1.M3U'):
 
 if __name__ == "__main__":
     # URL da coleção do Archive.org
-    archive_url = 'https://archive.org/details/sportv-2-02.02.22-08.08'
+    archive_url = 'https://archive.org/details/sportv-4-02.09.21-16.42-0/SPORTV+4+02.09.21+16.42_0.ts'
     
     # Obtém os detalhes dos vídeos
     details = get_video_details(archive_url)
