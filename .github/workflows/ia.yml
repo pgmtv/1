@@ -53,7 +53,7 @@ jobs:
       
     - name: Executar script Python
       run: |
-        python ia.py
+        python iaFULLHD.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
           exit 1
