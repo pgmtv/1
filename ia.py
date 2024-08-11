@@ -1,6 +1,3 @@
-!pip install youtube-dl yt-dlp
-
-
 import subprocess
 import json
 
@@ -38,19 +35,24 @@ def get_video_details(url):
             print(f"Erro: {e}")
             return []
 
-def print_extinf(details):
-    """Exibe os detalhes dos vídeos no formato #EXTINF, incluindo título e thumbnail como tvg-logo, e URL na linha de baixo."""
-    for entry in details:
-        video_url = entry.get('url')
-        thumbnail_url = entry.get('thumbnail', 'N/A')
-        title = entry.get('title', 'No Title')  # Obtém o título do vídeo
+def write_m3u_file(details, filename='lista1.M3U'):
+    """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
+    with open(filename, 'w', encoding='utf-8') as file:
+        # Adiciona o cabeçalho #EXTM3U
+        file.write("#EXTM3U\n")
+        
+        # Adiciona os detalhes dos vídeos no formato M3U
+        for entry in details:
+            video_url = entry.get('url')
+            thumbnail_url = entry.get('thumbnail', 'N/A')
+            title = entry.get('title', 'No Title')  # Obtém o título do vídeo
 
-        if video_url:
-            # Formata e exibe o título e o URL no formato #EXTINF
-            print(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\", {title}")
-            print(video_url)
-        else:
-            print("URL do vídeo não encontrada.")
+            if video_url:
+                # Formata e escreve o título e o URL no formato #EXTINF
+                file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\", {title}\n")
+                file.write(f"{video_url}\n")
+            else:
+                print("URL do vídeo não encontrada.")
 
 if __name__ == "__main__":
     # URL da coleção do Archive.org
@@ -59,8 +61,9 @@ if __name__ == "__main__":
     # Obtém os detalhes dos vídeos
     details = get_video_details(archive_url)
     
-    # Exibe os detalhes no formato #EXTINF
+    # Escreve os detalhes no arquivo M3U
     if details:
-        print_extinf(details)
+        write_m3u_file(details)
+        print("Arquivo lista1.M3U criado com sucesso.")
     else:
         print("Nenhum URL encontrado.")
