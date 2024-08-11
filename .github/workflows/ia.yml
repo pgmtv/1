@@ -6,8 +6,7 @@ name: Baixando Lista
 
 on:
   schedule:
-    # Agendamento para executar a tarefa a cada 30 minutos
-    - cron: '*/60 * * * *'
+    - cron: '0 */4 * * *'  # Executa a cada 4 horas
   pull_request:
     branches:
       - main
