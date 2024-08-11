@@ -1,5 +1,6 @@
 import subprocess
 import json
+import os
 
 def get_video_details(url):
     """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl e, se necessário, yt-dlp."""
@@ -35,7 +36,7 @@ def get_video_details(url):
             print(f"Erro: {e}")
             return []
 
-def write_m3u_file(details, filename='lista1.M3U'):
+def write_m3u_file(details, filename):
     """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
     with open(filename, 'w', encoding='utf-8') as file:
         # Adiciona o cabeçalho #EXTM3U
@@ -54,16 +55,31 @@ def write_m3u_file(details, filename='lista1.M3U'):
             else:
                 print("URL do vídeo não encontrada.")
 
+def process_urls_from_file(input_file):
+    """Lê URLs de um arquivo e processa cada uma para criar arquivos M3U."""
+    if not os.path.exists(input_file):
+        print(f"O arquivo {input_file} não foi encontrado.")
+        return
+    
+    with open(input_file, 'r') as file:
+        urls = file.readlines()
+    
+    urls = [url.strip() for url in urls if url.strip()]  # Remove espaços em branco e linhas vazias
+    
+    for i, url in enumerate(urls):
+        print(f"Processando URL {i + 1}: {url}")
+        details = get_video_details(url)
+        
+        if details:
+            filename = f'lista_{i + 1}.M3U'
+            write_m3u_file(details, filename)
+            print(f"Arquivo {filename} criado com sucesso.")
+        else:
+            print(f"Nenhum URL encontrado para a URL {url}.")
+
 if __name__ == "__main__":
-    # URL da coleção do Archive.org
-    archive_url = 'https://archive.org/details/TheApprenticeUSSeason2'
+    # Nome do arquivo contendo os URLs
+    input_file = 'ia.txt'
     
-    # Obtém os detalhes dos vídeos
-    details = get_video_details(archive_url)
-    
-    # Escreve os detalhes no arquivo M3U
-    if details:
-        write_m3u_file(details)
-        print("Arquivo lista1.M3U criado com sucesso.")
-    else:
-        print("Nenhum URL encontrado.")
+    # Processa URLs do arquivo
+    process_urls_from_file(input_file)
