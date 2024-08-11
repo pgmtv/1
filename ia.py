@@ -56,7 +56,7 @@ def write_m3u_file(details, filename='lista1.M3U'):
 
 if __name__ == "__main__":
     # URL da coleção do Archive.org
-    archive_url = 'https://archive.org/details/TheApprenticeUSSeason1'
+    archive_url = 'https://archive.org/details/TheApprenticeUSSeason2'
     
     # Obtém os detalhes dos vídeos
     details = get_video_details(archive_url)
