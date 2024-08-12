@@ -50,7 +50,7 @@ def write_m3u_file(details, filename):
 
             if video_url:
                 # Formata e escreve o título e o URL no formato #EXTINF
-                file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\", {title}\n")
+                file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\",{title}\n")
                 file.write(f"{video_url}\n")
             else:
                 print("URL do vídeo não encontrada.")
