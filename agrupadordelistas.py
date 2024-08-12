@@ -329,13 +329,13 @@ import requests
 output_file = "lista1.M3U"
 
 # URL para o conteúdo M3U
-m3upt_url = "https://github.com/LITUATUI/M3UPT/raw/main/M3U/M3UPT.m3u"
+m3upt_url = "https://github.com/strikeinthehouse/1/raw/main/lista3.M3U"
 
 # Requisição ao URL
 m3upt_response = requests.get(m3upt_url)
 
 if m3upt_response.status_code == 200:
-    m3upt_lines = m3upt_response.text.split('\n')[:25]
+    m3upt_lines = m3upt_response.text.split('\n')[:6]
 
     # Escreve no arquivo
     with open(output_file, "w") as f:
