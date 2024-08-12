@@ -15,7 +15,7 @@ def get_video_details(url):
         details = [json.loads(line) for line in result.stdout.splitlines()]
         return details
 
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError:
         print("youtube-dl falhou, tentando yt-dlp...")
         
         try:
