@@ -323,30 +323,6 @@ else:
         f.write("#EXTM3U\n")
 
 
-import requests
-
-# Nome do arquivo de saída
-output_file = "lista1.M3U"
-
-# URL para o conteúdo M3U
-m3upt_url = "https://github.com/strikeinthehouse/1/raw/main/lista3.M3U"
-
-# Requisição ao URL
-m3upt_response = requests.get(m3upt_url)
-
-if m3upt_response.status_code == 200:
-    m3upt_lines = m3upt_response.text.split('\n')[:6]
-
-    # Escreve no arquivo
-    with open(output_file, "w") as f:
-        f.write("#EXTM3U\n")
-        for line in m3upt_lines:
-            f.write(line + '\n')
-else:
-    # Caso a requisição falhe, escreve um cabeçalho padrão
-    with open(output_file, "w") as f:
-        f.write("#EXTM3U\n")
-
         
 import requests
 
