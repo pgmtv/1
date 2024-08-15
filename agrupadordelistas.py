@@ -2,8 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
-import youtube_dl
-import concurrent.futures
 from bs4 import BeautifulSoup
 
 # Configure Chrome options
@@ -14,11 +12,8 @@ options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
 options.add_argument("--disable-infobars")
 
-
-
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
-
 
 # Defina o URL base para fazer scraping
 base_url = "https://btdig.com/search?q=aula+ingl%C3%AAs&order=2"
@@ -29,8 +24,6 @@ time.sleep(10)  # Aguarde a página carregar
 
 # Extraia o HTML da página
 page_source = driver.page_source
-
-
 
 # Feche o WebDriver
 driver.quit()
@@ -45,9 +38,13 @@ for tag in soup.find_all('a', href=True):
     if href.startswith('magnet:?'):
         magnet_links.append(href)
 
-# Exibir o link magnet diretamente no display do Python
-for link in magnet_links:
-    display(Markdown(f'`{link}`'))
+# Escreva os links magnet no arquivo http.txt
+with open('http.txt', 'w') as file:
+    for link in magnet_links:
+        file.write(f'{link}\n')
+
+print("Links magnet foram escritos no arquivo http.txt")
+
 
 
 
