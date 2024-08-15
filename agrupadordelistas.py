@@ -29,13 +29,7 @@ time.sleep(10)  # Aguarde a página carregar
 # Extraia o HTML da página
 page_source = driver.page_source
 
-from IPython.display import Image, display
-# Capture a screenshot of the current browser window
-screenshot_path = "screenshot.png"
-driver.save_screenshot(screenshot_path)
 
-# Display the screenshot
-display(Image(filename=screenshot_path))
 
 # Feche o WebDriver
 driver.quit()
