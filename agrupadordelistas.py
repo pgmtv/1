@@ -18,6 +18,64 @@ options.add_argument("--disable-infobars")
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
 
+
+# Defina o URL base para fazer scraping
+base_url = "https://btdig.com/search?q=aula+ingl%C3%AAs&order=2"
+
+# Navegue até a página
+driver.get(base_url)
+time.sleep(10)  # Aguarde a página carregar
+
+# Extraia o HTML da página
+page_source = driver.page_source
+
+from IPython.display import Image, display
+# Capture a screenshot of the current browser window
+screenshot_path = "screenshot.png"
+driver.save_screenshot(screenshot_path)
+
+# Display the screenshot
+display(Image(filename=screenshot_path))
+
+# Feche o WebDriver
+driver.quit()
+
+# Use BeautifulSoup para analisar o HTML
+soup = BeautifulSoup(page_source, 'html.parser')
+
+# Encontre todos os links magnet
+magnet_links = []
+for tag in soup.find_all('a', href=True):
+    href = tag['href']
+    if href.startswith('magnet:?'):
+        magnet_links.append(href)
+
+# Exibir o link magnet diretamente no display do Python
+for link in magnet_links:
+    display(Markdown(f'`{link}`'))
+
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+import youtube_dl
+import concurrent.futures
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+
+
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
+
 # URL of the desired page
 url_archive = "https://archive.org/details/tvarchive?sort=-date"
 
