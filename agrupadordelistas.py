@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 import youtube_dl
 import concurrent.futures
+from bs4 import BeautifulSoup
 
 # Configure Chrome options
 options = Options()
