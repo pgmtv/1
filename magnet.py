@@ -16,7 +16,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # Define the base URL
-base_url = "https://www.1377x.to/sort-search/UDEMY/size/desc/1/"
+base_url = "https://www.1377x.to/sort-search/curso/size/desc/1/"
 
 # Navigate to the base URL
 driver.get(base_url)
