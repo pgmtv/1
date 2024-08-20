@@ -586,12 +586,17 @@ def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=900):
         with open(arquivo_original, 'r') as file:
             # Lê todas as linhas do arquivo
             linhas = file.readlines()
-        
-        # Filtra as linhas para remover linhas vazias
-        linhas = [linha for linha in linhas if linha.strip()]
+
+        # Filtra as linhas para remover linhas vazias e linhas com certos padrões
+        linhas_filtradas = [
+            linha for linha in linhas 
+            if linha.strip() and 
+            '#EXTVLCOPT:http-user-agent=iPhone' not in linha and 
+            '#EXTVLCOPT--http-reconnect=true' not in linha
+        ]
 
         # Limita as linhas conforme o valor de limite_linhas
-        linhas_limitadas = linhas[:limite_linhas]
+        linhas_limitadas = linhas_filtradas[:limite_linhas]
         
         # Abre o arquivo de saída para escrita
         with open(arquivo_saida, 'w') as file:
@@ -611,4 +616,5 @@ arquivo_saida = 'lista1.M3U'
 
 # Chama a função para limitar o arquivo
 limitar_arquivo_m3u(arquivo_original, arquivo_saida)
+
 
