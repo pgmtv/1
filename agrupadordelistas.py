@@ -587,6 +587,9 @@ def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=900):
             # Lê todas as linhas do arquivo
             linhas = file.readlines()
         
+        # Filtra as linhas para remover linhas vazias
+        linhas = [linha for linha in linhas if linha.strip()]
+
         # Limita as linhas conforme o valor de limite_linhas
         linhas_limitadas = linhas[:limite_linhas]
         
@@ -608,3 +611,4 @@ arquivo_saida = 'lista1.M3U'
 
 # Chama a função para limitar o arquivo
 limitar_arquivo_m3u(arquivo_original, arquivo_saida)
+
