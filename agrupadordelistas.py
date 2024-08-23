@@ -1,57 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-import time
-
-# Configure Chrome options
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-gpu")
-options.add_argument("--window-size=1280,720")
-options.add_argument("--disable-infobars")
-
-# Create the webdriver instance
-driver = webdriver.Chrome(options=options)
-
-# Target URL (replace with the actual archive.org details URL)
-target_url = "https://archive.org/details/@punkstarbr"
-
-# Navigate to the URL
-driver.get(target_url)
-
-# Wait for the page to load initially
-time.sleep(5)
-
-# Find all relevant <a> elements
-links = driver.find_elements(By.XPATH, "//a[contains(@href, '/details/')]")
-
-# Initialize ActionChains
-actions = ActionChains(driver)
-
-# Create or open the file in append mode
-with open("ANTA.txt", "a") as file:
-    for link in links:
-        # Move to the element and hover over it
-        actions.move_to_element(link).perform()
-        time.sleep(1)  # Wait for any hover effect or tooltip to appear
-        
-        # Extract title, link, etc. from the <a> element
-        href = link.get_attribute("href")
-        aria_label = link.get_attribute("aria-label")
-        # Extracting title and link
-        title = aria_label if aria_label else href
-        file.write(f"Title: {title}\nLink: {href}\n\n")
-
-# Close the browser
-driver.quit()
-
-
-
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import time
 import youtube_dl
 import concurrent.futures
