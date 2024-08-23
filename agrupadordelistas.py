@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 import time
-import concurrent.futures
 
 # Configure Chrome options
 options = Options()
@@ -11,8 +11,6 @@ options.add_argument("--no-sandbox")
 options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
 options.add_argument("--disable-infobars")
-
-
 
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
@@ -23,25 +21,42 @@ target_url = "https://archive.org/details/@punkstarbr"
 # Navigate to the URL
 driver.get(target_url)
 
-# Wait for the page to load (adjust wait time as needed)
-time.sleep(5)  # Wait for 5 seconds
+# Wait for the page to load initially
+time.sleep(5)
 
-# Find elements by class name 'item-tile'
-item_tiles = driver.find_elements(By.CLASS_NAME, "item-tile")
+# Function to scroll the page until the end
+def scroll_to_end(driver):
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    while True:
+        # Scroll down to the bottom
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(3)  # Wait for new content to load
+
+        # Calculate new scroll height and compare with the last height
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+# Scroll through the entire page
+scroll_to_end(driver)
+
+# Find all relevant <a> elements
+links = driver.find_elements(By.XPATH, "//a[contains(@href, '/details/')]")
 
 # Create or open the file in append mode
 with open("ANTA.txt", "a") as file:
-    for item in item_tiles:
-        # Extract title, description, link etc. using appropriate methods
-        # Replace this with your actual extraction logic
-        title = item.find_element(By.TAG_NAME, "h3").text
-        link = item.find_element(By.TAG_NAME, "a").get_attribute("href")
-
-        # Write the extracted data to the file
-        file.write(f"Title: {title}\nLink: {link}\n\n")
+    for link in links:
+        # Extract title, link, etc. from the <a> element
+        href = link.get_attribute("href")
+        aria_label = link.get_attribute("aria-label")
+        # Extracting title and link
+        title = aria_label if aria_label else href
+        file.write(f"Title: {title}\nLink: {href}\n\n")
 
 # Close the browser
 driver.quit()
+
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
