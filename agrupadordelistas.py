@@ -2,6 +2,51 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
+import concurrent.futures
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+
+
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
+
+# Target URL (replace with the actual archive.org details URL)
+target_url = "https://archive.org/details/@punkstarbr"
+
+# Navigate to the URL
+driver.get(target_url)
+
+# Wait for the page to load (adjust wait time as needed)
+time.sleep(5)  # Wait for 5 seconds
+
+# Find elements by class name 'item-tile'
+item_tiles = driver.find_elements(By.CLASS_NAME, "item-tile")
+
+# Create or open the file in append mode
+with open("ANTA.txt", "a") as file:
+    for item in item_tiles:
+        # Extract title, description, link etc. using appropriate methods
+        # Replace this with your actual extraction logic
+        title = item.find_element(By.TAG_NAME, "h3").text
+        link = item.find_element(By.TAG_NAME, "a").get_attribute("href")
+
+        # Write the extracted data to the file
+        file.write(f"Title: {title}\nLink: {link}\n\n")
+
+# Close the browser
+driver.quit()
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
 import youtube_dl
 import concurrent.futures
 
