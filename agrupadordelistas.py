@@ -410,7 +410,7 @@ end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=59, second=0
 output_file = "lista1.M3U"
 
 if is_within_time_range(start_time_br, end_time_br):
-    m3upt_url = "https://github.com/punkstarbr/STR-YT/raw/main/NEWSWORLD.m3u"
+    m3upt_url = "https://github.com/punkstarbr/STR-YT/raw/main/lista1.M3U"
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
