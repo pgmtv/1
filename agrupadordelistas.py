@@ -24,29 +24,19 @@ driver.get(target_url)
 # Wait for the page to load initially
 time.sleep(5)
 
-# Function to scroll the page until the end
-def scroll_to_end(driver):
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    while True:
-        # Scroll down to the bottom
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(3)  # Wait for new content to load
-
-        # Calculate new scroll height and compare with the last height
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
-
-# Scroll through the entire page
-scroll_to_end(driver)
-
 # Find all relevant <a> elements
 links = driver.find_elements(By.XPATH, "//a[contains(@href, '/details/')]")
+
+# Initialize ActionChains
+actions = ActionChains(driver)
 
 # Create or open the file in append mode
 with open("ANTA.txt", "a") as file:
     for link in links:
+        # Move to the element and hover over it
+        actions.move_to_element(link).perform()
+        time.sleep(1)  # Wait for any hover effect or tooltip to appear
+        
         # Extract title, link, etc. from the <a> element
         href = link.get_attribute("href")
         aria_label = link.get_attribute("aria-label")
@@ -56,6 +46,7 @@ with open("ANTA.txt", "a") as file:
 
 # Close the browser
 driver.quit()
+
 
 
 from selenium import webdriver
