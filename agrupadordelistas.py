@@ -580,7 +580,7 @@ else:
     print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
 
 
-def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=910):
+def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=3000):
     try:
         # Abre o arquivo M3U original para leitura
         with open(arquivo_original, 'r') as file:
@@ -612,7 +612,7 @@ def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=910):
 
 # Nome do arquivo original e do arquivo de saída
 arquivo_original = 'lista1.M3U'
-arquivo_saida = 'lista1.M3U'
+arquivo_saida = 'lista30.M3U'
 
 # Chama a função para limitar o arquivo
 limitar_arquivo_m3u(arquivo_original, arquivo_saida)
