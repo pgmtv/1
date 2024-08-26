@@ -32,7 +32,7 @@ with open('pt.txt', 'w') as file:
         link = element.get_attribute('href')
         # Check if the link is valid and not empty
         if link:
-            full_link = f"https://tviplayer.iol.pt{link}"
+            full_link = f"{link}"
             file.write(full_link + '\n')
 
 # Close the driver
@@ -78,7 +78,7 @@ def get_video_details(url):
 
 def write_m3u_file(details, filename):
     """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'a', encoding='utf-8') as file:
         # Adiciona o cabeçalho #EXTM3U
         file.write("#EXTM3U\n")
         
@@ -118,7 +118,7 @@ def process_urls_from_file(input_file):
             print(f"Nenhum URL encontrado para a URL {url}.")
     
     # Escreve todos os detalhes acumulados em um único arquivo M3U
-    filename = 'lista30.M3U'
+    filename = 'lista1.M3U'
     write_m3u_file(all_details, filename)
     print(f"Arquivo {filename} criado com sucesso.")
 
