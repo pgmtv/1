@@ -593,6 +593,7 @@ def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=9999):
             if linha.strip() and 
             '#EXTVLCOPT:http-user-agent=iPhone' not in linha and 
             '####' not in linha and 
+            '' not in linha and 
             '#EXTVLCOPT--http-reconnect=true' not in linha
         ]
 
