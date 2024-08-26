@@ -95,6 +95,7 @@ def write_m3u_file(details, filename):
             else:
                 print("URL do vídeo não encontrada.")
 
+
 def process_urls_from_file(input_file):
     """Lê URLs de um arquivo e processa cada uma para criar um único arquivo M3U."""
     if not os.path.exists(input_file):
