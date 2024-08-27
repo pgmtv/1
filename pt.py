@@ -1,11 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+from bs4 import BeautifulSoup
+import requests
 import time
 
-# Configure Chrome options
+# Configurar opções do Chrome
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
@@ -13,35 +18,68 @@ options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
 options.add_argument("--disable-infobars")
 
-# Create the webdriver instance
+# Criar a instância do WebDriver
 driver = webdriver.Chrome(options=options)
 
-# URL of the desired page
+# URL da página desejada
 url_archive = "https://archive.org/details/0825_134211_SBTVD_NOTI_CIAS_TELEMUNDO_-_SERVIC_O_2_2024"
 
-# Open the desired page
-driver.get(url_archive)
+# Função para extrair links usando BeautifulSoup
+def extract_links(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    links = []
+    for a_tag in soup.find_all('a', href=True):
+        href = a_tag['href']
+        if (href.startswith('http') and
+            not href.startswith('https://www.youtube.com') and
+            not href.startswith('https://secure2.rtve.es')):
+            links.append(href)
+    return links
 
-# Wait for the page to load and for the video elements to be present
-try:
-    # Adjust the timeout as necessary
+# Função para extrair links usando Selenium
+def selenium_extract_links(driver, url):
+    driver.get(url)
+    
+    # Esperar a página carregar e elementos estarem presentes
     WebDriverWait(driver, 10).until(
         EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'a[href]'))
     )
     
-    # Find all relevant video links
+    # Rolagem para garantir que todos os elementos de vídeo sejam carregados
+    for _ in range(2):  # Ajustar a faixa para mais rolagem, se necessário
+        driver.execute_script("window.scrollBy(0, 10000)")
+        time.sleep(2)
+    
+    # Encontrar todos os links relevantes
     video_elements = driver.find_elements(By.CSS_SELECTOR, 'a[href]')
+    
+    # Coletar links
+    links = []
+    for element in video_elements:
+        link = element.get_attribute('href')
+        if link and not link.startswith('https://www.youtube.com'):
+            links.append(link)
+    
+    return links
 
-    # Prepare to write the links to a file
+try:
+    # Extrair links usando BeautifulSoup
+    bs_links = extract_links(url_archive)
     with open('pt.txt', 'w') as file:
-        for element in video_elements:
-            link = element.get_attribute('href')
-            # Check if the link is valid and not empty
-            if link:
-                file.write(link + '\n')
+        for link in bs_links:
+            file.write(link + '\n')
+    
+    # Extrair links usando Selenium
+    selenium_links = selenium_extract_links(driver, url_archive)
+    with open('pt.txt', 'a') as file:
+        for link in selenium_links:
+            file.write(link + '\n')
+
 finally:
-    # Close the driver
+    # Fechar o driver
     driver.quit()
+
 
 
 
