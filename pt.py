@@ -73,7 +73,7 @@ with open('pt.txt', 'a') as file:
         link = element.get_attribute('href')
         # Check if the link is valid and not empty
         if link:
-            full_link = f"https://tviplayer.iol.pt{link}"  # Construct the full URL
+            full_link = f"{link}"  # Construct the full URL
             file.write(full_link + '\n')
 
 # Close the driver
