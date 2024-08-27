@@ -15,6 +15,47 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
+url_archive = "https://www.rtp.pt/play/"
+
+# Open the desired page
+driver.get(url_archive)
+
+# Wait for the page to load
+time.sleep(5)  # Adjust the sleep time if needed to ensure page load
+
+# Find all relevant video links
+# Note: The selector may need adjustment depending on the page's structure
+video_elements = driver.find_elements(By.CSS_SELECTOR, 'a[href*="/play/"]')
+
+# Prepare to write the links to a file
+with open('pt.txt', 'w') as file:
+    for element in video_elements:
+        link = element.get_attribute('href')
+        # Check if the link is valid and not empty
+        if link:
+            file.write(link + '\n')
+
+# Close the driver
+driver.quit()
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
+
+# URL of the desired page
 url_archive = "https://tviplayer.iol.pt/videos/ultimos/1/canal:"
 
 # Open the desired page
