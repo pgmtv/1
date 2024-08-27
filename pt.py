@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 
+
 # Configure Chrome options
 options = Options()
 options.add_argument("--headless")
