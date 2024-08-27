@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # Configure Chrome options
@@ -20,23 +22,27 @@ url_archive = "https://www.rtp.pt/play/"
 # Open the desired page
 driver.get(url_archive)
 
-# Wait for the page to load
-time.sleep(5)  # Adjust the sleep time if needed to ensure page load
+# Wait for the page to load and for the video elements to be present
+try:
+    # Adjust the timeout as necessary
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'a[href]'))
+    )
+    
+    # Find all relevant video links
+    video_elements = driver.find_elements(By.CSS_SELECTOR, 'a[href]')
 
-# Find all relevant video links
-# Note: The selector may need adjustment depending on the page's structure
-video_elements = driver.find_elements(By.CSS_SELECTOR, 'a[href*="/play/"]')
+    # Prepare to write the links to a file
+    with open('pt.txt', 'w') as file:
+        for element in video_elements:
+            link = element.get_attribute('href')
+            # Check if the link is valid and not empty
+            if link:
+                file.write(link + '\n')
+finally:
+    # Close the driver
+    driver.quit()
 
-# Prepare to write the links to a file
-with open('pt.txt', 'w') as file:
-    for element in video_elements:
-        link = element.get_attribute('href')
-        # Check if the link is valid and not empty
-        if link:
-            file.write(link + '\n')
-
-# Close the driver
-driver.quit()
 
 
 from selenium import webdriver
