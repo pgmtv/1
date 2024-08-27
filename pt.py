@@ -22,7 +22,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL da página desejada
-url_archive = "https://archive.org/details/0825_134211_SBTVD_NOTI_CIAS_TELEMUNDO_-_SERVIC_O_2_2024"
+url_archive = "https://vimeo.com/search/page:2/sort:latest?q=aula"
 
 # Função para extrair links usando BeautifulSoup
 def extract_links(url):
