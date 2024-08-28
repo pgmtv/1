@@ -57,7 +57,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.rtve.es/play"
+url = "https://megacanaisonline.com/estreladacasa.php"
 driver.get(url)
 
 for i in range(2):
