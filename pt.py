@@ -55,7 +55,6 @@ def write_m3u_file(links, output_path):
                 if title:
                     formatted_title = format_video_title(title)
                     # Adiciona a entrada no arquivo M3U
-                    f.write(f"#EXTINF:-1 tvg-logo=\"\" group-title=\"\", {formatted_title}\n")
                     f.write(f"{link}\n")
 
 url = "https://www.rtve.es/play/arquivo/"
@@ -89,7 +88,7 @@ except NoSuchElementException:
 driver.quit()
 
 # Definindo o caminho para a pasta raiz
-m3u_file_path = os.path.join(os.getcwd(), "lista1.m3u")
+m3u_file_path = os.path.join(os.getcwd(), "pt.txt")
 
 # Criação do arquivo M3U na pasta raiz
 write_m3u_file(links, m3u_file_path)
