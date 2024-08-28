@@ -46,7 +46,7 @@ def extract_links(url):
     return links
 
 def write_m3u_file(links, output_path):
-    with open(output_path, 'a') as f:
+    with open(output_path, 'w') as f:
         for link in links:
             response = requests.get(link)
             if response.status_code == 200:
@@ -127,7 +127,7 @@ time.sleep(5)  # Adjust the sleep time if needed to ensure page load
 video_elements = driver.find_elements(By.CSS_SELECTOR, 'a.item')
 
 # Prepare to write the links to a file
-with open('pt.txt', 'w') as file:
+with open('pt.txt', 'a') as file:
     for element in video_elements:
         link = element.get_attribute('href')
         # Check if the link is valid and not empty
