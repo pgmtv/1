@@ -57,7 +57,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.c-span.org/networks/"
+url = "https://www.google.com/search?q=telemundo&sca_esv=e2e26ca2267ebc0e&sca_upv=1&tbs=dur:l,srcf:H4sIAAAAAAAAAB3JQQ6AIAwEwN_10YuRPtKlgLKypRcPvTThOZmLEYE2CRkcWZeBaYAMaq5el-M6QmuIl8dGlTofZmk325849wQv98FRBtk0AAAA&tbm=vid&ei=awLQZrO9DOre1sQPhfe1kQ0&start=20&sa=N&ved=2ahUKEwjznqHHt5mIAxVqr5UCHYV7LdI4ChDw0wN6BAgBEBk&biw=1912&bih=956&dpr=1"
 driver.get(url)
 
 for i in range(2):
