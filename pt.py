@@ -32,46 +32,51 @@ def extract_m3u8_links():
     log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
     for entry in log_entries:
         if ".m3u8" in entry['name']:
-            print(entry['name'])
             return entry['name']
     return None
 
-# Loop principal
-for i in range(num_pages):
-    # Construir a URL para a página atual
-    if i == 0:
-        url = base_url
-    else:
-        url = f"{base_url}&start={i * 10}"
+# Função principal
+def main():
+    for i in range(num_pages):
+        # Construir a URL para a página atual
+        if i == 0:
+            url = base_url
+        else:
+            url = f"{base_url}&start={i * 10}"
 
-    # Carregar a página e esperar
-    driver.get(url)
-    time.sleep(10)  # Espera de 10 segundos após acessar a página
+        # Carregar a página e esperar
+        driver.get(url)
+        time.sleep(10)  # Espera de 10 segundos após acessar a página
 
-    # Localiza todos os elementos de vídeo na página
-    video_elements = driver.find_elements(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md')
+        # Localizar todos os elementos de vídeo na página
+        video_elements = driver.find_elements(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md')
 
-    for video_element in video_elements:
-        try:
-            # Clicar no link do vídeo
-            video_element.click()
-            time.sleep(10)  # Espera para o vídeo carregar
+        for video_element in video_elements:
+            try:
+                # Clicar no link do vídeo
+                video_element.click()
+                time.sleep(10)  # Espera para o vídeo carregar
 
-            # Extrair o link m3u8
-            m3u8_link = extract_m3u8_links()
-            if m3u8_link:
-                # Adicionar o link .m3u8 ao arquivo de playlist
-                video_title = video_element.text  # Usa o texto do elemento como título do vídeo
-                write_to_playlist((m3u8_link, video_title))
+                # Extrair o link m3u8
+                m3u8_link = extract_m3u8_links()
+                if m3u8_link:
+                    # Adicionar o link .m3u8 ao arquivo de playlist
+                    video_title = video_element.text  # Usa o texto do elemento como título do vídeo
+                    write_to_playlist((m3u8_link, video_title))
 
-            # Voltar para a página de resultados
-            driver.back()
-            time.sleep(10)  # Espera para a página carregar novamente
-        except Exception as e:
-            print(f"An error occurred: {e}")
+                # Voltar para a página de resultados
+                driver.back()
+                time.sleep(10)  # Espera para a página carregar novamente
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
-# Fechar o navegador após o término
-driver.quit()
+    # Fechar o navegador após o término
+    driver.quit()
+
+# Executar a função principal
+if __name__ == "__main__":
+    main()
+
 
 
 
