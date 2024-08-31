@@ -69,7 +69,7 @@ with open('output.m3u', 'w') as file:
             # Adiciona ao arquivo .m3u
             for m3u8_link in m3u8_links:
                 file.write(f"#EXTINF:-1,{title}\n")
-                file.write(f"{m3u8_link}\n")
+                file.write(f"{link}\n")
             
             # Volta para a página de resultados
             driver.back()
