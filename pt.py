@@ -146,7 +146,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=telemundo&sca_esv=e2e26ca2267ebc0e&sca_upv=1&tbs=dur:l,srcf:H4sIAAAAAAAAAB3JQQ6AIAwEwN_10YuRPtKlgLKypRcPvTThOZmLEYE2CRkcWZeBaYAMaq5el-M6QmuIl8dGlTofZmk325849wQv98FRBtk0AAAA&tbm=vid&ei=awLQZrO9DOre1sQPhfe1kQ0&start=20&sa=N&ved=2ahUKEwjznqHHt5mIAxVqr5UCHYV7LdI4ChDw0wN6BAgBEBk&biw=1912&bih=956&dpr=1"
+url = "https://www.google.com/search?q=a+casa&sca_esv=1e316cb0aa4d08d4&sca_upv=1&biw=1241&bih=956&tbs=dur%3Al%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVUvPyU_1KB7NK83NAtF5SkVpaYnJqUn5-NlhcOyUxM6cyN78kMz8PLFBkDqYAiXO3A0YAAAA&tbm=vid&ei=BrvSZrjXL_Ln1sQP9pCPwQw&ved=0ahUKEwi48rDyz56IAxXys5UCHXbII8gQ4dUDCA4&uact=5&oq=a+casa&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZhIGNhc2EyChAAGIAEGEMYigUyDRAAGIAEGLEDGEMYigUyCBAAGIAEGLEDMgoQABiABBhDGIoFMgUQABiABDIIEAAYgAQYsQMyCBAAGIAEGLEDMgsQABiABBixAxiDATIFEAAYgAQyCBAAGIAEGLEDSOoVUJUPWKMUcAB4AJABAJgBnQGgAeMHqgEDMC43uAEDyAEA-AEBmAIHoAKDCMICEBAAGIAEGLEDGEMYgwEYigXCAg4QABiABBixAxiDARiKBcICEBAAGIAEGLEDGIMBGIoFGAqYAwCIBgGSBwMwLjegB8om&sclient=gws-wiz-video"
 driver.get(url)
 
 for i in range(2):
