@@ -1,6 +1,68 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+import json
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
+
+# Definição das variáveis
+base_url = "https://www.google.com/search?q=integra&sca_esv=1e316cb0aa4d08d4&sca_upv=1&tbs=dur:l,qdr:d,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTJZnZJfnZYGZaYnJqUj6UU5qfA6L1korU0nPyk_1LBggCUSqXzQQAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwidvsq_uZ6IAxXwkJUCHZfAHVgQpwV6BAgBECo&biw=1912&bih=956&dpr=1"
+num_pages = 18
+playlist_file = "lista1.M3U"
+
+# Função para escrever o link no arquivo de playlist
+def write_to_playlist(video_info):
+    with open(playlist_file, "a") as f:
+        f.write(f"#EXTINF:-1,{video_info[1]}\n")
+        f.write(f"{video_info[0]}\n")
+
+# Função para extrair links m3u8
+def extract_m3u8_links():
+    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+    for entry in log_entries:
+        if ".m3u8" in entry['name']:
+            return entry['name']
+    return None
+
+# Loop principal
+for i in range(num_pages):
+    # Construir a URL para a página atual
+    if i == 0:
+        url = base_url
+    else:
+        url = f"{base_url}&start={i * 10}"
+
+    # Carregar a página e esperar
+    driver.get(url)
+    time.sleep(10)  # Espera de 10 segundos após acessar a página
+
+    # Extrair o link m3u8
+    m3u8_link = extract_m3u8_links()
+    if m3u8_link:
+        # Adicionar o link .m3u8 ao arquivo de playlist
+        video_title = "Video Title Not Extracted"  # Título fictício, ajuste conforme necessário
+        write_to_playlist((m3u8_link, video_title))
+
+# Fechar o navegador após o término
+driver.quit()
+
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 import time
 import os
 import requests
