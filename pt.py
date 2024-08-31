@@ -4,11 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import json
 
 # Configure Chrome options
 options = Options()
-options.add_argument("--headless")
+# options.add_argument("--headless")  # Uncomment if you don't need a GUI
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
@@ -28,15 +27,13 @@ def write_to_playlist(video_info):
         f.write(f"#EXTINF:-1,{video_info[1]}\n")
         f.write(f"{video_info[0]}\n")
 
-# Função para extrair links m3u8 após clicar no vídeo
+# Função para extrair links m3u8 da performance
 def extract_m3u8_links():
-    # Espera até que o vídeo comece a carregar
-    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "video")))
-    
-    # Obtém o link do vídeo
-    m3u8_link = driver.execute_script("return document.querySelector('video').src;")
-    if m3u8_link and ".m3u8" in m3u8_link:
-        return m3u8_link
+    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+    for entry in log_entries:
+        if ".m3u8" in entry['name']:
+            print(entry['name'])
+            return entry['name']
     return None
 
 # Loop principal
@@ -75,6 +72,8 @@ for i in range(num_pages):
 
 # Fechar o navegador após o término
 driver.quit()
+
+
 
 
 
