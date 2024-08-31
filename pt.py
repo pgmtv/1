@@ -20,7 +20,7 @@ driver = webdriver.Chrome(options=options)
 # Definição das variáveis
 base_url = "https://www.google.com/search?q=integra&sca_esv=1e316cb0aa4d08d4&sca_upv=1&tbs=dur:l,qdr:d,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTJZnZJfnZYGZaYnJqUj6UU5qfA6L1korU0nPyk_1LBggCUSqXzQQAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwidvsq_uZ6IAxXwkJUCHZfAHVgQpwV6BAgBECo&biw=1912&bih=956&dpr=1"
 num_pages = 18
-playlist_file = "lista1.M3U"
+playlist_file = "lista01.M3U"
 
 # Função para escrever o link no arquivo de playlist
 def write_to_playlist(video_info):
