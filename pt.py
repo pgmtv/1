@@ -34,28 +34,48 @@ driver.get(url)
 # Aguarda a página carregar
 time.sleep(5)  # Ajuste o tempo de espera se necessário
 
-# Encontra todos os links relevantes
-links = driver.find_elements(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md + a')
+# Coleta todos os links relevantes
+elements = driver.find_elements(By.CSS_SELECTOR, 'a[jsname="UWckNb"]')
+
+# Lista para armazenar os URLs e títulos
+videos = []
+
+# Armazena todos os links e títulos
+for element in elements:
+    try:
+        video_url = element.get_attribute('href')
+        title = element.find_element(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md').text
+        videos.append((video_url, title))
+    except Exception as e:
+        print(f"Erro ao coletar dados do elemento: {e}")
 
 # Abre o arquivo para escrita
 with open('output.m3u', 'w') as file:
-    for link in links:
-        # Extrai o título e o URL
-        title = link.find_element(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md').text
-        video_url = link.get_attribute('href')
-        
-        # Acessa a página do vídeo
-        driver.get(video_url)
-        time.sleep(10)  # Aguarda a página carregar
+    for video_url, title in videos:
+        try:
+            # Acessa a página do vídeo
+            driver.get(video_url)
+            time.sleep(10)  # Aguarda a página carregar
+            
+            # Extrai os links .m3u8 dos logs de desempenho
+            log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
 
-        # Extrai os links .m3u8 dos logs de desempenho
-        log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
-        m3u8_links = [entry['name'] for entry in log_entries if ".m3u8" in entry['name']]
-        
-        # Adiciona ao arquivo .m3u
-        for m3u8_link in m3u8_links:
-            file.write(f"#EXTINF:-1,{title}\n")
-            file.write(f"{m3u8_link}\n")
+            for entry in log_entries:
+                if ".m3u8" in entry['name']:
+                    print(entry['name'])
+                    link = entry['name']
+                    break
+            
+            # Adiciona ao arquivo .m3u
+            for m3u8_link in m3u8_links:
+                file.write(f"#EXTINF:-1,{title}\n")
+                file.write(f"{m3u8_link}\n")
+            
+            # Volta para a página de resultados
+            driver.back()
+            time.sleep(5)  # Aguarda a página de resultados carregar novamente
+        except Exception as e:
+            print(f"Erro ao processar o link {video_url}: {e}")
 
 # Fecha o navegador
 driver.quit()
