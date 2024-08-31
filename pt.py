@@ -1,13 +1,22 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
+import os
+import requests
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import NoSuchElementException
+from bs4 import BeautifulSoup
+from selenium.webdriver.common.by import By
+
 
 # Configure Chrome options
 options = Options()
-options.add_argument("--headless")  # Uncomment if you don't need a GUI
+options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
@@ -16,66 +25,41 @@ options.add_argument("--disable-infobars")
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
 
-# Definição das variáveis
-base_url = "https://www.google.com/search?q=integra&sca_esv=1e316cb0aa4d08d4&sca_upv=1&tbs=dur:l,qdr:d,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTJZnZJfnZYGZaYnJqUj6UU5qfA6L1korU0nPyk_1LBggCUSqXzQQAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwidvsq_uZ6IAxXwkJUCHZfAHVgQpwV6BAgBECo&biw=1912&bih=956&dpr=1"
-num_pages = 2
-playlist_file = "lista01.M3U"
+# URL da página inicial
+url = 'https://www.google.com/search?q=integra&sca_esv=1e316cb0aa4d08d4&sca_upv=1&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVSsyB1Pa6Tn5SflgZml-DojWSypSy8svyUzOTCxOTC_1KTM7PSSyGSaQlJqcm5edngzUAABk5f5ZPAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjg-aqkwJ6IAxWylZUCHVV7CbMQpwV6BAgBECs&biw=1554&bih=956&dpr=1'
 
-# Função para escrever o link no arquivo de playlist
-def write_to_playlist(video_info):
-    with open(playlist_file, "a") as f:
-        f.write(f"#EXTINF:-1,{video_info[1]}\n")
-        f.write(f"{video_info[0]}\n")
+# Navega até a página
+driver.get(url)
 
-# Função para extrair links m3u8 da performance
-def extract_m3u8_links():
-    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
-    for entry in log_entries:
-        if ".m3u8" in entry['name']:
-            return entry['name']
-    return None
+# Aguarda a página carregar
+time.sleep(5)  # Ajuste o tempo de espera se necessário
 
-# Função principal
-def main():
-    for i in range(num_pages):
-        # Construir a URL para a página atual
-        if i == 0:
-            url = base_url
-        else:
-            url = f"{base_url}&start={i * 10}"
+# Encontra todos os links relevantes
+links = driver.find_elements(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md + a')
 
-        # Carregar a página e esperar
-        driver.get(url)
-        time.sleep(10)  # Espera de 10 segundos após acessar a página
+# Abre o arquivo para escrita
+with open('output.m3u', 'w') as file:
+    for link in links:
+        # Extrai o título e o URL
+        title = link.find_element(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md').text
+        video_url = link.get_attribute('href')
+        
+        # Acessa a página do vídeo
+        driver.get(video_url)
+        time.sleep(10)  # Aguarda a página carregar
 
-        # Localizar todos os elementos de vídeo na página
-        video_elements = driver.find_elements(By.CSS_SELECTOR, 'h3.LC20lb.MBeuO.DKV0Md')
+        # Extrai os links .m3u8 dos logs de desempenho
+        log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+        m3u8_links = [entry['name'] for entry in log_entries if ".m3u8" in entry['name']]
+        
+        # Adiciona ao arquivo .m3u
+        for m3u8_link in m3u8_links:
+            file.write(f"#EXTINF:-1,{title}\n")
+            file.write(f"{m3u8_link}\n")
 
-        for video_element in video_elements:
-            try:
-                # Clicar no link do vídeo
-                video_element.click()
-                time.sleep(10)  # Espera para o vídeo carregar
+# Fecha o navegador
+driver.quit()
 
-                # Extrair o link m3u8
-                m3u8_link = extract_m3u8_links()
-                if m3u8_link:
-                    # Adicionar o link .m3u8 ao arquivo de playlist
-                    video_title = video_element.text  # Usa o texto do elemento como título do vídeo
-                    write_to_playlist((m3u8_link, video_title))
-
-                # Voltar para a página de resultados
-                driver.back()
-                time.sleep(10)  # Espera para a página carregar novamente
-            except Exception as e:
-                print(f"An error occurred: {e}")
-
-    # Fechar o navegador após o término
-    driver.quit()
-
-# Executar a função principal
-if __name__ == "__main__":
-    main()
 
 
 
