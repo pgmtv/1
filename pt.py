@@ -32,7 +32,7 @@ url = 'https://www.google.com/search?q=integra&sca_esv=1e316cb0aa4d08d4&sca_upv=
 driver.get(url)
 
 # Aguarda a página carregar
-time.sleep(5)  # Ajuste o tempo de espera se necessário
+time.sleep(8)  # Ajuste o tempo de espera se necessário
 
 # Coleta todos os links relevantes
 elements = driver.find_elements(By.CSS_SELECTOR, 'a[jsname="UWckNb"]')
@@ -55,21 +55,22 @@ with open('output.m3u', 'w') as file:
         try:
             # Acessa a página do vídeo
             driver.get(video_url)
-            time.sleep(10)  # Aguarda a página carregar
+            time.sleep(20)  # Aguarda a página carregar
             
             # Extrai os links .m3u8 dos logs de desempenho
             log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+            m3u8_link = None
 
             for entry in log_entries:
                 if ".m3u8" in entry['name']:
                     print(entry['name'])
-                    link = entry['name']
+                    m3u8_link = entry['name']
                     break
             
             # Adiciona ao arquivo .m3u
-            for m3u8_link in m3u8_links:
+            if m3u8_link:
                 file.write(f"#EXTINF:-1,{title}\n")
-                file.write(f"{link}\n")
+                file.write(f"{m3u8_link}\n")
             
             # Volta para a página de resultados
             driver.back()
@@ -79,6 +80,7 @@ with open('output.m3u', 'w') as file:
 
 # Fecha o navegador
 driver.quit()
+
 
 
 
