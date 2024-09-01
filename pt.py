@@ -77,7 +77,7 @@ with open("links_video.txt", "r") as file:
     links = file.readlines()
 
 # Criar ou abrir o arquivo lista1.m3u para escrever os links e títulos
-with open("lista1.m3u", "a") as output_file:
+with open("lista1.M3U", "a") as output_file:
     for link in links:
         link = link.strip()  # Remover espaços em branco e quebras de linha
 
@@ -91,7 +91,7 @@ with open("lista1.m3u", "a") as output_file:
 
             if m3u8_url:
                 # Escrever no formato extinf iptv
-                output_file.write(f"#EXTINF:-1 tvg-logo={logo_url} group-title=\"VOD TV\", {title}\n")
+                output_file.write(f'#EXTINF:-1 tvg-logo="{logo_url}" group-title="VOD TV", {title}\n')
                 output_file.write(f"{m3u8_url}\n")
                 print(f"M3U8 link encontrado: {m3u8_url}")
             else:
