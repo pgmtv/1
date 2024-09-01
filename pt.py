@@ -6,6 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import time
 
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+import time
+
 # Configure Chrome options
 options = Options()
 options.add_argument("--headless")  # Descomente se você não precisar de uma interface gráfica
@@ -17,46 +21,35 @@ options.add_argument("--disable-infobars")
 # Create the webdriver instance
 driver = webdriver.Chrome(options=options)
 
-# URL do vídeo no Globoplay
-url = 'https://globoplay.globo.com/v/6726333/'
+# URL base (substitua com a URL real)
+base_url = "https://globoplay.globo.com/v/2168377/"
 
-# Navega até a página
-driver.get(url)
+# Load the page and wait for 55 seconds
+driver.get(base_url)
+time.sleep(55)
 
-# Aumenta o tempo de espera até a página carregar
-wait = WebDriverWait(driver, 15)  # Espera até 15 segundos
+# Obter o link m3u8
+log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
 
-try:
-    # Aguarda que o título do vídeo esteja presente na página
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'h1')))
+m3u8_url = None
+for entry in log_entries:
+    if ".m3u8" in entry['name']:
+        m3u8_url = entry['name']
+        break
 
-    # Extrai o título da página
-    title_element = driver.find_element(By.CSS_SELECTOR, 'h1')
-    title = title_element.text.strip()
+# Imprimir o link m3u8 se encontrado
+if m3u8_url:
+    print(f"M3U8 link encontrado: {m3u8_url}")
 
-    # Extrai o link .m3u8 dos logs de desempenho
-    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
-    m3u8_link = None
+    # Escrever o link no arquivo listaFULL.m3u
+    with open("listaFULL.m3u", "w") as file:
+        file.write(m3u8_url)
+else:
+    print(f"Link .m3u8 não encontrado para {base_url}")
 
-    for entry in log_entries:
-        if ".m3u8" in entry['name']:
-            m3u8_link = entry['name']
-            break
+# Sair do driver
+driver.quit()
 
-    # Abre o arquivo para escrita
-    with open('LISTARATA.m3u', 'w') as file:
-        if m3u8_link:
-            file.write(f"#EXTINF:-1,{title}\n")
-            file.write(f"{m3u8_link}\n")
-
-except TimeoutException as e:
-    print(f"Tempo esgotado ao processar a página: {e}")
-except Exception as e:
-    print(f"Erro ao processar a página: {e}")
-
-finally:
-    # Fecha o navegador
-    driver.quit()
 
 
 
