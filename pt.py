@@ -47,23 +47,6 @@ try:
 except Exception as e:
     print(f"Ocorreu um erro: {e}")
 
-# Sair do driver
-driver.quit()
-
-
-
-
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import time
-
-# Configure Chrome options
-options = Options()
-options.add_argument("--headless")  # Descomente se você não precisar de uma interface gráfica
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-gpu")
-options.add_argument("--window-size=1280,720")
-options.add_argument("--disable-infobars")
 
 # Função para extrair o link m3u8 e o título da página
 def extract_m3u8_url_and_title(driver, url):
@@ -92,7 +75,7 @@ with open("links_video.txt", "r") as file:
     links = file.readlines()
 
 # Criar ou abrir o arquivo listaFULL.m3u para escrever os links e títulos
-with open("listaFULL.m3u", "w") as output_file:
+with open("lista1.M3U", "a") as output_file:
     for link in links:
         link = link.strip()  # Remover espaços em branco e quebras de linha
 
@@ -101,15 +84,21 @@ with open("listaFULL.m3u", "w") as output_file:
         
         print(f"Processando link: {link}")
 
-        title, m3u8_url = extract_m3u8_url_and_title(driver, link)
+        try:
+            title, m3u8_url = extract_m3u8_url_and_title(driver, link)
 
-        if m3u8_url:
-            # Escrever no formato extinf iptv
-            output_file.write(f"#EXTINF:-1, {title}\n")
-            output_file.write(f"{m3u8_url}\n")
-            print(f"M3U8 link encontrado: {m3u8_url}")
-        else:
-            print(f"Link .m3u8 não encontrado para {link}")
+            if m3u8_url:
+                # Escrever no formato extinf iptv
+                output_file.write(f"#EXTINF:-1 group-title=\"VOD TV\", {title}\n")
+                output_file.write(f"{m3u8_url}\n")
+                print(f"M3U8 link encontrado: {m3u8_url}")
+            else:
+                print(f"Link .m3u8 não encontrado para {link}")
+        
+        except Exception as e:
+            print(f"Erro ao processar o link {link}: {e}")
+
+
 
 # Sair do driver
 driver.quit()
