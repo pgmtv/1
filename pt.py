@@ -51,7 +51,7 @@ except Exception as e:
 # Função para extrair o link m3u8 e o título da página
 def extract_m3u8_url_and_title(driver, url):
     driver.get(url)
-    time.sleep(55)  # Aguarde a página carregar completamente
+    time.sleep(10)  # Aguarde a página carregar completamente
     
     # Obter o título da página
     title = driver.title
@@ -60,18 +60,13 @@ def extract_m3u8_url_and_title(driver, url):
     log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
 
     m3u8_url = None
+    logo_url = None
     for entry in log_entries:
         if ".m3u8" in entry['name']:
             m3u8_url = entry['name']
-            break
-
-    
-    logo_url = None
-    for entry in log_entries:
         if ".jpg" in entry['name']:
             logo_url = entry['name']
-            break
-            
+
     return title, m3u8_url, logo_url
 
 # Criar a instância do webdriver
@@ -81,8 +76,8 @@ driver = webdriver.Chrome(options=options)
 with open("links_video.txt", "r") as file:
     links = file.readlines()
 
-# Criar ou abrir o arquivo listaFULL.m3u para escrever os links e títulos
-with open("lista1.M3U", "a") as output_file:
+# Criar ou abrir o arquivo lista1.m3u para escrever os links e títulos
+with open("lista1.m3u", "a") as output_file:
     for link in links:
         link = link.strip()  # Remover espaços em branco e quebras de linha
 
@@ -92,7 +87,7 @@ with open("lista1.M3U", "a") as output_file:
         print(f"Processando link: {link}")
 
         try:
-            title, m3u8_url = extract_m3u8_url_and_title(driver, link)
+            title, m3u8_url, logo_url = extract_m3u8_url_and_title(driver, link)
 
             if m3u8_url:
                 # Escrever no formato extinf iptv
@@ -105,10 +100,9 @@ with open("lista1.M3U", "a") as output_file:
         except Exception as e:
             print(f"Erro ao processar o link {link}: {e}")
 
-
-
 # Sair do driver
 driver.quit()
+
 
 
 
