@@ -64,8 +64,15 @@ def extract_m3u8_url_and_title(driver, url):
         if ".m3u8" in entry['name']:
             m3u8_url = entry['name']
             break
+
     
-    return title, m3u8_url
+    logo_url = None
+    for entry in log_entries:
+        if ".jpg" in entry['name']:
+            logo_url = entry['name']
+            break
+            
+    return title, m3u8_url, logo_url
 
 # Criar a instância do webdriver
 driver = webdriver.Chrome(options=options)
@@ -89,7 +96,7 @@ with open("lista1.M3U", "a") as output_file:
 
             if m3u8_url:
                 # Escrever no formato extinf iptv
-                output_file.write(f"#EXTINF:-1 group-title=\"VOD TV\", {title}\n")
+                output_file.write(f"#EXTINF:-1 tvg-logo={logo_url} group-title=\"VOD TV\", {title}\n")
                 output_file.write(f"{m3u8_url}\n")
                 print(f"M3U8 link encontrado: {m3u8_url}")
             else:
@@ -171,7 +178,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=a+casa&sca_esv=1e316cb0aa4d08d4&sca_upv=1&biw=1241&bih=956&tbs=dur%3Al%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVUvPyU_1KB7NK83NAtF5SkVpaYnJqUn5-NlhcOyUxM6cyN78kMz8PLFBkDqYAiXO3A0YAAAA&tbm=vid&ei=BrvSZrjXL_Ln1sQP9pCPwQw&ved=0ahUKEwi48rDyz56IAxXys5UCHXbII8gQ4dUDCA4&uact=5&oq=a+casa&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZhIGNhc2EyChAAGIAEGEMYigUyDRAAGIAEGLEDGEMYigUyCBAAGIAEGLEDMgoQABiABBhDGIoFMgUQABiABDIIEAAYgAQYsQMyCBAAGIAEGLEDMgsQABiABBixAxiDATIFEAAYgAQyCBAAGIAEGLEDSOoVUJUPWKMUcAB4AJABAJgBnQGgAeMHqgEDMC43uAEDyAEA-AEBmAIHoAKDCMICEBAAGIAEGLEDGEMYgwEYigXCAg4QABiABBixAxiDARiKBcICEBAAGIAEGLEDGIMBGIoFGAqYAwCIBgGSBwMwLjegB8om&sclient=gws-wiz-video"
+url = "https://www.google.com/search?q=capitulo&sca_esv=1e316cb0aa4d08d4&sca_upv=1&biw=1866&bih=946&tbs=dur%3Al%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVUvPyU_1KB7NK83NAtF5SkVpaYnJqUn5-NlhcOyUxM6cyN78kMz8PLFBkDqYAiXO3A0YAAAA%2Cqdr%3Aw&tbm=vid&ei=J_zTZo26H-Xe1sQP5sKG0As&ved=0ahUKEwjN6ceSgqGIAxVlr5UCHWahAbo4ChDh1QMIDg&uact=5&oq=capitulo&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIghjYXBpdHVsbzILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMg4QABiABBixAxiDARiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARI5x5QyBZY9xxwAHgAkAEAmAGcAaABywmqAQMwLjm4AQPIAQD4AQGYAgmgAuIJwgIKEAAYgAQYQxiKBZgDAIgGAZIHAzAuOaAHxjE&sclient=gws-wiz-video"
 driver.get(url)
 
 for i in range(2):
@@ -354,7 +361,7 @@ def write_m3u_file(details, filename):
             title = entry.get('title', 'No Title')
 
             if video_url:
-                file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\",{title}\n")
+                file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\" group-title=\"VOD PT\",{title}\n")
                 file.write(f"{video_url}\n")
             else:
                 print("URL do vídeo não encontrada.")
