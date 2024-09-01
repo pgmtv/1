@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=amor&sca_esv=edeca30911a1fd73&sca_upv=1&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVUtLTE5Nys_1PBnNKMrNLoEztInMwnZ6Tn5QPZqUkZuZU5uaXZObngfkAgqKJvUYAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjh0duE8qCIAxVzqJUCHbtMBGoQpwV6BAgBECw&biw=1508&bih=768&dpr=1"
+base_url = "https://www.google.com/search?q=integra&sca_esv=edeca30911a1fd73&sca_upv=1&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTaYnJqUn5-dlgTnpOflI-mFWanwOi9ZKK1NJyEnNT89LzYXwANs4lv0YAAAA,dur:l,qdr:w&tbm=vid&source=lnt&sa=X&ved=2ahUKEwj2p47M-KCIAxW2ppUCHReUMPMQpwV6BAgCEBU&biw=1866&bih=946&dpr=1"
 
 # Load the page
 driver.get(base_url)
