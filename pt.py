@@ -3,11 +3,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-import time
-
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import time
 
 # Configure Chrome options
@@ -22,34 +17,102 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://globoplay.globo.com/v/2168377/"
+base_url = "https://www.google.com/search?q=amor&sca_esv=edeca30911a1fd73&sca_upv=1&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVUtLTE5Nys_1PBnNKMrNLoEztInMwnZ6Tn5QPZqUkZuZU5uaXZObngfkAgqKJvUYAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjh0duE8qCIAxVzqJUCHbtMBGoQpwV6BAgBECw&biw=1508&bih=768&dpr=1"
 
-# Load the page and wait for 55 seconds
+# Load the page
 driver.get(base_url)
-time.sleep(55)
 
-# Obter o link m3u8
-log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+# Wait until the video links are present
+try:
+    # Wait for the video links to load
+    WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'a[jsname="UWckNb"]')))
+    
+    # Extract links
+    video_links = driver.find_elements(By.CSS_SELECTOR, 'a[jsname="UWckNb"]')
+    links_list = [link.get_attribute('href') for link in video_links]
 
-m3u8_url = None
-for entry in log_entries:
-    if ".m3u8" in entry['name']:
-        m3u8_url = entry['name']
-        break
+    # Print the links found
+    if links_list:
+        print("Links encontrados:")
+        for link in links_list:
+            print(link)
+        
+        # Write the links to the file
+        with open("links_video.txt", "w") as file:
+            for link in links_list:
+                file.write(link + "\n")
+    else:
+        print("Nenhum link encontrado.")
 
-# Imprimir o link m3u8 se encontrado
-if m3u8_url:
-    print(f"M3U8 link encontrado: {m3u8_url}")
-
-    # Escrever o link no arquivo listaFULL.m3u
-    with open("listaFULL.m3u", "w") as file:
-        file.write(m3u8_url)
-else:
-    print(f"Link .m3u8 não encontrado para {base_url}")
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
 
 # Sair do driver
 driver.quit()
 
+
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+import time
+
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")  # Descomente se você não precisar de uma interface gráfica
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+# Função para extrair o link m3u8 e o título da página
+def extract_m3u8_url_and_title(driver, url):
+    driver.get(url)
+    time.sleep(55)  # Aguarde a página carregar completamente
+    
+    # Obter o título da página
+    title = driver.title
+
+    # Obter o link m3u8
+    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+
+    m3u8_url = None
+    for entry in log_entries:
+        if ".m3u8" in entry['name']:
+            m3u8_url = entry['name']
+            break
+    
+    return title, m3u8_url
+
+# Criar a instância do webdriver
+driver = webdriver.Chrome(options=options)
+
+# Abrir o arquivo links_video.txt e ler os links
+with open("links_video.txt", "r") as file:
+    links = file.readlines()
+
+# Criar ou abrir o arquivo listaFULL.m3u para escrever os links e títulos
+with open("listaFULL.m3u", "w") as output_file:
+    for link in links:
+        link = link.strip()  # Remover espaços em branco e quebras de linha
+
+        if not link:
+            continue
+        
+        print(f"Processando link: {link}")
+
+        title, m3u8_url = extract_m3u8_url_and_title(driver, link)
+
+        if m3u8_url:
+            # Escrever no formato extinf iptv
+            output_file.write(f"#EXTINF:-1, {title}\n")
+            output_file.write(f"{m3u8_url}\n")
+            print(f"M3U8 link encontrado: {m3u8_url}")
+        else:
+            print(f"Link .m3u8 não encontrado para {link}")
+
+# Sair do driver
+driver.quit()
 
 
 
