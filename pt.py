@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=gh&sca_esv=a781b331acaf4086&sca_upv=1&biw=1364&bih=643&tbs=dur%3Al%2Csrcf%3AH4sIAAAAAAAAAB3JQQrAIAwEwN94KfgnjVsINe7BWOrvS7zObC5fFVloydEhOoQZM91FUMnnzGUaGd6K9m105Tj1vdrAGfUD6ZTYjUwAAAA&tbm=vid&ei=1q7UZvjiMPjL1sQPv86i8AY&ved=0ahUKEwj4pdTGrKKIAxX4pZUCHT-nCG44ChDh1QMIDg&uact=5&oq=gh&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgJnaDINEAAYgAQYsQMYQxiKBTIIEAAYgAQYsQMyCBAAGIAEGLEDMgoQABiABBhDGIoFMgsQABiABBixAxiDATIIEAAYgAQYsQMyCBAAGIAEGLEDMgoQABiABBhDGIoFMgsQABiABBixAxiDATIQEAAYgAQYsQMYQxiDARiKBUjsDVD9CVixDHAAeACQAQCYAYgBoAH9AqoBAzAuM7gBA8gBAPgBAZgCA6ACiQPCAgUQABiABMICBhAAGBYYHsICDhAAGIAEGLEDGIMBGIoFmAMAiAYBkgcDMC4zoAeSEA&sclient=gws-wiz-video"
+base_url = "https://www.google.com/search?q=grande+fratello&sca_esv=a781b331acaf4086&sca_upv=1&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3LQQqAMAwF0dt0I-ROaRttkBBpf6reXuxy4I1JVR4CUqTXA5GFilvauUh2P1fgVpRGmGkbcUk_1Qitj_1s_1T2AakL_1cBMa89IU0AAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwj1qMjD16eIAxXrppUCHawEBSYQpwV6BAgCEC0&biw=1592&bih=822&dpr=1"
 
 # Load the page
 driver.get(base_url)
