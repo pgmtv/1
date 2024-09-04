@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=milf&sca_esv=a781b331acaf4086&sca_upv=1&tbas=0&tbs=qdr:w,dur:s,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVSvJzC7Jz4YwyzNLSlKLwOwKCFmWmZKaXwxma1ekF-Xnl1WCOQAlTGdVQgAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjjnsru2qiIAxUPr5UCHbDOFogQpwV6BAgCEC4&biw=1592&bih=822&dpr=1"
+base_url = "https://www.google.com/search?q=24&sca_esv=a781b331acaf4086&sca_upv=1&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuKilL1UstVivJzC7JzwaLZeYVlySmFyXmgnkpiZk5lbn5JZn5eWB-WmJyalI-VCkAU9N4LEsAAAA,dur:l,qdr:w&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjf9_6v3KiIAxVFr5UCHVUVEIEQpwV6BAgBEBU&biw=1592&bih=822&dpr=1"
 
 # Load the page
 driver.get(base_url)
