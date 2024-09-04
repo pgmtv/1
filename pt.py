@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=grande+fratello&sca_esv=a781b331acaf4086&sca_upv=1&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3LQQqAMAwF0dt0I-ROaRttkBBpf6reXuxy4I1JVR4CUqTXA5GFilvauUh2P1fgVpRGmGkbcUk_1Qitj_1s_1T2AakL_1cBMa89IU0AAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwj1qMjD16eIAxXrppUCHawEBSYQpwV6BAgCEC0&biw=1592&bih=822&dpr=1"
+base_url = "https://www.google.com/search?q=milf&sca_esv=a781b331acaf4086&sca_upv=1&tbas=0&tbs=qdr:w,dur:s,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVSvJzC7Jz4YwyzNLSlKLwOwKCFmWmZKaXwxma1ekF-Xnl1WCOQAlTGdVQgAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjjnsru2qiIAxUPr5UCHbDOFogQpwV6BAgCEC4&biw=1592&bih=822&dpr=1"
 
 # Load the page
 driver.get(base_url)
