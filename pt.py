@@ -172,7 +172,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=telemundo+florida&sca_esv=90c55360f106269f&sca_upv=1&tbas=0&tbs=dur:l,qdr:d&tbm=vid&tbas=0&source=lnt&sa=X&ved=2ahUKEwjkhP3L862IAxWhkJUCHcj_HzAQpwV6BAgDECg&biw=1912&bih=1002&dpr=1"
+url = "https://www.google.com/search?q=tv&sca_esv=90c55360f106269f&sca_upv=1&biw=1912&bih=1002&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAAC3HQQqAMAwEwN94EfxTWquENlloE0h_1LwRvMxtuXtpVIYdxN_1TkQ7UV_1DlZl9E7SbI38dgCY2g-IqoPKK3sB16ql0tSAAAA&tbm=vid&ei=2bzaZuKQIf7M1sQP8eWb6AI&ved=0ahUKEwii4fng8q2IAxV-ppUCHfHyBi0Q4dUDCA4&uact=5&oq=tv&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgJ0djIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMggQABiABBixAzILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMg4QABiABBixAxiDARiKBTILEAAYgAQYsQMYgwEyDhAAGIAEGLEDGIMBGIoFMgUQABiABDIFEAAYgARIiz1QpDpYkzxwAHgAkAEAmAF4oAHrAaoBAzAuMrgBA8gBAPgBAZgCAqAC9QHCAgoQABiABBhDGIoFmAMAiAYBkgcDMC4yoAfqCQ&sclient=gws-wiz-video"
 driver.get(url)
 
 for i in range(2):
