@@ -172,7 +172,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=capitulo&sca_esv=1e316cb0aa4d08d4&sca_upv=1&biw=1866&bih=946&tbs=dur%3Al%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVUvPyU_1KB7NK83NAtF5SkVpaYnJqUn5-NlhcOyUxM6cyN78kMz8PLFBkDqYAiXO3A0YAAAA%2Cqdr%3Aw&tbm=vid&ei=J_zTZo26H-Xe1sQP5sKG0As&ved=0ahUKEwjN6ceSgqGIAxVlr5UCHWahAbo4ChDh1QMIDg&uact=5&oq=capitulo&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIghjYXBpdHVsbzILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMg4QABiABBixAxiDARiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARI5x5QyBZY9xxwAHgAkAEAmAGcAaABywmqAQMwLjm4AQPIAQD4AQGYAgmgAuIJwgIKEAAYgAQYQxiKBZgDAIgGAZIHAzAuOaAHxjE&sclient=gws-wiz-video"
+url = "https://www.google.com/search?q=fox+news&sca_esv=90c55360f106269f&sca_upv=1&tbs=srcf:H4sIAAAAAAAAANNOy6_1ISy0v1kvOz1WrzC8tKU1KBbPTEpNTk_1Lzs8Gc0vwcEK2XVKQGVF9ckF9UAtahl1gKEkgqLc7MSy2GGAIA07pxLFIAAAA,dur:l,qdr:d&tbm=vid&source=lnt&sa=X&ved=2ahUKEwif5KTg8a2IAxWmqJUCHRstFS0QpwV6BAgDEBQ&biw=1912&bih=1002&dpr=1"
 driver.get(url)
 
 for i in range(2):
