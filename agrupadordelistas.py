@@ -440,7 +440,7 @@ end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=59, second=0
 output_file = "lista1.M3U"
 
 if is_within_time_range(start_time_br, end_time_br):
-    m3upt_url = "https://github.com/stunouteiro/addon/raw/665c6be16fe1c0bec29a6d51b4ead9e509fb44df/TVONLINE3.XML"
+    m3upt_url = "https://github.com/strikeinthehouse/M3UPT/raw/main/M3U/M3UPT.m3u"
     m3upt_response = requests.get(m3upt_url)
 
     if m3upt_response.status_code == 200:
