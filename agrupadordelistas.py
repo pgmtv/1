@@ -520,7 +520,7 @@ import requests
 
 # Lista de URLs dos repositórios do GitHub
 repo_urls = [
-    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
+    "https://api.github.com/repos/strikeinthehouse/STR-YT/contents"
 ]
 
 # Função para obter os URLs dos arquivos .m3u de um repositório GitHub
