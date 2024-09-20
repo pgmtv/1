@@ -135,10 +135,12 @@ https://archive.org/download/TTV_20240920_083000/TTV_20240920_083000.mp4?exact=1
 https://archive.org/download/KSTS_20240920_005800_Noticiero_Telemundo_48/KSTS_20240920_005800_Noticiero_Telemundo_48.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/FBC_20240920_100000_Mornings_With_Maria_Bartiromo",Mornings With Maria Bartiromo : FBC : September 20, 2024 6:00am-7:00am EDT
 https://archive.org/download/FBC_20240920_100000_Mornings_With_Maria_Bartiromo/FBC_20240920_100000_Mornings_With_Maria_Bartiromo.mp4?exact=1&start=0&end=300
-#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTANEWS_20240920_113000",RTANEWS : September 20, 2024 4:00pm-4:31pm AT
-https://archive.org/download/RTANEWS_20240920_113000/RTANEWS_20240920_113000.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20240920_120000",SOUTHERNSUDAN : September 20, 2024 2:00pm-2:31pm CAT
 https://archive.org/download/SOUTHERNSUDAN_20240920_120000/SOUTHERNSUDAN_20240920_120000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTANEWS_20240920_113000",RTANEWS : September 20, 2024 4:00pm-4:31pm AT
+https://archive.org/download/RTANEWS_20240920_113000/RTANEWS_20240920_113000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/GBN_20240920_083000_Britains_Newsroom",Britain's Newsroom : GBN : September 20, 2024 9:30am-12:01pm BST
+https://archive.org/download/GBN_20240920_083000_Britains_Newsroom/GBN_20240920_083000_Britains_Newsroom.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BBCNEWS_20240920_000000_Newsday",Newsday : BBCNEWS : September 20, 2024 1:00am-1:31am BST
 https://archive.org/download/BBCNEWS_20240920_000000_Newsday/BBCNEWS_20240920_000000_Newsday.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SFGTV_20240920_000000_Mayors_Press_Availability",Mayor's Press Availability : SFGTV : September 19, 2024 5:00pm-5:31pm PDT
@@ -147,8 +149,6 @@ https://archive.org/download/SFGTV_20240920_000000_Mayors_Press_Availability/SFG
 https://archive.org/download/RTANEWS_20240920_000000/RTANEWS_20240920_000000.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/1TV_20240920_015700_Pereriv_v_veshchanii",Перерыв в вещании : 1TV : September 20, 2024 4:57am-5:00am MSK
 https://archive.org/download/1TV_20240920_015700_Pereriv_v_veshchanii/1TV_20240920_015700_Pereriv_v_veshchanii.mp4?exact=1&start=0&end=300
-#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RT_20240920_003000_Documentary",Documentary : RT : September 19, 2024 8:30pm-9:01pm EDT
-https://archive.org/download/RT_20240920_003000_Documentary/RT_20240920_003000_Documentary.mp4?exact=1&start=0&end=300
 #EXTM3U
 #EXTM3U
 #EXTINF:-1 tvg-name="ESTRELA DA CASA 02" tvg-logo="https://i.imgur.com/YlSrqDa.png" group-title="Reality Show'S Live",ESTRELA DA CASA 02
@@ -3012,6 +3012,43 @@ https://live.playstop.me/1816184091/index.m3u8
 #EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="N/A",FOX NEWS USA
 https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/dp247/Freeview-EPG/master/epg.xml,https://experiencersinternational.github.io/tvsetup/epg.xml" tvg-rec="28" catchup-days="28" catchup="shift"
+#EXTINF:-1 tvg-id="BBCNewsEurope.uk" user-agent="Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,like Gecko) Mobile/15E148",BBC World News (480p) [Not 24/7]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML,like Gecko) Mobile/15E148
+http://ott-cdn.ucom.am/s24/index.m3u8
+#EXTINF:-1 tvg-id="BBCOneScotland.uk",BBC One Scotland HD (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_scotland_hd/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneSouthEast.uk",BBC One South East (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_south_east/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneSouthWest.uk",BBC One South West (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_south_west/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneSouth.uk",BBC One South (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_south/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneWales.uk",BBC One Wales (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_wales_hd/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneWest.uk",BBC One West (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_west/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneWestMidlands.uk",BBC One West Midlands (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_west_midlands/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOneYorkshireLincolnshire.uk",BBC One Yorks (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_yorks/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCParliament.uk",BBC Parliament (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_parliament/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-id="",BBC Red Button One (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:red_button_one/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-id="BBCScotland.uk",BBC Scotland HD (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-id="BBCTwoNorthernIreland.uk",BBC Two Northern Ireland HD (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_northern_ireland_hd/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-id="BBCTwoWales.uk",BBC Two Wales (720p) [Geo-blocked]
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_wales_digital/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-chno="2" tvg-rec="28" tvg-id="BBCTwoEngland.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc2-epg.png" group-title="General",BBC 2
+https://vs-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_two_hd/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-chno="2" tvg-rec="28" tvg-id="BBCTwoEngland.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc2-epg.png" group-title="General",BBC 2
+https://vs-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_hd/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-chno="7" tvg-rec="28" tvg-id="BBCThree.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc3-epg.png" group-title="Undefined",BBC Three
+https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.mpd
+#EXTINF:-1 tvg-chno="7" tvg-rec="28" tvg-id="BBCThree.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc3-epg.png" group-title="Undefined",BBC Three
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.mpd
 #EXTINF:-1 tvg-id="BBCUHD1.uk",BBC UHD 1 (2160p) [Geo-blocked] [Not 24/7]
 https://ve-uhd-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uhd_stream_01/iptv_uhd_v1.mpd
 #EXTINF:-1 tvg-id="BBCUHD2.uk",BBC UHD 2 (2160p) [Geo-blocked] [Not 24/7]
@@ -3024,10 +3061,6 @@ https://ve-uhd-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uhd_stream_
 https://ve-uhd-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:uhd_stream_05/iptv_uhd_v1.mpd
 #EXTINF:-1 tvg-chno="1" tvg-rec="28" tvg-id="BBCOneEngland.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc1-epg.png" group-title="General",BBC 1
 https://vs-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_one_hd/pc_hd_abr_v2.mpd
-#EXTINF:-1 tvg-chno="2" tvg-rec="28" tvg-id="BBCTwoEngland.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc2-epg.png" group-title="General",BBC 2
-https://vs-cmaf-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_two_hd/pc_hd_abr_v2.mpd
-#EXTINF:-1,BBC Three HD (720p) [Geo-blocked]
-https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.mpd
 #EXTINF:-1, BBC Four HD (720p) [Geo-blocked]
 https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=3/i=urn:bbc:pips:service:bbc_four_hd/iptv_hd_abr_v1.mpd
 #EXTINF:-1, BBC One HD (720p) [Geo-blocked]
@@ -3104,8 +3137,6 @@ https://vs-hls-push-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_two_hd/
 http://localiptv.site:85/UniversalIptvDisc/Qsfrorv45JDIJSjseZdhx/440
 #EXTINF:-1 tvg-chno="5" tvg-rec="28" tvg-id="Channel5.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/ch5-epg.png" group-title="General",Channel 5
 http://localiptv.site:85/UniversalIptvDisc/Qsfrorv45JDIJSjseZdhx/410
-#EXTINF:-1 tvg-chno="7" tvg-rec="28" tvg-id="BBCThree.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc3-epg.png" group-title="Undefined",BBC Three
-https://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_three_hd/t=3840/v=pv14/b=5070016/main.m3u8
 #EXTINF:-1 tvg-chno="9" tvg-rec="28" tvg-id="BBCFour.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbc4-epg.png" status="blocked",BBC Four
 https://vs-hls-pushb-uk-live.akamaized.net/x=3/i=urn:bbc:pips:service:bbc_four_hd/mobile_wifi_main_sd_abr_v2_akamai_hls_live_http.m3u8
 #EXTINF:-1 tvg-chno="13" tvg-rec="28" tvg-id="E4.uk" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/e4-epg.png" group-title="General",E4 - SEM VPN
@@ -3966,34 +3997,3 @@ https://panel.streamingtv-mediacp.online:1936/8212/8212/chunklist_w429508567.m3u
 https://5b38ce71f1f00.streamlock.net/8080/8080/.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/etndUmR.png" group-title="MUSICA",Latinos Up Tv op2 | Estados Unidos
 https://5b38ce71f1f00.streamlock.net/8080/8080/chunklist_w956830983.m3u8
-#EXTINF:-1 type="stream" tvg-logo="http://thaiptv.com/img/m2o.jpg" group-title="MUSICA",m2o TV | Italia
-http://m2otv-lh.akamaihd.net/i/m2oTv_1@186074/index_600_av-b.m3u8?sd=10&rebase=on
-#EXTINF:-1 type="stream" tvg-logo="https://lh3.googleusercontent.com/V5tg-A9mM5rfPTlOD8MVkLtIYyNYp5b7LThk_na9k82u77SzSJfxcD4MQioHXQ6iKgbI=w140" group-title="MUSICA" group-title="MUSICA",Melody Channel | Colombia
-https://5b464b69d264e.streamlock.net/Channels_live/ngrp:MelodyChannel_all/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/1RkqeV8.png" group-title="MUSICA",Memorias TV | Colombia
-https://mediacp.us:8081/8002/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Mezzo_Logo.svg/500px-Mezzo_Logo.svg.png" group-title="MUSICA",Mezzo | Francia
-http://ott-cdn.ucom.am/s35/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i2.paste.pics/ecac0da442f722d93b2a607b74c149df.png" group-title="MUSICA",MMC | Estados Unidos
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01024-olympusat-mmcfreetv-ono/f5378a67-beb2-4733-87e5-97093d53728a/4.m3u8
-#EXTINF:-1 tvg-id="MTV MX" tvg-name="MTV MX" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/mtv.png" group-title="MUSICA",MTV | Estados Unidos
-http://161.0.157.5/PLTV/88888888/224/3221226825/index.m3u8
-#EXTINF:-1 tvg-id="MTV Sur" tvg-name="MTV Sur" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/mtv.png" group-title="MUSICA",MTV | Noruega
-http://unilivemtveu-lh.akamaihd.net/i/mtvno_1@346424/master.m3u8
-#EXTINF:-1 tvg-id="MTV Hits Mexico" tvg-name="MTV Hits Mexico" tvg-logo="https://imagenes.gatotv.com/logos/canales/oscuros/mtv_hits-mediano.png" group-title="MUSICA",MTV HITS | Estados Unidos
-http://161.0.157.9/PLTV/88888888/224/3221226825/index.m3u8?fluxustv.m3u8
-#EXTINF:-1 tvg-logo="https://is5-ssl.mzstatic.com/image/thumb/Purple5/v4/05/fc/66/05fc6605-acfe-d39e-1b4a-87d3d5a548b0/source/512x512bb.jpg" group-title="MUSICA",MUSIC BOX | Eslovenia
-http://94.43.239.178:8080/CHANNEL470/BITRATE0/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://media.port.hu/images/000/986/300x300/359.jpg" group-title="MUSICA",Music Channel | Hungria
-http://1music.hu/1music.m3u8
-#EXTINF:-1 tvg-logo="https://media.port.hu/images/000/986/300x300/358.jpg" group-title="MUSICA",Music Channel HiT | Hungria
-http://hitmusic.hu/hitmusic.m3u8
-#EXTINF:-1 tvg-logo="https://costaricatelevision.com/sites/default/files/2021-02/radio-best-music-tv-costa-rica.png" group-title="MUSICA",Radio Best Music RBM TV | Costa Rica
-https://cp.sradiotv.com:1936/8016/8016/chunklist_w1427361354.m3u8
-#EXTINF:-1 tvg-logo="http://i.imgur.com/OXgDjwN.png" group-title="MUSICA",Radio Bruno | Italia
-http://37.48.83.34:80/radiobrunotv/radiobrunotv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1088375534395052033/jBKVUQbV_400x400.jpg" group-title="MUSICA",Radio Capital Tivu | Italia
-http://capital_tv-lh.akamaihd.net/i/CapitalTv_1@183098/master.m3u8
-#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1088375534395052033/jBKVUQbV_400x400.jpg" group-title="MUSICA",Radio Capital Tivu | Italia
-http://capital-live-tv-01-hls.akamai.media.kataweb.it/i/CapitalTv_1@183098/index_5_av-p.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/xsspfDW.png" group-title="MUSICA",Radio Contact Feel Good | Bélgica
