@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=debate+presidential&sca_esv=a781b331acaf4086&sca_upv=1&tbs=dur:l,srcf:H4sIAAAAAAAAAB3KwQrAIAgA0L_1xMvCfymyTlYJpsL8fdHuH91lGVkayCVdxemQzmt-Qaw7sDqO8W5aYxkblANJKZzu3JnH4A0-0vpVFAAAA&tbm=vid&tbas=0&source=lnt&sa=X&ved=2ahUKEwiZ-pST89mIAxVLppUCHSTPAV8QpwV6BAgDEBI&biw=1536&bih=721&dpr=1.25"
+base_url = "https://www.google.com/search?q=trump&sca_esv=a781b331acaf4086&sca_upv=1&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVcvMz9ErKFFLS0xOTcrPzwaLlZRnliRn6JWUqWmn54NFUhIzcypz80sy8_1PAfACD5hw_1QgAAAA&tbm=vid&ei=18DxZpe8DNvd1sQP1sqjwAQ&ved=0ahUKEwjXg4_m5dmIAxXbrpUCHVblCEgQ4dUDCA0&uact=5&oq=trump&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgV0cnVtcDIIEAAYgAQYsQMyChAAGIAEGEMYigUyChAAGIAEGEMYigUyBRAAGIAEMggQABiABBixAzIIEAAYgAQYsQMyDhAAGIAEGLEDGIMBGIoFMgsQABiABBixAxiDATIKEAAYgAQYQxiKBTIOEAAYgAQYsQMYgwEYxwNIrsX1AlCmvfUCWM7B9QJwAXgAkAEAmAHtAaAB4gaqAQUwLjUuMbgBA8gBAPgBAZgCB6ACvwjCAhAQABiABBixAxhDGIMBGIoFwgINEAAYgAQYsQMYQxiKBZgDAIgGAZIHBTAuNS4yoAf6Hg&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
