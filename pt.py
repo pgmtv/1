@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=trump&sca_esv=a781b331acaf4086&sca_upv=1&tbs=dur:l,qdr:w&tbm=vid&tbas=0&source=lnt&sa=X&ved=2ahUKEwjbqcP05dmIAxWRrpUCHePFCU8QpwV6BAgDECg&biw=1536&bih=721&dpr=1.25"
+base_url = "https://www.google.com/search?q=trump+campaing&sca_esv=a781b331acaf4086&sca_upv=1&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVSvNzwHReklFaun5YBHtZN3igsQ8vfyidLW0xOTUpPz8bLBEbnFeUjKYBQBba-1OQQAAAA&tbm=vid&ei=tsHxZtaAELTe1sQPrrGE8Ag&ved=0ahUKEwjWs73Q5tmIAxU0r5UCHa4YAY4Q4dUDCA0&uact=5&oq=trump+campaing&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIg50cnVtcCBjYW1wYWluZzIHEAAYgAQYCjIHEAAYgAQYCjIQEAAYgAQYsQMYgwEYxwMYCjIKEAAYgAQYxwMYCjIKEAAYgAQYxwMYCjIIEAAYFhgKGB4yCBAAGBYYChgeMggQABgWGAoYHjIIEAAYFhgKGB4yCBAAGBYYChgeSIwTUL4HWO4RcAB4AJABAJgB9gGgAZgLqgEFMC45LjG4AQPIAQD4AQGYAgqgApMMwgIIEAAYgAQYsQPCAgsQABiABBixAxjHA8ICDhAAGIAEGLEDGIMBGIoFwgIOEAAYgAQYsQMYgwEYxwPCAgUQABiABMICCxAAGIAEGLEDGIMBwgINEAAYgAQYsQMYgwEYCsICCBAAGIAEGMcDwgIIEAAYogQYiQXCAggQABiABBiiBMICBhAAGBYYHsICCxAAGBYYxwMYChgemAMAiAYBkgcFMC45LjGgB8o6&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
