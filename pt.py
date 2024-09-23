@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=24&sca_esv=a781b331acaf4086&sca_upv=1&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuKilL1UstVivJzC7JzwaLZeYVlySmFyXmgnkpiZk5lbn5JZn5eWB-WmJyalI-VCkAU9N4LEsAAAA,dur:l,qdr:w&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjf9_6v3KiIAxVFr5UCHVUVEIEQpwV6BAgBEBU&biw=1592&bih=822&dpr=1"
+base_url = "https://www.google.com/search?q=archivo&sca_esv=a781b331acaf4086&sca_upv=1&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuKilL1UstVivJzC7JzwaLZeYVlySmFyXmgnkpiZk5lbn5JZn5eWB-WmJyalI-VCkAU9N4LEsAAAA%2Cdur%3Al%2Cqdr%3Aw&tbm=vid&ei=7r7xZqHyLcXX1sQPwKCqoQE&ved=0ahUKEwihoZr949mIAxXFq5UCHUCQKhQQ4dUDCA0&uact=5&oq=archivo&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgdhcmNoaXZvMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyCBAAGIAEGKIESL8hUPwQWJUccAB4AJABAJgBgQOgAccMqgEHMC43LjEuMbgBA8gBAPgBAZgCCaAC_QzCAggQABiABBixA8ICChAAGIAEGEMYigXCAg4QABiABBixAxiDARiKBcICCxAAGIAEGLEDGIMBwgIQEAAYgAQYsQMYQxiDARiKBcICDRAAGIAEGLEDGEMYigWYAwCIBgGSBwcwLjcuMS4xoAe9Lg&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
