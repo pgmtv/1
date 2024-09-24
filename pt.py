@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=tv&sca_esv=a781b331acaf4086&sca_upv=1&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANPOzCsuSUwvSszVS87PVavMLy0pTUoFs9MSk1OT8vOzwZyknPz83KTUonQwr6Q8syQ5Q6-kTC0tv8ISLAQAi65M_1EkAAAA&tbm=vid&ei=4-HxZov_E9fe1sQPkLKY4Q4&ved=0ahUKEwjL_JuohdqIAxVXr5UCHRAZJuwQ4dUDCA0&uact=5&oq=tv&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgJ0djIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIIEAAYgAQYsQMyCBAAGIAEGLEDMgsQABiABBixAxiDATIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMggQABiABBixAzIFEAAYgAQyCBAAGIAEGLEDSK0PUJULWLANcAB4AJABAJgB8QGgAfIDqgEFMC4yLjG4AQPIAQD4AQGYAgOgAooEwgINEAAYgAQYsQMYQxiKBZgDAIgGAZIHBTAuMi4xoAeTDw&sclient=gws-wiz-video"
+base_url = "https://www.google.com/search?q=rtve+play&sca_esv=124892d69d68a598&sca_upv=1&biw=1536&bih=721&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjRgbal0tuIAxWEtJUCHe7YBqIQ0pQJegQIBxAG"
 
 # Load the page
 driver.get(base_url)
