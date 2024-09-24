@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=rtve+play&sca_esv=124892d69d68a598&sca_upv=1&biw=1536&bih=721&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjRgbal0tuIAxWEtJUCHe7YBqIQ0pQJegQIBxAG"
+base_url = "https://www.google.com/search?q=directo&sca_esv=124892d69d68a598&sca_upv=1&tbs=srcf:H4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVSvJzC7JzwYz0xKTU5PyoZzUnILEzGKokrLMtEqQRgAdTSYlQgAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjs8fbT09uIAxX7q5UCHWRDMZAQpwV6BAgCECk&biw=1536&bih=721&dpr=1.25"
 
 # Load the page
 driver.get(base_url)
