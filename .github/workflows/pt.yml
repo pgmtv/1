@@ -27,34 +27,25 @@ jobs:
         source venv/bin/activate
         pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
-    - name: Instalando selenium
-      run: |
-        source venv/bin/activate
-        pip install selenium
-        
     - name: Install ffmpeg
       run: |
         sudo apt-get update
         sudo apt-get install -y ffmpeg   
-      
+
     - name: Executar script Python
       run: |
+        source venv/bin/activate
         python pt.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
           exit 1
         fi
+
     - name: Adicionar arquivos ao controle de versão
       run: |
         git add -A
         ls -la
-        
 
-        
-
-         
-         
-         
     - name: Commit & Push
       run: |
         git config --global user.email "action@github.com"
