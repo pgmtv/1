@@ -27,6 +27,11 @@ jobs:
         source venv/bin/activate
         pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
+    - name: Instalando selenium
+      run: |
+        source venv/bin/activate
+        pip install selenium
+        
     - name: Install ffmpeg
       run: |
         sudo apt-get update
