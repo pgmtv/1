@@ -25,7 +25,7 @@ jobs:
     - name: Instalando Dependências Python
       run: |
         source venv/bin/activate
-        pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl
+        pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
     - name: Install ffmpeg
       run: |
