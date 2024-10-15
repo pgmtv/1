@@ -18,11 +18,11 @@ jobs:
 
     steps:
     - name: Checkout Repositório
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Instalando streamlink
       run: |
-        pip install --user --upgrade streamlink
+        pip install streamlink
         
     - name: INSTALANDO SELENIUM
       run: |
