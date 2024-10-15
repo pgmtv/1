@@ -16,9 +16,15 @@ jobs:
     - name: Checkout Repositório
       uses: actions/checkout@v3  # Updated to use a newer version
 
+    - name: Configurar Ambiente Virtual
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip  # Upgrade pip within the virtual environment
+
     - name: Instalando Dependências Python
       run: |
-        pip install --upgrade pip
+        source venv/bin/activate
         pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp
 
     - name: Install ffmpeg
@@ -28,6 +34,7 @@ jobs:
 
     - name: Executar script Python
       run: |
+        source venv/bin/activate
         python agrupadordelistas.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
