@@ -34,10 +34,11 @@ jobs:
     - name: Install ffmpeg
       run: |
         sudo apt-get update
-        sudo apt-get install -y ffmpeg     
-      
+        sudo apt-get install -y ffmpeg      
+
     - name: Executar script Python
       run: |
+        source venv/bin/activate
         python magnet.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
