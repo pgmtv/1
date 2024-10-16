@@ -18,40 +18,27 @@ jobs:
 
     steps:
     - name: Checkout Repositório
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3  # Updated to use a newer version
 
-    - name: Instalando streamlink
+    - name: Configurar Ambiente Virtual
       run: |
-        pip install streamlink
-        
-    - name: INSTALANDO SELENIUM
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip  # Upgrade pip within the virtual environment
+
+    - name: Instalando Dependências Python
       run: |
-        pip install selenium --upgrade
-        pip install requests
-        pip install beautifulsoup4
-        pip install lxml
-        pip install python-dateutil
-        pip install yt-dlp
-        pip install youtube-dl
+        source venv/bin/activate
+        pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
-
-           
     - name: Install ffmpeg
       run: |
         sudo apt-get update
         sudo apt-get install -y ffmpeg      
-        
-    - name: Install bs4
-      run: |
-        pip install beautifulsoup4
-        pip install --upgrade pip
 
-      
-    - name: Install ffmpeg
-      run: sudo apt-get update && sudo apt-get install -y ffmpeg
-      
     - name: Executar script Python
       run: |
+        source venv/bin/activate
         python ia.py
         if [ $? -ne 0 ]; then
           echo "Erro na execução do script Python."
