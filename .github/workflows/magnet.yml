@@ -18,27 +18,23 @@ jobs:
 
     steps:
     - name: Checkout Repositório
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3  # Updated to use a newer version
 
-    - name: INSTALANDO NEGOCIOS
+    - name: Configurar Ambiente Virtual
       run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip  # Upgrade pip within the virtual environment
+
+    - name: Instalando Dependências Python
+      run: |
+        source venv/bin/activate
         pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
-
-           
     - name: Install ffmpeg
       run: |
         sudo apt-get update
-        sudo apt-get install -y ffmpeg      
-        
-    - name: Install bs4
-      run: |
-        pip install beautifulsoup4
-        pip install --upgrade pip
-
-      
-    - name: Install ffmpeg
-      run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        sudo apt-get install -y ffmpeg     
       
     - name: Executar script Python
       run: |
