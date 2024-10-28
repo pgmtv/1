@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=doblado&sca_esv=124892d69d68a598&sca_upv=1&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAAC3JQQrAMAgF0du4KeROMbFFkvSD1UVuXypdzpuN8GApDYvO2oSBkeHyIAxdTRyfFDZyHf7_1a4LT6ehV515wxZ3wAibdjRRUAAAA%2Cdur%3Al%2Cqdr%3Aw&tbm=vid&ei=OMTyZsyoCZ3K1sQPt4a1kAc&ved=0ahUKEwjMpMeU3duIAxUdpZUCHTdDDXI4ChDh1QMIDQ&uact=5&oq=doblado&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgdkb2JsYWRvMgUQABiABDIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIKEAAYgAQYsQMYCjIKEAAYgAQYsQMYCjIHEAAYgAQYCjIHEAAYgAQYCkjiF1CsBVjyFXABeACQAQCYAcsBoAGcCaoBBTAuOC4xuAEDyAEA-AEBmAIKoALQCsICCBAAGIAEGLEDwgIKEAAYgAQYQxiKBcICDhAAGIAEGLEDGIMBGIoFwgINEAAYgAQYsQMYQxiKBcICCxAAGIAEGLEDGIMBmAMAiAYBkgcHMS44LjAuMaAHxi8&sclient=gws-wiz-video"
+base_url = "https://www.google.com/search?q=globo.com&sca_esv=124892d69d68a598&tbs=dur:l,qdr:w,srcf:H4sIAAAAAAAAADXIQQqAMAwF0dt0I_1ROJgRpSfpDNIK3F4Xs3sx2KAidYe1BXknym7FmxsdO0TxgYMjpI0R11J-4xXxf1QktvjOmZqhYAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwihr-jtgLKJAxUMBrkGHTLrCd8QpwV6BAgJECk&biw=1536&bih=721&dpr=1.25"
 
 # Load the page
 driver.get(base_url)
@@ -172,7 +172,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=tv&sca_esv=90c55360f106269f&sca_upv=1&biw=1912&bih=1002&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAAC3HQQqAMAwEwN94EfxTWquENlloE0h_1LwRvMxtuXtpVIYdxN_1TkQ7UV_1DlZl9E7SbI38dgCY2g-IqoPKK3sB16ql0tSAAAA&tbm=vid&ei=2bzaZuKQIf7M1sQP8eWb6AI&ved=0ahUKEwii4fng8q2IAxV-ppUCHfHyBi0Q4dUDCA4&uact=5&oq=tv&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgJ0djIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMggQABiABBixAzILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMg4QABiABBixAxiDARiKBTILEAAYgAQYsQMYgwEyDhAAGIAEGLEDGIMBGIoFMgUQABiABDIFEAAYgARIiz1QpDpYkzxwAHgAkAEAmAF4oAHrAaoBAzAuMrgBA8gBAPgBAZgCAqAC9QHCAgoQABiABBhDGIoFmAMAiAYBkgcDMC4yoAfqCQ&sclient=gws-wiz-video"
+url = "https://www.google.com/search?q=balan%C3%A7o+geral&sca_esv=90c55360f106269f&tbas=0&tbs=dur:l,qdr:w,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVSsyB1MleRmGIIZeUpFaSmJmTmVufklmfh5YTjstMTk1KT8_1G8wrzc-BKQQA-cZXEkgAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwifmaWUgbKJAxVnHbkGHZlWF68QpwV6BAgBEC0&biw=1536&bih=721&dpr=1.25"
 driver.get(url)
 
 for i in range(2):
