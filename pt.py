@@ -5,6 +5,73 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+# Configurações do Chrome
+options = Options()
+options.add_argument("--headless")  # Executa sem interface gráfica
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
+
+# URLs dos vídeos Globoplay
+globoplay_urls = [
+    "https://globoplay.globo.com/v/2145544/",
+    "https://globoplay.globo.com/v/2135579/"
+]
+
+# Função para extrair o link m3u8, título e thumbnail
+def extract_globoplay_data(driver, url):
+    driver.get(url)
+    time.sleep(10)  # Aguarde a página carregar completamente
+    
+    # Obter o título da página
+    title = driver.title
+
+    # Obter o link m3u8 e thumbnail dos recursos de rede
+    log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
+
+    m3u8_url = None
+    thumbnail_url = None
+    for entry in log_entries:
+        if ".m3u8" in entry['name']:
+            m3u8_url = entry['name']
+        if ".jpg" in entry['name'] and "thumbnail" in entry['name']:
+            thumbnail_url = entry['name']
+
+    return title, m3u8_url, thumbnail_url
+
+# Inicializar o WebDriver
+driver = webdriver.Chrome(options=options)
+
+# Criar ou abrir o arquivo lista1.m3u para escrever os links e títulos
+with open("lista1.M3U", "a") as output_file:
+    for link in globoplay_urls:
+        print(f"Processando link: {link}")
+
+        try:
+            title, m3u8_url, thumbnail_url = extract_globoplay_data(driver, link)
+
+            if m3u8_url:
+                # Escrever no formato extinf iptv
+                output_file.write(f'#EXTINF:-1 tvg-logo="{thumbnail_url}" group-title="GLOBO AO VIVO", {title}\n')
+                output_file.write(f"{m3u8_url}\n")
+                print(f"M3U8 link encontrado: {m3u8_url}")
+            else:
+                print(f"Link .m3u8 não encontrado para {link}")
+        
+        except Exception as e:
+            print(f"Erro ao processar o link {link}: {e}")
+
+# Sair do driver
+driver.quit()
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
 # Configure Chrome options
 options = Options()
 options.add_argument("--headless")  # Descomente se você não precisar de uma interface gráfica
@@ -17,7 +84,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=assista+aos+telejornais&sca_esv=124892d69d68a598&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAADXIQQqAMAwF0dt0I_1ROJgRpSfpDNIK3F4Xs3sx2KAidYe1BXknym7FmxsdO0TxgYMjpI0R11J-4xXxf1QktvjOmZqhYAAAA&tbm=vid&ei=Vn0gZ4rPMbrL1sQPmer26QY&ved=0ahUKEwiK0peE-LKJAxW6pZUCHRm1PW0Q4dUDCA0&uact=5&oq=assista+aos+telejornais&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIhdhc3Npc3RhIGFvcyB0ZWxlam9ybmFpczIGEAAYFhgeMggQABiABBiiBDIIEAAYgAQYogQyCBAAGKIEGIkFMggQABiABBiiBEjMNlC2HFjjNXAAeACQAQKYAYYHoAHzKaoBDjEuMTYuMy4xLjEuMC4yuAEDyAEA-AEBmAIWoAKTKcICChAAGIAEGEMYigXCAggQABiABBixA8ICEBAAGIAEGLEDGEMYgwEYigXCAgUQABiABMICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAg0QABiABBixAxhDGIoFwgIIEAAYFhgeGA_CAggQABgWGAoYHpgDAIgGAZIHEDAuMTYuMy4wLjEuMC4xLjGgB9J_&sclient=gws-wiz-video"
+base_url = "https://www.google.com/search?q=datena&sca_esv=124892d69d68a598&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTaYnJqUn5-dlgTklehiGIoZdUpJaZV1ySmF6UmAuWSUnMzKnMzS_1JzM8D8wEGg-AESwAAAA&tbm=vid&ei=pYIgZ-eJKpHn1sQPso7k-AE&ved=0ahUKEwin8JKM_bKJAxWRs5UCHTIHGR8Q4dUDCA0&uact=5&oq=datena&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZkYXRlbmEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMgUQABiABDIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAESK8KUM0FWLcJcAB4AJABAJgBrgGgAeoFqgEDMC42uAEDyAEA-AEBmAIGoAKeBsICChAAGIAEGEMYigXCAg4QABiABBixAxiDARiKBcICDRAAGIAEGLEDGEMYigWYAwCIBgGSBwUwLjUuMaAH8h0&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
@@ -172,7 +239,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=balan%C3%A7o+geral&sca_esv=90c55360f106269f&tbas=0&tbs=dur:l,qdr:w,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVSsyB1MleRmGIIZeUpFaSmJmTmVufklmfh5YTjstMTk1KT8_1G8wrzc-BKQQA-cZXEkgAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwifmaWUgbKJAxVnHbkGHZlWF68QpwV6BAgBEC0&biw=1536&bih=721&dpr=1.25"
+url = "https://www.google.com/search?q=ingles&sca_esv=90c55360f106269f&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVUtJzMypzM0vyczPA_1PTEpNTk_1Lzs8GckszsEigTAKNtLR09AAAA&tbm=vid&ei=5YIgZ-6PHurb1sQP1eygiAs&ved=0ahUKEwiulsmq_bKJAxXqrZUCHVU2CLEQ4dUDCA0&uact=5&oq=ingles&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZpbmdsZXMyBRAAGIAEMggQABiABBixAzIFEAAYgAQyBRAAGIAEMggQABiABBixAzIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyDRAAGIAEGLEDGIMBGApImw9QzQlY4Q1wAHgAkAEAmAGJAaABtwaqAQMwLje4AQPIAQD4AQGYAgegAtgGwgINEAAYgAQYsQMYQxiKBcICBhAAGBYYHsICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgoQABiABBhDGIoFmAMAiAYBkgcDMC43oAfnJQ&sclient=gws-wiz-video"
 driver.get(url)
 
 for i in range(2):
