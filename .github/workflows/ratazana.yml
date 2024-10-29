@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout Repositório
-      uses: actions/checkout@v3  # Updated to use a newer version
+      uses: actions/checkout@v4  # Updated to use a newer version
 
     - name: Configurar Ambiente Virtual
       run: |
