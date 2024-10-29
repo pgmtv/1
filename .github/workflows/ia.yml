@@ -6,7 +6,7 @@ name: Baixando Lista
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Executa a cada 4 horas
+    - cron: '0 */12 * * *'  # Executa a cada 12 horas
   pull_request:
     branches:
       - main
