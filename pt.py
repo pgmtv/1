@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # Configurações do Chrome
@@ -15,11 +13,15 @@ options.add_argument("--disable-infobars")
 
 # URLs dos vídeos Globoplay
 globoplay_urls = [
+    "https://globoplay.globo.com/v/6120663/",
     "https://globoplay.globo.com/v/2145544/",
-    "https://globoplay.globo.com/v/2135579/"
+    "https://globoplay.globo.com/v/2135579/",
+    "https://globoplay.globo.com/v/2168377/",
+    "https://globoplay.globo.com/v/2923546/",
+    "https://globoplay.globo.com/v/3383021/"
 ]
 
-# Função para extrair o link m3u8, título e thumbnail
+# Função para extrair o link m3u8, título e favicon
 def extract_globoplay_data(driver, url):
     driver.get(url)
     time.sleep(10)  # Aguarde a página carregar completamente
@@ -27,18 +29,22 @@ def extract_globoplay_data(driver, url):
     # Obter o título da página
     title = driver.title
 
-    # Obter o link m3u8 e thumbnail dos recursos de rede
+    # Obter o link m3u8 dos recursos de rede
     log_entries = driver.execute_script("return window.performance.getEntriesByType('resource');")
-
     m3u8_url = None
-    thumbnail_url = None
     for entry in log_entries:
         if ".m3u8" in entry['name']:
             m3u8_url = entry['name']
-        if ".jpg" in entry['name'] and "thumbnail" in entry['name']:
-            thumbnail_url = entry['name']
+            break
 
-    return title, m3u8_url, thumbnail_url
+    # Obter o favicon como thumbnail
+    try:
+        favicon_element = driver.find_element(By.XPATH, "//link[@rel='icon' or @rel='shortcut icon']")
+        favicon_url = favicon_element.get_attribute("href")
+    except:
+        favicon_url = None
+
+    return title, m3u8_url, favicon_url
 
 # Inicializar o WebDriver
 driver = webdriver.Chrome(options=options)
@@ -49,10 +55,11 @@ with open("lista1.M3U", "a") as output_file:
         print(f"Processando link: {link}")
 
         try:
-            title, m3u8_url, thumbnail_url = extract_globoplay_data(driver, link)
+            title, m3u8_url, favicon_url = extract_globoplay_data(driver, link)
 
             if m3u8_url:
                 # Escrever no formato extinf iptv
+                thumbnail_url = favicon_url if favicon_url else ""  # Se não encontrar o favicon, deixar em branco
                 output_file.write(f'#EXTINF:-1 tvg-logo="{thumbnail_url}" group-title="GLOBO AO VIVO", {title}\n')
                 output_file.write(f"{m3u8_url}\n")
                 print(f"M3U8 link encontrado: {m3u8_url}")
@@ -64,6 +71,7 @@ with open("lista1.M3U", "a") as output_file:
 
 # Sair do driver
 driver.quit()
+
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -84,7 +92,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=datena&sca_esv=124892d69d68a598&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTaYnJqUn5-dlgTklehiGIoZdUpJaZV1ySmF6UmAuWSUnMzKnMzS_1JzM8D8wEGg-AESwAAAA&tbm=vid&ei=pYIgZ-eJKpHn1sQPso7k-AE&ved=0ahUKEwin8JKM_bKJAxWRs5UCHTIHGR8Q4dUDCA0&uact=5&oq=datena&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZkYXRlbmEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMgUQABiABDIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgUQABiABDIFEAAYgAQyBRAAGIAESK8KUM0FWLcJcAB4AJABAJgBrgGgAeoFqgEDMC42uAEDyAEA-AEBmAIGoAKeBsICChAAGIAEGEMYigXCAg4QABiABBixAxiDARiKBcICDRAAGIAEGLEDGEMYigWYAwCIBgGSBwUwLjUuMaAH8h0&sclient=gws-wiz-video"
+base_url = "https://www.google.com/search?q=a&sca_esv=124892d69d68a598&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTaYnJqUn5-dlgTklehiGIoZdUpJaZV1ySmF6UmAuWSUnMzKnMzS_1JzM8D8wEGg-AESwAAAA,dur:l&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjJyu3vg7OJAxWHq5UCHcllB4YQpwV6BAgBEA4&biw=1536&bih=721&dpr=1.25"
 
 # Load the page
 driver.get(base_url)
@@ -239,7 +247,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=ingles&sca_esv=90c55360f106269f&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVUtJzMypzM0vyczPA_1PTEpNTk_1Lzs8GckszsEigTAKNtLR09AAAA&tbm=vid&ei=5YIgZ-6PHurb1sQP1eygiAs&ved=0ahUKEwiulsmq_bKJAxXqrZUCHVU2CLEQ4dUDCA0&uact=5&oq=ingles&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgZpbmdsZXMyBRAAGIAEMggQABiABBixAzIFEAAYgAQyBRAAGIAEMggQABiABBixAzIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyDRAAGIAEGLEDGIMBGApImw9QzQlY4Q1wAHgAkAEAmAGJAaABtwaqAQMwLje4AQPIAQD4AQGYAgegAtgGwgINEAAYgAQYsQMYQxiKBcICBhAAGBYYHsICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgoQABiABBhDGIoFmAMAiAYBkgcDMC43oAfnJQ&sclient=gws-wiz-video"
+url = "https://www.google.com/search?q=25&sca_esv=90c55360f106269f&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVUtJzMypzM0vyczPA_1PTEpNTk_1Lzs8GckszsEigTAKNtLR09AAAA&tbm=vid&ei=4IkgZ8ScMrvQ1sQPjdPMuQ0&ved=0ahUKEwjEjOv-g7OJAxU7qJUCHY0pM9cQ4dUDCA0&uact=5&oq=25&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgIyNTIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMg0QABiABBixAxiDARgKMggQABiABBixA0iCHlCGDlj-HXAAeACQAQCYAZsBoAGbAaoBAzAuMbgBA8gBAPgBAZgCAaACrgGYAwCIBgGSBwMwLjGgB78F&sclient=gws-wiz-video"
 driver.get(url)
 
 for i in range(2):
