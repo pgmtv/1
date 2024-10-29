@@ -17,7 +17,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=globo.com&sca_esv=124892d69d68a598&tbs=dur:l,qdr:w,srcf:H4sIAAAAAAAAADXIQQqAMAwF0dt0I_1ROJgRpSfpDNIK3F4Xs3sx2KAidYe1BXknym7FmxsdO0TxgYMjpI0R11J-4xXxf1QktvjOmZqhYAAAA&tbm=vid&source=lnt&sa=X&ved=2ahUKEwihr-jtgLKJAxUMBrkGHTLrCd8QpwV6BAgJECk&biw=1536&bih=721&dpr=1.25"
+base_url = "https://www.google.com/search?q=assista+aos+telejornais&sca_esv=124892d69d68a598&biw=1536&bih=721&tbs=srcf%3AH4sIAAAAAAAAADXIQQqAMAwF0dt0I_1ROJgRpSfpDNIK3F4Xs3sx2KAidYe1BXknym7FmxsdO0TxgYMjpI0R11J-4xXxf1QktvjOmZqhYAAAA&tbm=vid&ei=Vn0gZ4rPMbrL1sQPmer26QY&ved=0ahUKEwiK0peE-LKJAxW6pZUCHRm1PW0Q4dUDCA0&uact=5&oq=assista+aos+telejornais&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIhdhc3Npc3RhIGFvcyB0ZWxlam9ybmFpczIGEAAYFhgeMggQABiABBiiBDIIEAAYgAQYogQyCBAAGKIEGIkFMggQABiABBiiBEjMNlC2HFjjNXAAeACQAQKYAYYHoAHzKaoBDjEuMTYuMy4xLjEuMC4yuAEDyAEA-AEBmAIWoAKTKcICChAAGIAEGEMYigXCAggQABiABBixA8ICEBAAGIAEGLEDGEMYgwEYigXCAgUQABiABMICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAg0QABiABBixAxhDGIoFwgIIEAAYFhgeGA_CAggQABgWGAoYHpgDAIgGAZIHEDAuMTYuMy4wLjEuMC4xLjGgB9J_&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
