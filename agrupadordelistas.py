@@ -54,7 +54,8 @@ for element in elements:
 # Close the webdriver
 driver.quit()
 
-# Function to get the direct stream URL and title
+
+# Function to get the direct stream URL and title with error handling
 def get_stream_info(url):
     ydl_opts = {
         'quiet': True,
@@ -63,11 +64,15 @@ def get_stream_info(url):
         'outtmpl': '/dev/null',
         'geturl': True
     }
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        info_dict = ydl.extract_info(url, download=False)
-        video_title = info_dict.get('title', 'Video Desconhecido')
-        stream_url = info_dict.get('url', '')
-        return video_title, stream_url
+    try:
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            info_dict = ydl.extract_info(url, download=False)
+            video_title = info_dict.get('title', 'Video Desconhecido')
+            stream_url = info_dict.get('url', '')
+            return video_title, stream_url
+    except Exception as e:
+        print(f"Error fetching info for {url}: {e}")
+        return None, None  # Return None for failed entries
 
 # Generate the EXTINF lines with tvg-logo and URLs
 with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -80,7 +85,6 @@ with open('lista1.M3U', 'w') as file:
         if stream_url:
             tvg_logo = f'tvg-logo="{thumbnail}"' if thumbnail else ''
             file.write(f'#EXTINF:-1 tvg-group="VOD" {tvg_logo},{title}\n{stream_url}\n')
-
 
 print("A playlist M3U foi gerada com sucesso.")
 
