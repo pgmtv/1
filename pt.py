@@ -13,7 +13,7 @@ options.add_argument("--disable-infobars")
 
 # URLs dos vídeos Globoplay
 globoplay_urls = [
-    "https://record.r7.com/ao-vivo/",
+    "https://www.youtube.com/@CNNbrasil/live",
     "https://globoplay.globo.com/v/2145544/",
     "https://globoplay.globo.com/v/6120663/",
     "https://globoplay.globo.com/v/2135579/",
