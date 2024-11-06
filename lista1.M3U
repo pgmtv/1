@@ -1,37 +1,154 @@
 #EXTM3U
-#EXTM3U url-tvg="https://www.bevy.be/bevyfiles/unitedstatespremium3.xml"
-#EXTM3U url-tvg="https://www.bevy.be/bevyfiles/unitedstatespremium4.xml"
-
-
-
-#EXTINF:-1 tvg-id="WNJUDT1.us" tvg-name="Telemundo Miami" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5d/Telemundo_51_2018.png" group-title="USA",Telemundo Miami 2
-http://190.185.121.102:58092/play/a00f
-#EXTINF:-1 tvg-id="CBS HD New York-US" tvg-name="CBS HD New York-US" tvg-language="English" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/cbs.png" tvg-country="US" tvg-url="" group-title="USA",CBS New York 
-https://dai.google.com/linear/hls/event/rtcMlf4RTvOEkaudeany5w/master.m3u8?iu=/4128/CBS.NY.OTT
-
-#EXTINF:-1 tvg-id="ABCEast.us" tvg-logo="https://iili.io/JmoUd6g.png" group-title="USA",ABC East
-http://fl1.moveonjoy.com/ABC_EAST/index.m3u8
-#EXTINF:-1 tvg-id="CBSEast.us" tvg-logo="https://iili.io/JmoUFcJ.png" group-title="USA",CBS East
-http://fl2.moveonjoy.com/CBSEAST/index.m3u8
-#EXTINF:-1 tvg-id="FoxEast.us" tvg-logo="https://iili.io/JmoUJMF.png" group-title="USA",Fox East
-http://fl1.moveonjoy.com/FOX_EAST/index.m3u8
-#EXTINF:-1 tvg-id="NBCEast.us" tvg-logo="https://iili.io/JmoU3Fa.png" group-title="USA",NBC East
-http://fl1.moveonjoy.com/NBC_EAST/index.m3u8
-
-#EXTINF:-1 group-title="USA" tvg-logo="https://i.postimg.cc/d34hZkDX/Ednar33-TV.png", CANAL 57 USA
-https://167790.global.ssl.fastly.net/6189746bccf0424c112f5476/live_50bbca50292011ed8d265962bedee5f9/tracks-v2a1/mono.m3u8
-
-#EXTINF:-1 group-title="USA" tvg-logo="https://tvconnect.us/wp-content/uploads/2022/05/logotipo-tvc.webp", CONNECT USA
-https://5a3c48d69cf69.streamlock.net/tvconnect/tvconnect.sdp/playlist.m3u8
-
-#EXTINF:-1  tvg-id="WKAQDT1.us" group-title="NEWS WORLD" tvg-logo="https://media.telemundopr.com/2020/12/Telemundo-Puerto-Rico-Julio-2020.png?resize=850%2C478&quality=85&strip=all",Telemundo Puerto Rico (WKAQ)
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
-
-#EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="data:image/jpeg;base64,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",Telemundo Puerto Rico (WKAQ) 2
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream2/master.m3u8
-
-#EXTINF:-1 tvg-id="Univision" tvg-name="Univision" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_Univision_2019.svg/800px-Logo_Univision_2019.svg.png" group-title="USA",Univision
-http://23.237.66.106:25461/now_160322/now2.php?id=UNIVISIONEAST&calidad=sd&.m3u8
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CSPAN3_20241010_064800_Native_Americans_in_U.S._Culture",Native Americans in U.S. Culture : CSPAN3 : October 10, 2024 2:48am-3:51am EDT
+https://archive.org/download/CSPAN3_20241010_064800_Native_Americans_in_U.S._Culture/CSPAN3_20241010_064800_Native_Americans_in_U.S._Culture.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KAN11_20241010_073000",KAN11 : October 10, 2024 10:30am-11:01am IDT
+https://archive.org/download/KAN11_20241010_073000/KAN11_20241010_073000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BLOOMBERG_20241010_010000_The_David_Rubenstein_Show_Peer_to_Peer_Conversations",The David Rubenstein Show: Peer to Peer Conversations : BLOOMBERG : October 9, 2024 9:00pm-9:30pm EDT
+https://archive.org/download/BLOOMBERG_20241010_010000_The_David_Rubenstein_Show_Peer_to_Peer_Conversations/BLOOMBERG_20241010_010000_The_David_Rubenstein_Show_Peer_to_Peer_Conversations.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ALJAZ_20241010_010000_Al_Jazeera_Investigations__Gaza",Al Jazeera Investigations : Gaza : ALJAZ : October 10, 2024 4:00am-5:01am AST
+https://archive.org/download/ALJAZ_20241010_010000_Al_Jazeera_Investigations__Gaza/ALJAZ_20241010_010000_Al_Jazeera_Investigations__Gaza.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ESPRESO_20241010_013000",ESPRESO : October 10, 2024 4:30am-5:01am EEST
+https://archive.org/download/ESPRESO_20241010_013000/ESPRESO_20241010_013000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SUDAN_20241010_030000",SUDAN : October 10, 2024 5:00am-5:31am CAT
+https://archive.org/download/SUDAN_20241010_030000/SUDAN_20241010_030000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CNNW_20241010_020000_CNN_NewsNight_With_Abby_Phillip",CNN NewsNight With Abby Phillip : CNNW : October 9, 2024 7:00pm-8:00pm PDT
+https://archive.org/download/CNNW_20241010_020000_CNN_NewsNight_With_Abby_Phillip/CNNW_20241010_020000_CNN_NewsNight_With_Abby_Phillip.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/IRINN_20241010_000000",IRINN : October 10, 2024 3:30am-4:01am IRST
+https://archive.org/download/IRINN_20241010_000000/IRINN_20241010_000000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ALMAGHRIBIA_20241010_023000",ALMAGHRIBIA : October 10, 2024 3:30am-4:02am +01
+https://archive.org/download/ALMAGHRIBIA_20241010_023000/ALMAGHRIBIA_20241010_023000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/DW_20241010_060000_DW_News",DW News : DW : October 10, 2024 8:00am-8:16am CEST
+https://archive.org/download/DW_20241010_060000_DW_News/DW_20241010_060000_DW_News.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CTV_20241010_023000",CTV : October 10, 2024 10:30am-11:01am CST
+https://archive.org/download/CTV_20241010_023000/CTV_20241010_023000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RUSSIA24_20241010_043000_RIK_Rossiya_24",РИК "Россия 24" : RUSSIA24 : October 10, 2024 7:30am-8:01am MSK
+https://archive.org/download/RUSSIA24_20241010_043000_RIK_Rossiya_24/RUSSIA24_20241010_043000_RIK_Rossiya_24.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BELARUSTV_20241010_060000",Новости : BELARUSTV : October 10, 2024 9:00am-9:26am MSK
+https://archive.org/download/BELARUSTV_20241010_060000/BELARUSTV_20241010_060000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SUDAN_20241010_053000",SUDAN : October 10, 2024 7:30am-8:00am CAT
+https://archive.org/download/SUDAN_20241010_053000/SUDAN_20241010_053000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SUDAN_20241010_100000",SUDAN : October 10, 2024 12:00pm-12:31pm CAT
+https://archive.org/download/SUDAN_20241010_100000/SUDAN_20241010_100000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241010_093000",SOUTHERNSUDAN : October 10, 2024 11:30am-12:01pm CAT
+https://archive.org/download/SOUTHERNSUDAN_20241010_093000/SOUTHERNSUDAN_20241010_093000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CTV_20241010_073000",CTV : October 10, 2024 3:30pm-4:01pm CST
+https://archive.org/download/CTV_20241010_073000/CTV_20241010_073000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CTV_20241010_063000",CTV : October 10, 2024 2:30pm-3:01pm CST
+https://archive.org/download/CTV_20241010_063000/CTV_20241010_063000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CTV_20241010_000000",CTV : October 10, 2024 8:00am-8:31am CST
+https://archive.org/download/CTV_20241010_000000/CTV_20241010_000000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CANALCATORCE_20241010_010000_Conversando_con_Cristina_Pacheco",Conversando con Cristina Pacheco : CANALCATORCE : October 9, 2024 7:00pm-8:01pm CST
+https://archive.org/download/CANALCATORCE_20241010_010000_Conversando_con_Cristina_Pacheco/CANALCATORCE_20241010_010000_Conversando_con_Cristina_Pacheco.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RT_20241010_013000_CrossTalk",CrossTalk : RT : October 9, 2024 9:30pm-10:01pm EDT
+https://archive.org/download/RT_20241010_013000_CrossTalk/RT_20241010_013000_CrossTalk.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/M1_20241010_020000_Ma_ejszaka",Ma éjszaka : M1 : October 10, 2024 4:00am-5:00am CEST
+https://archive.org/download/M1_20241010_020000_Ma_ejszaka/M1_20241010_020000_Ma_ejszaka.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KRON_20241010_060000_KRON_4_News_at_11pm",KRON 4 News at 11pm : KRON : October 9, 2024 11:00pm-11:30pm PDT
+https://archive.org/download/KRON_20241010_060000_KRON_4_News_at_11pm/KRON_20241010_060000_KRON_4_News_at_11pm.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ESPRESO_20241010_070000",ESPRESO : October 10, 2024 10:00am-10:31am EEST
+https://archive.org/download/ESPRESO_20241010_070000/ESPRESO_20241010_070000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20241010_094200_CBS_News_Roundup",CBS News Roundup : KPIX : October 10, 2024 2:42am-3:30am PDT
+https://archive.org/download/KPIX_20241010_094200_CBS_News_Roundup/KPIX_20241010_094200_CBS_News_Roundup.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTPI_20241010_133900_duARTe_-_Uma_Peca_de_Arte",duARTe - Uma Peça de Arte : RTPI : October 10, 2024 2:39pm-2:47pm WEST
+https://archive.org/download/RTPI_20241010_133900_duARTe_-_Uma_Peca_de_Arte/RTPI_20241010_133900_duARTe_-_Uma_Peca_de_Arte.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KRON_20241010_120000_KRON_4_News_at_5am",KRON 4 News at 5am : KRON : October 10, 2024 5:00am-6:00am PDT
+https://archive.org/download/KRON_20241010_120000_KRON_4_News_at_5am/KRON_20241010_120000_KRON_4_News_at_5am.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BBCNEWS_20241010_000000_BBC_News",BBC News : BBCNEWS : October 10, 2024 1:00am-1:30am BST
+https://archive.org/download/BBCNEWS_20241010_000000_BBC_News/BBCNEWS_20241010_000000_BBC_News.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241010_123000",SOUTHERNSUDAN : October 10, 2024 2:30pm-3:01pm CAT
+https://archive.org/download/SOUTHERNSUDAN_20241010_123000/SOUTHERNSUDAN_20241010_123000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ESPRESO_20241010_043000",ESPRESO : October 10, 2024 7:30am-8:00am EEST
+https://archive.org/download/ESPRESO_20241010_043000/ESPRESO_20241010_043000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RT_20241010_053000_Documentary",Documentary : RT : October 10, 2024 1:30am-2:01am EDT
+https://archive.org/download/RT_20241010_053000_Documentary/RT_20241010_053000_Documentary.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CSPAN_20241010_041000_Campaign_2024_Gov._Tim_Walz_Campaigns_in_Arizona_with_Rep._Gallego__Jim...",Campaign 2024 Gov. Tim Walz Campaigns in Arizona with Rep. Gallego & Jim McCain : CSPAN : October 10, 2024 12:10am-12:47am EDT
+https://archive.org/download/CSPAN_20241010_041000_Campaign_2024_Gov._Tim_Walz_Campaigns_in_Arizona_with_Rep._Gallego__Jim.../CSPAN_20241010_041000_Campaign_2024_Gov._Tim_Walz_Campaigns_in_Arizona_with_Rep._Gallego__Jim....mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/NTV_20241010_052500_Pyos-3",Пёс-3 : NTV : October 10, 2024 8:25am-10:01am MSK
+https://archive.org/download/NTV_20241010_052500_Pyos-3/NTV_20241010_052500_Pyos-3.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RT_20241010_070000_News",News : RT : October 10, 2024 3:00am-3:31am EDT
+https://archive.org/download/RT_20241010_070000_News/RT_20241010_070000_News.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241010_070000",SOUTHERNSUDAN : October 10, 2024 9:00am-9:31am CAT
+https://archive.org/download/SOUTHERNSUDAN_20241010_070000/SOUTHERNSUDAN_20241010_070000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/IRINN_20241010_023000",IRINN : October 10, 2024 6:00am-6:30am IRST
+https://archive.org/download/IRINN_20241010_023000/IRINN_20241010_023000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/M1_20241010_030000_Ma_ejszaka",Ma éjszaka : M1 : October 10, 2024 5:00am-5:47am CEST
+https://archive.org/download/M1_20241010_030000_Ma_ejszaka/M1_20241010_030000_Ma_ejszaka.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/PRESSTV_20241010_003200_Documentary__Israels_Mother_2",Documentary : Israel's Mother 2 : PRESSTV : October 10, 2024 4:02am-4:31am IRST
+https://archive.org/download/PRESSTV_20241010_003200_Documentary__Israels_Mother_2/PRESSTV_20241010_003200_Documentary__Israels_Mother_2.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CCTV13_20241010_020000",新闻直播间 : CCTV13 : October 10, 2024 10:00am-11:00am CST
+https://archive.org/download/CCTV13_20241010_020000/CCTV13_20241010_020000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CSPAN3_20241010_075000_Rosie_the_Riveter_Congressional_Gold_Medal","Rosie the Riveter" Congressional Gold Medal : CSPAN3 : October 10, 2024 3:50am-4:47am EDT
+https://archive.org/download/CSPAN3_20241010_075000_Rosie_the_Riveter_Congressional_Gold_Medal/CSPAN3_20241010_075000_Rosie_the_Riveter_Congressional_Gold_Medal.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/1TV_20241010_080000_Informatsionnii_kanal",Информационный канал : 1TV : October 10, 2024 11:00am-12:00pm MSK
+https://archive.org/download/1TV_20241010_080000_Informatsionnii_kanal/1TV_20241010_080000_Informatsionnii_kanal.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/TELEARUBA_20241010_083000",TELEARUBA : October 10, 2024 4:30am-5:01am VET
+https://archive.org/download/TELEARUBA_20241010_083000/TELEARUBA_20241010_083000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CCTV1_20241010_035200_-",泱泱中华-历史文化街区 : CCTV1 : October 10, 2024 11:52am-11:56am CST
+https://archive.org/download/CCTV1_20241010_035200_-/CCTV1_20241010_035200_-.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ESPRESO_20241010_003000",ESPRESO : October 10, 2024 3:30am-4:01am EEST
+https://archive.org/download/ESPRESO_20241010_003000/ESPRESO_20241010_003000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KAN11_20241010_013000",KAN11 : October 10, 2024 4:30am-5:00am IDT
+https://archive.org/download/KAN11_20241010_013000/KAN11_20241010_013000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CSPAN_20241010_010600_Campaign_2024_Arizona_U.S._Senate_Debate",Campaign 2024 Arizona U.S. Senate Debate : CSPAN : October 9, 2024 9:06pm-9:58pm EDT
+https://archive.org/download/CSPAN_20241010_010600_Campaign_2024_Arizona_U.S._Senate_Debate/CSPAN_20241010_010600_Campaign_2024_Arizona_U.S._Senate_Debate.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/1TV_20241010_000500_PODKAST",ПОДКАСТ : 1TV : October 10, 2024 3:05am-3:31am MSK
+https://archive.org/download/1TV_20241010_000500_PODKAST/1TV_20241010_000500_PODKAST.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KGO_20241010_000000_ABC7_News_500PM",ABC7 News 5:00PM : KGO : October 9, 2024 5:00pm-5:30pm PDT
+https://archive.org/download/KGO_20241010_000000_ABC7_News_500PM/KGO_20241010_000000_ABC7_News_500PM.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KQED_20241010_000000_BBC_News_The_Context",BBC News The Context : KQED : October 9, 2024 5:00pm-5:31pm PDT
+https://archive.org/download/KQED_20241010_000000_BBC_News_The_Context/KQED_20241010_000000_BBC_News_The_Context.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SUDAN_20241010_133000",SUDAN : October 10, 2024 3:30pm-4:00pm CAT
+https://archive.org/download/SUDAN_20241010_133000/SUDAN_20241010_133000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTPI_20241010_131900_Hora_da_Sorte_-_Lotaria_Popular",Hora da Sorte - Lotaria Popular : RTPI : October 10, 2024 2:19pm-2:21pm WEST
+https://archive.org/download/RTPI_20241010_131900_Hora_da_Sorte_-_Lotaria_Popular/RTPI_20241010_131900_Hora_da_Sorte_-_Lotaria_Popular.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/PRESSTV_20241010_040000_World_News_in_Full",World News in Full : PRESSTV : October 10, 2024 7:30am-8:03am IRST
+https://archive.org/download/PRESSTV_20241010_040000_World_News_in_Full/PRESSTV_20241010_040000_World_News_in_Full.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KNTV_20241010_060000_NBC_Bay_Area_News_at_11",NBC Bay Area News at 11 : KNTV : October 9, 2024 11:00pm-11:34pm PDT
+https://archive.org/download/KNTV_20241010_060000_NBC_Bay_Area_News_at_11/KNTV_20241010_060000_NBC_Bay_Area_News_at_11.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20241010_083700_The_Late_News",The Late News : KPIX : October 10, 2024 1:37am-2:12am PDT
+https://archive.org/download/KPIX_20241010_083700_The_Late_News/KPIX_20241010_083700_The_Late_News.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/PRESSTV_20241010_093200_SPOTLIGHT__LEBANESE_RESISTANCE_AGAINST_ISRAEL",SPOTLIGHT : LEBANESE RESISTANCE AGAINST ISRAEL : PRESSTV : October 10, 2024 1:02pm-1:31pm IRST
+https://archive.org/download/PRESSTV_20241010_093200_SPOTLIGHT__LEBANESE_RESISTANCE_AGAINST_ISRAEL/PRESSTV_20241010_093200_SPOTLIGHT__LEBANESE_RESISTANCE_AGAINST_ISRAEL.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/PRESSTV_20241010_090000_World_News_in_Full",World News in Full : PRESSTV : October 10, 2024 12:30pm-1:03pm IRST
+https://archive.org/download/PRESSTV_20241010_090000_World_News_in_Full/PRESSTV_20241010_090000_World_News_in_Full.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KRON_20241010_000000_KRON_4_News_at_5pm",KRON 4 News at 5pm : KRON : October 9, 2024 5:00pm-5:31pm PDT
+https://archive.org/download/KRON_20241010_000000_KRON_4_News_at_5pm/KRON_20241010_000000_KRON_4_News_at_5pm.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CSPAN2_20241010_000800_Campaign_2024_Maine_2nd_Congressional_District_Forum",Campaign 2024 Maine 2nd Congressional District Forum : CSPAN2 : October 9, 2024 8:08pm-9:05pm EDT
+https://archive.org/download/CSPAN2_20241010_000800_Campaign_2024_Maine_2nd_Congressional_District_Forum/CSPAN2_20241010_000800_Campaign_2024_Maine_2nd_Congressional_District_Forum.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/FRANCE24_20241010_043000",FRANCE24 : October 10, 2024 6:30am-7:01am CEST
+https://archive.org/download/FRANCE24_20241010_043000/FRANCE24_20241010_043000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/IRINN_20241010_030000",IRINN : October 10, 2024 6:30am-7:01am IRST
+https://archive.org/download/IRINN_20241010_030000/IRINN_20241010_030000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BELARUSTV_20241010_042000",Доброе утро, Беларусь! : BELARUSTV : October 10, 2024 7:20am-8:01am MSK
+https://archive.org/download/BELARUSTV_20241010_042000/BELARUSTV_20241010_042000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BBCNEWS_20241010_023000_Business_Today",Business Today : BBCNEWS : October 10, 2024 3:30am-3:46am BST
+https://archive.org/download/BBCNEWS_20241010_023000_Business_Today/BBCNEWS_20241010_023000_Business_Today.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ESPRESO_20241010_033000",ESPRESO : October 10, 2024 6:30am-6:56am EEST
+https://archive.org/download/ESPRESO_20241010_033000/ESPRESO_20241010_033000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RT_20241010_020000_Documentary",Documentary : RT : October 9, 2024 10:00pm-10:30pm EDT
+https://archive.org/download/RT_20241010_020000_Documentary/RT_20241010_020000_Documentary.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTPI_20241010_032000_Os_Nossos_Dias",Os Nossos Dias : RTPI : October 10, 2024 4:20am-5:06am WEST
+https://archive.org/download/RTPI_20241010_032000_Os_Nossos_Dias/RTPI_20241010_032000_Os_Nossos_Dias.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241010_033000",SOUTHERNSUDAN : October 10, 2024 5:30am-6:01am CAT
+https://archive.org/download/SOUTHERNSUDAN_20241010_033000/SOUTHERNSUDAN_20241010_033000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/TELEARUBA_20241010_013000",TELEARUBA : October 9, 2024 9:30pm-10:01pm VET
+https://archive.org/download/TELEARUBA_20241010_013000/TELEARUBA_20241010_013000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241010_023000",SOUTHERNSUDAN : October 10, 2024 4:30am-5:01am CAT
+https://archive.org/download/SOUTHERNSUDAN_20241010_023000/SOUTHERNSUDAN_20241010_023000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/TVRI_20241010_020000",TVRI : October 10, 2024 5:00am-5:31am EEST
+https://archive.org/download/TVRI_20241010_020000/TVRI_20241010_020000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CCTV13_20241010_010000",新闻直播间 : CCTV13 : October 10, 2024 9:00am-10:01am CST
+https://archive.org/download/CCTV13_20241010_010000/CCTV13_20241010_010000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/BBCNEWS_20241010_034500_Sportsday",Sportsday : BBCNEWS : October 10, 2024 4:45am-5:00am BST
+https://archive.org/download/BBCNEWS_20241010_034500_Sportsday/BBCNEWS_20241010_034500_Sportsday.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RUSSIA1_20241010_080000_Vesti",Вести : RUSSIA1 : October 10, 2024 11:00am-11:31am MSK
+https://archive.org/download/RUSSIA1_20241010_080000_Vesti/RUSSIA1_20241010_080000_Vesti.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CNNW_20241010_070000_CNN_Newsroom",CNN Newsroom : CNNW : October 10, 2024 12:00am-1:00am PDT
+https://archive.org/download/CNNW_20241010_070000_CNN_Newsroom/CNNW_20241010_070000_CNN_Newsroom.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/TELECONGO_20241010_003000",TELECONGO : October 10, 2024 1:30am-2:03am WAT
+https://archive.org/download/TELECONGO_20241010_003000/TELECONGO_20241010_003000.mp4?exact=1&start=0&end=300
+#EXTM3U
+#EXTM3U
 #EXTM3U
 #EXTINF:-1  tvg-id="NBCWest.us" group-title="NEWS WORLD" tvg-logo="https://creativecloud.adobe.com/content/dam/2017/8/evolution-of-nbc-logo/article-marquee.jpg",NBC 7 San Diego
 https://nbculocallive.akamaized.net/hls/live/2037098/sandiego/stream1/master.m3u8
@@ -282,19 +399,19 @@ https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/tvipt/s
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXNPdVZKdE11K0NncVdpQ2srM2puTEE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD03ODNhNjBlNS1jOWQ5LTQxMzMtYmQ3ZS00YzJjODEwMGUxNTg=/
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDggQU0maGFzaF92YWx1ZT1CME5kZHhnMG1TY0VYanlwUGdoYnlBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YWQ2MzM0OTUtNmZhOS00MjRhLTk1MmEtMjM0NTc5YjA1YTU1/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI 2
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXNPdVZKdE11K0NncVdpQ2srM2puTEE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD03ODNhNjBlNS1jOWQ5LTQxMzMtYmQ3ZS00YzJjODEwMGUxNTg=/
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDggQU0maGFzaF92YWx1ZT1CME5kZHhnMG1TY0VYanlwUGdoYnlBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YWQ2MzM0OTUtNmZhOS00MjRhLTk1MmEtMjM0NTc5YjA1YTU1/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI 3
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXNPdVZKdE11K0NncVdpQ2srM2puTEE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD03ODNhNjBlNS1jOWQ5LTQxMzMtYmQ3ZS00YzJjODEwMGUxNTg=/
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDggQU0maGFzaF92YWx1ZT1CME5kZHhnMG1TY0VYanlwUGdoYnlBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YWQ2MzM0OTUtNmZhOS00MjRhLTk1MmEtMjM0NTc5YjA1YTU1/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI 4
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXNPdVZKdE11K0NncVdpQ2srM2puTEE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD03ODNhNjBlNS1jOWQ5LTQxMzMtYmQ3ZS00YzJjODEwMGUxNTg=/
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDggQU0maGFzaF92YWx1ZT1CME5kZHhnMG1TY0VYanlwUGdoYnlBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YWQ2MzM0OTUtNmZhOS00MjRhLTk1MmEtMjM0NTc5YjA1YTU1/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="tvihd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI 5
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -330,9 +447,9 @@ https://bit.ly/sicnotici?/index.m3u8
 #EXTINF:-1 group-title="PORTUGAL" group-title="CNN's" tvg-id="cnnpthd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/CNN-Portugal.png",CNN Portugal
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth7.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXROcjdmdnNLd0x0Z2htdFhrSUlVd1E9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD1hOTEzY2YyZi1mNjc3LTQ2MmQtOTRmOC1lMmFmMmE5YWZiNDQ=/
+https://video-auth7.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDkgQU0maGFzaF92YWx1ZT1wZy9LMWVDbk11SHFvVi9VVXdQSXdnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NWRiYWYwM2ItMDA1My00YTI1LWE0OGYtZTE3MWZlYzY2OTQ0/
 #EXTINF:-1 group-title="PORTUGAL" group-title="CNN's" group-title="NEWS WORLD" tvg-id="cnnpthd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/CNN-Portugal.png",CNN Portugal 2
-https://video-auth7.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6OSBBTSZoYXNoX3ZhbHVlPXROcjdmdnNLd0x0Z2htdFhrSUlVd1E9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD1hOTEzY2YyZi1mNjc3LTQ2MmQtOTRmOC1lMmFmMmE5YWZiNDQ=/
+https://video-auth7.iol.pt/live_cnn/live_cnn/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDkgQU0maGFzaF92YWx1ZT1wZy9LMWVDbk11SHFvVi9VVXdQSXdnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NWRiYWYwM2ItMDA1My00YTI1LWE0OGYtZTE3MWZlYzY2OTQ0/
 #EXTINF:-1 group-title="TV" tvg-id="artv.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/ARTV.png",ARTV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -388,11 +505,11 @@ https://streaming-live-app.rtp.pt/liverepeater/smil:rtpi.smil/rtp_playlist.m3u8
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="TVIInt.pt" tvg-logo="https://github.com/LITUATUI/M3UPT/raw/main/logos/TVI-Internacional.png",TVI Internacional
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi_internacional/live_tvi_internacional/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6MTAgQU0maGFzaF92YWx1ZT1wUS92Y3dyeURMaUNEcnBmVU5hOElBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NWYwNWY4N2YtZWYxZC00NDkxLWE0OTUtNzljYzM3N2M5MDE3/
+https://video-auth6.iol.pt/live_tvi_internacional/live_tvi_internacional/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDkgQU0maGFzaF92YWx1ZT0zZVBnK24zQzh5OGpwcThmY3NaYkxRPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZDNkOWI1ZmItM2YzYy00MjNlLWFkODQtODM2MTk3NzgyNjUy/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="TVIInt.pt" tvg-logo="https://github.com/LITUATUI/M3UPT/raw/main/logos/TVI-Internacional.png",TVI Internacional 2
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth6.iol.pt/live_tvi_internacional/live_tvi_internacional/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6MTAgQU0maGFzaF92YWx1ZT1wUS92Y3dyeURMaUNEcnBmVU5hOElBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NWYwNWY4N2YtZWYxZC00NDkxLWE0OTUtNzljYzM3N2M5MDE3/
+https://video-auth6.iol.pt/live_tvi_internacional/live_tvi_internacional/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NDkgQU0maGFzaF92YWx1ZT0zZVBnK24zQzh5OGpwcThmY3NaYkxRPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZDNkOWI1ZmItM2YzYy00MjNlLWFkODQtODM2MTk3NzgyNjUy/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="TVIFIC.meo.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI-Ficção.png",TVI Ficção
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -414,11 +531,11 @@ https://bit.ly/3gejKxf?720p/playlist.m3u8
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="TVIR.meo.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI-Reality.png",TVI Reality 
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth4.iol.pt/live_tvi_direct/live_tvi_direct/edge_servers/tvireality-720_passthrough/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6MTAgQU0maGFzaF92YWx1ZT1maXRnQVVSbXZhQWNFNFNiajM3cm9BPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9MmQ5YjRiMmEtMTFmNS00MzEyLWFiOTUtZDg2NTk1YjUwODUy/
+https://video-auth4.iol.pt/live_tvi_direct/live_tvi_direct/edge_servers/tvireality-720_passthrough/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NTAgQU0maGFzaF92YWx1ZT1OWXhSVWpMK0diQ2dtRlcwWU5jTWtnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YTQ0ZjM4ZjktODA0NC00OTEwLTg5ODktMGNiZWMwMjUxZWJl/
 #EXTINF:-1 group-title="PORTUGAL" tvg-id="TVIR.meo.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI-Reality.png",TVI Reality 2
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
-https://video-auth4.iol.pt/live_tvi_direct/live_tvi_direct/edge_servers/tvireality-720_passthrough/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDE6MTY6MTAgQU0maGFzaF92YWx1ZT1maXRnQVVSbXZhQWNFNFNiajM3cm9BPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9MmQ5YjRiMmEtMTFmNS00MzEyLWFiOTUtZDg2NTk1YjUwODUy/
+https://video-auth4.iol.pt/live_tvi_direct/live_tvi_direct/edge_servers/tvireality-720_passthrough/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NDQ6NTAgQU0maGFzaF92YWx1ZT1OWXhSVWpMK0diQ2dtRlcwWU5jTWtnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YTQ0ZjM4ZjktODA0NC00OTEwLTg5ODktMGNiZWMwMjUxZWJl/
 #EXTINF:-1 group-title="TV" tvg-id="sicnovelashd.tv.vodafone.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC-Novelas.png",SIC Novelas
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -1809,12 +1926,6 @@ https://tls-cl.cdnz.cl/umag2/live/playlist.m3u8
 #EXTINF:-1 group-title="Undefined" tvg-logo="Undefined.png", El Trece Canal 9 Litoral
 https://stream.arcast.live/ahora/ahora/playlist.m3u8?PlaylistM3UCL
 #EXTM3U
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-logo="https://static-cdn.jtvnw.net/previews-ttv/live_user_rodrisofoo-214x120.jpg" tvg-id="", rodrisofoo
-https://video-weaver.ord56.hls.ttvnw.net/v1/playlist/CuEE8l_N53FRkZJL1HjYySH3PCDCJJr3vysC2uNQKxwvXLIrW4KKatLduE3vOOlik9OeG3WrJoNYrdN9tlYgCEwy6snKFmmIUdyaYl_x7U0BmYUG8AdeVt4pHW8d_xA7qOPftH1LL_cTIKbtQWoO027pAxI-_mfZKw_1SVG7dIesY2ZDvzJjSFHbUZ1QB8GljpjzYF_Rg27x6DuKuXNvEYiYqNi-bAF1-ccnVX1uOffFk2u2v4Ltkt_7bpRRdj4VSFzsKtbQTFPHK1OYyM2QuihfRbqzMhqbTDVwVwbcs3_wL0uJFoqXrRKVFQR6bPw12aGbwUboaOsYUHMTzKr42wNyXwWpzK2BPb9_GFX8L0512wVabggoP7YLOrSOAHNNJg2tAvVIdckkatxzry-OBB6Pn6XlT2EXUW9P02chxeen3TiWiASyDD8I0u59cHwMLOD7pF_v4k-AHex_OE18tWLc0IiD8eQv_x6UUtYk428j7ADsAU2-h3GW9OM6ZN-k3oWiVxIhi7lbm8TczvCEW_m-UbbR_kiV-JevHD6s9uwgEm0n3qyC1Y-0Cf0WeNWiMAu7KnJj4neAp8ZdBTUCzZli4_rrdH5gFEUFjXYlodkbTZjEdBpxn3SonzL3rRO31nAgvvMoK8iMvcGkAZIubiCB_g82RoZf5lK6SG4Aq9Hcl_v8YF_uz34YNy_jYOdSUHHxxSubkigKXQ7UM0VFiMq9PU1TvLt2778azAHGf8mE1Aa40LN07BDfPzzQevhwlwaj66uR4_uE6KkKmEZMv8x777Rs3xWRndd_W8L7E9b1wAnCGgwJoPbXYoIp4ewCReYgASoJdXMtZWFzdC0xMJsJ.m3u8
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-logo="https://static-cdn.jtvnw.net/previews-ttv/live_user_pinochin09-214x120.jpg" tvg-id="", Pinochin09
-https://video-weaver.ord56.hls.ttvnw.net/v1/playlist/CuME6Bs0pjK1UesU6xWGrJTu76H75Y0E5TpxBPWLeeCytUSNaOeZ-1aT9QLN5S_r0eZf6HIonCRpjLJb2exEpEG46ent_M_4JzcVjZdQ6eDM7eM67OmHQ4_ggb7UiwBjQVnRDxv4NKTbRXFFYQlJizWdDW9oprlT3n8NXdVjiCi_3YfIr_TXfKidtOIoUB-u0bJ5IdxPD-351ZclVHRqaDejBQLS31UDRVqjX58yK2ZqE-0lU0GE5pmgzOaDjalcNaF4wdhPz4_UaIFb93eLTQ7TZYWLwJr2rShSMw9F0G5hLuDKX4D2qcd4j31zVBx7Q4emb6TN_-4JVrZqFae8RsH3tZpyPbkM_m9WZjWUP9ytplABp2D9A0_T-NPiqEanfFcym1Sb4ZTL_M9aztMFewpxW5QUocXJ8rzhmkwlVMZv0d9VVkFuK04z1LVa9g3dbgMPoO1q1gPI8nKPYmdFz-PRijB_p-FtFpK1ZSQuefD7WP__uJUWuOu-zbnCu5zoqC4Oz2Q1K-OkvSwXScyWyBJ-VPOZctWhRzzgYlaujKrWqeb_k97634OLid9_5TSkPdBAyggcV04ip9BhzWMufHGcjDLfdtvjbmJSD64AhQThfAV7ytQihS87RlCTtVKRT2KXwMXUszzYJGiZ2wSYESKwB96bkZ8gqmInLi5Goz8Bd2OFZpkLtmEvZqsG8XbizofG9WTgDqptQT6_tK_U2DCTtO2E6taZY_MbWzrFlcNHqCV8NIV8wDcgNpgJY01sf8r_gU26VFw-WJ0mN5Ob9j7t4e3gspMJJDIpirPxKDhcXIuICBIaDJWRmuZWrKygeDWSLiABKgl1cy1lYXN0LTEwmwk.m3u8
-#EXTINF:-1 group-title="Reality Show'S Live" tvg-logo="https://static-cdn.jtvnw.net/previews-ttv/live_user_granhermanochile_cl-214x120.jpg" tvg-id="", granhermanochile_cl
-https://video-weaver.ord03.hls.ttvnw.net/v1/playlist/Cv8EYMAI5vkMit6rsgqtraS6-GtyXnddPP8qL3ppU3BOkKdPheu1J008zauRF2759h-B1cBNRQefWUh475eFBVNWwbAWcq80J8EqxYRSOLn6YdENgdiB1CAa85WVI0UIiFiOHCpKitbgaxzjDyXi-eiifuCejlKE9kFtw96YmmIjmy199wWixBQxbbdcBWoxbEFC13egMSUh5Zjg-cLUg0gygLqryP_1AqTedi8f0ruS4t5v-gOYQlZz765XBlWjy4D28GjI_2NZHRsmpmjcZwLbaNPiHarLEjcY8MOJFf27pIz741LmB0-cAuyJGCbVXi332nj980L9CYZUt76ZE-x-bAjRpPXxF3yIWB1x5yC6_H8bblIBTMbcO2H6JRJV91URMyye0L1H4nYkV3Cks7qmChzOq5SIEL3iVWcLfZLb4fXpqwJdHWbeUdL8_LY3Yt_6rSxpyjNAqnj5NS9RzxI4UuaMbYiCiGOmqOGq49xDDj--dEHxQFpo-6KNheJB2KQKR8dM9I51mEVo9lb1QbQkUfdc_61BrlclVH3QyW9ZTpi-8MAIwFSIbY-P4It_2MehSvTjA4-Chr-0QseFA8AY0tS5Vb_nthAvK396TDj-Ww0c-MVKMkJX0tkpIPjEDu5ExBvOEXw1sQvc43zil0pqD_r9QIZl5tHmiQxf4SfOZbc9C6iEDMl5oTezAulX77cvpHhu3PUZ0HitJAhbhVG2XPtb3frsXk-zFtW60BZhj_oCi-u7y4lIqwwmglCVmX1aoYsnqpvUHg_bEuTPLqUnKPTrke1EvkBw4SwnT8fnOTldtWPAdm89YuPTg9WCjvdJfYXTcaW4WQYfcMR-m01_Ggwf-S3_V10_Av3e3u8gASoJdXMtZWFzdC0xMJsJ.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-id="AguacateTV.ve",Aguacate TV (1080p)
 https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8
@@ -3882,128 +3993,7 @@ https://cp.sradiotv.com:1936/8016/8016/chunklist_w1427361354.m3u8
 http://37.48.83.34:80/radiobrunotv/radiobrunotv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1088375534395052033/jBKVUQbV_400x400.jpg" group-title="MUSICA",Radio Capital Tivu | Italia
 http://capital_tv-lh.akamaihd.net/i/CapitalTv_1@183098/master.m3u8
-#EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 SC - AO VIVO: Assista aos telejornais da NSC TV online | Globoplay
-https://live-as-09-14.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDktMTQudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzMwOTQ3NzgzLCJpYXQiOjE3MzA4NjEzODMsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvbnNjc2NhdGFyaW5hL3BsYXlsaXN0Lm0zdTgifQ.dCPGPfaxOiDSMy3PSu0pBwrrNhFF0gO8Cp0w9mtPpMcS2xyvVEFIa1KVCDvBX45x-KCojA9n4DugEVIMoUMmYouywsw4A4C_o6sgCCr-JnSBkhcgSM2RwzQiRovmOxGAk2Iz1ZTTlg9eTLy1OKaq8uH8SRk6c2ChbNtILqacj0avoj0Mg-a7aq1PLhmQ5BEtgoSGnYk9ryTFCy5deBMRFqkCGrVL59ZcD8g-oriau6AQ0irQ6JHJ8XiJI3qvqD-GFR7W8mgN4J_yezd3-nOk5JWtQucgzqBc7RajIsv1QMa_kfwwM-_Zf2CksYPPwL_1M41dA8KDxopmBgprWajURg/nu/f(i=2)/nscscatarina/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 RS - Assista aos telejornais da RBS TV online | Globoplay
-https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzMwOTQ3ODA0LCJpYXQiOjE3MzA4NjE0MDQsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGR2cj0xMjAsaT0yKS9nbG9iby1yczEvcGxheWxpc3QubTN1OCJ9.RFSyNTOS3aqMXU6yOdLbh0j0cGePD6idpV9eii7vurD6vwIrMI1CncVjMsGjzP97uzgJzJtYm-wvAYAobwyAg3z82u_pxed0wLV-yRgqFPZ-4d4BfXEk9a8jN8pXopOqrf62DjkVh_Ku2tYwzJBGunfuOuR9Uwtsbfe4NJ_-fDIIBhJzvQhYxzuUKJ7ukVLD9l7DBmgFZdeFd5sq-aSdhk6_0rZupX2O3aC5oeomwYs3YW5vHmk8QX2Bztpmo04DImM9joJ_xPSykRrtysPF72jou1eVBhmJ2DBXWKCVhgRfoKcs96q-IgALQwEOlAHPWICKLsawhhskacbExsxDVg/nu/f(dvr=120,i=2)/globo-rs1/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 PA - Assista aos telejornais da TV Liberal online | Globoplay
-https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzMwOTQ3ODE2LCJpYXQiOjE3MzA4NjE0MTYsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvdHZsaWJlcmFsL3BsYXlsaXN0Lm0zdTgifQ.cSDMeqKyRoOkbWRJergCCWWd7gmsS4PAxHQcAbYbBfRUU3x-av_sGHUE9Jeop5CGkRbYBtT-1_wDo4aPTWBPPk32Di2A2p_tIhVa0q6qvwJht8rWe5ChvgMm9VwvaYv4ERn6Omy4IryMmzzDVX6W_BzscOJAhMd474mktA1s4Jmch-500TGXJLvwudYfzCKU-PMWr1hQAvsBrhFc6KnWV8agcLpzKEDhjH0HV3kuZHD9ZfwrvWpSKe31AtgighXAUZ-_OQBUitefoYtp5imsk7SRhg7GpiKrfQ732oRObwEcS4TvZt1O4kc0KkdwtLZ2wtDYDDlMss9v2UdAfsqcoA/nu/f(i=2)/tvliberal/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 AC - Assista aos jornais da Rede Amazônica online | Globoplay
-https://live-as-11-10.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTEtMTAudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzMwOTQ3ODI4LCJpYXQiOjE3MzA4NjE0MjgsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvcmVkZWFjL3BsYXlsaXN0Lm0zdTgifQ.M8D7G3UsBYIleERqg-EZ2i3-XMIjPSq2mUX-r5m1-3cfKRaW2Bn9x1tL1J2muyp_JgYkr1OdPW-Yh9cFjBX3GkhxKBTa8G4krFqWlu0ArG-VNfj8KpBmZkrnmAiWoBjrXbkHmR2pO-5gXcBWYF4qm1bD-380mN8iWjJcbIlkLXG5jeFoMLh0NHTjaX0c0QfUnkKqzA60OL0_ECK-yPJLo2Rbk4ADjsTFSLmoKI5mMXnh9Y8XvV_i9lfNucjn0G8BeiYp4fwk3BtZ6t3VGOw-az6OdwK5r5nIYipJj8uSKBNFx8OQrLr4nAb-9l-SX7Jr-pY5oLiTMPPyuMoPFqYRVw/nu/f(i=2)/redeac/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 CE - Assista à TV Verdes Mares ao vivo online | Globoplay
-https://live-as-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzMwOTQ3ODQwLCJpYXQiOjE3MzA4NjE0NDAsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvdHZ2bWNlZm9yL3BsYXlsaXN0Lm0zdTgifQ.PTKpuZuazp_psydDhlnS_s68CcUw7mUPFjCDxawTBhu3eJw-BO79WOWLF_UUZkpcqRjGNZkCqEXOgbuSB9dEdNWEgmDqaSvU1u9j6QwkqnuPusyF9FksdjkkmtBfuzV3ayb8gPjruLVWFOaKEiI9v6ygeamZQa_8uYbMpBD-QrkxGAXAUreHVnAvyxZR9MK1_VOtZkkBHlNVXL0UbBk0jg9LNGz_25bJLW7iukbegMvKthyeC5nsXMPqOCX1XCG18BPhkU3ex7v3FfZO40hr0lgymwIEzzwNHjT3XbG7gnS_3F-IRqyiX_nyi9YX99raf3nCRA8B2zgLjKbmyyuerA/nu/f(i=2)/tvvmcefor/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-05-2024/t_fa21d56bc6fc47c7a36ef93c5d993618_name_THUMB_BLOGS__5_.jpg" group-title="VOD TV", Assista à íntegra de A Hora da Venenosa desta segunda (4) – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241104/67291da51c70126e7c98d701/t_1aae65308b094c4b99b706ae0e3a558e_name_3593297_EPP_0411_VEN_INTEGRA/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-06-2024/t_758f8d48263c429cac49729287c00357_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Atividade de Apontamento é marcada por xingos, confusão e gritaria | A Fazenda 16 – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241105/67299d298939514c80bed27d/t_7fe46d9d76c44b33984086246ba2aeae_name_3594168_EPP_FA16_0411_PEDIDO_12/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-05-2024/t_66bc96548021435485801a5b74617fa0_name_THUMB_BLOGS__3_.jpg" group-title="VOD TV", Assista à íntegra de A Hora da Venenosa desta terça (5) – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241105/672a73cd8939514c80c141a8/t_a8a1d057c913447bbeb2b68c1a004e2f_name_3596325_EPP_0511_VEN_INTEGRA/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-03-2024/t_57c2a53796a64e5d8b3974a993d61164_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Roda da Vida: conheça a história de Anna, jovem que morou nas ruas, mas hoje é milionária – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241103/6727dd1eda12ec02e6fad482/t_a05480c809074e46a189f3c0cb6bf4b2_name_3590988_EPP_FA16_0311_HORA_DO_FARO_PEDIDO_1/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-05-2024/t_250780f4486049e4b8d4d526cba5949a_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Maníaco do Parque: Cidade Alerta refaz passo a passo do assassino ao lado de perito – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241104/672953d28939514c80bdb12c/t_bbb2e3a858f741a1be89369f3dcb3d1b_name_3593816_EPP_0411_CA_DE_VOLTA_AO_PARQUE/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-03-2024/t_9dfdeea21ae847cda43fb8d0e18f5e30_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Xepa do Faro: Luana leva R$ 20 mil ao ser a peoa que mais recebeu frutas e legumes | Última Chance – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241104/67281b7de8d1c9611a307c6f/t_ff4ad9319eca4fa884291e2a866f03d1_name_3591250_EPP_FA16_0311_ULTIMA_CHANCE_PEDIDO_8/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-04-2024/t_41e0bc8f63984188b950b50f9df9834c_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Exclusivo: Cabrini fica frente a frente com o primeiro brasileiro condenado por terrorismo – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241104/672824933c4b29180adf808b/t_cb8c4298a9ad4e9d8e14e2c1a69dbf2c_name_3591294_EPP_0311_DE_BRASILEIRO_ESTADO_ISLAMICO/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-05-2024/t_fa21d56bc6fc47c7a36ef93c5d993618_name_THUMB_BLOGS__5_.jpg" group-title="VOD TV", Assista à íntegra de A Hora da Venenosa desta sexta (1º) – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241101/672535ff9b20641a63dd0641/t_2061b9c9d4154ecdbef91293f1bace90_name_12113621_EPP_0111_VEN_INTEGRA/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/11-03-2024/t_7c56d7576c1d4e329600cbecf4e9c3c4_name_file_960x540_1600_v4_.jpg" group-title="VOD TV", Casal chama a Patrulha do Consumidor após comprar carro de leilão e descobrir problema na revenda – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241103/6726d6243db46a6971df3a07/t_3bd4a931c6614a8a87d06f8ea15fc821_name_3590483_EPP_0211_CA_LEILAO_SALVATORE/hlsv4_4_854x480-910-v4.m3u8
-#EXTINF:-1 tvg-logo="https://d22yf0mxeu0gma.cloudfront.net/10-09-2024/t_d3db616f03fb4ce2b09803b9d01b7395_name_THUMBS_EXTRAS_DOMINGO_ESPETACULAR__11_.jpg" group-title="VOD TV", Podcast PodCringe: Agora psicóloga, Franciely Freduzeski diz se voltaria para A Fazenda – Record
-https://d147dt0faszygd.cloudfront.net/wp-newr7/20241016/670fd0901f5e071321bb3c56/t_6a6d916fa821480ea468a328c1e4146f_name_DE_DIGITAL_PODCRINGE_FRANCIELY_FREDUZESKI_MASTER/hlsv4_4_854x480-910-v4.m3u8
-#EXTM3U
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/ggoJFaE71W8?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/YlmVKT3Zvhw?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/48l-xdS4pXg?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/ZdEIZNg3epQ?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16316183/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Episodio 13
-https://www.rtve.es/play/videos/diario-de-un-nomada/episodio-13/16316183/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16316183/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Episodio 13
-https://www.rtve.es/play/videos/diario-de-un-nomada/episodio-13/16316183/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16316183/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Episodio 13
-https://www.rtve.es/play/videos/diario-de-un-nomada/episodio-13/16316183/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16316132/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Mikel López Iturriaga y Koko-Jean Davis and The Tonics
-https://www.rtve.es/play/videos/culturas-2/mikel-lopez-iturriaga-y-koko-jean-davis-and-the-tonics/16316132/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16316132/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Mikel López Iturriaga y Koko-Jean Davis and The Tonics
-https://www.rtve.es/play/videos/culturas-2/mikel-lopez-iturriaga-y-koko-jean-davis-and-the-tonics/16316132/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16311370/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Marisol, llámame Pepa
-https://www.rtve.es/play/videos/imprescindibles/marisol-llamame-pepa/16311370/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16311370/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Marisol, llámame Pepa
-https://www.rtve.es/play/videos/imprescindibles/marisol-llamame-pepa/16311370/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16313185/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Programa 79
-https://www.rtve.es/play/videos/el-cazador-stars/programa-79/16313185/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16313185/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Programa 79
-https://www.rtve.es/play/videos/el-cazador-stars/programa-79/16313185/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16314548/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telediario - 8 horas - 04/11/24 - Lengua de signos
-https://www.rtve.es/play/videos/telediario-en-lengua-de-signos/telediario-8-horas-04-11-24-lengua-de-signos/16314548/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16314548/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telediario - 8 horas - 04/11/24 - Lengua de signos
-https://www.rtve.es/play/videos/telediario-en-lengua-de-signos/telediario-8-horas-04-11-24-lengua-de-signos/16314548/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16315803/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Noticias de Extremadura 2 - 04/11/2024
-https://www.rtve.es/play/videos/noticias-de-extremadura/noticias-de-extremadura-2-04-11-2024/16315803/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16315803/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Noticias de Extremadura 2 - 04/11/2024
-https://www.rtve.es/play/videos/noticias-de-extremadura/noticias-de-extremadura-2-04-11-2024/16315803/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16314545/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telediario - 8 horas - 04/11/24
-https://www.rtve.es/play/videos/telediario-matinal/telediario-8-horas-04-11-24/16314545/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16314545/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telediario - 8 horas - 04/11/24
-https://www.rtve.es/play/videos/telediario-matinal/telediario-8-horas-04-11-24/16314545/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16120818/?imgProgApi=imgBackground&w=400" group-title="VOD PT",La justicia de los forajidos
-https://www.rtve.es/play/videos/cine-de-siempre/la-justicia-de-los-forajidos/16120818/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16120818/?imgProgApi=imgBackground&w=400" group-title="VOD PT",La justicia de los forajidos
-https://www.rtve.es/play/videos/cine-de-siempre/la-justicia-de-los-forajidos/16120818/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16311883/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telexornal Galicia 2    31-10-2024
-https://www.rtve.es/play/videos/telexornal-galicia/telexornal-galicia-2-31-10-2024/16311883/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16311883/?imgProgApi=imgBackground&w=400" group-title="VOD PT",Telexornal Galicia 2    31-10-2024
-https://www.rtve.es/play/videos/telexornal-galicia/telexornal-galicia-2-31-10-2024/16311883/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16312427/?imgProgApi=imgBackground&w=400" group-title="VOD PT",59 segundos - Causas y consecuencias de la Dana
-https://www.rtve.es/play/videos/59-segundos/59-segundos-causas-y-consecuencias-de-la-dana/16312427/
-#EXTINF:-1 tvg-logo="https://img2.rtve.es/v/16312427/?imgProgApi=imgBackground&w=400" group-title="VOD PT",59 segundos - Causas y consecuencias de la Dana
-https://www.rtve.es/play/videos/59-segundos/59-segundos-causas-y-consecuencias-de-la-dana/16312427/
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/ggoJFaE71W8?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/YlmVKT3Zvhw?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/48l-xdS4pXg?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="N/A" group-title="VOD PT",No Title
-https://www.youtube-nocookie.com/embed/ZdEIZNg3epQ?rel=0&showinfo=0&theme=light&version=3&hl=en&cc_lang_pref=en&cc_load_policy=1
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672aa65ed34ea1acf2704bd2/" group-title="VOD PT",Secret Story - Especial - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/1/9/2/b/smil:672a96050cf23ab65536192b-L.smil/672a96050cf23ab65536192b-L-2500k.mp4_chunk.m3u8?nimblesessionid=107490318&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6MjMgQU0maGFzaF92YWx1ZT1aOUxPWUhhUUxoT1FrV1B1TnVQVE5RPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9OTU5YzgyZjUtYmZlZC00NWZiLWJiYzUtMzdhM2ZiNjA3NmJi
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672aa5dbd34ea1acf2704bce/" group-title="VOD PT",Jornal Nacional - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/1/9/2/7/smil:672a8fd20cf23ab655361927-L.smil/672a8fd20cf23ab655361927-L-2500k.mp4_chunk.m3u8?nimblesessionid=107490327&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6MjggQU0maGFzaF92YWx1ZT1DdFkwOVdFRzU5S3F5WndMLy9iU0ZRPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NmJmNTA4NzUtOTYyMS00N2EzLWI5NjYtYTEyYWIzYTRiNTVi
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a8a49d34e94b829071a4d/" group-title="VOD PT",Secret Story - Diário - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/1/9/2/6/smil:672a83100cf23ab655361926-L.smil/672a83100cf23ab655361926-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490332&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6MzIgQU0maGFzaF92YWx1ZT1LZndGMUNkTUpNUjBSR0ZYVmIxOE1RPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9OTc2Y2EyNzctNDIzMS00YTk4LTk4MTQtNmU4YzNiNWFlNGFh
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a783ed34e94b8290719b4/" group-title="VOD PT",CNN Negócios - 18H27 - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/3/1/d/8/smil:672a789f0cf28c51602e31d8-L.smil/672a789f0cf28c51602e31d8-L-2500k.mp4_chunk.m3u8?nimblesessionid=107490342&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6MzcgQU0maGFzaF92YWx1ZT1TbEcwNEVudHpRMTd2djBJSkIrOUd3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YzQ3ZWI1NjQtZGI2NC00NWE2LWE2ZDYtNWFiZGIzZjkyNTVk
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a783ed34ea1acf2704a3d/" group-title="VOD PT",CNN Fim de Tarde - 17H57 - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/1/9/1/b/smil:672a74000cf23ab65536191b-L.smil/672a74000cf23ab65536191b-L-2500k.mp4_chunk.m3u8?nimblesessionid=107490358&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6NDEgQU0maGFzaF92YWx1ZT03WlhReDF0UDZrQmZSMlJnYUFrLzdBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9MGMyNDI3ZWYtOGFhNi00MTRiLTljMTUtYjFmYTUwZTQ5YmQ5
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a88a4d34ea1acf2704ad4/" group-title="VOD PT",Secret Story - Última Hora - 5 de novembro de 2024
-https://streaming-vod1.iol.pt/vod/3/1/d/b/smil:672a7acd0cf28c51602e31db-L.smil/672a7acd0cf28c51602e31db-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921673&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6NDUgQU0maGFzaF92YWx1ZT1FQjZ0RlVDbkVnSy9RL1RtWm1wZGRBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NDk0MTE4MjAtZTAwZS00NjVjLWI1OTgtZWU0YzY0ZWM3Y2Vh
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a783ed34e94b8290719b6/" group-title="VOD PT",Agora CNN - 17H30 - 5 de novembro de 2024
-https://streaming-vod1.iol.pt/vod/1/9/0/c/smil:672a63710cf23ab65536190c-L.smil/672a63710cf23ab65536190c-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921676&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6NTAgQU0maGFzaF92YWx1ZT1icDc5ZUlxWEpNckRvdTJqUG1HdjN3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZmQ0NDI2Y2YtY2VmNi00ZGYwLWE2NWEtOTRmOTAyMTEwZTdm
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a6126d34e94b8290718e2/" group-title="VOD PT",Goucha - As revelações de Ivete Oliveira sobre os casamentos falhados
-https://streaming-vod1.iol.pt/vod/3/1/c/2/smil:672a5e170cf28c51602e31c2-L.smil/672a5e170cf28c51602e31c2-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921681&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6NTQgQU0maGFzaF92YWx1ZT0vTGVsampVWDdQdytFT0lFUzl6Z3JnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YTA0NGZjZDQtNDZlNy00ODc0LWI1NDktMzdmZTU0OGE0MGM2
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a783ed34ea1acf2704a3f/" group-title="VOD PT",CNN Mais Futebol - Benfica realizou esta manhã último treino
-https://streaming-vod1.iol.pt/vod/1/9/1/c/smil:672a742e0cf23ab65536191c-L.smil/672a742e0cf23ab65536191c-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921686&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTQ6NTggQU0maGFzaF92YWx1ZT1LNHJPd3dNRE5xUEJzSVArcFpqakVnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9Njc2OTJiZWUtYWYxNS00Mjc5LThkOWMtMWI0MDBmY2NjYjI5
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a774cd34e94b8290719a2/" group-title="VOD PT",Para Si - 5 de novembro de 2024
-https://streaming-vod1.iol.pt/vod/3/1/d/3/smil:672a73a50cf28c51602e31d3-L.smil/672a73a50cf28c51602e31d3-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921695&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MiBBTSZoYXNoX3ZhbHVlPXlPTVU5K2VwQlo5VVQvS2JEMzd3Unc9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD03ODk2MTE4Ny01ZDYxLTQ3YTYtODIxNS01MDU4YmFmNDc2NWQ=
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a783ed34e94b8290719b8/" group-title="VOD PT",V+ Crime - 5 de novembro de 2024
-https://streaming-vod1.iol.pt/vod/3/f/9/d/smil:672a73ce0cf23e044af73f9d-L.smil/672a73ce0cf23e044af73f9d-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921705&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6NiBBTSZoYXNoX3ZhbHVlPThBV3NzWXk3SVR4NlRZWHdEdXNwaUE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD0xMWFiYmNjNC1lMDJmLTQzZWItYTI1Yy0wNTg2Njc3NTc0ODk=
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a73c2d34ea1acf27049f9/" group-title="VOD PT",Agora CNN - 14H55 - 5 de novembro de 2024
-https://streaming-vod1.iol.pt/vod/1/9/2/2/smil:672a7a910cf23ab655361922-L.smil/672a7a910cf23ab655361922-L-2000k.mp4_chunk.m3u8?nimblesessionid=48921714&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MTEgQU0maGFzaF92YWx1ZT1yUXNLeW4xakhYY2VrVkxGbjlzYWdnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9OWI0YmEwMTYtYWIxMS00MjgxLWEzZTAtN2IxZmIxOTA3MmNm
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a7565d34e94b829071985/" group-title="VOD PT",A Sentença - "Estacionamento fatal" e "Arte urbana"
-https://streaming-vod2.iol.pt/vod/3/1/d/4/smil:672a749b0cf28c51602e31d4-L.smil/672a749b0cf28c51602e31d4-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490388&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MTUgQU0maGFzaF92YWx1ZT1USzRlQS91anUwRFhNUExaMEQ0dmFnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9OGZiMzYyZDgtOTFhOS00ZDBmLWE0NGItODlhMTdmZGRkYjhi
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a73c3d34e94b82907196e/" group-title="VOD PT",TVI - Em cima da hora - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/8/d/4/3/smil:672a2e1e0cf2f130c2998d43-L.smil/672a2e1e0cf2f130c2998d43-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490392&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MTkgQU0maGFzaF92YWx1ZT1oeWZvcm1rZy9ndis1M1FXc1Z4bDh3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZmE3MjE5NzktMDNmMy00ZWVkLWIxM2QtOTEyY2Q1OWRlNWI3
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a73c2d34e94b82907196c/" group-title="VOD PT",CNN Meio Dia - 13H55 - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/1/8/f/4/smil:672a41800cf23ab6553618f4-L.smil/672a41800cf23ab6553618f4-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490397&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MjQgQU0maGFzaF92YWx1ZT1GVW1aNXRKMkcvcm16VTZkYzh6TitBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9ZWQxNzk1MGItY2RhYi00ZGQwLWE4ODQtY2VjYTk2MTJmYzg2
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a73c2d34ea1acf27049fb/" group-title="VOD PT",CNN Mais Futebol - Último jogo de Amorim em Alvalade é frente ao Manchester City
-https://streaming-vod2.iol.pt/vod/3/f/7/7/smil:672a30bb0cf23e044af73f77-L.smil/672a30bb0cf23e044af73f77-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490403&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MjggQU0maGFzaF92YWx1ZT13YmpBeUlKdnQzOEkyU1BGK0NMbFh3PT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NzBkMzhiMDAtZjA1OC00ZDM0LWIwMjctODI3ODc1NWU0MWJh
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a3452d34ea1acf27044e7/" group-title="VOD PT",CNN Negócios - 13h17 - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/8/d/3/c/smil:672a25f30cf2f130c2998d3c-L.smil/672a25f30cf2f130c2998d3c-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490419&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MzMgQU0maGFzaF92YWx1ZT1ocjNTSkFsUkh5aW5KRHRUSHExQlJnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9YjE2YjBmZjItYTUzOS00M2IxLWEyNzgtMTYzY2UzOGI2ZTgz
-#EXTINF:-1 tvg-logo="https://img.iol.pt/image/id/672a32d4d34ea1acf27044b5/" group-title="VOD PT",TVI Jornal - 5 de novembro de 2024
-https://streaming-vod2.iol.pt/vod/3/f/7/4/smil:672a2ddc0cf23e044af73f74-L.smil/672a2ddc0cf23e044af73f74-L-2000k.mp4_chunk.m3u8?nimblesessionid=107490429&wmsAuthSign=c2VydmVyX3RpbWU9MTEvNi8yMDI0IDI6NTU6MzcgQU0maGFzaF92YWx1ZT1JOHdYZGw3aW1qcHAvL1kvcXUzYWhBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NmUyNTVjMzctYmIwZS00ZjY3LTgxYTgtNjdlMDNhMDE3YTNm
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1088375534395052033/jBKVUQbV_400x400.jpg" group-title="MUSICA",Radio Capital Tivu | Italia
+http://capital-live-tv-01-hls.akamai.media.kataweb.it/i/CapitalTv_1@183098/index_5_av-p.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/xsspfDW.png" group-title="MUSICA",Radio Contact Feel Good | Bélgica
+http://contact-lh.akamaihd.net/i/CONTACT_1@321283/master.m3u8
