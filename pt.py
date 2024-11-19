@@ -13,7 +13,7 @@ options.add_argument("--disable-infobars")
 
 # URLs dos vídeos Globoplay
 globoplay_urls = [
-    "https://timesbrasil.com.br/videos/times-brasil-ao-vivo/",
+    "https://geo.dailymotion.com/player/x128wg.html?video=k3FmKcBH6xd7QkBSPho",
     "https://globoplay.globo.com/v/2145544/",
     "https://globoplay.globo.com/v/6120663/",
     "https://globoplay.globo.com/v/2135579/",
