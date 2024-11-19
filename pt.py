@@ -13,7 +13,7 @@ options.add_argument("--disable-infobars")
 
 # URLs dos vídeos Globoplay
 globoplay_urls = [
-    "https://tviplayer.iol.pt/direto/TVI",
+    "https://timesbrasil.com.br/videos/times-brasil-ao-vivo/",
     "https://globoplay.globo.com/v/2145544/",
     "https://globoplay.globo.com/v/6120663/",
     "https://globoplay.globo.com/v/2135579/",
