@@ -1,3 +1,163 @@
+import requests
+import os
+import sys
+import streamlink
+import logging
+from logging.handlers import RotatingFileHandler
+import json
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+log_file = "log.txt"
+file_handler = RotatingFileHandler(log_file)
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+# URL do arquivo .txt
+CHANNEL_FILE_URL = "https://github.com/strikeinthehouse/JCTN/raw/refs/heads/main/channel_argentina.txt"
+
+# Funções utilitárias
+def download_channel_file(url):
+    try:
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+        return response.text.splitlines()  # Retorna o conteúdo do arquivo como uma lista de linhas
+    except requests.exceptions.RequestException as err:
+        logger.error("Erro ao baixar o arquivo: %s", err)
+        sys.exit("Erro ao baixar o arquivo .txt")
+
+def grab(url):
+    try:
+        if url.endswith('.m3u') or url.endswith('.m3u8') or ".ts" in url:
+            return url
+
+        session = streamlink.Streamlink()
+        streams = session.streams(url)
+        logger.debug("URL Streams %s: %s", url, streams)
+        if "best" in streams:
+            return streams["best"].url
+        return None
+    except streamlink.exceptions.NoPluginError as err:
+        logger.error("URL Error No PluginError %s: %s", url, err)
+        return None
+    except streamlink.StreamlinkError as err:
+        logger.error("URL Error %s: %s", url, err)
+        return None
+
+def check_url(url):
+    try:
+        response = requests.head(url, timeout=15)
+        if response.status_code == 200:
+            logger.debug("URL Streams %s: %s", url, response)
+            return True
+    except requests.exceptions.RequestException as err:
+        pass
+    
+    try:
+        response = requests.head(url, timeout=15, verify=False)
+        if response.status_code == 200:
+            logger.debug("URL Streams %s: %s", url, response)
+            return True
+    except requests.exceptions.RequestException as err:
+        logger.error("URL Error %s: %s", url, err)
+        return False
+    
+    return False
+
+# Baixa e processa o arquivo de canais
+lines = download_channel_file(CHANNEL_FILE_URL)
+
+channel_data = []
+channel_data_json = []
+
+banner = r'''
+#EXTM3U
+###########################################################################
+#EXTM3U url-tvg="https://www.bevy.be/bevyfiles/argentina.xml"
+'''
+
+banner2 = r'''
+#EXTINF:-1 tvg-id="N/A" group-title="Argentina" tvg-logo="https://fonts.gstatic.com/s/i/productlogos/lens_camera/v1/192px.svg",Canal Nueve Multivisión (AR) - TDA 20.1
+http://panel.dattalive.com:1935/8250/8250/playlist.m3u8
+'''
+
+# Processa as linhas do arquivo
+for line in lines:
+    line = line.strip()
+    if not line or line.startswith('~~'):
+        continue
+    if not line.startswith('http:') and len(line.split("|")) == 4:
+        line = line.split('|')
+        ch_name = line[0].strip()
+        grp_title = line[1].strip().title()
+        tvg_logo = line[2].strip()
+        tvg_id = line[3].strip()
+        channel_data.append({
+            'type': 'info',
+            'ch_name': ch_name,
+            'grp_title': grp_title,
+            'tvg_logo': tvg_logo,
+            'tvg_id': tvg_id
+        })
+    else:
+        link = grab(line)
+        if link and check_url(link):
+            channel_data.append({
+                'type': 'link',
+                'url': link
+            })
+
+# Escreve no arquivo .m3u
+with open("ARGENTINA.m3u", "w") as f:
+    f.write(banner)
+    f.write(banner2)
+
+    prev_item = None
+
+    for item in channel_data:
+        if item['type'] == 'info':
+            prev_item = item
+        if item['type'] == 'link' and item['url']:
+            f.write(f'\n#EXTINF:-1 group-title="{prev_item["grp_title"]}" tvg-logo="{prev_item["tvg_logo"]}" tvg-id="{prev_item["tvg_id"]}", {prev_item["ch_name"]}')
+            f.write('\n')
+            f.write(item['url'])
+            f.write('\n')
+
+# Escreve no arquivo JSON
+prev_item = None
+for item in channel_data:
+    if item['type'] == 'info':
+        prev_item = item
+    if item['type'] == 'link' and item['url']:
+        channel_data_json.append({
+            "id": prev_item["tvg_id"],
+            "name": prev_item["ch_name"],
+            "alt_names": [""],
+            "network": "",
+            "owners": [""],
+            "country": "AR",
+            "subdivision": "",
+            "city": "Buenos Aires",
+            "broadcast_area": [""],
+            "languages": ["spa"],
+            "categories": [prev_item["grp_title"]],
+            "is_nsfw": False,
+            "launched": "2016-07-28",
+            "closed": "2020-05-31",
+            "replaced_by": "",
+            "website": item['url'],
+            "logo": prev_item["tvg_logo"]
+        })
+
+with open("ARGENTINA.json", "w") as f:
+    json_data = json.dumps(channel_data_json, indent=2)
+    f.write(json_data)
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
