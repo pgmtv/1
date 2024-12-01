@@ -1,10 +1,8 @@
 import requests
-import os
-import sys
-import streamlink
 import logging
 from logging.handlers import RotatingFileHandler
 import json
+import re
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -31,43 +29,20 @@ def download_channel_file(url):
         logger.error("Erro ao baixar o arquivo: %s", err)
         sys.exit("Erro ao baixar o arquivo .txt")
 
-def grab(url):
-    try:
-        if url.endswith('.m3u') or url.endswith('.m3u8') or ".ts" in url:
-            return url
-
-        session = streamlink.Streamlink()
-        streams = session.streams(url)
-        logger.debug("URL Streams %s: %s", url, streams)
-        if "best" in streams:
-            return streams["best"].url
-        return None
-    except streamlink.exceptions.NoPluginError as err:
-        logger.error("URL Error No PluginError %s: %s", url, err)
-        return None
-    except streamlink.StreamlinkError as err:
-        logger.error("URL Error %s: %s", url, err)
-        return None
-
-def check_url(url):
-    try:
-        response = requests.head(url, timeout=15)
-        if response.status_code == 200:
-            logger.debug("URL Streams %s: %s", url, response)
-            return True
-    except requests.exceptions.RequestException as err:
-        pass
+def extract_youtube_id(url):
+    """Extrai o ID do canal do YouTube ou do vídeo a partir da URL."""
+    # Para URLs do tipo "/channel/<ID>"
+    channel_match = re.search(r"youtube\.com/channel/([a-zA-Z0-9_-]+)", url)
+    if channel_match:
+        return channel_match.group(1)
     
-    try:
-        response = requests.head(url, timeout=15, verify=False)
-        if response.status_code == 200:
-            logger.debug("URL Streams %s: %s", url, response)
-            return True
-    except requests.exceptions.RequestException as err:
-        logger.error("URL Error %s: %s", url, err)
-        return False
+    # Para URLs do tipo "/watch?v=<ID>" ou "/live/<ID>"
+    video_match = re.search(r"(?:youtube\.com/watch\?v=|youtube\.com/live/|youtube\.com/live/\S+)[a-zA-Z0-9_-]+", url)
+    if video_match:
+        return video_match.group(1)
     
-    return False
+    logger.warning("ID não encontrado para URL: %s", url)
+    return None
 
 # Baixa e processa o arquivo de canais
 lines = download_channel_file(CHANNEL_FILE_URL)
@@ -81,22 +56,17 @@ banner = r'''
 #EXTM3U url-tvg="https://www.bevy.be/bevyfiles/argentina.xml"
 '''
 
-banner2 = r'''
-#EXTINF:-1 tvg-id="N/A" group-title="Argentina" tvg-logo="https://fonts.gstatic.com/s/i/productlogos/lens_camera/v1/192px.svg",Canal Nueve Multivisión (AR) - TDA 20.1
-http://panel.dattalive.com:1935/8250/8250/playlist.m3u8
-'''
-
 # Processa as linhas do arquivo
 for line in lines:
     line = line.strip()
     if not line or line.startswith('~~'):
         continue
-    if not line.startswith('http:') and len(line.split("|")) == 4:
+    if not line.startswith('http') and len(line.split("|")) == 4:
         line = line.split('|')
         ch_name = line[0].strip()
         grp_title = line[1].strip().title()
         tvg_logo = line[2].strip()
-        tvg_id = line[3].strip()
+        tvg_id = None
         channel_data.append({
             'type': 'info',
             'ch_name': ch_name,
@@ -105,17 +75,17 @@ for line in lines:
             'tvg_id': tvg_id
         })
     else:
-        link = grab(line)
-        if link and check_url(link):
+        # Pega o ID do canal a partir da URL do YouTube
+        youtube_id = extract_youtube_id(line)
+        if youtube_id:
             channel_data.append({
                 'type': 'link',
-                'url': link
+                'url': f"https://ythls.armelin.one/channel/{youtube_id}.m3u8"
             })
 
 # Escreve no arquivo .m3u
 with open("ARGENTINA.m3u", "w") as f:
     f.write(banner)
-    f.write(banner2)
 
     prev_item = None
 
@@ -123,19 +93,19 @@ with open("ARGENTINA.m3u", "w") as f:
         if item['type'] == 'info':
             prev_item = item
         if item['type'] == 'link' and item['url']:
-            f.write(f'\n#EXTINF:-1 group-title="{prev_item["grp_title"]}" tvg-logo="{prev_item["tvg_logo"]}" tvg-id="{prev_item["tvg_id"]}", {prev_item["ch_name"]}')
+            f.write(f'\n#EXTINF:-1 group-title="{prev_item["grp_title"]}" tvg-logo="{prev_item["tvg_logo"]}", {prev_item["ch_name"]}')
             f.write('\n')
             f.write(item['url'])
             f.write('\n')
 
-# Escreve no arquivo JSON
+# Escreve no arquivo JSON (opcional, mantém o formato detalhado)
 prev_item = None
 for item in channel_data:
     if item['type'] == 'info':
         prev_item = item
     if item['type'] == 'link' and item['url']:
         channel_data_json.append({
-            "id": prev_item["tvg_id"],
+            "id": prev_item.get("tvg_id", ""),
             "name": prev_item["ch_name"],
             "alt_names": [""],
             "network": "",
@@ -157,6 +127,7 @@ for item in channel_data:
 with open("ARGENTINA.json", "w") as f:
     json_data = json.dumps(channel_data_json, indent=2)
     f.write(json_data)
+
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
