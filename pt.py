@@ -92,7 +92,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=a&sca_esv=124892d69d68a598&tbs=srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVdMuMgfTaYnJqUn5-dlgTklehiGIoZdUpJaZV1ySmF6UmAuWSUnMzKnMzS_1JzM8D8wEGg-AESwAAAA,dur:l&tbm=vid&source=lnt&sa=X&ved=2ahUKEwjJyu3vg7OJAxWHq5UCHcllB4YQpwV6BAgBEA4&biw=1536&bih=721&dpr=1.25"
+base_url = "https://www.google.com/search?q=gran+hermano&sca_esv=124892d69d68a598&udm=7&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3HQQrAIAwEwN_1kUvBPqYY2YAyY1dbfl3qbWT4wTknZjbQF-Opse4W1LnOot31TSJUkQe_1UIh4_1DzyKfCdM-gBpl5_1dSgAAAA&source=lnt&sa=X&ved=2ahUKEwiWs6yu_bGKAxUSrJUCHXKBJooQpwV6BAgBEC4&biw=1920&bih=936&dpr=1"
 
 # Load the page
 driver.get(base_url)
