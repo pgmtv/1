@@ -1,12 +1,8 @@
 name: Baixando Lista
-# Baixando Lista
-
-# Descrição: Este script automatiza o processo de atualização da lista baixada.
-# O script é disparado por meio de uma agendamento (cron) ou pela ação de pull request.
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Executa a cada 4 horas
+    - cron: '*/30 * * * *'  # Schedule to run every 30 minutes
   pull_request:
     branches:
       - main
@@ -18,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout Repositório
-      uses: actions/checkout@v3  # Updated to use a newer version
+      uses: actions/checkout@v4  # Updated to use a newer version
 
     - name: Configurar Ambiente Virtual
       run: |
