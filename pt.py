@@ -92,7 +92,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=gran+hermano&sca_esv=124892d69d68a598&udm=7&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3HQQrAIAwEwN_1kUvBPqYY2YAyY1dbfl3qbWT4wTknZjbQF-Opse4W1LnOot31TSJUkQe_1UIh4_1DzyKfCdM-gBpl5_1dSgAAAA&source=lnt&sa=X&ved=2ahUKEwiWs6yu_bGKAxUSrJUCHXKBJooQpwV6BAgBEC4&biw=1920&bih=936&dpr=1"
+base_url = "https://www.google.com/search?q=25&sca_esv=90c55360f106269f&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVUtJzMypzM0vyczPA_1PTEpNTk_1Lzs8GckszsEigTAKNtLR09AAAA&tbm=vid&ei=4IkgZ8ScMrvQ1sQPjdPMuQ0&ved=0ahUKEwjEjOv-g7OJAxU7qJUCHY0pM9cQ4dUDCA0&uact=5&oq=25&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgIyNTIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMg0QABiABBixAxiDARgKMggQABiABBixA0iCHlCGDlj-HXAAeACQAQCYAZsBoAGbAaoBAzAuMbgBA8gBAPgBAZgCAaACrgGYAwCIBgGSBwMwLjGgB78F&sclient=gws-wiz-video"
 
 # Load the page
 driver.get(base_url)
@@ -247,7 +247,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=25&sca_esv=90c55360f106269f&biw=1536&bih=721&tbs=dur%3Al%2Cqdr%3Aw%2Csrcf%3AH4sIAAAAAAAAANMuKilL1UstVqvMLy0pTUrVS87PVUtJzMypzM0vyczPA_1PTEpNTk_1Lzs8GckszsEigTAKNtLR09AAAA&tbm=vid&ei=4IkgZ8ScMrvQ1sQPjdPMuQ0&ved=0ahUKEwjEjOv-g7OJAxU7qJUCHY0pM9cQ4dUDCA0&uact=5&oq=25&gs_lp=Eg1nd3Mtd2l6LXZpZGVvIgIyNTIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMg0QABiABBixAxiDARgKMggQABiABBixA0iCHlCGDlj-HXAAeACQAQCYAZsBoAGbAaoBAzAuMbgBA8gBAPgBAZgCAaACrgGYAwCIBgGSBwMwLjGgB78F&sclient=gws-wiz-video"
+url = "https://www.google.com/search?q=gran+hermano&sca_esv=124892d69d68a598&udm=7&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3HQQrAIAwEwN_1kUvBPqYY2YAyY1dbfl3qbWT4wTknZjbQF-Opse4W1LnOot31TSJUkQe_1UIh4_1DzyKfCdM-gBpl5_1dSgAAAA&source=lnt&sa=X&ved=2ahUKEwiWs6yu_bGKAxUSrJUCHXKBJooQpwV6BAgBEC4&biw=1920&bih=936&dpr=1"
 driver.get(url)
 
 for i in range(2):
