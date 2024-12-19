@@ -247,7 +247,7 @@ def write_m3u_file(links, output_path):
                     # Adiciona a entrada no arquivo M3U
                     f.write(f"{link}\n")
 
-url = "https://www.google.com/search?q=gran+hermano&sca_esv=124892d69d68a598&udm=7&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3HQQrAIAwEwN_1kUvBPqYY2YAyY1dbfl3qbWT4wTknZjbQF-Opse4W1LnOot31TSJUkQe_1UIh4_1DzyKfCdM-gBpl5_1dSgAAAA&source=lnt&sa=X&ved=2ahUKEwiWs6yu_bGKAxUSrJUCHXKBJooQpwV6BAgBEC4&biw=1920&bih=936&dpr=1"
+url = "https://www.google.com/search?q=gran+hermano&sca_esv=124892d69d68a598&udm=7&tbas=0&tbs=dur:l,srcf:H4sIAAAAAAAAAB3HQQrAIAwEwN_1kUvBPqYY2YAyY1dbfl3qbWT4wTknZjbQF-Opse4W1LnOot31TSJUkQcc7tYjHbzyKfCdM-gD00yBkSgAAAA&source=lnt&sa=X&ved=2ahUKEwjN-_rmwbSKAxXBuJUCHWLNLjcQpwV6BAgBEC0&biw=1920&bih=936&dpr=1"
 driver.get(url)
 
 for i in range(2):
