@@ -85,6 +85,10 @@ https://archive.org/download/M1_20241222_113500_Nemzeti_Sporthirado/M1_20241222_
 https://archive.org/download/RUSSIA24_20241222_163000_RIK_Rossiya_24/RUSSIA24_20241222_163000_RIK_Rossiya_24.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SOUTHERNSUDAN_20241222_170000",SOUTHERNSUDAN : December 22, 2024 7:00pm-7:31pm CAT
 https://archive.org/download/SOUTHERNSUDAN_20241222_170000/SOUTHERNSUDAN_20241222_170000.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RUSSIA24_20241222_180000_RIK_Rossiya_24",РИК "Россия 24" : RUSSIA24 : December 22, 2024 9:00pm-9:31pm MSK
+https://archive.org/download/RUSSIA24_20241222_180000_RIK_Rossiya_24/RUSSIA24_20241222_180000_RIK_Rossiya_24.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KCTV_20241222_183000",KCTV : December 23, 2024 3:30am-4:01am KST
+https://archive.org/download/KCTV_20241222_183000/KCTV_20241222_183000.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/RTPI_20241222_000000_24_Horas",24 Horas : RTPI : December 22, 2024 12:00am-1:01am WET
 https://archive.org/download/RTPI_20241222_000000_24_Horas/RTPI_20241222_000000_24_Horas.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/SUDAN_20241222_010000",SUDAN : December 22, 2024 3:00am-3:31am CAT
@@ -145,11 +149,24 @@ https://archive.org/download/TVRI_20241222_133000/TVRI_20241222_133000.mp4?exact
 https://archive.org/download/M1_20241222_133000_Hirek/M1_20241222_133000_Hirek.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/NTV_20241222_132000_Chelovek_v_prave_s_Andreem_Kunitsinim",Человек в праве с Андреем Куницыным : NTV : December 22, 2024 4:20pm-5:01pm MSK
 https://archive.org/download/NTV_20241222_132000_Chelovek_v_prave_s_Andreem_Kunitsinim/NTV_20241222_132000_Chelovek_v_prave_s_Andreem_Kunitsinim.mp4?exact=1&start=0&end=300
-#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/ALJAZ_20241222_140000_NEWS_30min",NEWS 30min : ALJAZ : December 22, 2024 5:00pm-5:31pm AST
-https://archive.org/download/ALJAZ_20241222_140000_NEWS_30min/ALJAZ_20241222_140000_NEWS_30min.mp4?exact=1&start=0&end=300
-#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/IRINN_20241222_143000",IRINN : December 22, 2024 6:00pm-6:31pm IRST
-https://archive.org/download/IRINN_20241222_143000/IRINN_20241222_143000.mp4?exact=1&start=0&end=300
-#EXTM3U
+#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-nos-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-meo-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rtp-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz"
+# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
+# 📺 TV
+#EXTINF:-1 group-title="TV" tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
+#KODIPROP:inputstream=inputstream.adaptive
+https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
+#KODIPROP:inputstream=inputstream.adaptive
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjIvMjAyNCA4OjU6NTYgUE0maGFzaF92YWx1ZT1RQ2tCNW01bndYUkM1QUVuSGEwSHBBPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9Zjc3ZTlmNTgtZjA2YS00Zjk2LTg5MmMtY2Q0MzI5NjUzZDI1/
+#EXTINF:-1 group-title="TV" tvg-id="RTP3.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP3.png",RTP 3
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtpnHD.smil/playlist.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-id="Canale 5 HD.it" tvg-logo="https://iili.io/d93woZP.png" group-title="Reality Show's Live",Canale 5
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -3980,20 +3997,3 @@ https://dai.google.com/linear/hls/event/cJXgmHHTQIGMhSzDk7TBsA/master.m3u8
 #EXTINF:0 group-title="ESTADOS UNIDOS",Xplore (1080p)
 #EXTVLCOPT:network-caching=1000
 http://xlpore-samsungus.amagi.tv/playlist.m3u8
-#EXTINF:0 group-title="ESTADOS UNIDOS",Yahoo! Finance (1080p)
-#EXTVLCOPT:network-caching=1000
-https://d1ewctnvcwvvvu.cloudfront.net/playlist.m3u8
-#EXTINF:0 group-title="ESTADOS UNIDOS",Youtoo America (1080p)
-#EXTVLCOPT:network-caching=1000
-https://thegateway.app/YouToo/CueTones/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/DJG1KGR.png" group-title="USA PUBLIC",CCX Media Minnesota
-http://156.142.85.152/live/WIFI-2096k-1080p/WIFI-2096k-1080p.m3u8?fluxustv.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UxEzPeX.png" group-title="USA PUBLIC",Connecticut Network
-http://video.ct-n.com/live/ctnstream/chunklist_w1534354198_DVR.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UxEzPeX.png" group-title="USA PUBLIC",Connecticut Network (Instant)
-http://video.ct-n.com/live/ctnspare/chunklist_w252238746_DVR.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/UxEzPeX.png" group-title="USA PUBLIC",Connecticut Network (Live Stream 1)
-http://video.ct-n.com/live/web1stream/chunklist_w1992415243_DVR.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/F95hUZ4.png" group-title="USA PUBLIC",LNKTV City
-http://5tv.lincoln.ne.gov/live/WIFI-2096k-1080p/WIFI-2096k-1080p.m3u8?fluxustv.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/jOhhLQQ.png" group-title="USA PUBLIC",LNKTV Health
