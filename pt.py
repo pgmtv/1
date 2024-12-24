@@ -92,7 +92,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=la+sexta&sca_esv=90c55360f106269f&udm=7&tbs=qdr:w,srcf:H4sIAAAAAAAAAMvMKy5JTC9KzNVLzs9Vq8wvLSlNSgWz0xKTU5Py87PBnJLM7BIoUzsnsTi1oiQRzClNTYMwAG-aSOhIAAAA&source=lnt&sa=X&ved=2ahUKEwjkmabr8LaKAxVCHrkGHShVC6YQpwV6BAgBEC0&biw=1592&bih=774&dpr=1"
+base_url = "https://www.google.com/search?q=canale+5&sca_esv=90c55360f106269f&udm=7&tbs=qdr:w,srcf:H4sIAAAAAAAAANPOTU3JTCxOLdHLLFGrzC8tKU1K1UvOz1VLS0xOTcrPzwZzMvOKSxLTixJzwbzc4jyIaE5xfk6qkUl-EUQLADwnizZMAAAA&source=lnt&sa=X&ved=2ahUKEwilr4uzicGKAxUfALkGHWaiIlMQpwV6BAgCECk&biw=1920&bih=936&dpr=1"
 
 # Load the page
 driver.get(base_url)
@@ -430,7 +430,7 @@ def write_m3u_file(details, filename):
             title = entry.get('title', 'No Title')
 
             if video_url:
-                file.write(f'#EXTINF:-1 tvg-logo="{thumbnail_url}" group-title="VOD PT",{title}\n')
+                file.write(f'#EXTINF:-1 tvg-logo="{thumbnail_url}" group-title="VOD",{title}\n')
                 file.write(f"{video_url}\n")
             else:
                 print("URL do vídeo não encontrada.")
