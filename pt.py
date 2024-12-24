@@ -94,7 +94,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL base (substitua com a URL real)
-base_url = "https://www.google.com/search?q=canale+5&sca_esv=90c55360f106269f&udm=7&tbs=qdr:w,srcf:H4sIAAAAAAAAANPOTU3JTCxOLdHLLFGrzC8tKU1K1UvOz1VLS0xOTcrPzwZzMvOKSxLTixJzwbzc4jyIaE5xfk6qkUl-EUQLADwnizZMAAAA&source=lnt&sa=X&ved=2ahUKEwilr4uzicGKAxUfALkGHWaiIlMQpwV6BAgCECk&biw=1920&bih=936&dpr=1"
+base_url = "https://www.google.com/search?q=puntata&sca_esv=90c55360f106269f&udm=7&tbas=0&tbs=qdr:w,srcf:H4sIAAAAAAAAAKvMLy0pTUrVS87PVStKzCzISazUyyxRy0k0B1G5qSmZicWpJSB2WmJyalJ-fjZYqXZxNlgdADjpIOk_1AAAA&source=lnt&sa=X&ved=2ahUKEwiS7KjwicGKAxUFELkGHcdIOE4QpwV6BAgBEC4&biw=1920&bih=936&dpr=1"
 
 # Load the page
 driver.get(base_url)
