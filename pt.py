@@ -13,9 +13,7 @@ options.add_argument("--disable-infobars")
 
 # URLs dos vídeos Globoplay
 globoplay_urls = [
-    "https://www.rtp.pt/play/direto/rtp1",
-    "https://www.rtp.pt/play/direto/rtp2",
-    "https://www.rtp.pt/play/direto/rtp3",
+    "https://globoplay.globo.com/tv-globo/ao-vivo/6120663/",
     "https://www.rtp.pt/play/direto/rtpdesporto1",
     "https://globoplay.globo.com/v/2145544/",
     "https://globoplay.globo.com/v/6120663/",
