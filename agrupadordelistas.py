@@ -444,7 +444,7 @@ end_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=45, 
 
 # Horários locais do Brasil para 17h30 e 23h00
 start_time_br_night = datetime.now(brazil_timezone).replace(hour=17, minute=30, second=0, microsecond=0)
-end_time_br_night = datetime.now(brazil_timezone).replace(hour=23, minute=0, second=0, microsecond=0)
+end_time_br_night = datetime.now(brazil_timezone).replace(hour=20, minute=0, second=0, microsecond=0)
 
 # Nome do arquivo de saída
 output_file = "lista1.M3U"
