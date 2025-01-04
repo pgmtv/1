@@ -471,7 +471,7 @@ http://tv.dominiotv.xyz:25461/live/Rolando/Rolando2021/52487.ts
 http://cord-cutter.net:8080/live/j3McKd/673709/164878.m3u8
 #EXTINF:-1 tvg-id="Encuentro.ar" tvg-logo="https://www.lyngsat-logo.com/logo/tv/ee/encuentro-ar.png" group-title="Argentina",Encuentro
 http://181.13.173.86:8000/play/a01m/index.m3u8
-EXTINF:-1 tvg-logo="https://i.ibb.co/41CYHm1/La-Naci-n.png" group-title="Argentina",LA NACION
+EXTINF:-1 tvg-id="LA NACION+.ar" tvg-logo="https://i.ibb.co/41CYHm1/La-Naci-n.png" group-title="Argentina",LA NACION
 http://45.5.151.151:8000/play/a0e2/index.m3u8
 #EXTINF:-1 tvg-id="LaNacionPlus.ar" tvg-logo="https://www.lyngsat-logo.com/logo/tv/ll/lnplus-ar.png" group-title="Argentina",LN+
 http://181.13.173.86:8000/play/a01s/index.m3u8
@@ -968,10 +968,6 @@ https://d277k9d1h9dro4.cloudfront.net/out/v1/293e7c3464824cbd8818ab8e49dc5fe9/in
 #EXTVLCOPT:http-user-agent=Android
 #EXTVLCOPT:http-referrer=https://rtp.pt/
 https://streaming-live.rtp.pt/liverepeater/smil:rtpi.smil/playlist.m3u8
-#EXTINF:-1 group-title="Undefined" tvg-id="Undefined" tvg-logo="https://i.ibb.co/9GMzcw7/rtpaco.jpg",🇵🇹 RTP AÇORES
-#EXTVLCOPT:http-user-agent=Android
-#EXTVLCOPT:http-referrer=https://rtp.pt/
-https://streaming-live.rtp.pt/liverepeater/smil:rtpacoresHD.smil/playlist.m3u8
 #EXTINF:-1 group-title="Undefined" tvg-id="Undefined" tvg-logo="https://i.ibb.co/BsdgH54/rtpafr.webp",🇵🇹 RTP ÁFRICA
 #EXTVLCOPT:http-user-agent=Android
 #EXTVLCOPT:http-referrer=https://rtp.pt/
@@ -980,10 +976,6 @@ https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Android
 #EXTVLCOPT:http-referrer=https://rtp.pt/
 https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/playlist.m3u8
-#EXTINF:-1 group-title="Undefined" tvg-id="Undefined" tvg-logo="https://i.ibb.co/vZ9S4rV/rtpmem.jpg",🇵🇹 RTP MEMÓRIA
-#EXTVLCOPT:http-user-agent=Android
-#EXTVLCOPT:http-referrer=https://rtp.pt/
-https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/playlist.m3u8
 #EXTINF:-1 group-title="Undefined" tvg-id="Undefined" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Logo_Porto_Canal.jpg/200px-Logo_Porto_Canal.jpg",🇵🇹 PORTO CANAL
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -4200,3 +4192,11 @@ http://srmx.ddns.net:8100/;
 #EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio Radio Tormenta 100.1 Morelia
 https://cdn-embed.tunein.com/resources/media/blank.mp3
 #EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio 40 Principales Morelia
+http://s4.mexside.net:7040/;
+#EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio Candela 91.1 Uruapan
+http://167.114.116.223:3334/stream/1/streams.mp3
+#EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio La Candela 97.7 Zacapu
+http://s4.mexside.net:2094/;stream.nsv
+#EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio Azul Lazaro Cardenas
+https://s2.mexside.net/8010/stream
+#EXTINF:-1 group-title="RADIOS" tvg-id="Undefined" tvg-logo="Radio.png",Radio Fantasia Zitacuaro
