@@ -3,17 +3,22 @@ import json
 import os
 
 def get_video_details(url):
-    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl ou yt-dlp."""
+    """Obtém os detalhes de vídeos individuais ou de playlists, dependendo da URL."""
     try:
-        # Tenta usar youtube-dl
+        # Primeiro, tenta obter detalhes de vídeo usando youtube-dl
         result = subprocess.run(
-            ['youtube-dl', '-j', url],  # Remover '--flat-playlist' para obter detalhes completos
+            ['youtube-dl', '-j', url],  # Tenta obter detalhes de vídeo ou playlist
             capture_output=True,
             text=True,
             check=True
         )
         details = json.loads(result.stdout)
-        return [details] if isinstance(details, dict) else details
+
+        # Verifica se a URL é de uma playlist ou de um vídeo
+        if isinstance(details, list):  # É uma playlist, retorna a lista de vídeos
+            return details
+        else:  # Caso contrário, é um único vídeo
+            return [details]
 
     except subprocess.CalledProcessError as e:
         print("youtube-dl falhou, tentando yt-dlp...")
@@ -21,13 +26,18 @@ def get_video_details(url):
         try:
             # Tenta usar yt-dlp
             result = subprocess.run(
-                ['yt-dlp', '-j', url],  # Usando yt-dlp sem '--flat-playlist' também
+                ['yt-dlp', '-j', url],  # Tenta obter detalhes de vídeo ou playlist
                 capture_output=True,
                 text=True,
                 check=True
             )
             details = json.loads(result.stdout)
-            return [details] if isinstance(details, dict) else details
+
+            # Verifica se a URL é de uma playlist ou de um vídeo
+            if isinstance(details, list):  # É uma playlist, retorna a lista de vídeos
+                return details
+            else:  # Caso contrário, é um único vídeo
+                return [details]
         
         except subprocess.CalledProcessError as e:
             print("yt-dlp também falhou.")
