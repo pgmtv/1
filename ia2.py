@@ -3,18 +3,17 @@ import json
 import os
 
 def get_video_details(url):
-    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl e, se necessário, yt-dlp."""
+    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl ou yt-dlp."""
     try:
         # Tenta usar youtube-dl
         result = subprocess.run(
-            ['youtube-dl', '-j', '--flat-playlist', url],
+            ['youtube-dl', '-j', url],  # Remover '--flat-playlist' para obter detalhes completos
             capture_output=True,
             text=True,
             check=True
         )
-        entries = result.stdout.strip().split('\n')
-        details = [json.loads(entry) for entry in entries]
-        return details
+        details = json.loads(result.stdout)
+        return [details] if isinstance(details, dict) else details
 
     except subprocess.CalledProcessError as e:
         print("youtube-dl falhou, tentando yt-dlp...")
@@ -22,14 +21,13 @@ def get_video_details(url):
         try:
             # Tenta usar yt-dlp
             result = subprocess.run(
-                ['yt-dlp', '-j', '--flat-playlist', url],
+                ['yt-dlp', '-j', url],  # Usando yt-dlp sem '--flat-playlist' também
                 capture_output=True,
                 text=True,
                 check=True
             )
-            entries = result.stdout.strip().split('\n')
-            details = [json.loads(entry) for entry in entries]
-            return details
+            details = json.loads(result.stdout)
+            return [details] if isinstance(details, dict) else details
         
         except subprocess.CalledProcessError as e:
             print("yt-dlp também falhou.")
@@ -53,7 +51,7 @@ def write_m3u_file(details, filename):
                 file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\",{title}\n")
                 file.write(f"{video_url}\n")
             else:
-                print("URL do vídeo não encontrada.")
+                print(f"URL do vídeo não encontrada para o título: {title}")
 
 def process_urls_from_file(input_file):
     """Lê URLs de um arquivo e processa cada uma para criar um único arquivo M3U."""
@@ -73,12 +71,12 @@ def process_urls_from_file(input_file):
         details = get_video_details(url)
         
         if details:
-            all_details.extend(details)  # Acumula os detalhes
+            all_details.extend(details)  # Acumula os detalhes dos vídeos
         else:
-            print(f"Nenhum URL encontrado para a URL {url}.")
+            print(f"Nenhum detalhe encontrado para a URL {url}.")
     
     # Escreve todos os detalhes acumulados em um único arquivo M3U
-    filename = 'lista1.M3U'
+    filename = 'playlist.M3U'
     write_m3u_file(all_details, filename)
     print(f"Arquivo {filename} criado com sucesso.")
 
