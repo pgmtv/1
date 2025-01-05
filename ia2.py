@@ -76,7 +76,7 @@ def process_urls_from_file(input_file):
             print(f"Nenhum detalhe encontrado para a URL {url}.")
     
     # Escreve todos os detalhes acumulados em um único arquivo M3U
-    filename = 'playlist.M3U'
+    filename = 'lista1.M3U'
     write_m3u_file(all_details, filename)
     print(f"Arquivo {filename} criado com sucesso.")
 
