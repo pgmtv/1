@@ -149,8 +149,347 @@ https://archive.org/download/KNTV_20250103_100700_NBC_Nightly_News_With_Lester_H
 https://archive.org/download/KNTV_20250103_093700_NBC_Bay_Area_News_at_11/KNTV_20250103_093700_NBC_Bay_Area_News_at_11.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/CNBC_20250103_090000_Street_Signs",Street Signs : CNBC : January 3, 2025 4:00am-5:00am EST
 https://archive.org/download/CNBC_20250103_090000_Street_Signs/CNBC_20250103_090000_Street_Signs.mp4?exact=1&start=0&end=300
+#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-nos-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-meo-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rtp-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz"
+# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
+# 📺 TV
+#EXTINF:-1 group-title="TV" tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
+#KODIPROP:inputstream=inputstream.adaptive
+https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
+#KODIPROP:inputstream=inputstream.adaptive
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS84LzIwMjUgODo2OjQzIFBNJmhhc2hfdmFsdWU9TXhzUFBFYjMrT0I3RlJlYTJoTmtIUT09JnZhbGlkbWludXRlcz0xNDQwJmlkPWVkM2ViNzIxLTI2OWUtNDU3Ni05ODRmLWYxMDIyM2YwNjY4OA==/
+#EXTINF:-1 group-title="TV" tvg-id="RTP3.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP3.png",RTP 3
+#EXTVLCOPT:http-user-agent=Firefox
+https://streaming-live.rtp.pt/liverepeater/smil:rtpnHD.smil/playlist.m3u8
 #EXTM3U
+#EXTM3U url-tvg="https://www.bevy.be/bevyfiles/brazil.xml"
+#EXTINF:-1 group-title="Globo" tvg-logo="http://i.imgur.com/qtRBqdX.png",TV Asa Branca
+http://15.235.15.230:14492/AFDTV
+#EXTINF:-1 group-title="Globo" tvg-logo="http://i.imgur.com/h4PzuTy.png",RPC Curitiba
+http://15.235.15.230:14487/AFDTV
+#EXTINF:-1 group-title="Globo" tvg-logo="http://i.imgur.com/9R6n3ti.png",TV Mirante São Luís
+http://15.235.15.230:14499/AFDTV
+#EXTINF:-1 group-title="Globo" tvg-logo="http://i.imgur.com/zldYz3t.png",TV Tem Sorocaba
+http://cdn-2.nxplay.com.br/TV_TEM_TK/index.m3u8
+#EXTINF:-1 group-title="Globo" tvg-logo="http://i.imgur.com/Jyh2wWJ.png",TV Tribuna Santos
+http://15.235.15.230:14513/AFDTV
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo TV Santos 
+http://15.235.15.230:14513/
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/k4fl1wF.png" group-title="Canais | GLOBO",Globo BA
+http://186.226.215.132:80/carlos123/carlos123/130
+#EXTINF:-1 tvg-id="GloboBA" tvg-name="Globo Bahia SD" tvg-logo="https://i.imgur.com/k4fl1wF.png" group-title="Canais | GLOBO",Globo Bahia SD
+http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
+#EXTINF:-1 tvg-id="TVGloboBrasilia.br" tvg-name="Globo Brasília HD" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo Brasília HD
+http://s1.1-cup.net:2095/solucao111hgfgh77hu78/xplus1111XXhjgyu87/51
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",RPC Curitiba HD
+http://15.235.15.230:14487/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" group-title="GLOBO" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/f/fa/Logotipo_da_TV_TEM_%282013%E2%80%932019%29.png", Globo SP 1 HD
+http://cdn-1.nxplay.com.br/TV_TEM_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" group-title="GLOBO" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/f/fa/Logotipo_da_TV_TEM_%282013%E2%80%932019%29.png", Globo SP 2 HD
+http://cdn-2.nxplay.com.br/TV_TEM_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" group-title="GLOBO" tvg-logo="https://seeklogo.com/images/R/rede-globo-logo-817F928B4F-seeklogo.com.png", Globo SP 5 HD
+https://cdn-3.nxplay.com.br/GLOBO_SP_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="GLOBO" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/1/1e/Logotipo_TV_Bahia.png", Globo Bahia HD
+http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" group-title="GLOBO" tvg-logo="https://imgur.com/waZJG1M.png",Globo SP 8 HD
+http://hls1.sua.tv:80/live/globosphd/s.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" group-title="GLOBO" tvg-logo="https://i.imgur.com/zldYz3t.png",Globo SP 9 HD
+http://cdn-3.nxplay.com.br/TV_TEM_TK/index.m3u8
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://archive.org/download/todd_20240415/todd_20240415.thumbs%2FAbriendo%20sets_001302.jpg",Abriendo sets
+https://archive.org/download/todd_20240415/Abriendo%20sets.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/todd_20240415/todd_20240415.thumbs%2FInside_001302.jpg",Inside
+https://archive.org/download/todd_20240415/Inside.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/todd_20240415/todd_20240415.thumbs%2FText%20game_000266.jpg",Text game
+https://archive.org/download/todd_20240415/Text%20game.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/todd_20240415/todd_20240415.thumbs%2FTodd_000558.jpg",Todd
+https://archive.org/download/todd_20240415/Todd.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/todd_20240415/todd_20240415.thumbs%2Funderground%20dating_002124.jpg",underground dating
+https://archive.org/download/todd_20240415/underground%20dating.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2FCunningham_001500.jpg",Cunningham
+https://archive.org/download/lover_202404/Cunningham.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2FEric%20Von%20Sydow_000747.jpg",Eric Von Sydow
+https://archive.org/download/lover_202404/Eric%20Von%20Sydow.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2FNEED%20from%20a%20Man_000309.jpg",NEED from a Man
+https://archive.org/download/lover_202404/NEED%20from%20a%20Man.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2FRickH_000325.jpg",RickH
+https://archive.org/download/lover_202404/RickH.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Flove%20drop_001500.jpg",love drop
+https://archive.org/download/lover_202404/love%20drop.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Flover_000549.jpg",lover
+https://archive.org/download/lover_202404/lover.mp4
+#EXTINF:-1 tvg-logo="None",metodo mistery
+https://archive.org/download/lover_202404/metodo%20mistery.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt2%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation_000058.jpg",pt2 Alex Allman s presentation from #ManTransformation
+https://archive.org/download/lover_202404/pt2%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt3%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation_000058.jpg",pt3 Alex Allman s presentation from #ManTransformation
+https://archive.org/download/lover_202404/pt3%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt4%20Alex%20Allman_000058.jpg",pt4 Alex Allman
+https://archive.org/download/lover_202404/pt4%20Alex%20Allman.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt5%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation_000058.jpg",pt5 Alex Allman s presentation from #ManTransformation
+https://archive.org/download/lover_202404/pt5%20Alex%20Allman%20s%20presentation%20from%20%23ManTransformation.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt6%20Alex_000058.jpg",pt6 Alex
+https://archive.org/download/lover_202404/pt6%20Alex.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/lover_202404/lover_202404.thumbs%2Fpt7_000058.jpg",pt7
+https://archive.org/download/lover_202404/pt7.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FBe%20a%20Natural_000117.jpg",Be a Natural
+https://archive.org/download/juggler_202404/Be%20a%20Natural.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FBrad%20Pee%20s%20Underground%20Club%20Game_000560.jpg",Brad Pee s Underground Club Game
+https://archive.org/download/juggler_202404/Brad%20Pee%20s%20Underground%20Club%20Game.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FFemale%20Psychology%20Exposed_000395.jpg",Female Psychology Exposed
+https://archive.org/download/juggler_202404/Female%20Psychology%20Exposed.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FHow%20to%20Same%20Night%20Lay_000117.jpg",How to Same Night Lay
+https://archive.org/download/juggler_202404/How%20to%20Same%20Night%20Lay.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FInfield%20Insider%20feat%20%20Royce_000710.jpg",Infield Insider feat  Royce
+https://archive.org/download/juggler_202404/Infield%20Insider%20feat%20%20Royce.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FInterview%20with%20Dan%20Bilzerian_000227.jpg",Interview with Dan Bilzerian
+https://archive.org/download/juggler_202404/Interview%20with%20Dan%20Bilzerian.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FJeffy%20Van%20Pull_000373.jpg",Jeffy Van Pull
+https://archive.org/download/juggler_202404/Jeffy%20Van%20Pull.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FJlaix%20and%20the%20Princess%20Full%20Text%20%2B%20Infield%20Breakdown_000784.jpg",Jlaix and the Princess Full Text + Infield Breakdown
+https://archive.org/download/juggler_202404/Jlaix%20and%20the%20Princess%20Full%20Text%20%2B%20Infield%20Breakdown.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FJuggler_001146.jpg",Juggler
+https://archive.org/download/juggler_202404/Juggler.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2FMake%20Her%20Chase%20You_000378.jpg",Make Her Chase You
+https://archive.org/download/juggler_202404/Make%20Her%20Chase%20You.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2Fhow%20a%20man%20meets%20a%20woman_000059.jpg",how a man meets a woman
+https://archive.org/download/juggler_202404/how%20a%20man%20meets%20a%20woman.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/juggler_202404/juggler_202404.thumbs%2Fhow%20to%20ACTUALLY%20be%20an%20Alpha%20Male_000117.jpg",how to ACTUALLY be an Alpha Male
+https://archive.org/download/juggler_202404/how%20to%20ACTUALLY%20be%20an%20Alpha%20Male.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2001_000117.jpg",Emotional Technique 01
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2001.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2002_000117.jpg",Emotional Technique 02
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2002.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2003_000117.jpg",Emotional Technique 03
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2003.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2004_000058.jpg",Emotional Technique 04
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2004.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2005_000117.jpg",Emotional Technique 05
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2005.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02_202404/new-code-02_202404.thumbs%2FEmotional%20Technique%2006_000058.jpg",Emotional Technique 06
+https://archive.org/download/new-code-02_202404/Emotional%20Technique%2006.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F01%20Viernes_000613.jpg",01 Viernes
+https://archive.org/download/20-domingo/01%20Viernes.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F02%20%20Viernes_000426.jpg",02  Viernes
+https://archive.org/download/20-domingo/02%20%20Viernes.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F03%20Viernes_000106.jpg",03 Viernes
+https://archive.org/download/20-domingo/03%20Viernes.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F04%20Viernes_000128.jpg",04 Viernes
+https://archive.org/download/20-domingo/04%20Viernes.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F05%20Viernes_000474.jpg",05 Viernes
+https://archive.org/download/20-domingo/05%20Viernes.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F06%20S%C3%A1bado_000890.jpg",06 Sábado
+https://archive.org/download/20-domingo/06%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F07%20S%C3%A1bado_000090.jpg",07 Sábado
+https://archive.org/download/20-domingo/07%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F08%20S%C3%A1bado_000128.jpg",08 Sábado
+https://archive.org/download/20-domingo/08%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F09%20S%C3%A1bado_000368.jpg",09 Sábado
+https://archive.org/download/20-domingo/09%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F10%20S%C3%A1bado_000106.jpg",10 Sábado
+https://archive.org/download/20-domingo/10%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F11%20S%C3%A1bado_000615.jpg",11 Sábado
+https://archive.org/download/20-domingo/11%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F12%20%20S%C3%A1bado_000480.jpg",12  Sábado
+https://archive.org/download/20-domingo/12%20%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F13%20%20S%C3%A1bado_000373.jpg",13  Sábado
+https://archive.org/download/20-domingo/13%20%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F14%20%20S%C3%A1bado_000176.jpg",14  Sábado
+https://archive.org/download/20-domingo/14%20%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F15%20S%C3%A1bado_000405.jpg",15 Sábado
+https://archive.org/download/20-domingo/15%20S%C3%A1bado.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F16%20Domingo_000698.jpg",16 Domingo
+https://archive.org/download/20-domingo/16%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F17%20Domingo_000400.jpg",17 Domingo
+https://archive.org/download/20-domingo/17%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F18%20Domingo_000384.jpg",18 Domingo
+https://archive.org/download/20-domingo/18%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F19%20Domingo_000234.jpg",19 Domingo
+https://archive.org/download/20-domingo/19%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F20%20Domingo_000960.jpg",20 Domingo
+https://archive.org/download/20-domingo/20%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/20-domingo/20-domingo.thumbs%2F21%20%20Domingo_000160.jpg",21  Domingo
+https://archive.org/download/20-domingo/21%20%20Domingo.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2001_000117.jpg",New Code 01
+https://archive.org/download/new-code-02/New%20Code%2001.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2002_000117.jpg",New Code 02
+https://archive.org/download/new-code-02/New%20Code%2002.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2003_000117.jpg",New Code 03
+https://archive.org/download/new-code-02/New%20Code%2003.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2004_000058.jpg",New Code 04
+https://archive.org/download/new-code-02/New%20Code%2004.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2005_000058.jpg",New Code 05
+https://archive.org/download/new-code-02/New%20Code%2005.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2006_000117.jpg",New Code 06
+https://archive.org/download/new-code-02/New%20Code%2006.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/new-code-02/new-code-02.thumbs%2FNew%20Code%2007_000117.jpg",New Code 07
+https://archive.org/download/new-code-02/New%20Code%2007.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%201_000117.jpg",Master Chess 1
+https://archive.org/download/master-chess-6/Master%20Chess%201.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%202_000058.jpg",Master Chess 2
+https://archive.org/download/master-chess-6/Master%20Chess%202.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%203_000117.jpg",Master Chess 3
+https://archive.org/download/master-chess-6/Master%20Chess%203.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%204_000058.jpg",Master Chess 4
+https://archive.org/download/master-chess-6/Master%20Chess%204.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%205_000144.jpg",Master Chess 5
+https://archive.org/download/master-chess-6/Master%20Chess%205.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/download/master-chess-6/master-chess-6.thumbs%2FMaster%20Chess%206_000117.jpg",Master Chess 6
+https://archive.org/download/master-chess-6/Master%20Chess%206.mp4
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo RPC Curitiba
+https://8mwx.short.gy/RPCPR/index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo SC HD
+https://8mwx.short.gy/NSCTVSC/index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo RBS HD
+https://cr7v.short.gy/live7/GloboRS/Index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo BA HD
+https://transcoder.proxy.tokplay.com.br:443/videos/REDEGLOBO/format720p_REDEGLOBO.m3u8?ManoTV
+#EXTINF:-1 tvg-id="Globosp.br" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo
+https://cdn-1.nxplay.com.br/GLOBO_SP_TK/tracks-v2a1/mono.m3u8
+#EXTINF:-1 tvg-id="globo.tem.bauru.br" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo
+http://cdn-1.nxplay.com.br/TV_TEM_TK/index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo TV Mirante HD
+https://cr7v.short.gy/manotv/GloboTVMirante/Index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",Globo Juiz d Fora MG
+https://cr7v.short.gy/manotv/Juizdfora/Index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais Abertos",TV TEM SP HD
+http://cdn-1.nxplay.com.br/TV_TEM_TK/index.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://imgur.com/waZJG1M.png" group-title= "Canais Abertos",GLOBO SP
+https://8mwx.short.gy/GLOBOSP/index.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title= "Canais Abertos",GLOBO BA
+https://8mwx.short.gy/GLOBOBA/index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo RPC TV Maringa HD
+http://s.apkwuv.xyz:80/demopadexchange/demopad/162703
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo Anhanguera HD
+http://s.apkwuv.xyz:80/demopadexchange/demopad/83270
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo TV Mirante HD
+http://s.apkwuv.xyz:80/demopadexchange/demopad/83498
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo TV Liberal Belém 
+http://s.apkwuv.xyz:80/demopadexchange/demopad/83506
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo Juiz d Fora MG
+http://s.apkwuv.xyz:80/demopadexchange/demopad/162682
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo MG HD
+http://185.150.190.225:16263/
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo Verdes Mares 
+http://s.apkwuv.xyz:80/demopadexchange/demopad/162711
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo Nordeste FHD
+http://s.apkwuv.xyz:80/demopadexchange/demopad/162791
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo SP HD
+https://cdn-1.nxplay.com.br/GLOBO_SP_TK/index.m3u8
+#EXTINF:-1 tvg-id="Globo SP" tvg-name="Globo SP" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | ABERTO",Globo SP HD [Alter]
+http://hls1.sua.tv:80/live/globosphd/s.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/zldYz3t.png" group-title="Canais | ABERTO",TV TEM SP HD
+http://cdn-1.nxplay.com.br/TV_TEM_TK/index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/LiXkiAZ.png" group-title="Canais | ABERTO",Globo ES HD
+http://200.194.238.229:8383/live/globosupernet/index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/h4PzuTy.png" group-title="Canais | ABERTO",Globo RPC Curitiba
+https://8mwx.short.gy/RPCPR/index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/sGlWS38.png" group-title="Canais | ABERTO",Globo SC HD
+https://8mwx.short.gy/NSCTVSC/index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/Lmi9NLU.png" group-title="Canais | ABERTO",Globo RBS HD
+https://cr7v.short.gy/live7/GloboRS/Index.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://i.imgur.com/k4fl1wF.png" group-title="Canais | ABERTO",Globo BA HD
+https://transcoder.proxy.tokplay.com.br:443/videos/REDEGLOBO/format720p_REDEGLOBO.m3u8?ManoTV
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO PE HD
+http://15.235.15.230:14478/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO PE HD 2
+http://15.235.15.230:14492/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO PR HD
+http://15.235.15.230:14485/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOGO PB HD
+http://15.235.15.230:14495/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO MS SD
+http://15.235.15.230:14502/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SE HD
+http://15.235.15.230:14506/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO MS HD
+http://15.235.15.230:14504/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SP HD 2
+http://15.235.15.230:14508/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO INTERIOR SD
+http://15.235.15.230:14513/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SP HD
+http://15.235.15.230:14512/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SP SD 2
+http://15.235.15.230:14510/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SP FHD 2
+http://15.235.15.230:14516/
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SP FHD
+http://15.235.15.230:14783/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/f/fa/Logotipo_da_TV_TEM_%282013%E2%80%932019%29.png" group-title="Canais | GLOBO",➾ Globo SP (TV TEM 2).ᴴᴰ
+http://cdn-2.nxplay.com.br/TV_TEM_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/f/fa/Logotipo_da_TV_TEM_%282013%E2%80%932019%29.png" group-title="Canais | GLOBO",➾ Globo SP (TV TEM 3).ᴴᴰ
+http://cdn-3.nxplay.com.br/TV_TEM_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/f/fa/Logotipo_da_TV_TEM_%282013%E2%80%932019%29.png" group-title="Canais | GLOBO",➾ Globo SP (TV TEM 4).ᴴᴰ
+http://cdn-4.nxplay.com.br/TV_TEM_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://seeklogo.com/images/R/rede-globo-logo-817F928B4F-seeklogo.com.png" group-title="Canais | GLOBO",➾ Globo SP (Link3).ᴴᴰ
+https://cdn-3.nxplay.com.br/GLOBO_SP_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://seeklogo.com/images/R/rede-globo-logo-817F928B4F-seeklogo.com.png" group-title="Canais | GLOBO",➾ Globo SP (Link4).ᴴᴰ
+https://cdn-4.nxplay.com.br/GLOBO_SP_TK/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/1/1e/Logotipo_TV_Bahia.png" group-title="Canais | GLOBO", ➾ Globo Bahia.ᴴᴰ ✅
+http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/1/1e/Logotipo_TV_Bahia.png" group-title="Canais | GLOBO", ➾ Globo Bahia.ᴴᴰ ✅✅
+https://3d30a042367404fa.mediapackage.sa-east-1.amazonaws.com/out/v1/c5e55defd54a4e57a9dd4469bf889073/index_4.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/NSC_TV_logo.png" group-title="Canais | GLOBO",➾ Globo SC NSC (Blumenau).ᴴᴰ
+http://89.45.12.66:8080/live/toptv_207670/LgNXVm3I/14161.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/NSC_TV_logo.png" group-title="Canais | GLOBO",➾ Globo SC NSC (Chapeco FHD)
+http://190.102.43.113/Formigatv/offilinetv2806/1541684.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/NSC_TV_logo.png" group-title="Canais | GLOBO",➾ Globo SC NSC (Chapeco HD)
+http://190.102.43.113/Formigatv/offilinetv2806/1541685.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOB PI
+http://15.235.15.230:14785/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO GO
+http://15.235.15.230:14757/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | TESTE",GLOBO CE SD
+http://15.235.15.230:14517/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO CE
+http://15.235.15.230:14519/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO PB
+http://15.235.15.230:14488/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SC HD
+http://15.235.15.230:14464/
+#EXTINF:-1 tvg-id="RedeGlobo.br" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO",GLOBO SC HD 2
+http://15.235.15.230:14462/
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/b/b8/Logotipo_da_Rede_Liberal.png" group-title="Canais | GLOBO",➾ TV Liberal Belem (Globo)
+http://89.45.12.66:8080/live/toptv_207670/LgNXVm3I/14146.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/7/77/Logotipo_da_TV_Centro_Am%C3%A9rica.png" group-title="Canais | GLOBO", ➾ Globo Centro America (Cuiaba)
+http://89.45.12.66:8080/live/toptv_207670/LgNXVm3I/36283.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/4/4b/Globo_TV_America_1999.png/revision/latest?cb=20130621143303" group-title="Canais | GLOBO", ➾ GLOBO TV CENTRO AMERICA HD
+http://190.102.43.113:80/Formigatv/offilinetv2806/1541727.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO", ➾ Globo PA *
+http://190.102.43.113:80/Formigatv/offilinetv2806/320566.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/4/42/Rede_Globo_logo.png" group-title="Canais | GLOBO", ➾ Globo PA **
+http://190.102.43.113:80/Formigatv/offilinetv2806/320567.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/5/5b/Logotipo_da_TV_Morena.png/200px-Logotipo_da_TV_Morena.png" group-title="Canais | GLOBO",➾ Globo MS
+https://3d30a042367404fa.mediapackage.sa-east-1.amazonaws.com/out/v1/c5e55defd54a4e57a9dd4469bf889073/index_4.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/2/22/Logotipo_da_InterTV.png/200px-Logotipo_da_InterTV.png" group-title="Canais | GLOBO",Globo RN *
+http://190.102.43.113:80/Formigatv/offilinetv2806/320570.m3u8
+#EXTINF:-1 tvg-id="Globo" tvg-name="Globo" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/thumb/2/22/Logotipo_da_InterTV.png/200px-Logotipo_da_InterTV.png" group-title="Canais | GLOBO",Globo RN **
+http://190.102.43.113:80/Formigatv/offilinetv2806/320569.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cf/TV_Gazeta_ES_1976.svg/revision/latest?cb=20200131054039" group-title="Canais | GLOBO", ➾ Globo ES - Gazeta
+http://190.102.43.113:80/Formigatv/offilinetv2806/320563.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cf/TV_Gazeta_ES_1976.svg/revision/latest?cb=20200131054039" group-title="Canais | GLOBO", ➾ Globo ES - Gazeta
+http://190.102.43.113:80/Formigatv/offilinetv2806/320564.m3u8
+#EXTINF:-1 tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo SP HD
+https://cdn-3.nxplay.com.br/GLOBO_SP_TK/index.m3u8
+#EXTINF:-1 tvg-id="Globo SP" tvg-name="Globo SP" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo SP HD Alternativo
+http://hls1.sua.tv:80/live/globosphd/s.m3u8
+#EXTINF:-1 tvg-id="TVGloboBrasilia.br" tvg-name="Globo SP" tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo Brasília HD
+http://xcui.vitvabc.xyz:8880/laok300/8pEZjdeMPad7/32370
+#EXTINF:-1 tvg-id="Globo"  tvg-logo="https://i.imgur.com/zldYz3t.png" group-title="Canais | GLOBO",TV TEM SP HD
+http://cdn-3.nxplay.com.br/TV_TEM_TK/index.m3u8
+#EXTINF:-1 tvg-id="Globo"  tvg-logo="https://imgur.com/waZJG1M.png" group-title="Canais | GLOBO",Globo RPC Curitiba HD
+http://xcui.vitvabc.xyz:8880/laok300/8pEZjdeMPad7/32266
+#EXTINF:-1 tvg-id="Globo"  tvg-logo="https://i.imgur.com/k4fl1wF.png" group-title="Canais | GLOBO",Globo BA HD
+https://cr7v.short.gy/manoiptvfree/REDEBA/Index.m3u8
+#EXTINF:-1 tvg-id="altolitoral.br" tvg-name="GLOBO INTER TV RJ FHD ( REGIAO SERRANA)" tvg-logo="https://images2.imgbox.com/a8/9a/vK6Bkhet_o.png" group-title="GLOBO",GLOBO INTER TV RJ FHD ( REGIAO SERRANA)	
+http://bccdn.xyz:80/4387701968208/945823895687/390
 #EXTM3U
 #EXTM3U url-tvg="https://www.open-epg.com/files/serbia1.xml.gz"
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rai_1_-_Logo_2016.svg/250px-Rai_1_-_Logo_2016.svg.png",RAI 1
@@ -2797,50 +3136,50 @@ https://ythls-v3.onrender.com/channel/UCTGoE7LoZCEI1FuwJ2lLqqw.m3u8
 #EXTINF:-1 group-title="Reality Show's Live" tvg-logo="None" tvg-id="Zadruga live 1.rs" ,Live Chat Zadruga Uzivo Elita 8 24/7
 https://ythls-v3.onrender.com/channel/UCVklt1DoNwbIBa3_TPwEg_Q.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 RS - Assista aos telejornais da RBS TV online | Globoplay
-https://live-as-11-31.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTEtMzEudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNjAyLCJpYXQiOjE3MzYzNjUyMDIsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGR2cj0xMjAsaT0yKS9nbG9iby1yczEvcGxheWxpc3QubTN1OCJ9.zq1I3z19Ga5UMsvB87coY31mU_4-jNI73dwhJJowvBdMu22_E8f36Vadysnul8A3PYbGpuUewYMuPCC9jlO9ppCt50HVE6Kvsrsa-lQ4enSjWaK2chcL6h4c9OnXgdc6sKOb4ESZpOSMfRTeeIaqtOde1yzcK-Vd3YzqNyaS8t9MMevIQd4JDuv_KlpW92l8UB1D6FvvjxhqQ_XLghTtYnixYQCIPsf9gRFOHhU7sHrl9qCXJ8q2cSa2fnlVQzftKUggTLOkB4uYIsmxN5RZJ47TZute-B3hizq-KT9lo1z0G8Zom_HY36xyjLouInITKiSi2egFn-VgMYXR482bog/nu/f(dvr=120,i=2)/globo-rs1/playlist.m3u8
+https://live-as-10-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTAtMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNTY3LCJpYXQiOjE3MzYzNjcxNjcsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGR2cj0xMjAsaT0yKS9nbG9iby1yczEvcGxheWxpc3QubTN1OCJ9.K0wKvrBIV3nI_zCC49Fr6pXQaQDTR0nKOmb2dCkTuPNBLUh05JLO_0xOsEdCPg0ARQ1ogxlZYblTWdzeYwl3gF-rrGUNWAxNLDUEt7k_KrrfXWB2k9Zy-jrt4_YISA5mDK8HDCvLgxIm3_xsw3KTq4Kj2YuS9SrioyAxuJVKWMqv31t81UFMsI-hhLHK8oL5TdO-6UMCAwNa_cO1uMDi4EDfQ1-nilydgQ2Fpk0CWM0fVBASGOb2IFx5ncw0UuPOf7dDWjdzz_OGxtEJt_gGEMYADb0aWQkRCt_xzV4T9JJ2nQgWMRySJicZi6n-4g1GSlGM2rB4gs9Ke3wtT8yCHA/nu/f(dvr=120,i=2)/globo-rs1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 PA - Assista aos telejornais da TV Liberal online | Globoplay
-https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNjM0LCJpYXQiOjE3MzYzNjUyMzQsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dmxpYmVyYWwvcGxheWxpc3QubTN1OCJ9.JoKDqVI-9pkpjSsiqXGcpwaanT0T3qGXQKrtDhmuTRitxEk9UyeNlQnhHpDfGs6NEnASqPDLb2krybdCEhjXq498myZ5QDLqklq46W1ZZzrdqQxouSW7anQVT7ho1KYwnIbEOon8iJXhWLtPAwzrmv5UtJbIETwp71hKNWCdvcKIl_c4WZnL9gJ_GHbkzsxwk8HZWzojtiUBKrve_TpOjZZY0VWgEzcUpcimJXNbgrjhlu7lsfGj8F6X-NSFgQeA-RFtfuI0fsSwiMIIeCfhVTgU_JLU8zM-kmGjwTC82qrLKkHZlsAnCvQJTifyRXe6SsSsrC-JEP5KG6jmcli4Ng/nu/f(bMin=558976)/tvliberal/playlist.m3u8
+https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNTk3LCJpYXQiOjE3MzYzNjcxOTcsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dmxpYmVyYWwvcGxheWxpc3QubTN1OCJ9.ajMRIu_UBx_Ei4Mb6dWZk9-R5eqAS-RN_7rIQU_fgAjAgEKaQ7knOPO7N3VkDk7kGCqkXQ90NymehVqDIfMoztj9-ys1VBk3A0nL2F26TJHVZJPWK_92TGlgfCTxgnZ9BFAWz9BdDOg54cQ4o1yuH8wrUE0v2TDHjBvYnWZjvWSEG8peaJKq9UL_NBVIi8blfscGm2wcUjFLycKudB3Uf3JJSNYaDZNO8UyXRhHvbdQCOuRbCU6vjtSmWVGpZiicdqEgfxkyZmYWPECb7DifHoXsIpNhpgFSNwRxv6YDJ_g5AVOEmtBDVhxYBY3raSx-to8DGVkTaXmvgVeaPcV6CA/nu/f(bMin=558976)/tvliberal/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 AC - Assista aos jornais da Rede Amazônica online | Globoplay
-https://live-as-10-02.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTAtMDIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNjY0LCJpYXQiOjE3MzYzNjUyNjQsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvcmVkZWFjL3BsYXlsaXN0Lm0zdTgifQ.v7JtCZDWodBu38sggU0UnzF7IAKhBSJeOAYSUKiMwjQKitc1C6ERTBoN4m-6xnRDdy1eL-vKA9xSK1HC4jm_QKbwxbb_Qv6l2a2R3WvtOO0vFb-3lRg3HcMcu6TI9jTRyySH4IxmxtajopEjuDmDfyRnfUaUrlXAtvcM8yesUT9BFDJ4u4W8HY2o7QH1mEB6B5hLQrmPxDH3kK0tUwzMOKEaMYCGFFd4Ae-JBSXEt1UWx5N4dz9yjSBN8BYLHlSrlyOkyecvG_ullhavV5KPQUmNLbIWv-E9lV7pBWe3Kom1bKPAV42p8LnZHlCk2wgrWSnVqKiOFPmLPIK1bWTj8w/nu/f(i=2)/redeac/playlist.m3u8
+https://live-as-10-02.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTAtMDIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNjI4LCJpYXQiOjE3MzYzNjcyMjgsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvcmVkZWFjL3BsYXlsaXN0Lm0zdTgifQ.HxQeYGmldF4-ZGQvFj5Yne_yXqCzuHyHRW1w57QQXPDedYUI9oJvtItBdUaqjpAyz3gu0y6nGJ29TV0VWPU-2VQc8UR5a0wPBasEETj7YBHVfds6nKs-xylDuYNprmCgmNvJ6jA50FUpMgOk7rw8c7H7y_yksczxMiUlbVZWkZtZ-7k9KyWYcyM3JQO-5IfmtKMB5txloRiQLsCx5y5098kZujo2x7u7r04NupUAA6tEWu0quT92j5ZD6EOy04HiHVriRvm1Zq2rTKNYWmd0KjvxZtZLq3G5qLfLnJRO4TJcn0WRxoYVwH2_425ah97vLl9iWZdz3N9Y1GCjzund8A/nu/f(i=2)/redeac/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 CE - Assista à TV Verdes Mares ao vivo online | Globoplay
-https://live-as-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNjk1LCJpYXQiOjE3MzYzNjUyOTUsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dnZtY2Vmb3IvcGxheWxpc3QubTN1OCJ9.NnXIYD5K5GjiSx06wFZXnNqRYz0WTk7HePewm-y13bM0Mv8Txp9XbHgRtQjMb-nzPgF_YWzXIQu5tmZu6lU5G89yIvij32vldMC9RH0xPAaGlVbu5gHrNJ_Ev81pi_BTrGJF2S6YoCoftrnkRn1lg9qbJAM34LMwjnjBMer6n-IC8YpJ_gwXj5s2AuYe6RfCvUvt06slu9GPqZTRrQ4kz3DoDduHVk95cElfCHA6R_6uKcfXS1Y63SDwxmkTGMk-BGMUQ-Aby_fgqe--pj1Uo1z8AOriJDi6AwMUYwx2mkNtDpC5-75TiHwqiOlNpzZwCOWe6vqo4gY-KP_MO6QF0w/nu/f(bMin=558976)/tvvmcefor/playlist.m3u8
+https://live-as-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNjYwLCJpYXQiOjE3MzYzNjcyNjAsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dnZtY2Vmb3IvcGxheWxpc3QubTN1OCJ9.Tx_jKosDW9VX0uYAKIqWfqL7pz3Ib_03uMKOa3hC8CVRo-_DVAjf12lwC5ThdfObxK1XVUebVe63mz55nd3M60Y5dtqT8YWLlu3JN4CXPhlyiXyZssXMOEqezuQMj0kwiNOH1p0kiGMiaek4TWIS6fTVTnTMOnpBPuAtZEw_btkf-YOMQqkingH1ZaIxyZgucyC6ojZaPaIF2mhf23zJBrtuA3ZCFwQe_jEDRM_p_aG1LIWMjmnkdWkI3x8eUgTPUfG0GFxKJskQk-4mQenvxw-2feYGw1WSZ3mod5N37C8doTb65uhJeFcKbYl5l-tqdsnFFnye1N9sK8kEezwoTg/nu/f(bMin=558976)/tvvmcefor/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s2.glbimg.com/7sLV4OQ1BuefK4KTbOFsixr20vo=/16x16/i.s3.glbimg.com/v1/AUTH_d975fad146a14bbfad9e763717b09688/internal_photos/bs/2021/z/M/JpDF4cRs6ZHPip8YMKNw/cbn.png" group-title="GLOBO AO VIVO", CBN | Estúdio ao Vivo - SP
-https://live-as-01-01.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDEtMDEudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNzI3LCJpYXQiOjE3MzYzNjUzMjcsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnNwMjRoYS9wbGF5bGlzdC5tM3U4In0.BapnzU-F2r9PPxBMfKooH64666zsUu7DPk4F-pvTQy87ZIal-O2SvoxrxoCpWOUHT9qmsO3UYPYAgWx1VbkPX0XQHQcL_7xBwC0IxMkZgY2_xXlJXnycwh4TYc9wk7z9oieXW94bApgbg7O1JeNfXjjx5gtwGRcBSuGwo51oWV0zdjmm1RXH5rqlEsd-sYrNXmDIpn8oyqnICSDJrDy6pmlU_pcA4W2-4GoFLcY3XL4rQyCoQhYmCRwpCQ8PVMIkHIJ0Mm5pfSm4szl8pfVL58ZuPPqz2Ji8Q0Am9iOTL6HZHYq1tOK4YzcKprr4fl8lG6xVWI1kJ1cWtagcBofWpA/nu/f(bMin=558976,dvr=120)/cbnsp24ha/playlist.m3u8
+https://live-as-02-01.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMDEudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNjkyLCJpYXQiOjE3MzYzNjcyOTIsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnNwMjRoYS9wbGF5bGlzdC5tM3U4In0.mjJPgPXzy2llyCU8LRjk98kirUFdyBnOFkOs1nnD-DOgmXBonfFWV3A76mUdztHZFBXGQ1sx0i8M0mpfoxB-vue7PEmR6VCkt5lYBbDGEoqAZ0Cz7iFsA6gHPprfu6VxZijPVq8dUMU5R7g24RyzlHCS8x7OoGHP4rbi6xPS1SL3v-k0K3RTL-YXdzK7IELA5otr-17RYHs3BmnNVBR9kz0GiWhbyfOYAMZ5jbnhdBRcrcO5wNthf_iwTS_70OqkPT3Dzt99cpqKcBmP7PVW-jA4xfykRq4InbvsRu-aX-6Lwzsbuo1h3n_zf0C7efP_0_EdFHbS4z4w2ffGq5PQrA/nu/f(bMin=558976,dvr=120)/cbnsp24ha/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s2.glbimg.com/7sLV4OQ1BuefK4KTbOFsixr20vo=/16x16/i.s3.glbimg.com/v1/AUTH_d975fad146a14bbfad9e763717b09688/internal_photos/bs/2021/z/M/JpDF4cRs6ZHPip8YMKNw/cbn.png" group-title="GLOBO AO VIVO", CBN | Estúdio ao Vivo - RJ
-https://live-as-08-16.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTYudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUxNzYwLCJpYXQiOjE3MzYzNjUzNjAsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnJqMjRoYS9wbGF5bGlzdC5tM3U4In0.LyiC6pW_3cWMaDGskGBrjq00l1TJqWXaf_88C00uhe1PmB1aC0GTsPWPWPxQ2PL9QKm0IJJt68ydHUsQtVXQ-gXzl6l6vbWocjeBN0e74HnEEfE3DJSiwM63HuhqUTEKDguZ7OVngZeO6CuvDAHLKxq5q53usk04uLv6z271ASL8wpiqQgfSd1Cb-MGp5ZKeZI8b8BHOffXb7OsSnShJ35qCaU5Z-nIHLMc4w17M7XadqGMMAO3QnIy-Su1pkNu8NDycil3cl8im6OMx7U-g2SyLylrru3SIjeF-RW9W8voDxq4AX6aTKnehxMTFxtAKr_Kdm3QrD3g5h1RSw6NrGw/nu/f(bMin=558976,dvr=120)/cbnrj24ha/playlist.m3u8
+https://live-as-09-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDktMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NDUzNzI1LCJpYXQiOjE3MzYzNjczMjUsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnJqMjRoYS9wbGF5bGlzdC5tM3U4In0.kp75ewG8Cu6x53zNLELDid8hMEDxdtlV7TIJ3jFdZDbN_0jqOiu1_gwBw91LJy4PjKEdq1wtqYhqVw45StE6dqyguUz7IN7FZ5JGufG8djiBFsjsBk_5iAa3yr36gUvroE9wQpXFDunGAaK8fDGWe2PuDWYtrz_HW8uf4CwQKCJqr0jOAVPjq1RAOUNBQXHGVNfYZe98ZdYr-uRfKCmTPUUzvT4sEi-afEplwTQvpD6fHB6YgsYog4TGSTgkQpvDBZDcBqhrBUaaeTrMER3fGQpgJ35AF8p5MTyqO7KX7BK5XBpyq2G_z28jFQTMXi1ZMX9RZWccTXIE9i6i77EgQw/nu/f(bMin=558976,dvr=120)/cbnrj24ha/playlist.m3u8
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
+https://StreamCdnG21-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=bGh5lfG0a1Z95gnfWkSUFgeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
+https://StreamCdnG21-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736262428657_1736262362475.png" group-title="VOD IT",La volta buona - Puntata del 07/01/2025
 https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/La_volta_buona/25165202_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736262428657_1736262362475.png" group-title="VOD IT",Puntata del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=FlykHNAMy0dTxCQkWpPpPlussObdAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736262428657_1736262362475.png" group-title="VOD IT",La volta buona - Puntata del 07/01/2025
 https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/La_volta_buona/25165202_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
-https://StreamCdnG21-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/Storie_italiane/25178867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=bGh5lfG0a1Z95gnfWkSUFgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178872.png" group-title="VOD IT",Storie Italiane. Cecilia Sala è libera, sta rientrando in Italia
-https://StreamCdnG21-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 19:00 del 07/01/2025
 https://StreamCdnG17-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/TG3_RAIPLAY/25168656_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 19:00 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=L6jZ8wPr92aP7VUF1mBKMweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 19:00 del 07/01/2025
-https://StreamCdnG17-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/TG3_RAIPLAY/25168656_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnG17-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/TG3_RAIPLAY/25168656_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
+https://StreamCdnG7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Playlist24/25179570_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HssSlash9L64pPpPlussQZTPsXCTXSpEuDQeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
+https://StreamCdnG7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Playlist24/25179570_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 07/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25163298_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25163298_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0pgDIJt3Nzhb9trW5BRDdAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 07/01/2025
 https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25163298_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
-https://StreamCdnG7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/Playlist24/25179570_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HssSlash9L64pPpPlussQZTPsXCTXSpEuDQeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179573.png" group-title="VOD IT",Tg1. La liberazione di Cecilia Sala, i dettagli dell'operazione
-https://StreamCdnG7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/Playlist24/25179570_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736255746018_1736255684501.png" group-title="VOD IT",Ore 14 - Puntata del 07/01/2025
-https://StreamCdnG19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25164685_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnG19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/Ore_14/25164685_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736255746018_1736255684501.png" group-title="VOD IT",Puntata del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ntpPPLJ91KR3AssSlashTy00ag3geeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736255746018_1736255684501.png" group-title="VOD IT",Ore 14 - Puntata del 07/01/2025
@@ -2851,40 +3190,40 @@ https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25184201_,1800,2400
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=S3RY5AssSlashakUp1f8hx2G1C2QeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736350930074_Tg1SpecialeRientrodiCeciliaSalainItalia_0801202516.00.00_RAIPLAY_VIDEOCUT_CLIPREAL_1800_3.png" group-title="VOD IT",Tg1. La prima foto di Cecilia Sala rientrata in Italia
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25184201_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736345540508_sci%20alpino%20maschile%20slalom%20vinatzer%202023.jpg" group-title="VOD IT", Madonna di Campiglio: Slalom (I manche)
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pLu7WfYyPI8FueFMsIT3OgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/07/01/1625144053268_fattore%20umano%202048x1152.jpg" group-title="VOD IT",Leaving Gaza - Il Fattore Umano - Puntata del 07/01/2025
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Il_fattore_umano_prog/25171374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Il_fattore_umano_prog/25171374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/07/01/1625144053268_fattore%20umano%202048x1152.jpg" group-title="VOD IT",Leaving Gaza
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=D0mB64o52Q3QVNfNUb3GtAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/07/01/1625144053268_fattore%20umano%202048x1152.jpg" group-title="VOD IT",Leaving Gaza - Il Fattore Umano - Puntata del 07/01/2025
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Il_fattore_umano_prog/25171374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Il_fattore_umano_prog/25171374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25169836_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SIa6tXt22bwVyv9fOBRZIAeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25169836_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179820.png" group-title="VOD IT",L'oroscopo di Paolo Fox - I Fatti Vostri 08/01/2025
 https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25179799_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25179820.png" group-title="VOD IT",L'oroscopo di Paolo Fox -   08/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=V04yc9iSXxFdxESOBWKMgAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25179820.png" group-title="VOD IT",L'oroscopo di Paolo Fox - I Fatti Vostri 08/01/2025
 https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25179799_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25169836_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SIa6tXt22bwVyv9fOBRZIAeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 20:00 del 07/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25169836_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736274582813_Geo%207-1.jpg" group-title="VOD IT",Puntata del 07/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Pl3aD8pPpPlusskejJE7jGLjF3utgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 12:00 del 07/01/2025
 https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/TG3_RAIPLAY/25161239_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 12:00 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YCG4iePCEznW8A5HtASegweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172758681_2048x1152.jpg" group-title="VOD IT",Tg3 ore 12:00 del 07/01/2025
-https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/TG3_RAIPLAY/25161239_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/TG3_RAIPLAY/25161239_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 08:00 del 07/01/2025
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25159042_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 08:00 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=cdksZnWbRm7ssSlashceslZvr5pweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 08:00 del 07/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25159042_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25159042_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736341977776_1736341901158.png" group-title="VOD IT",Ore 14 - Puntata del 08/01/2025
-https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25183430_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/Ore_14/25183430_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736341977776_1736341901158.png" group-title="VOD IT",Puntata del 08/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=3tssSlashHNvkApEIC0WssSlashJc0sfYAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736341977776_1736341901158.png" group-title="VOD IT",Ore 14 - Puntata del 08/01/2025
@@ -2900,7 +3239,7 @@ https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736250227595_1736250917820.png" group-title="VOD IT",Puntata del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=xCqwhfzJHk8Xt9rTaQcQ0geeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736250227595_1736250917820.png" group-title="VOD IT",E' sempre mezzogiorno - Puntata del 07/01/2025
-https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25162254_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25162254_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736331938146_1736331932695.png" group-title="VOD IT",Elisir - Puntata del 08/01/2025
 https://StreamCdnG22-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/elisir/Elisir_EP_Puntate/25178800_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736331938146_1736331932695.png" group-title="VOD IT",Puntata del 08/01/2025
@@ -2914,31 +3253,31 @@ https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SbZc0WAVOMt8fbBRP
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736245127691_1736245109391.png" group-title="VOD IT",I Fatti Vostri - Puntata del 07/01/2025
 https://StreamCdnM6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25161622_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/03/1735909703929_VDM-Tandoi-7gen.jpg" group-title="VOD IT",Via Dei Matti n°0 - Francesca Tandoi - Puntata del 07/01/2025
-https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Via_dei_Matti_n_0/25169846_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Via_dei_Matti_n_0/25169846_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/03/1735909703929_VDM-Tandoi-7gen.jpg" group-title="VOD IT",Francesca Tandoi - 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=jAdnu1QwdDvCjpPpPlusssHJQyxhAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/03/1735909703929_VDM-Tandoi-7gen.jpg" group-title="VOD IT",Via Dei Matti n°0 - Francesca Tandoi - Puntata del 07/01/2025
 https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Via_dei_Matti_n_0/25169846_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 13:00 del 07/01/2025
-https://StreamCdnG5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/TG2_RAIPLAY/25162236_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/TG2_RAIPLAY/25162236_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 13:00 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=TJXtGPH2iyeOKqxSnIUleAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 13:00 del 07/01/2025
 https://StreamCdnG5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/TG2_RAIPLAY/25162236_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736278854353_1736278848199.png" group-title="VOD IT",Il cavallo e la torre - Puntata del 07/01/2025
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Il_cavallo_e_la_torre/25170009_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Il_cavallo_e_la_torre/25170009_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736278854353_1736278848199.png" group-title="VOD IT",Differenza - 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=MLessSlashafk6F73xsiGd4PppPpPluss7QeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736278854353_1736278848199.png" group-title="VOD IT",Il cavallo e la torre - Puntata del 07/01/2025
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Il_cavallo_e_la_torre/25170009_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25163637.png" group-title="VOD IT",Monza, accoltella a morte il compagno dopo una lite: fermata - Ore 14 del 07/01/2025
-https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25163620_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25163637.png" group-title="VOD IT",Monza, accoltella a morte il compagno dopo una lite: fermata - 07/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uhIS49zeQqRL9hGhXRv7nweeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25163637.png" group-title="VOD IT",Monza, accoltella a morte il compagno dopo una lite: fermata - Ore 14 del 07/01/2025
-https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25163620_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Il_cavallo_e_la_torre/25170009_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736364123592_TELEGIORNALE_0801202520.00.00_RAIPLAY_VIDEOCUT_CLIPREAL_1800_1.png" group-title="VOD IT",Tg1. Cecilia Sala, le immagini dell'abbraccio al compagno e ai genitori
+https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Playlist24/25187954_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736364123592_TELEGIORNALE_0801202520.00.00_RAIPLAY_VIDEOCUT_CLIPREAL_1800_1.png" group-title="VOD IT",Tg1. Cecilia Sala, le immagini dell'abbraccio con i genitori
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=eoqjRpPpPlussWZUX96nDYOEV8WRQeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736364123592_TELEGIORNALE_0801202520.00.00_RAIPLAY_VIDEOCUT_CLIPREAL_1800_1.png" group-title="VOD IT",Tg1. Cecilia Sala, le immagini dell'abbraccio al compagno e ai genitori
+https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/Playlist24/25187954_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 08/01/2025
-https://StreamCdnG2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/News_in_english/25183696_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/News_in_english/25183696_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 08/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=GhnhmQssSlashypZ9LHrYgmSbUAgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 08/01/2025
@@ -2949,6 +3288,8 @@ https://StreamCdnG5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/R
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rAdMeX0cbWF2gLjwx8qDZAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25176646.png" group-title="VOD IT",Il Fattore Umano. Noa: "La mia battaglia per la pace in Medio Oriente"
 https://StreamCdnG5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/Playlist24/25176643_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736274582813_Geo%207-1.jpg" group-title="VOD IT",Puntata del 07/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Pl3aD8pPpPlusskejJE7jGLjF3utgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172432521_2048x1152.jpg" group-title="VOD IT",Tg3 Linea Notte del 07/01/2025
 https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg3/linea_notte/25158008_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/19/1616172432521_2048x1152.jpg" group-title="VOD IT",Tg3 Linea Notte del 07/01/2025
@@ -2956,13 +3297,19 @@ https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=4aKqUpPpPlussvFei
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/19/1616172432521_2048x1152.jpg" group-title="VOD IT",Tg3 Linea Notte del 07/01/2025
 https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg3/linea_notte/25158008_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736325812804_1734703002193_rai%20giubileo.jpg" group-title="VOD IT",La Rai per il Giubileo: 10-16 gennaio
-https://StreamCdnM2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_nologo_nogeo/25177438_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnM2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/prod_extra_nologo_nogeo/25177438_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736325812804_1734703002193_rai%20giubileo.jpg" group-title="VOD IT",La Rai per il Giubileo: 10-16 gennaio
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=xkLGsHNUKniTajMriSbrXQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736325812804_1734703002193_rai%20giubileo.jpg" group-title="VOD IT",La Rai per il Giubileo: 10-16 gennaio
 https://StreamCdnM2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_nologo_nogeo/25177438_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736322486541_agor.jpg" group-title="VOD IT",Trump di lancio - Agorà
+https://StreamCdnG2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre_2/AGORA/Agora_EP_Puntate/25177391_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736322486541_agor.jpg" group-title="VOD IT",Trump di lancio - 08/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=KZr5c5jNYt3GNelaKpckUweeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736322486541_agor.jpg" group-title="VOD IT",Trump di lancio - Agorà
+https://StreamCdnG2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre_2/AGORA/Agora_EP_Puntate/25177391_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/01/05/1609868778126_2048x1152.jpg" group-title="VOD IT",Oggi in prima del 07/01/2025
-https://StreamCdnM6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news2/podcastcdn/rainews_vod/oggi_in_prima/25158449_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnM6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news1/podcastcdn/rainews_vod/oggi_in_prima/25158449_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/01/05/1609868778126_2048x1152.jpg" group-title="VOD IT",Oggi in prima del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=7VIIt2sRssSlashCdOOiqAdnE03geeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/01/05/1609868778126_2048x1152.jpg" group-title="VOD IT",Oggi in prima del 07/01/2025
@@ -2972,25 +3319,33 @@ https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news2/podcastcdn/
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2024/10/01/1727783716237_mattina24%20002.jpg" group-title="VOD IT",Mattina 24 del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=1tNadJjT2i3IqDCYP9h5ssSlashgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2024/10/01/1727783716237_mattina24%20002.jpg" group-title="VOD IT",MATTINA 24
-https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news1/podcastcdn/rainews_vod/Finestra_sull_italia/25158486_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
-https://StreamCdnM1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TG_regionali/TG_Marche/25169437.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=oq1fBJpPpPlussamGz2uxq7lsMllweeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
-https://StreamCdnM1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TG_regionali/TG_Marche/25169437.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news2/podcastcdn/rainews_vod/Finestra_sull_italia/25158486_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25168408.png" group-title="VOD IT",Enrico Fontana - Rifiuti elettronici - 07/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=fig2pRcyteBnzZImGkacCweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25185008_1.jpg" group-title="VOD IT",Casa Italia del 08/01/2025
-https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/italia_con_voi_raiitalia/25184981_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/italia_con_voi_raiitalia/25184981_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25185008_1.jpg" group-title="VOD IT",Casa Italia del 08/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=C7ZNpPpPlussCqGVlz95xUPgfwBOgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25185008_1.jpg" group-title="VOD IT",Casa Italia del 08/01/2025
-https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/italia_con_voi_raiitalia/25184981_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - Storie italiane 08/01/2025
-https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/Storie_italiane/25178151_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - 08/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=S1lDXAXS2ssSlashJY1gcpPpPlussO5g2pPpPlussAeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - Storie italiane 08/01/2025
-https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178151_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/italia_con_voi_raiitalia/25184981_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
+https://StreamCdnM1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TG_regionali/TG_Marche/25169437.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=oq1fBJpPpPlussamGz2uxq7lsMllweeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/TGR.jpg" group-title="VOD IT",TGR Marche del 07/01/2025 ore 19:30
+https://StreamCdnM1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TG_regionali/TG_Marche/25169437.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 08/01/2025
+https://vod1-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25176534_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 08/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=lmyyNdoa7fVy2izvapPpPlussmD1AeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 08/01/2025
+https://vod1-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25176534_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736239209025_videobox.png" group-title="VOD IT",Videobox del 07/01/2025
+https://StreamCdnR18-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/E_viva_il_video_box/25159235_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736239209025_videobox.png" group-title="VOD IT",Videobox del 07/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uS9tKxu1brRjadpaBuIWMAeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736239209025_videobox.png" group-title="VOD IT",Videobox del 07/01/2025
+https://StreamCdnR18-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/E_viva_il_video_box/25159235_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Liguria del 07/01/2025
 https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Liguria/25158939.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Liguria del 07/01/2025
@@ -2998,69 +3353,49 @@ https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=X3X74GTW1s1wSj5pb
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Liguria del 07/01/2025
 https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Liguria/25158939.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Basilicata del 07/01/2025
-https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Basilicata/25158957.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TgRegionali/Basilicata/25158957.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Basilicata del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=9k151chnwLievoGazHiETweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Basilicata del 07/01/2025
 https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TgRegionali/Basilicata/25158957.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - Storie italiane 08/01/2025
+https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178151_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - 08/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=S1lDXAXS2ssSlashJY1gcpPpPlussO5g2pPpPlussAeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178156.png" group-title="VOD IT",Omicidio Pierina Paganelli, il Dna scagiona Louis Dassilva - Storie italiane 08/01/2025
+https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178151_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Marche del 07/01/2025
 https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Marche/25158968.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Marche del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=yVWgwHZqe6yrGJHssSlashd2rWAweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Marche del 07/01/2025
-https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Marche/25158968.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2024/03/12/1710220681266_2048x1152.jpg" group-title="VOD IT",SERA 24
-https://StreamCdnG11-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news2/podcastcdn/rainews_vod/In_un_ora/25168773_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2024/03/12/1710220681266_2048x1152.jpg" group-title="VOD IT",Sera 24 del 07/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pPpPluss15sqsRILaZXpPpPlussqetpPpPlussvTbVgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2024/03/12/1710220681266_2048x1152.jpg" group-title="VOD IT",SERA 24
-https://StreamCdnG11-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/news2/podcastcdn/rainews_vod/In_un_ora/25168773_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TgRegionali/Marche/25158968.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Abruzzo del 07/01/2025
-https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TgRegionali/Abruzzo/25158994.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
+https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews1/podcastcdn/TgRegionali/Abruzzo/25158994.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Abruzzo del 07/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=P1Mi4arh1x5hG4ABOsKf9QeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/rai24/assets/images/tgr/BuongiornoRegione.jpg" group-title="VOD IT",Buongiorno Regione Abruzzo del 07/01/2025
 https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostrnews2/podcastcdn/TgRegionali/Abruzzo/25158994.mp4/chunklist_b1758000_t64MTgwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25171541_1.jpg" group-title="VOD IT",Paparazzi del 07/01/2025
-https://StreamCdnR12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/paparazzi/25171530_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25171541_1.jpg" group-title="VOD IT",Paparazzi del 07/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kXOznPOx7ssSlashNhG3LA7nnzJweeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25171541_1.jpg" group-title="VOD IT",Paparazzi del 07/01/2025
-https://StreamCdnR12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/paparazzi/25171530_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736325706775_3.jpg" group-title="VOD IT",Un Posto Al Sole - Anticipazione del 08/01/2025 EP 6608
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raitre/UnPostoAlSole_multiaudio/25177249_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736325706775_2.jpg" group-title="VOD IT",Un Posto Al Sole - Anticipazione ep 6608
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=5CMmiVRgLTANI4OADimaCQeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/08/1736325706775_3.jpg" group-title="VOD IT",Un Posto Al Sole - Anticipazione del 08/01/2025 EP 6608
-https://StreamCdnR2-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raitre/UnPostoAlSole_multiaudio/25177249_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/08/1736345540508_sci%20alpino%20maschile%20slalom%20vinatzer%202023.jpg" group-title="VOD IT", Madonna di Campiglio: Slalom (I manche)
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pLu7WfYyPI8FueFMsIT3OgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178377.png" group-title="VOD IT",Gualdo Tadino: Uccide moglie e si suicida: sposi da poco. Le testimonianze - Storie italiane 08/01/2025
-https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/Storie_italiane/25178374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25178377.png" group-title="VOD IT",Gualdo Tadino: Uccide moglie e si suicida: sposi da poco. Le testimonianze - 08/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0qV4cVXCrlssSlash0R7fXC4VoZAeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25178377.png" group-title="VOD IT",Gualdo Tadino: Uccide moglie e si suicida: sposi da poco. Le testimonianze - Storie italiane 08/01/2025
-https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25178374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365698125&plid=acaa1d75-c336-463a-89f4-0630cd87a44c&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A48%3A18+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22MasterChef+14%2C+Laura+%C3%A8+l%27eliminata+della+quarta+puntata%22%2C%22duration%22%3A103000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F02%2F977609%2F977609_1735857873674_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977609%7D&pvid=9c148239-9024-447d-951b-b57e6a7e2ffb&vsid=38578ae0-49d7-40b1-ba34-ee7ee7e34ee7&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Pressure Test, Laura è l'eliminata della quarta puntata
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367666586&plid=ed3de4af-8696-45e3-a76d-96e26edc57b2&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A21%3A06+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22MasterChef+14%2C+Laura+%C3%A8+l%27eliminata+della+quarta+puntata%22%2C%22duration%22%3A103000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F02%2F977609%2F977609_1735857873674_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977609%7D&pvid=ae5e6271-ba43-4e30-820c-57658f2a3228&vsid=95fab107-0522-4656-912a-67a01f781de3&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Pressure Test, Laura è l'eliminata della quarta puntata
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/02/977609/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365708795&plid=788cc767-9fdd-4bf6-a88d-8266de958bda&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Fmeglio-quarta-puntata-masterchef-14-video-977719&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A48%3A28+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22MasterChef+14%2C+il+meglio+della+quarta+puntata%22%2C%22duration%22%3A590000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F03%2F977719%2F977719_1735916574624_thumb_494.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977719%7D&pvid=be36c4e0-2141-4d1a-b7bb-eb89d42377c5&vsid=5eceea22-6099-4b73-ae41-1f97ee6dad98&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", MasterChef 14, il meglio della quarta puntata | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367676691&plid=3e881a73-a478-446a-9efd-6f1294c46259&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Fmeglio-quarta-puntata-masterchef-14-video-977719&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A21%3A16+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22MasterChef+14%2C+il+meglio+della+quarta+puntata%22%2C%22duration%22%3A590000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F03%2F977719%2F977719_1735916574624_thumb_494.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977719%7D&pvid=3ac2929c-9f9c-4999-bdde-2e196e5367ee&vsid=9031c9cd-b83b-49fb-b77f-2a57a8d9c0c3&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", MasterChef 14, il meglio della quarta puntata | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/03/977719/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365720123&plid=86fd5b53-1c9f-4956-9459-6385d294cca4&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-02-gennaio-2025-977560&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A48%3A40+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+02+Gennaio+2025%22%2C%22duration%22%3A1435000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F02%2F977560%2F977560_1735833940942_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977560%7D&pvid=95c1c8b5-c68a-44fb-8672-09a15fa39148&vsid=1daaa91e-d059-4acc-b0aa-248dec5183fa&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Sky Tg24 Timeline puntata del 02 Gennaio 2025 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/02/977560/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365732920&plid=59651046-654d-4cb8-8706-56a16504dd24&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-07-gennaio-2025-978503&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A48%3A52+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+07+Gennaio+2025%22%2C%22duration%22%3A1647000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978503%2F978503_1736264604420_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978503%7D&pvid=4075755c-cac5-4faa-af4d-c5a380d2cd12&vsid=a86338d5-b735-4a67-a9ba-e103bceed862&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Sky Tg24 Timeline puntata del 07 Gennaio 2025 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978503/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365743857&plid=d5503157-4ace-452e-bdef-5c02f27abc54&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fconnessi-la-puntata-integrale-del-5-gennaio-978167&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A49%3A03+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Connessi%2C+la+puntata+integrale+del+5+gennaio%22%2C%22duration%22%3A2457000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F05%2F978167%2F978167_1736112337979_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978167%7D&pvid=7e8a6045-4ecf-4f11-9109-47c4cc63d8ba&vsid=c72a3904-8830-4d78-9760-8a7533bbbbdc&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Connessi, la puntata integrale del 5 gennaio | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/05/978167/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365755530&plid=4c4a2593-939c-4591-9724-f3670a218ccc&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-20-dicembre-2024-978476&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A49%3A15+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+20+dicembre+2024%22%2C%22duration%22%3A1470000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978476%2F978476_1736263227419_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978476%7D&pvid=2edf56f7-842f-4224-88c3-0b8fdf1df4ac&vsid=4632774f-70f7-4607-9974-c26d89ebb664&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Sky TG24 Business, la puntata del 20 dicembre 2024 | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367689019&plid=e3552c5f-7771-49a5-9ccb-cb5e8d2446db&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-20-dicembre-2024-978476&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A21%3A29+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+20+dicembre+2024%22%2C%22duration%22%3A1470000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978476%2F978476_1736263227419_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978476%7D&pvid=8fc4e9d0-2eda-435e-a3e0-a35ec49e159e&vsid=1cc39476-aab1-417e-9400-6552450ab166&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Sky TG24 Business, la puntata del 20 dicembre 2024 | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978476/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365767370&plid=7547c63f-bb9c-4e9e-9674-c70f1dd68255&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-7-gennaio-2025-978473&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A49%3A27+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+7+gennaio+2025%22%2C%22duration%22%3A1531000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978473%2F978473_1736263212016_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978473%7D&pvid=bccb06cb-a66a-406a-b28e-d99bfc22b880&vsid=5b035323-93aa-4259-9487-c8299c7146e9&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Sky TG24 Business, la puntata del 7 gennaio 2025 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978473/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365778865&plid=ebb6c197-3552-4a70-b5bc-e44f2c26156f&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-23-dicembre-2024-978474&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A49%3A38+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+23+dicembre+2024%22%2C%22duration%22%3A1498000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978474%2F978474_1736261996942_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978474%7D&pvid=0742ec12-ca67-4c31-828d-00b80d970e9a&vsid=ba2f4573-a2ef-4111-a87f-57d9891aa4d0&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", Sky TG24 Business, la puntata del 23 dicembre 2024 | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367701327&plid=a9e43aa6-48df-405f-a80f-14f4164e25e2&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-07-gennaio-2025-978503&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A21%3A41+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+07+Gennaio+2025%22%2C%22duration%22%3A1647000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978503%2F978503_1736264604420_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978503%7D&pvid=acfe1b09-8b3f-4f43-b283-47439dff8caf&vsid=c2b96234-9101-478f-800a-34b7e1533004&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Sky Tg24 Timeline puntata del 07 Gennaio 2025 | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978503/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367713475&plid=7bb89f5b-c436-41e9-baf5-2396aaf985bc&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fconnessi-la-puntata-integrale-del-5-gennaio-978167&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A21%3A53+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Connessi%2C+la+puntata+integrale+del+5+gennaio%22%2C%22duration%22%3A2457000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F05%2F978167%2F978167_1736112337979_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978167%7D&pvid=cc5c5170-79b5-4976-8783-569a4c429e5f&vsid=21a6653b-eeb3-4d77-8ff8-b0b5816d9bd3&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Connessi, la puntata integrale del 5 gennaio | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/05/978167/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367725239&plid=776060ea-0611-4520-8dd0-dfe96b38f19e&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-23-dicembre-2024-978474&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A22%3A05+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+23+dicembre+2024%22%2C%22duration%22%3A1498000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978474%2F978474_1736261996942_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978474%7D&pvid=a8d25020-d3ca-477e-96b1-b4803bdbb95b&vsid=90f80891-aa6f-40b5-9501-20f2b550d1bf&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Sky TG24 Business, la puntata del 23 dicembre 2024 | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978474/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736365790256&plid=35d023c3-6366-4572-94bd-b62f628b6907&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fsport%2Faltri-sport%2Fvideo%2Fsky-sport-doctor-undicesima-puntata-975019&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736365695633&slts=0&date=Wed+Jan+08+2025+19%3A49%3A50+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22%5C%22Sky+Sport+Doctor%5C%22%2C+undicesima+puntata%22%2C%22duration%22%3A361000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2024%2F12%2F19%2F975019%2F975019_1734608748796_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A975019%7D&pvid=bee507a5-0b1d-4e37-98f4-974f8691ff96&vsid=f78cabf6-b7a0-4c19-a1fd-b1ce6633cdaf&u=pid%3D2e54c2a1-21e3-41ea-b4b1-810d0a226c01" group-title="VOD IT", "Sky Sport Doctor", undicesima puntata | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367737458&plid=d7525800-2d1a-4652-9da5-9494a46516b6&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fsport%2Faltri-sport%2Fvideo%2Fsky-sport-doctor-undicesima-puntata-975019&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A22%3A17+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22%5C%22Sky+Sport+Doctor%5C%22%2C+undicesima+puntata%22%2C%22duration%22%3A361000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2024%2F12%2F19%2F975019%2F975019_1734608748796_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A975019%7D&pvid=9b6ef93b-1770-44ce-986a-5728fbcf6f30&vsid=ca3e97c6-fc46-4fd7-97fb-9ee7bf9796de&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", "Sky Sport Doctor", undicesima puntata | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2024/12/19/975019/master/720p/stream.m3u8
 #EXTINF:-1 tvg-logo="https://videoplatform.sky.it/captures/494/2025/01/08/978755/978755_1736359196271_thumb_494.0000001.jpg" group-title="VOD IT", Video news di economia - Sky TG24 | Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/08/978755/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367761317&plid=94d71375-d716-44f5-81dc-872926d2b261&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-7-gennaio-2025-978473&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A22%3A41+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+7+gennaio+2025%22%2C%22duration%22%3A1531000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978473%2F978473_1736263212016_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978473%7D&pvid=f75f128a-5a62-4106-bc12-3dfd091474c8&vsid=dc5fe134-4712-4067-ac13-b7d12770d889&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Sky TG24 Business, la puntata del 7 gennaio 2025 | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978473/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736367772880&plid=9acf0974-099d-47d5-9e49-a2e9a50e35fa&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Festerna-parco-terme-boario-masterchef-14-video-977588&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fmasterchef%2Fpuntate%2Fvideo%2Flaura-eliminata-pressure-quarta-puntata-masterchef-14-video-977609&sref=&sts=1736367664371&slts=0&date=Wed+Jan+08+2025+20%3A22%3A52+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22MasterChef+14%2C+esterna+al+Parco+delle+Terme+di+Boario%22%2C%22duration%22%3A120000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F02%2F977588%2F977588_1735840866173_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A977588%7D&pvid=4511e3b7-6f2f-4903-aa5e-beb9b0a6c85b&vsid=1f4585ab-3772-4471-834b-a38393fc2763&u=pid%3Db75d0c00-9ccd-4496-8337-735c86eaca05" group-title="VOD IT", Prova in esterna al Parco delle Terme di Boario
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/02/977588/master/720p/stream.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-id="AguacateTV.ve",Aguacate TV (1080p)
 https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8
@@ -3865,338 +4200,3 @@ http://cord-cutter.net:8080/live/j3McKd/673709/158059.m3u8
 #EXTINF:-1 group-title="Local" tvg-id="ABC KBMT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLX7K2lkvgIgcJcqmTixBuans_HYZv8toDojnw-pIqC5zASQaWTeoI6oorNfU&s",ABC 12 (KBMT) Port Arthur (H)
 http://cord-cutter.net:8080/live/j3McKd/673709/158060.m3u8
 #EXTINF:-1 group-title="Local" tvg-id="ABC KSTP" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShTcSZ31AE9YOC_vK-grokcpFboXwEFGS8fccicFK4CL6DFbEVEOkijbAOeg&s",ABC (KSTP) Minneapolis/St. paul
-http://cord-cutter.net:8080/live/j3McKd/673709/158481.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="NFL NETWORK 1" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC1k5aZFyAkJtB2mlW8v4FQf1ppquat_UH3KkAqY6hItqErQTpI_z3kaduNWg&s",NFL NETWORK (1)
-http://cord-cutter.net:8080/live/j3McKd/673709/159091.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="NFL NETWORK 2" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC1k5aZFyAkJtB2mlW8v4FQf1ppquat_UH3KkAqY6hItqErQTpI_z3kaduNWg&s",NFL NETWORK (2)
-http://cord-cutter.net:8080/live/j3McKd/673709/159117.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="NFL REDZONE" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70rqa0xm1gOCkNzGZJCoBmDf3_e6-xrfctIX5hFDR1-4Aot5JRpMlqoGiyg&s",NFL REDZONE
-http://cord-cutter.net:8080/live/j3McKd/673709/159118.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="NFL REDZONE 2" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV5WTdXxw0v9uG2n0kWSuQqfl1tYQ7XyKt2m2D5VU4AfOXAIcSSIkF98UJ3XY&s",NFL REDZONE (2)
-http://cord-cutter.net:8080/live/j3McKd/673709/159119.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="NFL REDZONE US" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70rqa0xm1gOCkNzGZJCoBmDf3_e6-xrfctIX5hFDR1-4Aot5JRpMlqoGiyg&s",NFL REDZONE (US)
-http://cord-cutter.net:8080/live/j3McKd/673709/159120.m3u8
-#EXTINF:-1 group-title="News" tvg-id="NEWS 12 CONNECTICUT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSjJkxU_PghyFABJRsj_QLySQ2Vlujbw3lyE9Chy_6yY9ruvQCjiIOjw_7Ow&s",NEWS 12 CONNECTICUT HD
-http://cord-cutter.net:8080/live/j3McKd/673709/159246.m3u8
-#EXTINF:-1 group-title="International" tvg-id="FRANCE 2" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmrbOqjG8PomXE86TM5SAMP5_Z30xG2nW1kot6nym9nU63PCzUdpHMrAYwA&s",FRANCE 2 FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160297.m3u8
-#EXTINF:-1 group-title="International" tvg-id="FRANCE 3" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQONO80OTwp8oIc8fzLkInbb6ZJ8xondzxrzyVhvYg1hZZOSi99MbV3ifz0Ipg&s",FRANCE 3 FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160298.m3u8
-#EXTINF:-1 group-title="International" tvg-id="FRANCE 4" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRrR9BsBZw4zTAzFAAxFQuDp1lm06mXAEU-PnGfC7FTLZEyqnuRWDE-P9C4w&s",FRANCE 4 FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160299.m3u8
-#EXTINF:-1 group-title="International" tvg-id="FRANCE 5" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu32fM_Xm6U-85aB1LCxFXx6tYjCCu1SdpmlXj5xLUwdm5dCbriIctZf2QHbk&s",FRANCE 5 FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160300.m3u8
-#EXTINF:-1 group-title="International" tvg-id="AB3" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr6MUDj0n6v9nnGeWPZYTCFLFGbfBngXq9kOQhdANhR85PkhhrS-l1_dfkFw&s",AB3 HD
-http://cord-cutter.net:8080/live/j3McKd/673709/160302.m3u8
-#EXTINF:-1 group-title="International" tvg-id="MCM" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBZcXDqx9hacNNvV9xAo99bAph_kqQfIhIiNHNRWdSMHRRaMo6ded0VByfDtE&s",MCM
-http://cord-cutter.net:8080/live/j3McKd/673709/160303.m3u8
-#EXTINF:-1 group-title="International" tvg-id="CANAL+ CINEMA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdQBH7n5DuXfXar_GGoMgKuUayTbTes_msil5yvKKo9zPCffyhOkytnZeGvw&s",CANAL+ CINEMA FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160304.m3u8
-#EXTINF:-1 group-title="International" tvg-id="C8" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsbo3nxTE4KNcCIg5_URYEsIzNcFcCtl_vQTWEOPumfafVAEuJvSEGo-CxWRA&s",C8 FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160305.m3u8
-#EXTINF:-1 group-title="International" tvg-id="CANAL+ DECALE" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1e-PkB2u266-2gMjec_o8DYEVOL8m7gTdGZcmAAE5HpL7DhmG71F6Is97GE&s",CANAL+ DECALE FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160306.m3u8
-#EXTINF:-1 group-title="International" tvg-id="CANAL+ FAMILY" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTU_qC6skc2XK6lMWo_Tsj0kVxCmSk94pg_Ib-Jxb6LQm2_fECxwpE-LtAbQ&s",CANAL+ FAMILY FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160307.m3u8
-#EXTINF:-1 group-title="International" tvg-id="CINE+ FAMIZ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkbSbE7zZD6Gz3u-tTD7QDdySva5991FH2rgOEvgfxDj-Qnr0FDD18pWWpA&s",CINE+ FAMIZ FHD
-http://cord-cutter.net:8080/live/j3McKd/673709/160308.m3u8
-#EXTINF:-1 group-title="News" tvg-id="Real America's Voice" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4BwMQMrSC3QllOLEW5TUFNfkki2sC0A9G-lvZRDISy6XKA3mpuf7wrp_xZw&s",Real America's Voice (STV)
-http://cord-cutter.net:8080/live/j3McKd/673709/160581.m3u8
-#EXTINF:-1 group-title="News" tvg-id="Al Jazeera" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_D9WOAaoPC8yyCvYzHJpvW8L72lbzeA_1Rk2-f3J4P3pczmQXR1UyFtSehA&s",Al Jazeera
-http://cord-cutter.net:8080/live/j3McKd/673709/160711.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="WGCL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH0YNFMb0Keqyl74jOKS3WnVhqGp5EKmONrlPfFB1sgGXgZNS85GgnNfSTqg&s",CBS (WGCL) Atlanta
-http://cord-cutter.net:8080/live/j3McKd/673709/160716.m3u8
-#EXTINF:-1 group-title="News" tvg-id="Sky News" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6CvgULDwJL4mfqsIr-zYOAjrumulaIffskIRNhftrWJOQfN4XS2pQw0S8Aw&s",Sky News
-http://cord-cutter.net:8080/live/j3McKd/673709/160719.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="GREENSBORO NC WFMY" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_yD1E-IB9MsLWRhwwagPDgLtydpSURV2fkL49zJVJZmmpro6PsguUFe2bKQ&s",CBS: NC GREENSBORO WFMY
-http://cord-cutter.net:8080/live/j3McKd/673709/121131.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="HIGH POINT NC WGHP" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpgDlkuTPo52VsmTy0py4INhIlMOwnqfSitx0_oqNBf9n91T2i1DuQGqh2dH8&s",FOX: NC HIGH POINT WGHP
-http://cord-cutter.net:8080/live/j3McKd/673709/121132.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="WINSTON-SALEM NC WXII" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuKg9qMOef4v7SGk8VRFbKJs1lB7iW1m1SEUSzljpFMZJ90DpXHAeRnw2F6w&s",NBC: NC WINSTON-SALEM WXII
-http://cord-cutter.net:8080/live/j3McKd/673709/121133.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="ATLANTA GA WAGA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9U-San_aa1RNU4ESZD_7EFuMdi8wNzk1mYxWtw4s-sOHyXhX3SejTOUYCtsY&s",FOX 5: GA ATLANTA WAGA
-http://cord-cutter.net:8080/live/j3McKd/673709/121135.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="ATLANTA GA WXIA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIlfJo4q2yKciTHtOiy83sb8coAuUC_lhUl3hDgHOgXM5lFkvtbqJoxYcNEw&s",NBC: GA ATLANTA WXIA
-http://cord-cutter.net:8080/live/j3McKd/673709/121136.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="DALLAS TX WFAA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-z2gKvp3GLxI87U7ZSUdZYJOuCdjg7Y-qOti9S-edTtxlU_I3uP-1rOReBg&s",ABC 8: TX DALLAS WFAA
-http://cord-cutter.net:8080/live/j3McKd/673709/121138.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="NEW YORK NY WABC" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckgc7YH1jSSG71y0-BzndATB4c3LqFki_vKad3LbsFgtiZleXO_DntDp7qw&s",ABC 7: NY NEW YORK WABC
-http://cord-cutter.net:8080/live/j3McKd/673709/121139.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="FORT WORTH TX KTVT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLu-nXsUbConwxaQKGRpjQdwNWw0bQBRgHFJH4xfmmnFEWeDt2HUUhlBeu9fg&s",CBS: TX FORT WORTH KTVT
-http://cord-cutter.net:8080/live/j3McKd/673709/121140.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="HOUSTON TX KTRK" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUhWsC-nAgz0cridJ2p-zuxZkA9K_TlqMqkx4H3nG5OKW04Cs89cR0wmSQUg&s",ABC 13: TX HOUSTON KTRK
-http://cord-cutter.net:8080/live/j3McKd/673709/121141.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="SOUTH FLORIDA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2U5C0shbD4ZN_U9o3J_MpNrjQYb3PUdcLiLECyR7fkTdWlMvadtQelvB4A&s",NBC South Florida News
-http://cord-cutter.net:8080/live/j3McKd/673709/121142.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="WKMG" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8pHDl1dYt-_zWJIIrwxtK8ykIVnYZ6rycN9zyFLJclvjVWD8bKoUoiwuOrw&s",CBS: FL WKMG
-http://cord-cutter.net:8080/live/j3McKd/673709/121144.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="ORLANDO FL WFTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGr3BtMtsbxSS8dcJLMV8JQ-he2yWH7vSqWzqKmmvbn_pL2-FeVIqanb0lwA&s",ABC 9: FL ORLANDO WFTV
-http://cord-cutter.net:8080/live/j3McKd/673709/121145.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="ORLANDO FL WESH" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2sR8X4xh9XqYD3PMtN_2dkfa_IraaqHzBaDeyaMUCTJTIzEWXj-zB762-1KA&s",NBC 2: FL ORLANDO WESH
-http://cord-cutter.net:8080/live/j3McKd/673709/121147.m3u8
-#EXTINF:-1 group-title="Local" tvg-id="SAVANNAH GA WTGS" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOubWexlLmzfOY4d-TDrFzyZdJqwoLFW15HO-yuPj3s4oAdV9RKk_yRid-EQ&s",FOX 28: GA SAVANNAH WTGS
-http://cord-cutter.net:8080/live/j3McKd/673709/121148.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5U6z17XJ-PbPAlZzmybboh2Q2HAShGXs5g_Qet9RGLuUQzD0u-y-6br2Znw&s",ABC 7 Denver CO (KMGH) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/64ca339f04964a5e961c3207a7771bf1.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO5iv5EwCyK7r6ASjP92iiiZtJBA8K2wKo2BNnktvNgm1MNAAh5AvAkZJF1us&s",ABC 7 Los Angeles CA (KABC-TV) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/kabc_24x7_news.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTecBLaLqZETn44L9fZ1JhHgUWfxMxy8ANPBsIWzsyFh_QIfPdyBLnuBtStNUI&s",ABC 7 Washington DC (WJLA) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/40cec2bf074c40f08932da03ab4510be.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ohTNelk6gDTiPpX8JCF8qmrZ3nNvSvkK_VH6HANto5h1fpqq_UtFIGJGZSY&s",ABC 13 Las Vegas NV (KTNV) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/39919d3f7a074eefa8bf579214e952f9.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH069iJmqeZOJT2Qhj02Pr7NnSAHSymBA4yQP2DOaBiOVqUrwKSYcGTZs6XFI&s",ABC 15 Phoenix AZ (KNXV-TV) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/9deaf22aaa33461f9cac22e030ed00ec.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2X7zQdKfMC7Mn9oHYLHiUBMOOntKM8qX4Awl2vOi2N8M9pnXN_txlk2T0g&s",Ace TV (KCKS-LD3) (480p)
-#EXTVLCOPT:network-caching=1000
-https://cdn.igocast.com/channel3_hls/channel3_master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZoTy_Er9DujHJ-s8TF0P9qthnjssw7VCZyy3EElxnP1rPsrn2_MV0LNNDJg&s",Action (KCKS-LD4) (480p)
-#EXTVLCOPT:network-caching=1000
-https://cdn.igocast.com/channel4_hls/channel4_master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIzq4nMbSAN_nhLRh2DEKhgu6bL0SMu3qogxBaBsUtl9CUcF-xtRaw-VBdnI&s",Adult Swim Dream Corp LLC (1080p) [Geo-blocked]
-#EXTVLCOPT:network-caching=1000
-https://adultswim-vodlive.cdn.turner.com/live/DREAM-CORP-LLC/stream.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWMlliFO_bULOAyFcJ1glyl0nEeqs0beVutsK4FlNmwYbzKDAnXza6A0-mKQ&s",Adult Swim Rick and Morty (1080p) [Geo-blocked]
-#EXTVLCOPT:network-caching=1000
-https://adultswim-vodlive.cdn.turner.com/live/rick-and-morty/stream.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1r1Hgryn70kkwtxoNO5utFJ4jEaSf1JnBp7oVYBGBUOk2K-YELb2AFzTlnns&s",Adult Swim Robot Chicken (1080p) [Geo-blocked]
-#EXTVLCOPT:network-caching=1000
-https://adultswim-vodlive.cdn.turner.com/live/robot-chicken/stream.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34FvSGEkwFxQyHdv9-06zr5f6v98hh_rZQA8VEu60v2XW9bUynwHqxDkhb6M&s",AKC TV (1080p)
-#EXTVLCOPT:network-caching=1000
-https://broadcast.blivenyc.com/speed/broadcast/22/desktop-playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59-cOUMCQyuIl2sqrYaYpaC1v13jcQPIZf_UDIXavD-uBM_m0CTM-A8yXKQ&s",Al Horreya TV (720p)
-#EXTVLCOPT:network-caching=1000
-http://media.smc-host.com:1935/alhorreya.tv/alhorreya.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ZqQT5cCOCt2CNEjUqAMKJD0M4Cm8nOXllUCRV3o4Zuo82shcjS00jxZMQHo&s",Aliento Vision (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://209.133.209.195:1935/AlientoSD/smil:AlientoSD.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYvBkCygiosPIcZ61OO2R3IdRE_5avnkEz4u-zx8I_a4xZiHjQZhRgwaRC9J4&s",Alkarma TV Australia (1080p)
-#EXTVLCOPT:network-caching=1000
-https://5a8308add0b31.streamlock.net/alkarmatv.com/alkarmaau.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYvBkCygiosPIcZ61OO2R3IdRE_5avnkEz4u-zx8I_a4xZiHjQZhRgwaRC9J4&s",Alkarma TV Family (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://58cc65c534c67.streamlock.net/alkarmatv.com/alkarmaNA2.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYvBkCygiosPIcZ61OO2R3IdRE_5avnkEz4u-zx8I_a4xZiHjQZhRgwaRC9J4&s",Alkarma TV Middle East (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://58cc65c534c67.streamlock.net/alkarmatv.com/alkarmame1.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZkg-_DQt30VSdf1C7uGyiNPCt7FPSV5LU7zy6iWw6XbOfgbq-n9EVBw46ncc&s",Alkarma TV Praise (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://58cc65c534c67.streamlock.net/alkarmatv.com/alkarmapa.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYvBkCygiosPIcZ61OO2R3IdRE_5avnkEz4u-zx8I_a4xZiHjQZhRgwaRC9J4&s",Alkarma TV Talmaza (Discipleship) (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://58cc65c534c67.streamlock.net/alkarmatv.com/alkarmame2.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLiSplFXgq79qt4LlusDfbDJ8bee225qsQ3Na9rqWsVI1aMfl6mvCu_R-kVyk&s",America's Voice (KCKS-LD5) (480p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://cdn.igocast.com/channel5_hls/channel5_master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIDxp6YfMU1aY4w4A762G409B46DIDuqNRkRf6w4J79K4aaZMsVbu8gmx&s",American Classics (432p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxamericanclassics/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAh3ehMuChk_LelHDhsoAVvWJPYJ2-XiFK5ZTkiLLbKi_zzKOIF9-b4Q5zsQ&s",AMG TV (1080p)
-#EXTVLCOPT:network-caching=1000
-https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSypoI77HTW9Rh8AYrwj0sdgP44IQjL8FGewlkPc2JXytj8tXOsMFZWMYFQ4w&s",Architectural Digest (720p) [Timeout]
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxarchitecturaldigest/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExagI6_ju90tRTFvwAiJMaCgiIppIY7HcibKFjT86H1qMPkGYDaCMBlx0xg&s",Atlanta Channel (720p) [Timeout]
-#EXTVLCOPT:network-caching=1000
-http://media4.tripsmarter.com:1935/LiveTV/ACVBHD/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDEFiUS5V9AmOpDlYG371nfgAhvj2rY8XDSvMpKxjGCZBGcyBYMNma22ltfYM&s",AWE Encore (720p)
-#EXTVLCOPT:network-caching=1000
-https://aweencore-vizio.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5cDxQWd0IRJlPBVvPrKEprsiinYWxAWMlx1B3-2G3ynJmGzJHhD1tK4Tr8bk&s",AXS TV Now (1080p)
-#EXTVLCOPT:network-caching=1000
-https://dikcfc9915kp8.cloudfront.net/hls/main.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSREelyBdE709otDD-UkbbRMP-Or2ivStH1ZGlb5mTCZ7UcqDyQ9yrYFem8MA&s",Beach TV CSULB (160p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://stream04.amp.csulb.edu:1935/Beach_TV/smil:BeachTV.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd3eXf1XlwNs7vcQGXKWSqj2seST63T4tAcQeqcfnjxVJ_yNq6UwTjGozHvA&s",Beach TV Florida & Alabama (720p) [Timeout]
-#EXTVLCOPT:network-caching=1000
-http://media4.tripsmarter.com:1935/LiveTV/DTVHD/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZegPT5xlyxvYI7EG0fckc_5jABug7NmYHgReUBWfhJxzlqs2C4ZIJW0Q6hw&s",Beach TV Myrtle Beach & The Grand Strand (720p)
-#EXTVLCOPT:network-caching=1000
-http://media4.tripsmarter.com:1935/LiveTV/MTVHD/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nR1nr-p9rUQwU_NsL3G9ez0BJ4ePrtOk0ngQnzx1gjC3ZZcXlUymR6ychw&s",Beach TV Panama City (720p) [Offline]
-#EXTVLCOPT:network-caching=1000
-http://media4.tripsmarter.com:1935/LiveTV/BTVHD/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIZeGnVrst7aFHyp38Jup9VVU294NOtQSAlVzM5WhX6Eu-TU3PL-sY2uLlBg&s",Biz TV (1080p)
-#EXTVLCOPT:network-caching=1000
-https://thegateway.app/BizAndYou/BizTV/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGMWWRr6T_UojeKimXg6T4ewdTgsJ-j-GvpixZKZeFLiE__n1QLadkpt6JAE&s",Black News Channel (1080p)
-#EXTVLCOPT:network-caching=1000
-http://redbox-blacknewschannel-xumo.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1kltagitQcwkA-Swoye2NcTBiLqKUTQfaAMEkhrjDCZKAQtA5B7jTRXgUAQ&s",Bloomberg TV US Live Event (720p)
-#EXTVLCOPT:network-caching=1000
-https://www.bloomberg.com/media-manifest/streams/us-event.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzy1jzUXJ0oMTPEddnPwD3Jp8wG8pu9Cp_q1Po9j2gwMo3a-Y61OxGb0KIMw&s",Bloomberg TV US Politics Live Event (720p)
-#EXTVLCOPT:network-caching=1000
-https://www.bloomberg.com/media-manifest/streams/politics.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKfwNanDw_sovsmRSs-d2fIbhK66uknWz9JQopyryKYrm4ZjuS8LxZMOYvLCg&s",bon appétit (1080p)
-#EXTVLCOPT:network-caching=1000
-https://bonappetit-samsung.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrLfiD0wrw6zdq5CLCLWLpev2DRouemPIED8qcdAdYt1waXVrNN6A6jtDr9bQ&s",Buzzr (KCKS-LD1) (480p)
-#EXTVLCOPT:network-caching=1000
-https://cdn.igocast.com/channel1_hls/channel1_master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKaEf54dQB6R9y4PC-ZoIAt9CIepmMPGO9xMxxsITk0wqPbsfVGN1FpZ5K7g&s",CBC News (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxcbcnews/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFwYQA-gSFfeDVAeJ1puslUTXLxveiNEwWalfeqSEK-VucfOA4EG_p1N0bNg&s",CBS 3 Omaha NE (KMTV-TV) (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/4a09fbea28ef4f32bce095e9eae04bd8.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvAZn6m1SsfSMC7XV4zkjIBxFH_6-cNBsnN-XF9pPp5O0jg03zqE8vgNmEjw&s",CBS News Baltimore (720p)
-#EXTVLCOPT:network-caching=1000
-https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSViBf-E2HLjwuCirqRUPjEfjT3pMViCT7z71STgVqFyHQ_76YQwP1fqlq7pbo&s",CBS News Dallas Ft Worth (720p)
-#EXTVLCOPT:network-caching=1000
-https://cbsn-dal.cbsnstream.cbsnews.com/out/v1/ffa98bbf7d2b4c038c229bd4d9122708/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWH1ayfCXWlOJQVdfhdi681vSnLq6QyIG0vq8k0YqVijmdI9hxEj4VywzVPOU&s",CBS News Los Angeles (720p)
-#EXTVLCOPT:network-caching=1000
-https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaIrWYMViPoK9xEaUGRqryEDP5SUT4OwJcLH2jz6Ed8AHQDXQGFhLSqNIxuQ&s",CBS News Miami (720p)
-#EXTVLCOPT:network-caching=1000
-https://cbsn-mia.cbsnstream.cbsnews.com/out/v1/ac174b7938264d24ae27e56f6584bca0/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkmjWcpVPEPwlAmjpapmSi0gWE5vSqzPHh7TvGD6L73vFgkpnNNvEIp3Gn1dY&s",CBS News New York (720p)
-#EXTVLCOPT:network-caching=1000
-https://www.cbsnews.com/common/video/cbsn-ny-prod.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHnTZSnxim9GDGlnUdSyDLHu2jNIMGOm6mdarU41HKT4FPdt6e-O1LiQXYWKY&s",CBSN Boston (720p)
-#EXTVLCOPT:network-caching=1000
-https://cbsn-bos.cbsnstream.cbsnews.com/out/v1/589d66ec6eb8434c96c28de0370d1326/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXGS7qbCWWe8_bxTGIs-7n6clSODizHJYhU1YJbbDomG7XjN7CcE1WxTsAFn4&s",Charge! (720p)
-#EXTVLCOPT:network-caching=1000
-http://content.uplynk.com/channel/37eb732888614810b512fdd82604244e.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYBxySFmrA94IpI60Atv4QaC80lHZU0e6VjHqK5wzL1cE5JxVItx04HfA3RM&s",Chive TV (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxchive/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRduzcHEB63RLSD-BUfoZL74ZqE-0EY2Kz5_OKj8aS7z6tKnavk0fkDNJwQpQ&s",Christian Youth Channel (CYC) (1080p)
-#EXTVLCOPT:network-caching=1000
-http://media3.smc-host.com:1935/cycnow.com/smil:cyc.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD-nHvddxJfm-Lxt8Gxb-UIqe64mZH8awPacVExsrPxdLckkX2ohlCebAhWA&s",Circle (1080p)
-#EXTVLCOPT:network-caching=1000
-https://circle-roku.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4_SXOLbm1jKj4_WIAJJZ-Cyr4di4Az71P5gXUYqrTU_i5NdfMHxWcUig1H4&s",Cloudflare TV (720p)
-#EXTVLCOPT:network-caching=1000
-https://cloudflare.tv/hls/live.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMeLoWJNm--G_qrog_ecLauFo0yyBOOd9sXEAmBglH8CEh5iq2fGiGmwqN8M&s",Comet (720p)
-#EXTVLCOPT:network-caching=1000
-http://content.uplynk.com/channel/3e45c6b5354a40f787e0b2aadb0f5d6a.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gZjQSdRZxl4fVY_Roi-G51Iws1VBJJRB5Gop6I2YV9bEltG7QaRpRiKQ7u4&s",Cooking Panda (576p)
-#EXTVLCOPT:network-caching=1000
-https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=46
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN4XZNgpWmntBkxJiE29UTnl7ZNxzJwIk0ML2H5kbc-q5igmGSUQvqxQgeqQ&s",CSat TV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://media.smc-host.com:1935/csat.tv/smil:csat.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlO-uHbcQ5xsL8XOfUT2QgJZahZB36lfk-cEhsmkeBW4gCPeiyI8ILucKcpEc&s",CT-N Live Stream 2 (360p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://video.ct-n.com/live/web2stream/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGuym2xCQFSgp41fc_6R0K9wrFjJ87Qg8y0aD6zNov91SJhSRlAUUOg49XA&s",CT-N TV Conneticut (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://video.ct-n.com/live/ctnstream/playlist_DVR.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN4XZNgpWmntBkxJiE29UTnl7ZNxzJwIk0ML2H5kbc-q5igmGSUQvqxQgeqQ&s",Elbeshara GTV (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://media3.smc-host.com:1935/elbesharagtv.com/gtv.smil/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXmxdbSUbGAZkmJyFqHUW5bvR6J2_FfiqgbclOyNTyPIVMNhOR5hgrr_TMw&s",Electric Now (1080p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-electricnow/CDN/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWdPT1BBi6gRqKpJRozEAYXPw3UAGz6U6dBDhrLC-Q2RQEyNQ0KbbjA9WyEk&s",Estrella News (1080p)
-#EXTVLCOPT:network-caching=1000
-https://estrellanews-plex.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqCoC-Nl9YI7MYBtKR8aQ1ANoOwiQh3B6LLO7cyXb5Xxg4gxlz0O3uHe_rQ&s",EWTN Asia-Pacific (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://cdn3.wowza.com/1/QmVNUVhTNTZSS3Uz/YWQ0aHpi/hls/live/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccvkCgUJcfh_z9iCGzh313GRVo6Bagk-JjFotr3qbDf_o6o2GfyRb0oRxLw&s",EWTN Europe (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://cdn3.wowza.com/1/T2NXeHF6UGlGbHY3/WFluRldQ/hls/live/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmuIAB9YH2IPVD1PgTj44tuqT5TQVL83wiE0pHeQ3MCce6mlnOjGFNtmtboA&s",Extrema TV (720p)
-#EXTVLCOPT:network-caching=1000
-http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnjpZrmGChOMNmkBecDFeJCos6wUrUN35FR6swEGF7LOViIb3lTlp5RF3zuQ&s",FailArmy International (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxfailarmy/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKiturci0EBrqxQCNjxeaiaiDXxrr7JTPrJDH94ju5BkpVBtFHnZDQqgrcMZs&s",FilmRise Family (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxfilmrisefamily/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsb7H_uFrqxwaVVSMIlZqrQJHs6rWCnAiIWSmuX3RrZ9Yd3gaxvbcCFqmEWQ&s",FOX News Now (720p)
-#EXTVLCOPT:network-caching=1000
-https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatOvN-zY0yG_W6XV0qUPnQL8qsWROZmR96DoDA-brKyCUYd7ohvkvQO7cIA&s",Fox Weather (720p)
-#EXTVLCOPT:network-caching=1000
-https://247wlive.foxweather.com/stream/index.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD7MpTJdfPIy8YEX0LGqsYPzTHzS-M0HHWcrcPjRGp3k0QgEqL4Dx-20wxA&s",fubo Sports Network (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2-xumo.fubo.tv/amagi_hls_data_xumo1212A-fubo/CDN/master.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQevmXdRfwB3EiD-TY7LOgqi6EwHBDyW9VjZmehInfy_DJiiVCMMdyqORRzUs&s",Fun Roads (404p)
-#EXTVLCOPT:network-caching=1000
-http://104.143.4.5:2080/funroads.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnBeu41wgz1-hQYvkAuSB5jmYjXGB4PWuoidywgtTWGAXg-OfOodBxSK3SKKI&s",Funny or Die (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxfunnyordie/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_cN9Du2_7p-ORCIA79beRv6HZuk7W0dXIFe7dt-1G98gbvqrpbDj2-oh-0Qs&s",Glamour (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxglamour/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiiL6V8JERx5ylM1eD7RO9FoJ1etzP0oisneMHg2QewIDWCiQhCfgCZ264vw&s",Go Traveler (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxgotraveler/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyXBtEagEaJGMTu6lJdbYTdFp2UYoTCk3iIdgKBbTzlIgWO9dYf20SDH5Avk&s",GQ (720p) [Timeout]
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxgq/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYtHHd7ryvh5RMR2ka-9MG0rrFQmn1sZJET3KMiWeuJ4S6njLzLUcI9QqylA&s",HTV 1 Houston Television (720p)
-#EXTVLCOPT:network-caching=1000
-https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-a/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQp3nXDLQfFvlRvGa_g2yx-xYfesZmU9P6VvL2fPWReFGAa3vLWgQRZplGTg&s",HTV 2 Houston Television (720p)
-#EXTVLCOPT:network-caching=1000
-https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-b/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ26rxJxoQCtlWXM-F1Fi3u4DP3SsDyuGWK5YcQi14lgAiqkAIhrCb4ZivXX9A&s",Hunt Channel (1080p)
-#EXTVLCOPT:network-caching=1000
-https://1111296894.rsc.cdn77.org/LS-ATL-56868-1/index.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfDFc__z3BpkC9hTua-lcro0wEG9v75xpnfkEd7Fg5NzUNNzmIUZYl2PSI3Q&s",IMPACT! Wrestling (1080p)
-#EXTVLCOPT:network-caching=1000
-https://d2p372oxiwmcn1.cloudfront.net/hls/main.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRklfGW4O-8JbU3GdZ-ej9hS4PRUULZ6h6tVT8dj2uPb75M_4Wk62_203PGmXY&s",InfoWars (720p)
-#EXTVLCOPT:network-caching=1000
-http://wpc.9ec1.edgecastcdn.net/249EC1/infowarshd-edgecast/hd720.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_GXmbdbB1zb6YLdDTUeT7AJ2yd8aTm_KReX1dpHt8mOCuF_qJyDcJfdtr-g&s",KBSV/AssyriaSat (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://66.242.170.53/hls/live/temp/index.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO5iv5EwCyK7r6ASjP92iiiZtJBA8K2wKo2BNnktvNgm1MNAAh5AvAkZJF1us&s",KGO-TV News (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/ext/4413701bf5a1488db55b767f8ae9d4fa/kgo_24x7_news.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkpxzr56zclAbuPtJO46PvNYrf_-Wc3rGhbRr8ODVVqsBquVB5e9J5xGFV-Vw&s",KidsFlix (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=50
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0PCN6j1tcEHKyTfKXgMBJKEIBVFHuVwZfGCe48noyQLs0Ke6AKG483EhmoY&s",KSBY News San Louis Obispo CA (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/5545aa8a7e5a480d85fd1cff8d0cf610.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxJg6XAH2aJv3PNC1WMx5Ze0ZUCcb2a5lny2UOH9b9TC7XQyNdbVppjFQGYQ&s",KTRK TV News (720p)
-#EXTVLCOPT:network-caching=1000
-https://content.uplynk.com/channel/ext/1efe3bfc4d1e4b5db5e5085a535b510b/ktrk_24x7_news.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgMhnuiQWsSVpWAA_t39UZeUlWJpYiFZgcM6MekAc09wBVcBcb6sKJHulbqA&s",KVVB-TV 33 Victor Valley (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://2-fss-2.streamhoster.com/pl_138/amlst:201950-1309230/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgldNhy6Kyfy0S8TbAUViGMdck-i8yB4rNV-S4XXv5MBy-Osjsb_9VdvrD3yE&s",Law & Crime (XUMO) (720p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1234A-lawcrime/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_CUMNDVbEjqYR6ro6A-z_GvDH4XesPkXlYvjSrZyBciYHc8qK7wrLGGRE-Lo&s",Lax Sports Network TV (720p)
-#EXTVLCOPT:network-caching=1000
-https://1840769862.rsc.cdn77.org/FTF/LSN_SCTE.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GrmGvLd1D4Ne60_hEIgNRCCfL1Nwavkhx5bEj1DXy2ohoF3RIBoGlrJekaY&s",Lone Star (1080p)
-#EXTVLCOPT:network-caching=1000
-https://lonestar-rakuten.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwJ4mapi2xfskbLvSDaXqVkiTMdGZ7JhL9RRM-cyMum7cJuL5Co4lmfjnoF3U&s",Love and Hip Hop (720p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-http://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5d51ddf0369acdb278dfb05e/master.m3u8?advertisingId=91a6ae51-6f9d-4fbb-adb0-bdfffa44693e&appVersion=unknown&deviceDNT=0&deviceId=91a6ae51-6f9d-4fbb-adb0-bdfffa44693e&deviceLat=0&deviceLon=0&deviceMake=samsung&deviceModel=samsung&deviceType=samsung-tvplus&deviceUA=samsung/SM-T720/10&deviceVersion=unknown&embedPartner=samsung-tvplus&profileFloor=&profileLimit=&samsung_app_domain=https://play.google.com/store/apps/details?id=com.samsung.android.tvplus&samsung_app_name=Mobile+TV+Plus&us_privacy=1YNY
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyb_p1t5q5yd5N8mH8gFjJxgA4RSTw6HW-pzT4HeouRuKkygdvw5Pv3Uo9UqI&s",Maverick Black Cinema (432p)
-#EXTVLCOPT:network-caching=1000
-https://dai2.xumo.com/amagi_hls_data_xumo1212A-redbox-maverickmovies/CDN/playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN4XZNgpWmntBkxJiE29UTnl7ZNxzJwIk0ML2H5kbc-q5igmGSUQvqxQgeqQ&s",MCN6 (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_MAIN.smil/Playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0gf9f9fYoXuJytGrFvH8eMcMhOxneSdzs1YffK9_T2KSqxDycT6pJY2GvZA&s",MCN6 Arts Channel (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_COMEDY.smil/Playlist.m3u8
-#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0gf9f9fYoXuJytGrFvH8eMcMhOxneSdzs1YffK9_T2KSqxDycT6pJY2GvZA&s",MCN6 Music Channel (1080p) [Not 24/7]
-#EXTVLCOPT:network-caching=1000
-https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_MUSIC.smil/Playlist.m3u8
