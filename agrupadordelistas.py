@@ -63,11 +63,11 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 
 urls_twitch = [
-    "https://www.twitch.tv/directory/all/tags/GranHermano",
-    "https://www.twitch.tv/directory/all/tags/granhermanoargentina",
-    "https://www.twitch.tv/directory/all/tags/GrandeFratello",
-    "https://www.twitch.tv/directory/all/tags/breakingnews",
-    "https://www.twitch.tv/directory/all/tags/bb18",
+    "https://www.twitch.tv/search?term=GranHermano",
+    "https://www.twitch.tv/search?term=granhermanoargentina",
+    "https://www.twitch.tv/search?term=GrandeFratello",
+    "https://www.twitch.tv/search?term=breakingnews",
+    "https://www.twitch.tv/search?term=bb18",
 ]
 
 try:
