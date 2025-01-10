@@ -85,44 +85,41 @@ try:
 
         while True:
             soup = BeautifulSoup(driver.page_source, 'html.parser')
-            live_channels = soup.find_all('div', {'data-target': 'directory-game__card_container'})
-
+            live_channels = soup.find_all('article', {'data-a-target': True})
+            
             for channel in live_channels:
-                article_tag = channel.find('article', {'data-a-target': True})
-                if not article_tag:
-                    continue
+                # Título e Nome do Canal
+                title_tag = channel.find('h3', {'title': True})
+                channel_name_tag = channel.find('div', {'class': 'Layout-sc-1xcs6mc-0 bQImNn'})
+            
+                # Categoria do Jogo
+                category_tag = channel.find('a', {'data-test-selector': 'GameLink'})
+            
+                # Tags associadas
+                tags = channel.find_all('button', {'class': 'ScTag-sc-14s7ciu-0'})
+                tag_texts = [tag.find('span').text.strip() for tag in tags]
+            
+                # Imagem do canal
+                img_tag = channel.find('img', {'class': 'tw-image'})
+                img_url = img_tag['src'] if img_tag else ''
+            
+                # URL do canal
+                link_tag = channel.find('a', {'data-test-selector': 'TitleAndChannel'})
+                url = f"https://www.twitch.tv{link_tag['href']}" if link_tag else ''
+            
+                # Adicionando informações ao dataset
+                if title_tag and channel_name_tag:
+                    tvg_id = link_tag['href'].strip('/').split('/')[-1]
+                    channel_data.append({
+                        'type': 'info',
+                        'ch_name': title_tag.text.strip(),
+                        'tvg_id': tvg_id,
+                        'url': url,
+                        'thumb': img_url,
+                        'group_title': category_tag.text.strip() if category_tag else "Unknown",
+                        'tag_text': ', '.join(tag_texts),  # Concatenando as tags
+                    })
 
-                link_tag = article_tag.find('a', {'data-test-selector': 'TitleAndChannel'})
-                title_tag = article_tag.find('h3')
-                category_tag = article_tag.find('p', {'data-a-target': 'preview-card-game-link'})
-
-                thumb_tag = article_tag.find('img', class_='tw-image')
-                thumb_url = thumb_tag['src'] if thumb_tag else ''
-
-                tag_tag = article_tag.find('div', {'class': 'ScTagContent-sc-14s7ciu-1'})
-                tag_text = tag_tag.find('span').text.strip() if tag_tag else 'Unknown'
-
-                if not link_tag or not title_tag:
-                    continue
-
-                tvg_id = link_tag['href'].strip('/').split('/')[-1]
-                channel_name = title_tag.text.strip()
-                group_title = category_tag.text.strip() if category_tag else "Reality Show's Live"
-
-                if tvg_id in processed_channels:
-                    continue
-
-                processed_channels.add(tvg_id)
-
-                channel_data.append({
-                    'type': 'info',
-                    'ch_name': channel_name,
-                    'tvg_id': tvg_id,
-                    'url': f"https://www.twitch.tv/{tvg_id}",
-                    'thumb': thumb_url,
-                    'group_title': group_title,
-                    'tag_text': tag_text
-                })
 
             try:
                 next_button = driver.find_element(By.CSS_SELECTOR, 'button[data-a-target="pagination-forward-button"]')
