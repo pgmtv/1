@@ -1,6 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20250110_120000_CBS_Mornings",CBS Mornings : KPIX : January 10, 2025 4:00am-6:00am PST
-https://archive.org/download/KPIX_20250110_120000_CBS_Mornings/KPIX_20250110_120000_CBS_Mornings.mp4?exact=1&start=0&end=300
+#EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20250110_200000_CBS_News_Bay_Area_Afternoon_Edition",CBS News Bay Area: Afternoon Edition : KPIX : January 10, 2025 12:00pm-12:30pm PST
+https://archive.org/download/KPIX_20250110_200000_CBS_News_Bay_Area_Afternoon_Edition/KPIX_20250110_200000_CBS_News_Bay_Area_Afternoon_Edition.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20250110_140000_CBS_News_Bay_Area_Morning_Edition_6am",CBS News Bay Area: Morning Edition 6am : KPIX : January 10, 2025 6:00am-7:00am PST
 https://archive.org/download/KPIX_20250110_140000_CBS_News_Bay_Area_Morning_Edition_6am/KPIX_20250110_140000_CBS_News_Bay_Area_Morning_Edition_6am.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20250110_113000_CBS_News_Mornings",CBS News Mornings : KPIX : January 10, 2025 3:30am-4:00am PST
@@ -147,24 +147,7 @@ https://archive.org/download/KPIX_20250104_010000_CBS_News_Bay_Area_Evening_Edit
 https://archive.org/download/KPIX_20250104_003000_CBS_News_Bay_Area_with_Elizabeth_Cook/KPIX_20250104_003000_CBS_News_Bay_Area_with_Elizabeth_Cook.mp4?exact=1&start=0&end=300
 #EXTINF:-1 tvg-group="VOD" tvg-logo="https://archive.org/services/img/KPIX_20250104_000000_CBS_Evening_News_With_Norah_ODonnell",CBS Evening News With Norah O'Donnell : KPIX : January 3, 2025 4:00pm-4:30pm PST
 https://archive.org/download/KPIX_20250104_000000_CBS_Evening_News_With_Norah_ODonnell/KPIX_20250104_000000_CBS_Evening_News_With_Norah_ODonnell.mp4?exact=1&start=0&end=300
-#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-nos-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-meo-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rtp-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz"
-# M3UPT.com - IPTV playlist in M3U format with 📺 TV channels and 📻 radio stations in 🇵🇹 Portuguese. Public and official streams only.
-# 📺 TV
-#EXTINF:-1 group-title="TV" tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
-#EXTVLCOPT:http-user-agent=Firefox
-https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
-#EXTINF:-1 group-title="TV" tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
-#EXTVLCOPT:http-user-agent=Firefox
-https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8
-#EXTINF:-1 group-title="TV" tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
-#KODIPROP:inputstream=inputstream.adaptive
-https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
-#EXTINF:-1 group-title="TV" tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
-#KODIPROP:inputstream=inputstream.adaptive
-https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS8xMS8yMDI1IDEyOjI2OjQ4IEFNJmhhc2hfdmFsdWU9Q1dzeUpBTjlRRlpUU2lxSVhSQVVyUT09JnZhbGlkbWludXRlcz0xNDQwJmlkPWY0OWYwYTg4LTUyYWQtNGRlYi05YmM5LTY3Y2VmMTYzNTk5Ng==/
-#EXTINF:-1 group-title="TV" tvg-id="RTP3.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP3.png",RTP 3
-#EXTVLCOPT:http-user-agent=Firefox
-https://streaming-live.rtp.pt/liverepeater/smil:rtpnHD.smil/playlist.m3u8
+#EXTM3U
 #EXTM3U
 #EXTM3U
 #EXTM3U url-tvg="https://www.open-epg.com/files/serbia1.xml.gz"
@@ -944,6 +927,8 @@ http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
 http://s1.1-cup.net:2095/solucao111hgfgh77hu78/xplus1111XXhjgyu87/51
 #EXTINF:-1 group-title="Canais | GLOBO" tvg-id="Globo" tvg-logo="https://imgur.com/waZJG1M.png",RPC Curitiba HD
 http://15.235.15.230:14487/
+#EXTINF:-1 group-title="GLOBO" tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://seeklogo.com/images/R/rede-globo-logo-817F928B4F-seeklogo.com.png",Globo SP 5 HD
+https://cdn-3.nxplay.com.br/GLOBO_SP_TK/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="GLOBO" tvg-id="Undefined" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/1/1e/Logotipo_TV_Bahia.png",Globo Bahia HD
 http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
 #EXTINF:-1 group-title="GLOBO" tvg-id="TVGloboSaoPaulo.br" tvg-logo="https://imgur.com/waZJG1M.png",Globo SP 8 HD
@@ -1020,8 +1005,6 @@ http://hls1.sua.tv:80/live/globosphd/s.m3u8
 http://xcui.vitvabc.xyz:8880/laok300/8pEZjdeMPad7/32370
 #EXTINF:-1 group-title="Canais | GLOBO" tvg-id="Globo" tvg-logo="https://imgur.com/waZJG1M.png",Globo RPC Curitiba HD
 http://xcui.vitvabc.xyz:8880/laok300/8pEZjdeMPad7/32266
-#EXTINF:-1 group-title=" CANAIS | 4K" tvg-id="Premierefchd.br" tvg-logo="https://i.imgur.com/BMWGQhx.png",PREMIERE CLUBES 4K
-http://bccdn.xyz:80/4387701968208/945823895687/80553
 #EXTINF:-1 group-title="Canais | ABERTO" tvg-id="RecordTV" tvg-logo="https://imgur.com/lyQ1v9M.png",RecordTV Conquista HD
 http://tvconquistalrv.duckdns.org:8080/hls/tvconquistalrv.m3u8?ManoTV
 #EXTINF:-1 group-title="Canais | ABERTO" tvg-id="BAND" tvg-logo="https://i.imgur.com/yyFeDm7.png",Band Arapuan HD
@@ -1082,7 +1065,7 @@ https://stream.n1.au.swellnet.com/surfcams/scarborough.stream/chunks.m3u8
 https://stream.n1.au.swellnet.com/surfcams/middleton-bay.stream/chunks.m3u8
 #EXTINF:-1 group-title="Австралия 🇦🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdx-XICEgT8w2_QqaBC8nBlGSB6EiPZDgyCzphfNpZTQpGYviLATkcx1yzLw&s",Австралия 5
 https://stream.n1.au.swellnet.com/surfcams/south-port.stream/chunks.m3u8
-#EXTINF:-1 group-title="Австралия 🇦🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEmItlJ8CBMUC7OPJMSV787ka2DYPQmaIbJuxTGFMPVu80tlWjhjs6aW9ZH0&s",Австралия 6
+#EXTINF:-1 group-title="Австралия 🇦🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_VwmyRumsYdzVfueom3zpwSvP_mp-tY-AGmw4ePL-x3tRG-4G0U4BDogpew&s",Австралия 6
 https://stream.n1.au.swellnet.com/surfcams/shark-island.stream/playlist.m3u8
 #EXTINF:-1 group-title="Австралия 🇦🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMyrd4FZaFzmKNJ3rF_Ym-b9nF5IcepBwSfyMWa54B93Rf-b0fivfMvgcIjg&s",Австралия 7
 https://hls.augrea.stream/coral/hls/stream.m3u8
@@ -1172,7 +1155,7 @@ https://maybach.railcam.co.uk/Hebden_41043/tracks-v1a1/mono.m3u8
 https://maybach.railcam.co.uk/Hensall_12532/tracks-v1/mono.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLnvq57BWdS5KbAeIGJvl6omGDjBleRunUqegeFzDwlcZnvTUSAK60JydL_IU&s",Hythe
 http://maybach.railcam.co.uk/Hythe_22835/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiTXbBOkX3vY5C11cfhPWzrrQP6LQByqhdL2ehyH1u8Ueg4EjRyZ8iV0pFoWg&s",Kidderminster 2
+#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWwm0LSBjbDSp8Ftaf-Txt28hMi5Ak0DnBMc6m2fKyxHd6oSoxNzwqu2rb8Fg&s",Kidderminster 2
 http://89.16.164.68:80/SVR-Kidderminster-C2_094871/index.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWp_-jKNc5in9kXd49XY1RaUEPXuhdrde3SpkfCHXootRAUDsHooDlzyfy9c&s",Minehead Station
 http://maybach.railcam.co.uk:80/Minehead_05286/tracks-v1a1/mono.m3u8
@@ -1192,15 +1175,15 @@ https://paxman.railcam.co.uk/Shrewsbury_10933/tracks-v1a1/mono.m3u8
 http://maybach.railcam.co.uk:80/Swanage_43965/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmtPic-mK6H9aQArGBTpSdSXRLVOfsgzsLCKJnAklj7ON_d0wchD75sfEeE_Q&s",Tormorden
 https://maybach.railcam.co.uk/Todmorden_19065/tracks-v1/mono.m3u8
-#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC7G3rH2hKxpTXnq2wZz47-nefjHJT6qGozMuJ3Tj7uKIdCib3yfLuBP8_cQ&s",Torquay
+#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0AgTta8MOzFgLY0ER_KN5U9L91dN1IcDHlUTOBZ72m5GPWbLxPjGwFnyN5w&s",Torquay
 http://camsecure.co/HLS/boatq1.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC7G3rH2hKxpTXnq2wZz47-nefjHJT6qGozMuJ3Tj7uKIdCib3yfLuBP8_cQ&s",Torquay
 https://camsecure.co/HLS/boatq.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3D48VP6n4wReoaanW5r8AHIQELArIdbcKZkRy7btew5ysQj0IBmB_mCEW1Q&s",Uphall
 https://maybach.railcam.co.uk/Uphall_96341/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicMbmnA49zu-GiuHLNpt0Od2-ynytbPMISJ582zG6BW87mdjb9oGzeukG17o&s",Weather
+#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPGwGRWAwieI7Fo9eKxzxD4va6_bey_25zMBHbAitjnhq7b_TFBLx6joeB5os&s",Weather
 http://89.16.164.69/weather/index.m3u8
-#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicMbmnA49zu-GiuHLNpt0Od2-ynytbPMISJ582zG6BW87mdjb9oGzeukG17o&s",Weather
+#EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyNxp6LPwtAH6BL-Af-AjU1j6pmXO8IOv2ymTPDN3mSIoviRUBuulktffoGg&s",Weather
 http://89.16.164.69/weather/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Великобритания 🇬🇧" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSXCCBeNqlh98eoXKFecvPPOFZwInvxQ6nz8dEQLErucF1juyT4FmsAx5i4Q&s",Westward
 http://camsecure.co/HLS/westho.m3u8
@@ -1226,7 +1209,7 @@ http://cam01.binz-kabel.de/cam1/960.m3u8
 http://cam01.binz-kabel.de/cam2/960.m3u8
 #EXTINF:-1 group-title="Германия 🇩🇪" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPU4kAA-XfeLi17aNeNhQQgQqYry-zX00N6J5gIFnbVEaqknm0LvaXzpB23w&s",Groemitz
 http://osltv.stream24.net/osltv1/_definst_/mp4:groemitz.stream/playlist.m3u8
-#EXTINF:-1 group-title="Германия 🇩🇪" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ev_vRHRJXtpfsVoSPRndiX0BJZ_RByK_TuG2squa414cko2HOuVEj6AHw&s",Vogel
+#EXTINF:-1 group-title="Германия 🇩🇪" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ8sfRjwjywj7a0-yvQ3SBTdUzXZWha-cp9s8VG6cT4j24zmib0TBAYX33jRU&s",Vogel
 http://vogelkamera2.dyndns.tv/hls/live.stream.m3u8
 #EXTINF:-1 group-title="Германия 🇩🇪" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_RlffBXJEEcsJl12BZqzbGcZ6QXtQ0AvPMzr607ehvpK8-nkSPYYg6TIcmMY&s",Аэропорт Дюссельдорфа 1
 http://stream-5gw.1000eyes.de/cupertino/dus5a92.stream/playlist.m3u8
@@ -1278,7 +1261,7 @@ https://cdn.cast-tv.com/23595/Live_Kotel3_ABR/23595/Live_Kotel3_4K_1080p/playlis
 https://cdn.cast-tv.com/23595/Live_Kotel2_ABR/23595/Live_Kotel2_4K_1080p/playlist.m3u8
 #EXTINF:-1 group-title="Израиль 🇮🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeqN-NIp-isB0LylXwco0kW35NgQkqMKY6otht_tA7IMFxrwaqQHPbixWN4A&s",Иерусалим арка Уилсона
 https://cdn.cast-tv.com/23595/Live_Kotel1_ABR/23595/Live_Kotel1_4K_1080p/chunks.m3u8
-#EXTINF:-1 group-title="Израиль 🇮🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSESAdeS3boho_QML-4Be0__yo7ZPlbjnck6-_NJcd6NQTmbapQD9qRUP3_1A&s",Назарет Базилика Благовещения Грот
+#EXTINF:-1 group-title="Израиль 🇮🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlD_H6VJFCy-NWDVGGu5-h2AxTbPd-XJm4T0GFTtxkSwT4xLaQgOHWV8SMyw&s",Назарет Базилика Благовещения Грот
 https://streamer.clickadia.ps/nz_grotto/tracks-v3a1/mono.m3u8
 #EXTINF:-1 group-title="Израиль 🇮🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NUhf7T0JJ4zfk4HiN30EyCAXlaCowRExZsotjC2Fex069qnPvxLL6vgiaJg&s",Бейт-Янай Пляж
 https://cams.cdn-surfline.com/cdn-int/il-beityanai/chunklist.m3u8
@@ -1286,6 +1269,8 @@ https://cams.cdn-surfline.com/cdn-int/il-beityanai/chunklist.m3u8
 https://5b8d2cbe62ad6.streamlock.net/live/spanje.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Испания 🇪🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPSgFdGyYgr02Wj9Om6pukgge9zHyiQxQBZduUGQ-PILw5OuKxukKtvbY8gSA&s",Гудар Панорама
 https://webcam-2.ibericam.com:5443/live/streams/gudar.m3u8
+#EXTINF:-1 group-title="Испания 🇪🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWcNVTYR3TfU8xj06lQLrTAyg3KTzI_J1LLsVuTyhT0x53Do9uLpLA7fmL0g&s",Захара-де-лос-Атунес вид из отеля Playa de la Plata
+https://flus.spotfav.com/zahara-atunes-playa-plata-spotfav/tracks-v1/mono.m3u8
 #EXTINF:-1 group-title="Испания 🇪🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9LjPdgnuXKsC80i7rD_CDaNaOzveZcqTSaSW7xcr_D9hUK5oOgLa3yH91Q&s",Кальпе пляж Ла-Фосса
 https://streaming.comunitatvalenciana.com/webcam/CalpPlayaFoss/manifest.mpd
 #EXTINF:-1 group-title="Испания 🇪🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuzmS7-sOtYfIwaebeqh8ysiWJ13znztypDb7M62CproyFVdO9KnefJKr4Hyw&s",Кабра-де-Мора Панорама
@@ -1394,7 +1379,7 @@ https://5d881567b7568.streamlock.net/live/Torenvalk3.stream/playlist.m3u8
 https://5d881567b7568.streamlock.net/live/Kerkuil1Buiten.stream/playlist.m3u8
 #EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3-yUXLhXKMnqoGSgqilqEstAaVgDFw9EECYfAynPLwUoLyAyXAkwzh63_Qc&s",7
 https://5b8d2cbe62ad6.streamlock.net/live/vlissingen4.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQdPdL3EdSZhrkDt-a8JBai26_c4phPpZbXXVcHEo8KlNM1I_ruyCRImCxFI&s",8
+#EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9mIo6fgSyQIsY0l_47RaYPy_WiqcmZc7SZnXXp4hTzt_UeqCrM4yGHM7Gmuc&s",8
 https://5d881567b7568.streamlock.net/live/Steenuil2Binnen.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwpufbNwd3T1vZnz58PUeZczTV4r8xSaBmhY6Jk2s2k0NgI7gz_SpMlqFW-w&s",Морские котики
 https://6162417352ffd.streamlock.net/live/ecomare.stream/playlist.m3u8
@@ -1406,10 +1391,8 @@ https://5d881567b7568.streamlock.net/live/Torenvalk3.stream/chunklist.m3u8
 https://5d881567b7568.streamlock.net/live/Praathuis/chunklist.m3u8
 #EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnQkxFgrlK39LKEIXRwQkjRyF8gSuENrrW6brqHV5ey1EOGpxQRcYN61DEsWU&s",22
 https://5b8d2cbe62ad6.streamlock.net/live/bontekoe.stream/playlist.m3u8
-#EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLALEscRELCEd2YnZcesZQ_hg1OZQdMHjJ0M3-1uFyPCEjM7GZUeRAI6NiAQ&s",23
+#EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49psq7gWNEdIaS-WsW3bEz1rK5e2kVViYpYnQ6B3aIDFZXInApRtYQsn0BNw&s",23
 https://5d881567b7568.streamlock.net/live/Torenvalk2.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4KhWOwtyNkMUkL5y1YvhkQtauSjSf3U6ETvouBMLdiI7Tz-_AarbNqxWRhIc&s",24
-https://5d881567b7568.streamlock.net/live/Dras.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlFObe9k6kEb7_4bgsFWiA_XAyRRUn95eeAqxqMra-wILpDufayXjidblSn_U&s",25
 https://584b389d712f9.streamlock.net/live2/blokzijl2.stream/playlist.m3u8
 #EXTINF:-1 group-title="Нидерланды 🇳🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRo2ED33C3sAJl-9266fObgqOVVqirszufyEHgYN4SqpZNx8DTl3Ebvo_rQ&s",26
@@ -1436,7 +1419,7 @@ http://s1.worldcam.live:8081/rabien/index.m3u8
 http://stream.elblag.net:18080/mosir/index.m3u8
 #EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3-yUXLhXKMnqoGSgqilqEstAaVgDFw9EECYfAynPLwUoLyAyXAkwzh63_Qc&s",7
 https://stream.arkomnet.eu/ciecina/index.m3u8
-#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQdPdL3EdSZhrkDt-a8JBai26_c4phPpZbXXVcHEo8KlNM1I_ruyCRImCxFI&s",8
+#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9mIo6fgSyQIsY0l_47RaYPy_WiqcmZc7SZnXXp4hTzt_UeqCrM4yGHM7Gmuc&s",8
 https://stream.arkomnet.eu/zabnica/index.m3u8
 #EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2RjZ019JqqF9NlT877wbR4ewINASz1UDauMF6iai7wWLPDIGgkUbwSUEIHHg&s",9
 https://stream.arkomnet.eu/wgjaz/index.m3u8
@@ -1472,11 +1455,11 @@ http://hls8.webcamera.pl/sopot_cam_e1c28f/sopot_cam_e1c28f.stream/chunks.m3u8
 http://hoktastream1.webcamera.pl/tv_cam_781381/tv_cam_781381.stream/chunks.m3u8
 #EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzG_IYVyxdsgQ2dPBVgCeI1PzFaAFVrvep9Sf5J0ZRcEiPC3-WwW-Qa06_uw&s",Ujsoly
 http://91.224.104.112:80/ujsoly/index.m3u8
-#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzLtrqlN8MlBekj20Txx_q3aJHdXrLewlHBaf5JfdCvozIAobjo-4hn0FIIlI&s",Widok
+#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8yGqCvdqFkxJ7Sg_ibyHILxJUmiA04T688YCDZ3zVPZtmehe5v3q8paiYmA&s",Widok
 http://91.224.104.112:80/wgwidok/index.m3u8
 #EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhIOlfRtAZnZ4l7bPjgaBKSnfBj8MUMM6irb3cfO8RZRmOeaoeedKkAJWSw&s",Аэропорт 10
 https://cdn-3-go.toya.net.pl/kamery/lodz_lublinek2.m3u8
-#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRABtMVsNalavpWNny0AjlVJeaNfSyL0pr8R5nMcS4onPmh95Ak3OL9-KHSU7U&s",Аэропорт 11
+#EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Tzqfe_oRp_ZYdm9bXAxF947x4pIBVdDbU_AUbIkFGA7mLG6DBXz5aOn4Ng&s",Аэропорт 11
 https://cdn-3-go.toya.net.pl/kamery/lodz_lublinek1.m3u8
 #EXTINF:-1 group-title="Польша 🇵🇱" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBe9CKLKi1YigHRfh5iIC9h4XBx1vdBEOoEHmQ7VUqGLSGQQDw7ILLfsRASs&s",Аэропорт 9
 https://cdn-3-go.toya.net.pl/kamery/lodz_lublinek3.m3u8
@@ -1586,13 +1569,13 @@ http://city.vtvn.ru:88/hls_65_4/stream_65_4.m3u8
 http://city.vtvn.ru:88/hls_65_14/stream_65_14.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ztK5JqyfUMr8cYikWkpH1PHYW6xyt3qVQCn_4P08aMYSQV3KonGgmLb6Ag&s",Врангель 3
 http://city.vtvn.ru:88/hls_65_15/stream_65_15.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwke8zMbuDH01CN7aPksDB7JN2USMvgV1ixeXhxpwiGGJgBO79vM_UrBRrwDQ&s",Врангель 4
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkDeNdQIpIrN11VlPlzxVB1ncCa1tAQYyXL_Saw12szCP1zwDqt7J9QirS1o&s",Врангель 4
 http://city.vtvn.ru:88/hls_65_16/stream_65_16.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV21sHTo-DIKJgOKtVWS2AC2uf6WTcBG_JiioSJ1Fmw_7Q5AtTCAU2kLBjvw&s",Врангель 5
 http://city.vtvn.ru:88/hls_65_17/stream_65_17.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTOOBNOfjdu5K_6BaK30Q7xXNIPEXsXQl-W4VdzRwdaKUQqgnzq3ZY1gmsr1I&s",Врангель 6
 http://city.vtvn.ru:88/hls_65_19/stream_65_19.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-lB_fBVtJ83G_JX6KWBjdmCU31tbXQQOfuTL9FTpzFhH2S79bs3DQZZc0Eg&s",Врангель 7
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Ey6JihXDcCSPlO4ypfpuQu0K7TBv2cvKqcpgTErYUByKvDgX8uZJZoSvXTw&s",Врангель 7
 http://city.vtvn.ru:88/hls_65_20/stream_65_20.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiS3zrQhLqPrTvfxeCwFty9cicV__P2gkFc6zQczyIxMvgaaTgL3mMATOXO6Y&s",Врангель 8
 http://city.vtvn.ru:88/hls_65_21/stream_65_21.m3u8
@@ -1624,10 +1607,6 @@ http://city.vtvn.ru:88/hls_65_6/stream_65_6.m3u8
 http://city.vtvn.ru:88/hls_65_36/stream_65_36.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDu7VL98AqhNv68tuAVfCc8oi1hqHU8-fzCRy9mAfqO64hRDKKXzdHObMtQY&s",Врангель 23
 http://city.vtvn.ru:88/hls_65_129/stream_65_129.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfyM3tUlIXsq2TrDADqqgQt9xajNl2iNu3IPNv9Qk4Yj9RTE-KAbTdY9rT8GA&s",Врангель 24
-http://city.vtvn.ru:88/hls_65_132/stream_65_132.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNynaYs6ud6okBlqghvFW8QsBQUUmtAfHEJSg1wKlsPA2HXiOwd88qYO50co&s",Врангель 25
-http://city.vtvn.ru:88/hls_65_130/stream_65_130.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9W5KftUpiFFfOSthVzOy0_ZiM-SwFq5BS41wXV-PPDwQB9O0R0rCSks8Usnc&s",Врангель 26
 http://city.vtvn.ru:88/hls_65_133/stream_65_133.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl5kj6zinvP5ImGZMPelnQ4fMSQCV-RX25-AKxTqNVOlMs3nMr3YwqZ5dUXK8&s",Врангель 27
@@ -1642,7 +1621,7 @@ http://city.vtvn.ru:88/hls_65_191/stream_65_191.m3u8
 http://city.vtvn.ru:88/hls_65_192/stream_65_192.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbIniJiD7bmVbestPYMoALVYu4sY6_8A1d1_YXGL39k5n8GWzGpLIguQvAKQ&s",Врангель 33
 http://city.vtvn.ru:88/hls_65_197/stream_65_197.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH25Q9eSD4uC2wzNIfMec2eHwoodFJ1Fa2ZkwARpyci6_rm2nfO4PvpkhdRAQ&s",Врангель 34
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRVTX0gfbBVrEV8MT5x79e1XykLSqTOt-cT8whaQnjcdbfSDXdALKAqcR2&s",Врангель 34
 http://city.vtvn.ru:88/hls_65_9/stream_65_9.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJtqtuirFHM-l38TA_iOOpnL565us2v57c2t9EFcU5qddNidf-zt4EU1U7Ttc&s",Врангель 36
 http://city.vtvn.ru:88/hls_65_11/stream_65_11.m3u8
@@ -1764,7 +1743,7 @@ https://cam.satnet-spb.ru/stream/5a67a7b2900850ad9da25847.m3u8
 https://cam.satnet-spb.ru/stream/5d62389b9008ce72a85f8df1.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqctvSKPitPItH037JcupgfuOMdTiACsH5AyJsWCTJkjzUDupSForpTJCx22E&s",Ломоносов 3
 https://cam.satnet-spb.ru/stream/5a67a7b4900850ad9da2584a.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Bp-BDe8sBQGxmP0BNk4fc0lD4rAyL-ub4tUDVIQuSARyZN6_Q1ah81SVy2I&s",Ломоносов 4
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySoAxCUWUFrv7V7apBNFY0OlY_GgAiHjO9ZtntlHXu55QoliVk-A3tu3yN1Y&s",Ломоносов 4
 https://cam.satnet-spb.ru/stream/5a67a7b4900850ad9da2584b.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQYWlyJEi45NxOvEpQRLR8XpxhZy7omARFuu6d5IwkJFNb6QRrcvrT3nQbzQ&s",Ломоносов 5
 https://cam.satnet-spb.ru/stream/5a67a7b2900850ad9da25848.m3u8
@@ -1842,11 +1821,9 @@ http://194.28.212.11/other/vo1.m3u8
 http://194.28.212.11/other/vo2.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRADw9Q4W_NLWIrLXYiJ0iT34P879rL4Mu8SdLW-6oTpThWeIlNYuO6lCAcNA&s",Невинномысск 5
 http://194.28.212.11/other/most1.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEqTCllnNlnDQiFF-fgHS3XpV6n6s5NB9bRIKuD4wYBsyoWsekwYhOSUfZmi4&s",Невинномысск 8
-http://194.28.212.11/other/nizki.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFK84ujNvtJN2hbELSPDmM8LMJ6AsPhXdZ4vTr6nAvLBy771OLVGOavDG1Wdw&s",Невинномысск 9
 http://194.28.212.11/other/mendeleeva1.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxyKeVw4aj8P9_sJ-_2hNLbnsZ8Va9nyeaGPMNGEHMKPWALJr3yypUh1RkbDE&s",Орск 1
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhkcxxnl7BaitVwFDnjg6wuHpQOdy7fpblA2V2llaKOUjdaW_ZfgAoruWt5A&s",Орск 1
 http://komsomolskaya.camsh.orsk.ru/hls/komsomolskaya.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHf0EUGNQ5xdEnUHpO6S288IY-0MuxkQP3iFhFeO-oNZ3FgkpLLdVrxYCmi4&s",Орск 2
 http://televyshka.camsh.orsk.ru/hls/televyshka.m3u8
@@ -1894,7 +1871,7 @@ http://stream.telko.ru/Tuhach_30_5_cam3/tracks-v1/mono.m3u8
 http://stream.telko.ru/Tuhach_30_2_cam2/tracks-v1/mono.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj9pqLnkeyaBUYsDK-ciV2yxcAR7AJsWC1lg2TiyEwxGMge1y6v9_pPRmd1EQ&s",Ставрополь 18
 http://stream.telko.ru/Tuhach_30_1_cam2/tracks-v1/mono.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPER9T9Lu6FfbtsYwmgVNpoTazYDP9Ja20If_rnKG9MoBX5qYRYQrbgc_ecQ&s",Ставрополь 2
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nOk-3rkB9RON0-WCGxSQckRgGu4xJQ3KO2Fc6pjSh6KhlK1bmaPyUPAhyw&s",Ставрополь 2
 http://stream.telko.ru/Rogog17_Cam1/tracks-v1/mono.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYLF8fzFBqDqVsdJi-z52LA-PQgqaaefI442Z6XYiOljfhVGhoqB6QrCU4XlI&s",Ставрополь 20
 http://stream.telko.ru/Tuhach_30_cam1/tracks-v1/mono.m3u8
@@ -1918,6 +1895,8 @@ http://stream.telko.ru/Tuh30_6cam2/tracks-v1/mono.m3u8
 http://stream.iformula.ru:8080/hls/ParkSamolet.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqQiX2u5vXEQYfYStYZYr4C1ptsfLtCvX6sHg3iTLq8Tkc3vjG3oNMP9UxmGs&s",Тольятти 1
 https://webcamsbuildpool.tltsu.ru/cam0/cam0.m3u8
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2SVYuQbBPENkZUqM9Mo9tvEechPEpAIhS3bi1L5cNVrsvBFGrj3C9aK0oqkc&s",Тольятти 2
+https://webcamsbuildpool.tltsu.ru/cam1/cam1.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz_lSDFhbbYp6AM2L3TOTefO9jxvv_6KpCW3uRAaVzkWcCe-8t0KdilepgRg&s",Томск - Перекресток пр Ленина
 http://cdn08.vtomske.ru/hls/stream1.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLU3gYEWwubyiRmws_KEvCEmdsutNlth6S_on4dNUBrHosYP6zUzgmxCsLTA&s",Томск - Площадь Южная
@@ -1934,7 +1913,7 @@ http://tv.t-tk.ru/cam_vokzal/index.m3u8
 http://tv.t-tk.ru/cam_park_mira_ploshad/index.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-kStaN6z6hpoEF-6ddLSyNx5M3Vs_IVrXiktWUWQ_t7PmzALJ23--A5QFpEQ&s",Тулун 11
 http://tv.t-tk.ru/park_gidro/index.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYtgYzH9m3QCN5MdUCwzn2Uct7rOc9onwg6-Ty4lwK9C-kGMFEMELnViZing&s",Тулун 12
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0DB7Ah63eX-4yTtAsQcgbz8_tk5zQmh55wDD0Ly2rix1WkIc2RRTdk_xeqtA&s",Тулун 12
 http://tv.t-tk.ru/prometey/index.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYAuw9773aQhBYN5imtoFfexmLHWQr4xWGiRBTftFRXBXNnXV5uwsUYk--ww&s",Тулун 13
 http://tv.t-tk.ru/atrium2/index.m3u8
@@ -1942,7 +1921,7 @@ http://tv.t-tk.ru/atrium2/index.m3u8
 http://tv.t-tk.ru/1412/index.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd32Qmip2jEE8PrKvwYXHC1iceup4gtVklsaWcePCWoVnHc5osXDvwTzOjFQ&s",Тулун 15
 http://tv.t-tk.ru/lenina_2/index.m3u8
-#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZ0x_VhTn1xmbM5B4wCsocnUbZ9Bl_7dbQTmx73yLDRZE5FB4MY66pbG79tM&s",Тулун 2
+#EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNe8I08Z2vaJip_k2jHaGIA_sYEDFQYpzPstsfCX0A2L3IIAYsIMrhHgh1Fw&s",Тулун 2
 http://tv.t-tk.ru/cam_fontan_lenina/index.m3u8
 #EXTINF:-1 group-title="Россия 🇷🇺" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPX-sJtWbQkpZLrinFWUKYA9tB77voiO8rsW_cM1pyw-ikw8spCcL8KC1hLw&s",Тулун 3
 http://tv.t-tk.ru/lenina_128/index.m3u8
@@ -2000,7 +1979,7 @@ https://streamer.devnet.rs/hls/opstinanbg.m3u8
 https://streamer.devnet.rs/hls/genex.m3u8
 #EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfUImb7L652LLBwn5mvGF8pj2TSDlc13siUUthhFLWA05H8-K14b-csXA60Q&s",Белград 15
 https://streamer.devnet.rs/hls/zeleznicka.m3u8
-#EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLACbuu4wMtqnUEb55M3rA2IBQfhXvCp-XzITFZCDRKFn2WlodvWipScRRxA&s",Белград 16
+#EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5RHXnwqKjvQ7Q1A_YaPKDHte3mHiCdSQ1-0OIFP4WkQViqwL64R7IWr8mG3A&s",Белград 16
 https://streamer.devnet.rs/hls/despotastefana.m3u8
 #EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoNyL5D27l1iNMxr4Qv84P56WvLRoj9ScvkVqvr6m3WkYBNG61Chy2hMNEBg&s",Белград 17
 https://streamer.devnet.rs/hls/vuk.m3u8
@@ -2030,7 +2009,7 @@ https://stream5.infokop.net:1443/live_cameras/camera_7/playlist.m3u8
 https://stream5.infokop.net:1443/live_cameras/husky/playlist.m3u8
 #EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsKRhlHuvQ2fsbfM30dTpqSjC3XUfnxL4jcC6WQlkL0eew4GrGlDbgLOUsOQ&s",Сербия 8
 https://stream5.infokop.net:1443/live_cameras/jat/playlist.m3u8
-#EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4UAg9oT2_3_uw3aEZ3vtP3HCPVVql2Cc2QgT5-KJoASTQBkr69lQdmmzeoEk&s",Сербия 9
+#EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYNHP3n7hE_F4Y400Be_Ihaf9PEaXGJqPgUaDUQm1CdQj7jAszVyTisFmoMA&s",Сербия 9
 https://stream5.infokop.net:1443/live_cameras/green/playlist.m3u8
 #EXTINF:-1 group-title="Сербия 🇷🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhwa5crNuXiKuu3P5PXcKDgRrAozJ3KTlMVKMheF62CxhpBjySUGqI125-WQ&s",Сербия 10
 https://stream5.infokop.net:1443/live_cameras/grand/playlist.m3u8
@@ -2046,7 +2025,7 @@ http://stream.kukaj.se/stream/2/video.m3u8
 http://stream.kukaj.se/stream/11/video.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3-yUXLhXKMnqoGSgqilqEstAaVgDFw9EECYfAynPLwUoLyAyXAkwzh63_Qc&s",7
 http://stream.kukaj.se/stream/18/video.m3u8
-#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQdPdL3EdSZhrkDt-a8JBai26_c4phPpZbXXVcHEo8KlNM1I_ruyCRImCxFI&s",8
+#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9mIo6fgSyQIsY0l_47RaYPy_WiqcmZc7SZnXXp4hTzt_UeqCrM4yGHM7Gmuc&s",8
 http://stream.kukaj.se/stream/12/video.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEigS3yuC_9URZq3E7w1RikLSWr_xm7MKxVZCJfvsYNl6UYJmYN6eE8GckXw&s",13
 http://stream.kukaj.se/stream/27/video.m3u8
@@ -2058,7 +2037,7 @@ https://kukaj.profi-net.sk/live/BOCIANY_BESENOVA_4K.stream/chunklist.m3u8
 https://kukaj.profi-net.sk/livetrans/KUVIK1.stream_aac/chunklist.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuiHKlanPI80KxgV0A-23Ot1a5VI_zytbZ4vwtwcYRAx-C9OqsoGc6mOrpaw&s",17
 http://stream.profi-net.sk:1935/tmr/STREAM33.stream/playlist.m3u8
-#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4jRS9ZJRtrAdQaomxkR0EIFAoZFDKN-QZOaqziEA4PXuxDxxLzwzrRkI_Ak&s",18
+#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdbSC3Fuyb535inWxkvBAZNihgAymnsUBYVORlx25Gw4OV6GJpz_AbXu8BcY&s",18
 http://stream.profi-net.sk:1935/tmr/STREAM31.stream/playlist.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRucNO_YwQVA53yQ01lh-tHKi2kXC9cWyxyGiou5_sQEv_EwktC8aHkC1V3ig&s",19
 http://stream.profi-net.sk:1935/tmr/STREAM43.stream/playlist.m3u8
@@ -2068,7 +2047,7 @@ http://stream.profi-net.sk:1935/tmr//STREAM29.stream/playlist.m3u8
 http://kukaj.profi-net.sk:1935/live/PLAMIENKA2.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnQkxFgrlK39LKEIXRwQkjRyF8gSuENrrW6brqHV5ey1EOGpxQRcYN61DEsWU&s",22
 http://stream.profi-net.sk:1935/tmr/STREAM3.stream/playlist.m3u8
-#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLALEscRELCEd2YnZcesZQ_hg1OZQdMHjJ0M3-1uFyPCEjM7GZUeRAI6NiAQ&s",23
+#EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49psq7gWNEdIaS-WsW3bEz1rK5e2kVViYpYnQ6B3aIDFZXInApRtYQsn0BNw&s",23
 http://parksnow.zivekamery.sk:1935/donovaly/DONOVALY.stream/playlist.m3u8
 #EXTINF:-1 group-title="Словакия 🇸🇰" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4KhWOwtyNkMUkL5y1YvhkQtauSjSf3U6ETvouBMLdiI7Tz-_AarbNqxWRhIc&s",24
 http://stream.strba.sk:1935/strba/VYHLAD_NOVESTRB.stream/playlist.m3u8
@@ -2080,7 +2059,7 @@ http://stream.strba.sk:1935/strba/VYHLAD_NAMESTIE.stream/playlist.m3u8
 https://5ed7b8fd7bf40.streamlock.net:444/holidayinnpcbbeach/holidayinnpcbbeachcam/chunklist_w1565534470.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPoL2QKILoPfYe2coUxMT7mxQ09LzZAeWwKpnyNOX6WhoZnpZgWV6SePAKQv0&s",Флорида Панама-Сити-Бич Парк развлечений
 https://5ed7b8fd7bf40.streamlock.net:444/wonderworks/wonderworksroofcam/chunklist_w1486767688.m3u8
-#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgOOOROs6EOrtR4qmgxlwdo9A7bknQt_4751TP1SX_KdL5Un9G1zJzzd600w&s",Джорджия Taйби-Айленд вид на Атлантический океан - Пляж
+#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNFsBMVhYfiZ5JQSnt9loG0MjW8hGlxntFW0pqw-I_yG12qbkVaL2PPhDONg&s",Джорджия Taйби-Айленд вид на Атлантический океан - Пляж
 https://5ddd47d64e730.streamlock.net:444/mousepad1/mousepad1.stream/chunklist_w733151700.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzI2scbvwXZRFvKwt8MPjVH5Dj_BTnB55Feygtlxh4VDG6RU6Eo6Mdm5_Lkg&s",Вашингтон Капитолий
 https://www-senate-gov-media-srs.akamaized.net/hls/live/2036784/capcam/capcam/master.m3u8
@@ -2100,7 +2079,7 @@ https://1-or.vdn.terrafox.net/live/sonoma/chunks.m3u8
 https://5ddd47d64e730.streamlock.net:444/westland/westland.stream/chunklist_w2084520689.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5M1s6ZEJWmCB8J9dpaFfDddD2J4nR0tNcdRvgcvFn0MhrMOBTF6IabuRzmxc&s",Южная Каролина Паулис-Айленд Пляж
 https://5f4ad95bcff44.streamlock.net:444/pawleys1/pawleys1.stream/chunklist_w1289805910.m3u8
-#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03z0zpSEOi6_XBDoZ8u-OKKjtwUhEEkZU4nYntLaE5IpS27PwPnu_1d4izw&s",Род-Айленд Наррагансетт Набережная
+#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0rw-XBScC1rfz3dvdFvuLZtJFiog6qiZIiEPf5WvZaJ78c3l_YDq2GEiS3A&s",Род-Айленд Наррагансетт Набережная
 https://5c864aa99ee04.streamlock.net/surfcam/live.stream/chunklist_w1964635316.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTEQnp94pdAQ4CLDf6ZRXc-t7kZcnvKrZ_wsrY5EVJMZ9nqNqGJwALpwUnYOM&s",Колорадо Урей вид на Горы
 https://2-fss-2.streamhoster.com/pl_126/200612-1260510-1/chunklist.m3u8
@@ -2124,15 +2103,15 @@ https://allclassical.cachefly.net/allclassical/tilicam/chunks.m3u8
 https://5ab0d1d85f91f.streamlock.net/fuel/boardwalk_1.stream/chunklist_w609308605.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKbmX_soo7wL8xA7X36_S1rKm2W_cE_cnrtdDnKg1g56OfUWt2F2RibhoTpg&s",Южная Каролина Норт-Миртл-Бич 17-я авеню
 https://5ed7b8fd7bf40.streamlock.net:444/condoworld/condoworldcam/chunklist_w1918045463.m3u8
-#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBCifcveq9dcyLeuTWVQoTt49OzWhaV9X545TObd9aze3wj-c3VxDowB_JoI&s",Beach Cam
+#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjs38xKARs_NmyA8LNI39nGdDhY9wNIpGliwiDt_p7rjfoo_pR3VpdSBaEKVg&s",Beach Cam
 https://59b69eab8875b.streamlock.net/live/Beach_Cam_01.stream/playlist.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RvOvKsR5o97_vMKwJewytwWsVupJfhK7VQJaH6RfcRzB3Q-5Gt2UoageiQ&s",Estes Park
 http://cdn.estesparkwebcams.com/prospect3/index.m3u8
-#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKmToy77YMI45cJMSTUUtXItpScwzU_ip-viY7sLUMJ_Tw5mhzJSBEpF9Qey8&s",Myrtle Beach Cam
+#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0jvYlu3xHwI3vNbdNPHH_rt6DV02HzRoMwvfTXV5OEHgQI0Hovkx5wdosroE&s",Myrtle Beach Cam
 https://5ab0d1d85f91f.streamlock.net/Riptydz/cam-rt-beach.stream/playlist.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0jvYlu3xHwI3vNbdNPHH_rt6DV02HzRoMwvfTXV5OEHgQI0Hovkx5wdosroE&s",Myrtle Beach Cam 2
 https://5ab0d1d85f91f.streamlock.net/Riptydz/cam-rt-volleyball.stream/playlist.m3u8
-#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT922NUJJIQ5ed0Z2ED64mQoDVVsW-PCfow9zlL9T3TzAq7vV-rIigm3z6E8g&s",Myrtle Beach Cam 3
+#EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZ5qgsnlGCmqn8cp_bob0o-9x1Bdy--1Ut_gSEPMXy486J0u_IUQLyj9PKQ&s",Myrtle Beach Cam 3
 https://5ab0d1d85f91f.streamlock.net/Riptydz/cam-rt-blvd.stream/playlist.m3u8
 #EXTINF:-1 group-title="США 🇺🇸" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBu4EhrTXc1CaW2Zk4M8gT-ciOo9Pppj4wwvN_mHNcpHRWcorEvryXgyO90A&s",Southport
 http://5a5f765a4fcc2.streamlock.net:1935/live/spp.stream/playlist.m3u8
@@ -2152,13 +2131,13 @@ http://ibb-media4.ibb.gov.tr:1935/live/13.stream/chunklist.m3u8
 http://ibb-media2.ibb.gov.tr:1935/live/1029.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMR30kUEdVFSiPq6uHXeTkCMSOMYoGFL8AcGLpDzpMLCVmPuAZOSrLtPX6k7M&s",4
 http://ibb-media2.ibb.gov.tr:1935/live/1030.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNs-6V583BmVeckE7mpogm_lRrKHpiFhjkrW_iLk1kYjxXZ1dXMKH3WzjOn9s&s",5
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR809rPpCs5uXZ96wliRadLqkwbTXDGfEx_4-jhZCY9QzpL0y-8URb9suUWQXw&s",5
 http://ibb-media2.ibb.gov.tr:1935/live/1033.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JKb6uKT5s4Z4vV7Po78C5OTfKI3m4bvcchx7j3nhPcEo9I-EQfnYYZrv0g&s",6
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvOA9v-GNqs6mkzJvCVmHg4Xkb3MauMroia1VlrPpv-FJWh7dO2EzYhQ1Gg&s",6
 http://ibb-media2.ibb.gov.tr:1935/live/1031.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3-yUXLhXKMnqoGSgqilqEstAaVgDFw9EECYfAynPLwUoLyAyXAkwzh63_Qc&s",7
 http://ibb-media2.ibb.gov.tr:1935/live/1032.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQdPdL3EdSZhrkDt-a8JBai26_c4phPpZbXXVcHEo8KlNM1I_ruyCRImCxFI&s",8
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9mIo6fgSyQIsY0l_47RaYPy_WiqcmZc7SZnXXp4hTzt_UeqCrM4yGHM7Gmuc&s",8
 http://ibb-media2.ibb.gov.tr:1935/live/1034.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXS-IeQdmO98DwqQfgw298QKUAmyAQcb5P_8y7McuTiZWtCjsa0MTSqZDi5w&s",12
 http://ibb-media4.ibb.gov.tr:1935/live/17.stream/chunklist.m3u8
@@ -2172,7 +2151,7 @@ http://ibb-media4.ibb.gov.tr:1935/live/21.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/25.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnQkxFgrlK39LKEIXRwQkjRyF8gSuENrrW6brqHV5ey1EOGpxQRcYN61DEsWU&s",22
 http://ibb-media4.ibb.gov.tr:1935/live/33.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLALEscRELCEd2YnZcesZQ_hg1OZQdMHjJ0M3-1uFyPCEjM7GZUeRAI6NiAQ&s",23
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49psq7gWNEdIaS-WsW3bEz1rK5e2kVViYpYnQ6B3aIDFZXInApRtYQsn0BNw&s",23
 http://ibb-media4.ibb.gov.tr:1935/live/2.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4KhWOwtyNkMUkL5y1YvhkQtauSjSf3U6ETvouBMLdiI7Tz-_AarbNqxWRhIc&s",24
 http://ibb-media4.ibb.gov.tr:1935/live/35.stream/chunklist.m3u8
@@ -2192,7 +2171,7 @@ http://ibb-media4.ibb.gov.tr:1935/live/3.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/52.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQeTEo-MYLjLWHu0yn6xQyYeErRni3mclZub_JNH4BsVxIqCFsa2w0s5tzPE&s",32
 http://ibb-media4.ibb.gov.tr:1935/live/57.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBAN9IpiMhEIwNA2nJwLSr56-FV_2_LADO2qsohqrWWm9B7OJ5CCPvxxl9KH0&s",33
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQixgpBwhNysot7fjdHZbAvSetLdya7QjMZTSrLIzBibK_XWhm9YvgascA52w&s",33
 http://ibb-media4.ibb.gov.tr:1935/live/58.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj23sQsDs-h0sOBI40jqGDMiSfhbc5rj1UGEzr1JKcaMxm-wIjPNZ7euNVhw&s",34
 http://ibb-media4.ibb.gov.tr:1935/live/60.stream/chunklist.m3u8
@@ -2212,7 +2191,7 @@ http://ibb-media4.ibb.gov.tr:1935/live/76.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/77.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP2_q2UoJQwkT3l--37vjgoGRcThXwIFUbLoo19yc4fSIqSF-NmCzhveAPXw&s",42
 http://ibb-media4.ibb.gov.tr:1935/live/78.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvG5PzSPFuX31yPLrz48vjFL7Nve6KSK64wWue-PkMRQ716lOgwn9W-UuBhA&s",43
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSEtqH4ud0q5YA0xmW6ZPLVT4LE2cbVdX-nEA4sT3_XdWwmUCynkSLP4WmQ&s",43
 http://ibb-media4.ibb.gov.tr:1935/live/79.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREvNhW3aXAUJwO_0WYFt67bCEH4x9KOwxUuel7RFDhaxpQ9eGTApuzMnz2w&s",44
 http://ibb-media4.ibb.gov.tr:1935/live/85.stream/chunklist.m3u8
@@ -2234,19 +2213,19 @@ http://ibb-media4.ibb.gov.tr:1935/live/94.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/97.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVBdf6-A-P0SBt4X9LdPXnANaGk_j7kNDDPjcHBfsi3sv_cuQ4nIMYEwuKhmM&s",53
 http://ibb-media4.ibb.gov.tr:1935/live/99.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7CN4p_M9PA38WaTeWxvLsuvBa3qrSYhhlCbhgBXnZl4TD_okVyA1SBzNURA&s",54
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtDhFS6blaBwOXmzkXzINF7Je-b7Bp01m3VYxM2BVYA9A5rCrbNeW2-f39Q&s",54
 http://ibb-media4.ibb.gov.tr:1935/live/100.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRlsDPJasQ8v9khCvbALaCxLDJ7-jyEmuBWvmGP0mzaGMiQn5oXaLCdBu4Q&s",55
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO5tcgRfnXzafh4bDhFcs78gAy_KNuuTlDx6vcOMXRVlc9QAynC01aM7I5i-8&s",55
 http://ibb-media4.ibb.gov.tr:1935/live/101.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXNmABKAHfPdlnzeABPUPV-Nen31rJuA8YxJoFuuVOCmZ4J_kXyGH-NkZ1BA&s",56
 http://ibb-media4.ibb.gov.tr:1935/live/102.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWAbr7KBu2IbteHCtH7plsIJTrFD3v4qzSRcFGnhMJuS_b59iHStZhxwKWw&s",57
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe190pqD5I_C2FXlto7chOOnEEVdDe7EA-Z_T3JUe7xwA1uP7QfhKPTTB2Rww&s",57
 http://ibb-media4.ibb.gov.tr:1935/live/103.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRusU8rPVXCsE9BMX_vYvvT8R3XYgahXYaVbgRVFgsGkAYcXL6nNJ6OMsrew00&s",58
 http://ibb-media4.ibb.gov.tr:1935/live/105.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1LsIGOMUleqA5jVn_mknHxCeOrHn6Me0qUm64xO4XsT2CB0gqV5nAnjVyag&s",59
 http://ibb-media4.ibb.gov.tr:1935/live/8.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UJnOYBsmKJK1UDdx1GlQjtwtVVENse1WNTbJKFjbibHfjM4rChy-X2fF_w&s",60
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsiWo6KxzSQkpCTEtFeAp-7z0rTeWlQ1EbrrzI9NCruzR3DwOnQrX1oysQ-bs&s",60
 http://ibb-media4.ibb.gov.tr:1935/live/107.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRet-TQ9-xJ9_OLPwJAmpuMt340ggEW__n-yq4WrMOy6Gryy8SHuU_-NVWYEw&s",61
 http://ibb-media4.ibb.gov.tr:1935/live/108.stream/chunklist.m3u8
@@ -2264,15 +2243,15 @@ http://ibb-media4.ibb.gov.tr:1935/live/118.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/120.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hp_5yDTF94j1lT-z_65Lx9uvUsrvm7NrOJUX3ngFBRpbbDlT7N_07mxNyQ&s",69
 http://ibb-media4.ibb.gov.tr:1935/live/9.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcGrItB52fP5TNdSukAFdG0CypWEkwtXnLWe35kp3M1nnU6zlbY4LVynMN6b0&s",70
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTywaPYaJJ311Ku98wsyhlzhKplDNJ3MsSZMUMdEhOKhoA6Uc2f42hlUrEcFw&s",70
 http://ibb-media4.ibb.gov.tr:1935/live/121.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mGtotzbVHcyGvHxPuPpUtLRuNIeUhQhC3AMwErWIuhbwxtlL6Awi_UUGPzY&s",72
 http://ibb-media4.ibb.gov.tr:1935/live/122.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1gGXCVj3sKc8oOevXK0PnXTY35w4cZ3g4iJONYe3i5XPJPxkRDDM5QOu4Y0&s",73
 http://ibb-media4.ibb.gov.tr:1935/live/123.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTyV_np2b0Mb9a4O_nlEc6zkhc6CbrcYE1yFY0flTLxetC3gBbojqjXsFcYms&s",74
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_q0rQzrL5QdTp9mw9ol43ZCmHckJuCxpJvLAualB-OXs9BsqSW0ExIgFMgQ&s",74
 http://ibb-media4.ibb.gov.tr:1935/live/124.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8_XG4LpiMLsLeULBubQKX24wr-0ipMJRzDHuFOefUQsLZhZg4hX33y3gdxQ&s",75
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSti4xK8ZQVOIJBy75eSPSA3z7vLRnCJTPZ1wKfcLkhUBGSExyEB8_KhSVAJg&s",75
 http://ibb-media4.ibb.gov.tr:1935/live/130.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCOPHp8uJqJIDz-oaR5gvv_N81DIQy-lIeEJPIayMN9SmwPy6ZzGDeJ_rA-A&s",76
 http://ibb-media4.ibb.gov.tr:1935/live/131.stream/chunklist.m3u8
@@ -2286,21 +2265,21 @@ http://ibb-media4.ibb.gov.tr:1935/live/137.stream/chunklist.m3u8
 http://ibb-media4.ibb.gov.tr:1935/live/10.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdRkMtA4yrLWsFs5zj7rTcwe6GchBzQlD3F4TijJVJ5VDxxbm-BPIMETmww&s",82
 http://ibb-media4.ibb.gov.tr:1935/live/139.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq6VgQ3wQevfthw9GfndLja3anMXahkoAXyJCQ91JBbf_8nyHbOerEvH76tA&s",83
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzlOFB1T5weZ10BRk2otumJbpTLxV79493Ef-a1ws-WtRu2O9ggK0cY3J5E0&s",83
 http://ibb-media4.ibb.gov.tr:1935/live/140.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh07fx5TQTIq2IQKbWDWxgZEbjhRCXJfXDSdK38UFXpKawaFwfiVjkQOwhEg&s",84
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu-o-ZKR2Ei_Zhr9n_h3JEQVRpLcsknm5g0EZM9PrZVNCbTPQqnIs017uUXu8&s",84
 http://ibb-media4.ibb.gov.tr:1935/live/143.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ECte9tiNr6GKvjMnNRxCc-XPfFK-H0y_uUgPfAES2Lqq4uVG1m_n0dVUvA&s",85
 http://ibb-media4.ibb.gov.tr:1935/live/144.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfTftiSUhTaTV-Npr8Ob1_d3OZdYUO4dJwxVNj4Nz7411o3P-WkauyeEh1A&s",86
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-sAwP-Hpkwirq-M9-GNrWZmOoTPqi-M5SUJd4MKlIskrpo6KjoDTcOYHGgy4&s",86
 http://ibb-media4.ibb.gov.tr:1935/live/145.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeEJYzjf2fE_UHZs_3VM7am94GWn9QCod70Xj0nj0AhbAkiAxjUvicvbsd-OQ&s",87
 http://ibb-media4.ibb.gov.tr:1935/live/146.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ93OEirABbgTOFup0GeKq6IEDV61jgFWX9a5L_OD2M7QF9ZREaoAKiCl6KQ4k&s",88
 http://ibb-media4.ibb.gov.tr:1935/live/149.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCuMCJnxQJwmi45V3g1b6xSh3GlSmvpwpqobj79sMML5DcCFpSEilbEL5B-HE&s",89
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9R2T7PO6u95yqmvzmfrp5kyirPgJIMgXFNIxQ92ID_mQDdUhvuFvDh8eEMg&s",89
 http://ibb-media4.ibb.gov.tr:1935/live/12.stream/chunklist.m3u8
-#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2yY0AlN4aNUpRlV-pWimcEnDc8oSTus2FPypnjvIcNIIe7aZXqZZG2cqEqw&s",90
+#EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAiTm6rfO_V7md9NhqwowNUNrXREX-h0qfZb5U7lqPDzOuLNi6CdT32faZZQ&s",90
 http://ibb-media4.ibb.gov.tr:1935/live/150.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Турция 🇹🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7Oha9fddD1cFsfc7ilqHL-ahH1Vo1UXPPAdWihLpoW_RiHVXKgoJsBzrjrk&s",91
 http://ibb-media2.ibb.gov.tr:1935/live/1020.stream/chunklist.m3u8
@@ -2330,9 +2309,11 @@ https://hls.iwilive.net/live/pleneuf1.stream/playlist.m3u8
 https://live.viewsurf.com/liveedge/sanary01_5_3/playlist.m3u8
 #EXTINF:-1 group-title="Франция 🇫🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmm_ncd5Sq7EZyFUXMQ0HSfgtrcERLr6cpjSMpD_pvh-DcdxF4GIs2ch3HRM&s",Франция 2
 https://live.viewsurf.com/liveedge/biarritzgrandeplage_1_1.stream/playlist.m3u8
+#EXTINF:-1 group-title="Франция 🇫🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VmtGO7pyNFUgvv3HqCy2JS59vc_8bwwlFqx8nURKkokWeEFu1DWDKelZOc8&s",Франция 3
+https://live.viewsurf.com/liveedge/anglet07_1_1.stream/playlist.m3u8
 #EXTINF:-1 group-title="Франция 🇫🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGXbfXdGOKMp1oQtadc8ZKLJprNC7Uka6iiUAWJUQ2TwxFV_p2FXMbK_MQG8&s",Франция 4
 https://live.viewsurf.com/liveedge/anglet01_1_1.stream/playlist.m3u8
-#EXTINF:-1 group-title="Франция 🇫🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnO4rhroSig4IRhLKB85EIfgyW-A0qKFY2KImoM8g0Jc8myQjwMFaLenZTIQ&s",Франция 5
+#EXTINF:-1 group-title="Франция 🇫🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6JzGe3YKoB98QpvfLhNpqrh6dofe52Rp0Iv11--fOViYHBDUIHJGQ2iizpw&s",Франция 5
 https://live.viewsurf.com/liveedge/anglet02_1_1.stream/playlist.m3u8
 #EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKBGk3ee_7_MwpvWm8W6dy1hQhe8TM_UO_ZgaGXd4OXesCCY9Toh31Ua6mQ&s",1
 http://31.47.96.14:80/hls/roznov.m3u8
@@ -2348,8 +2329,6 @@ http://185.15.109.62:8086/hls/live.stream.m3u8
 http://185.15.109.62:8090/hls/live.stream.m3u8
 #EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3-yUXLhXKMnqoGSgqilqEstAaVgDFw9EECYfAynPLwUoLyAyXAkwzh63_Qc&s",7
 http://185.15.109.62:8091/hls/live.stream.m3u8
-#EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTb3SIDQKdqnP40lcwu1RcnTxcqfaDFnVo4m8kUPMgxxveEudcT4yHNzFTcpA&s",Аэропорт
-http://live.idnes.cz/slow/planespotting/playlist.m3u8
 #EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHUbKr0UvjiKK9HM97MmkgMuqIorZIhR3PnOgr249JkizLnGvKS8G-ud7tm0&s",Валашске-Мезиржичи 1
 http://212.111.1.7:1937/vlmcam01/vlmcam01.stream/playlist.m3u8
 #EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHUbKr0UvjiKK9HM97MmkgMuqIorZIhR3PnOgr249JkizLnGvKS8G-ud7tm0&s",Валашске-Мезиржичи 2
@@ -2364,6 +2343,8 @@ http://212.111.1.7:1937/vlmcam05/vlmcam05.stream/playlist.m3u8
 http://live.idnes.cz/slow/vytopna/playlist.m3u8
 #EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzXO3f2yhjl2weuXnAv78kb3XDRL-V9XvG_FdBOSLZ4Z2FF-qbWqk2IHbzv8&s",Ж/д королевство
 http://live.idnes.cz/slow/kralovstvizeleznic/playlist.m3u8
+#EXTINF:-1 group-title="Чешская Республика 🇨🇿" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXkyZqwIRdE28ML5FawwqnNGT8pIQnCUFlg8pl0N3oaJA0bCO30h3zMDvCNa8&s",Прага
+http://live.idnes.cz/slow/amc/playlist.m3u8
 #EXTINF:-1 group-title="Хорватия 🇭🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI24vbrjjaXFVZZPNUeVn-FPwFfMi0fwr5HilPBdphoERPBw6SZ9tUo-pChA&s",Хорватия 1
 http://cdn-006.whatsupcams.com/hls/hr_kastel1.m3u8
 #EXTINF:-1 group-title="Хорватия 🇭🇷" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkjIo8JhTvi0teVA5zRITZVIav4b0viyWV8PFxNHyWaXoJLGxQ0Dc7GtcAoMs&s",Хорватия 2
@@ -2435,17 +2416,17 @@ https://ythls-v3.onrender.com/channel/UCVklt1DoNwbIBa3_TPwEg_Q.m3u8
 #EXTINF:-1 group-title="Reality Show's Live" tvg-logo="None" tvg-id="Zadruga live 1.rs" ,🔴 CHAT UZIVO GLAVNA TEMA ZADRUGA
 https://ythls-v3.onrender.com/channel/UCVaFR84f-9fkIaf591Con1Q.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 RS - Assista aos telejornais da RBS TV online | Globoplay
-https://live-as-04-27.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDQtMjcudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyNzY3LCJpYXQiOjE3MzY1NTYzNjcsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGR2cj0xMjAsaT0yKS9nbG9iby1yczEvcGxheWxpc3QubTN1OCJ9.R2HYo6SUdT8A37f80BSyhc97nr1MowHF-KLtZ6QnER_wpJ8oVE7q2QBQAFZvmUs7FJp7z_bs7SrGVdOpdrQwr_ACYNS_vrIu5IMnDXKjYz7NgHksJyd09MW664KL8YfVoKaoYFi3EckUKDqwDGdIkfG5ResHI8-DTvkEvFjLjJPEbAbdxNfzN94bgnjuEzb5gomZFQMgJD8Pj54JmdxjV7sAzlCbM7ugdfgeEWB6-6LboviKE8HdJabLuJZK3JmXH36UDWi3UAO6EE7wxxRKseLgZ4ruWYSvlr-oZaVPz06D7d8_TQD9gh7DW1AYMLe37tm8ssq15Ul91RE3oUqUIA/nu/f(dvr=120,i=2)/globo-rs1/playlist.m3u8
+https://live-as-03-33.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDMtMzMudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MDAwLCJpYXQiOjE3MzY1NjE2MDAsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGR2cj0xMjAsaT0yKS9nbG9iby1yczEvcGxheWxpc3QubTN1OCJ9.Mi3w4-kYXM5NmR2V3neHvlYMI9L_kwPX7gIte3fQMHBaFSWe4tLyECgsT1rsMxKI8FEzJSLm01CVDWniOcVxxvXWpjf4Z1OVhwQXureXS5kgwn98UtcB8MLgZYkX-bSlE9Bm93Ua_LJpxvEUXRaS2yBN0xXZRWavQ4Ri9UoqhRWN9bPvNoezF9dMBq1VpM9_YYCwaBMLWqaHJX7c16ld7uoLKIAPfbnql4Z1G3kynZ3zs8hIcSJXwHWHFX2qQfLZLlBbbkr7WaifgyvT5RpQaCM04m7tru0lSJrzWmLGekhZ-ZZPGLt2TRLnx2P7OfXL84Nvr9_pT26cU33CLw_f3A/nu/f(dvr=120,i=2)/globo-rs1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 PA - Assista aos telejornais da TV Liberal online | Globoplay
-https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyNzk4LCJpYXQiOjE3MzY1NTYzOTgsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dmxpYmVyYWwvcGxheWxpc3QubTN1OCJ9.k9JFazdVlbhxGfBsH8JCFjqBsH6j8BSUbDYglR6N2pVaRasY8ENS_IQ9hwUcxrfOXWkYtBc_l8uK5DTSQJTKYtwUwHGytZs1KeRzqgMfOmFiGWHtVqPLXMU4HypIztjqChUowaLxoaw1s6sHway_KH61DgDrcAmX5QMwITrPFjexWgMO7Xj7TGXb8Z4r5XaCm-J_DXhJWrM5z_doGZohqop0qei5r1QpXqqjPpysDCFfdVItrVNI1pAwp5xGomD9Zn6G-_yY00gtAdXfUkstvC1MRkfR_tQyNAEsElJAJ5COJVxRwaCI4YZUfPL8PRBgGhOhhKpijyE69K_Hd9Hq-w/nu/f(bMin=558976)/tvliberal/playlist.m3u8
+https://live-as-02-22.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMjIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MDMxLCJpYXQiOjE3MzY1NjE2MzEsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dmxpYmVyYWwvcGxheWxpc3QubTN1OCJ9.JYALyUgS0kBNBOqO8eFjNU67b_XtNEgVb1nEdZ2jO3HdwCREuTaIN9HtCs7SpY4c12ITOyomaqc598zKI3qjQSWdzAbZQqD_sgNBw-hAMZJBPebgOrK54qnsSlqzNCsfuMfqwAlEpOdOD1azFt1wOHZuEA-X72dTWN5oWdI0N-CY25rBk0OIc9bPQ6waWg3PIHzBoGSqVKcpL2ZoSaqJX0XLyTHRrej4lLRfoZFJzzPISbKkMme6luptXVS_8PvTPBo7DMwhkRM4ydHmNzi5l27p1e4ImLSnUahY4K86hVdwiZ4eVfZXQBMHKfhysQOrJqAUG1CyUWB0bcCOTuRpBA/nu/f(bMin=558976)/tvliberal/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 AC - Assista aos jornais da Rede Amazônica online | Globoplay
-https://live-as-11-10.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTEtMTAudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyODI4LCJpYXQiOjE3MzY1NTY0MjgsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvcmVkZWFjL3BsYXlsaXN0Lm0zdTgifQ.oN8X1Z3TlnDvlak5BgO9_J4D7anUpg9PIR23G-nRNTui6x6bfIEHETOlGithl-QLUpKktHAXS7dSVF1KAbzhpbCAYD4KMkyBA_EMOzpPDP6nSJc2SVDPftmFw2i3L9Cr0zLegh7ehU_qjYPbPWBZn_B39hOA-cEysvmph-DZXvfMxikOGN7PQ8P7JesHw13nlgWBGPZaKvmjLBCWMYG2g4EVhZSnktxUZ3_jBzaIweV5gZkMO66td7YcuNri53S5GExb6MzLgLy_t3mbjmD13Z6-8W0Yi0pVpV8HexEHlL2xHWgWxR2ioK2qbIjr85RYSncLxI6e63SYvtnv23HgJA/nu/f(i=2)/redeac/playlist.m3u8
+https://live-as-10-02.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMTAtMDIudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MDYxLCJpYXQiOjE3MzY1NjE2NjEsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGk9MikvcmVkZWFjL3BsYXlsaXN0Lm0zdTgifQ.jKufwFgHRfvCO1W6NtYmZpcqsEru8aIScafJVRQfwGwqUy5gcKbZ_sYdjsCjG8R_FyFLL5BknOPWMYCP8vcoVjwxyMImybQYoaGBN9lOYIwXX8O4O-Uhpk46nFnfAC9dF1kMFSE7JTALyZWlHh_1BQ-vxfz6_4Y8gYdUVuXTOvw-ZBZK6UCqnzsAQVq_DQc6eNezZ44H7baYn29vBhqCz-RSMQiRMZx_MJpZzpeEgU1beH7IBiJNJrJNLdb9azwDZFrQLTsuXt7-P3yGyLQBp53R1hN0Vk9SIz93feYM8aTzaSHhs0Ior_WqRGMiGWJJZJ6sVtZ8QcJgclgoKv0fjQ/nu/f(i=2)/redeac/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s3.glbimg.com/v1/AUTH_c7def7ff66fe4b13beac0810ffbf780f/secure/favicon-9805031.ico" group-title="GLOBO AO VIVO", Assistir G1 CE - Assista à TV Verdes Mares ao vivo online | Globoplay
-https://live-as-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyODU5LCJpYXQiOjE3MzY1NTY0NTksImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dnZtY2Vmb3IvcGxheWxpc3QubTN1OCJ9.iie5RIxOjXE1_PsrUhHf3Q782urQHUvRN73LKA5bNk0jmUCJaE04ZhdXksU1q9J7OzjGp-iHV-9whdeRYIE12IW1EcevjVHibiwpAoXAusl5wbdbhswsLBhywgVAkqfjARFzcz6vkvgptLdHbZTNFKrBvKvgxU4ellxoZqm3nPgRalLYciVtoZtcjJrhc_rvgTcH4dyofXf50XxWzhofr79QxtNFnzqRFEFGNIwfMRHRWkiKOAF5zsVIBJQReF8VXxYmJg60F4wFRidrEp98see9J8GqcD2bid3Jjs8YDA9DyRVr5hZvfIhc1dauBW0uAa76Tq4ND2XJStvoQlW4PQ/nu/f(bMin=558976)/tvvmcefor/playlist.m3u8
+https://live-as-08-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDgtMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MDkyLCJpYXQiOjE3MzY1NjE2OTIsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2KS90dnZtY2Vmb3IvcGxheWxpc3QubTN1OCJ9.yI_WDAw-iAzpWTVKQl1oMQ-e3N4V-0fndkC5TKyaO9qbcrlgejWfogfnzvLxIGce0Dor03h-5qy3-inl_ZXBZzx_mdVJObI1K4LPyISA2uiKbOhfZia6jRw2d8S567JjC7to9hei0dgyvVgkqv3hI12gTugsZL3WzX2V9k2DH6r2iCgORK9RnDnHagMkHUlLmeo3nSfZbibGD_ALO67SGckldPwa_h31TydmAJ1C_sRWILcDrbVwpndc6ubcjS6nQ0Qa7jHIMxptju98tywJ9KhYWsz4Leiq5Xb_Koqwrwre15LR9SPZe1R8AiHL4jdv-DWrw1MBtPNjaNsXVxOFSQ/nu/f(bMin=558976)/tvvmcefor/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s2.glbimg.com/7sLV4OQ1BuefK4KTbOFsixr20vo=/16x16/i.s3.glbimg.com/v1/AUTH_d975fad146a14bbfad9e763717b09688/internal_photos/bs/2021/z/M/JpDF4cRs6ZHPip8YMKNw/cbn.png" group-title="GLOBO AO VIVO", CBN | Estúdio ao Vivo - SP
-https://live-as-01-01.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDEtMDEudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyODkwLCJpYXQiOjE3MzY1NTY0OTAsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnNwMjRoYS9wbGF5bGlzdC5tM3U4In0.T2BYQhOLUjTtjJr5ytwAkAEz2FHNLjhyLxX9loEXuPu9KKEsLj_UDSA1CTnZZtUNkmriA8FXCi2zYpJKs5hnaIzL5-1p8PnInHcPD4mg-5uSSKMW8HJEQYNrLpAEbBRmLsduhJAbbRKykWYBr_vnBxUb1Rf6vXRmg7Cgcs9uH0qJMyXMO0SoZVgKofgLh0u1GNh9O7i0dk4Srw2uNuOul-aBYkFsqq6fqhaJs-vZQAI54CQc3h66H1djFw7bWv_GLnyulVJ32TCGs4IB8vNUBCojK1P9qN_37HsAq3x5kRt_UBcr-kPP6YwMGCFJoe6f8ZEYyUDKfonJhEOawLREYA/nu/f(bMin=558976,dvr=120)/cbnsp24ha/playlist.m3u8
+https://live-as-02-01.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDItMDEudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MTI0LCJpYXQiOjE3MzY1NjE3MjQsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnNwMjRoYS9wbGF5bGlzdC5tM3U4In0.X2dx6vDbc8Hwu_PrdBfeMfFO-1H5qWMwBXKczZJnjXDuxtCJsDgwaevvrW8eZs8OgH297sBA-dd_B6P6ifj1nD7csNT-7WTh8gD36dsx6rMufwhMYb98AprnEFEhz-us6n0s73UXZ0li2cRF-8tSkd-JLduYC7SvYd2DNERp-s1tqmyhnbVVSP9n3_atQGj-wYabmx8xCua_Q99Z18bpLYvbuxi_q2VS58kHpUTpVGx5vIb8840avMUOkS3wxc76rcGyD37QmpV1YSBt9Xwq-eUD8A5LrEx7tpL9SCQB1WiZ_5f7lH8QL6WunyM7WdU0cGw5qp2y0_vEf99sc7ovew/nu/f(bMin=558976,dvr=120)/cbnsp24ha/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://s2.glbimg.com/7sLV4OQ1BuefK4KTbOFsixr20vo=/16x16/i.s3.glbimg.com/v1/AUTH_d975fad146a14bbfad9e763717b09688/internal_photos/bs/2021/z/M/JpDF4cRs6ZHPip8YMKNw/cbn.png" group-title="GLOBO AO VIVO", CBN | Estúdio ao Vivo - RJ
-https://live-as-09-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDktMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQyOTIzLCJpYXQiOjE3MzY1NTY1MjMsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnJqMjRoYS9wbGF5bGlzdC5tM3U4In0.pFoBOKvP88M4JhLMKIoFHwTGaicyLIxGPJMBbmq4YT5t3xI4oPj442dSN3TwVcS56nUVEepcbmQnY3tNrl_n7F4ssXnQQak_mlMjwL1mgsxZWuYPbp3ku79CayZWxeOyp0QcrRUVjTutY_tQ95liwY_0PXvWrOTEUKTSy_TMfMbfNFnDh3cW187DASFh2XFRiPtUVDNd1R42BiQjADcaEij8FN68Nb5qZXZWiqD7xdQPgP5tQOUgSHQbYY4jNPZ54ohYxcX6a0FjEAGcAHvo5rl4W7DT8Jsh4rpasT1xTf84Y8OBQio0oKaCbqzW3XlsL1lD-PDkchu6oM6xtEXarg/nu/f(bMin=558976,dvr=120)/cbnrj24ha/playlist.m3u8
+https://live-as-09-15.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJVUyIsImRvbWFpbiI6ImxpdmUtYXMtMDktMTUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNzM2NjQ4MTU3LCJpYXQiOjE3MzY1NjE3NTcsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiIiwicGF0aCI6Ii9udS9mKGJNaW49NTU4OTc2LGR2cj0xMjApL2NibnJqMjRoYS9wbGF5bGlzdC5tM3U4In0.kwYQsyEdH5twxq06ZpHp5XfimVm0l7SPt4rAVlxwqIe8ia3zdd0Y2magemE7SLwLwRcBqNV72kicnZ7D_7NfKjjT3Ms2QoQ7SGMXADAxDRzuOZK88u1dily3yHe_X6YAPS9I16QnSCUSuz3ckUHqgn1hHwxZ-4gPoAoew9OAtOehwk6apcGw4m4TZ42ZDNjwMwHQsSp6iiNXYRuu66dTnwXiIQpv0uVJxoT38OhZdjjI-ZchJMPa-QB-8i4pSJAEajDSK-0JmostLtZ1b43Os_ud8zW9T1XhvC2I6dRzSx2G8Sy4jg3-cIwEIvn40EbwhWPs7eRlHVtCIOnaf6UbXw/nu/f(bMin=558976,dvr=120)/cbnrj24ha/playlist.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736483408754_come-ridevamo.jpg" group-title="VOD IT",Come ridevamo - Puntata del 09/01/2025
 https://StreamCdnR14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Come_ridevamo/25206232_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
@@ -2453,150 +2434,152 @@ https://StreamCdnR14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=zhDChZkLSayGKTjAHG0jFweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736483408754_come-ridevamo.jpg" group-title="VOD IT",Come ridevamo - Puntata del 09/01/2025
 https://StreamCdnR14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Come_ridevamo/25206232_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Storie italiane - Puntata del 10/01/2025
-https://StreamCdnR16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25214053_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Puntata del 10/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kTfbmyia3MPK4mdLHVeojgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Storie italiane - Puntata del 10/01/2025
-https://StreamCdnR16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25214053_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736515324801_1736515243615.png" group-title="VOD IT",Ore 14 - Puntata del 10/01/2025
-https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25218545_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/Ore_14/25218545_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736515324801_1736515243615.png" group-title="VOD IT",Puntata del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=eqdxBdn22gRiTdiCaIMIjAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736515324801_1736515243615.png" group-title="VOD IT",Ore 14 - Puntata del 10/01/2025
 https://StreamCdnG14-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/Ore_14/25218545_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Storie italiane - Puntata del 10/01/2025
+https://StreamCdnR16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/Storie_italiane/25214053_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Puntata del 10/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kTfbmyia3MPK4mdLHVeojgeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510437280_1736510406765.png" group-title="VOD IT",Storie italiane - Puntata del 10/01/2025
+https://StreamCdnR16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/Storie_italiane/25214053_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Un posto al sole - Puntata del 10/01/2025 EP6610
+https://vod1-rai-it.akamaized.net/podcastcdn/raitre/raitre_multiaudio_nogeo/25224077_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Puntata del 10/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vQNX4jvdFpPpPluss7ZrPYQitIpPpPlusswgeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Un posto al sole - Puntata del 10/01/2025 EP6610
+https://vod1-rai-it.akamaized.net/podcastcdn/raitre/raitre_multiaudio_nogeo/25224077_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/02/1735834400857_VDM-PasqualeMirra.jpg" group-title="VOD IT",Via Dei Matti n°0 - Pasquale Mirra - Puntata del 09/01/2025
-https://StreamCdnR19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Via_dei_Matti_n_0/25203949_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Via_dei_Matti_n_0/25203949_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/02/1735834400857_VDM-PasqualeMirra.jpg" group-title="VOD IT",Puntata del 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=LaW6Ir4bimpPt2uiECamDAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/02/1735834400857_VDM-PasqualeMirra.jpg" group-title="VOD IT",Via Dei Matti n°0 - Pasquale Mirra - Puntata del 09/01/2025
 https://StreamCdnR19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Via_dei_Matti_n_0/25203949_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Un posto al sole - Puntata del 10/01/2025 EP6610
-https://vod2-rai-it.akamaized.net/podcastcdn/raitre/raitre_multiaudio_nogeo/25224077_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Puntata del 10/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vQNX4jvdFpPpPluss7ZrPYQitIpPpPlusswgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/05/1736092949137_vlcsnap-2025-01-05-16h38m25s791.jpg" group-title="VOD IT",Un posto al sole - Puntata del 10/01/2025 EP6610
-https://vod2-rai-it.akamaized.net/podcastcdn/raitre/raitre_multiaudio_nogeo/25224077_,1800,2400/chunklist_b2344000_vo_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736508530951_1736508495785.png" group-title="VOD IT",E' sempre mezzogiorno - Puntata del 10/01/2025
 https://StreamCdnG11-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215798_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736508530951_1736508495785.png" group-title="VOD IT",Puntata del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rgoR0k5dp4Zq2SqmOKssSlashsYweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736508530951_1736508495785.png" group-title="VOD IT",E' sempre mezzogiorno - Puntata del 10/01/2025
-https://StreamCdnG11-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215798_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG11-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215798_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736483286834_sottovoce.jpg" group-title="VOD IT", Julián Carrón - Sottovoce
-https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/raiuno_2/sottovoce/Sottovoce_2014/25207155_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8?baseuri=%2Fdom2%2Fpodcastcdn%2Fraiuno_2%2Fsottovoce%2FSottovoce_2014%2F25207155_,1800,2400,.mp4.csmil%2F&tstart=0&tend=1736643260&tk2=7a4dd0b28d48097720d40db27c7bccaebacd83cccd6638cfead56c5f08082c52
+https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/raiuno_2/sottovoce/Sottovoce_2014/25207155_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8?baseuri=%2Fdom2%2Fpodcastcdn%2Fraiuno_2%2Fsottovoce%2FSottovoce_2014%2F25207155_,1800,2400,.mp4.csmil%2F&tstart=0&tend=1736648496&tk2=ffb286e4bffc492b2733faa50cfe029c32c6707c838c3d7ff488b7049c50c978
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736483286834_sottovoce.jpg" group-title="VOD IT", Julián Carrón - 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=gCmo3VBVyXiuGi5nAVo2pPpPlussQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736483286834_sottovoce.jpg" group-title="VOD IT", Julián Carrón - Sottovoce
-https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/raiuno_2/sottovoce/Sottovoce_2014/25207155_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8?baseuri=%2Fdom2%2Fpodcastcdn%2Fraiuno_2%2Fsottovoce%2FSottovoce_2014%2F25207155_,1800,2400,.mp4.csmil%2F&tstart=0&tend=1736643264&tk2=4f80d397045c6f3ff3abdab624e04bb14bc56ebc83a33bf74881d383c8f689f4
+https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/raiuno_2/sottovoce/Sottovoce_2014/25207155_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8?baseuri=%2Fdom2%2Fpodcastcdn%2Fraiuno_2%2Fsottovoce%2FSottovoce_2014%2F25207155_,1800,2400,.mp4.csmil%2F&tstart=0&tend=1736648501&tk2=4fda32238cbc2df72c1229132669edfbabe915e1d09d187361c188fedf7dbe4b
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 09/01/2025
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25197303_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=opPpPlussFpzumsrGKoFTYtk47QHQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 13:30 del 09/01/2025
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25197303_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736535826551_1736535794862.png" group-title="VOD IT",Puntata del 10/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=DmGmnssSlashq1TiSrVa3qG7BcQQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 17:00 del 10/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25219974_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25219974_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 17:00 del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=zi7tRU6IssSlashmcQxYHCTm85AQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 17:00 del 10/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25219974_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25219974_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510116816_1736510079137.png" group-title="VOD IT",Quante storie - Puntata del 10/01/2025
-https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Quante_storie/Quante_storie_EP_puntate/25215752_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Quante_storie/Quante_storie_EP_puntate/25215752_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736510116816_1736510079137.png" group-title="VOD IT",Che razza di problema
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=8B5zU6eTFY0CvC62W9jSKAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736510116816_1736510079137.png" group-title="VOD IT",Quante storie - Puntata del 10/01/2025
 https://StreamCdnR1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Quante_storie/Quante_storie_EP_puntate/25215752_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736417662175_1736417619604.png" group-title="VOD IT",I Fatti Vostri - Puntata del 09/01/2025
-https://StreamCdnR10-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25195520_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR10-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25195520_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736417662175_1736417619604.png" group-title="VOD IT",Puntata del 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YXpIdr3Lq5VlYOC4yF4auAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736417662175_1736417619604.png" group-title="VOD IT",I Fatti Vostri - Puntata del 09/01/2025
 https://StreamCdnR10-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/I_Fatti_Vostri/I_Fatti_Vostri_EP_Puntate/25195520_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - La Confessione 11/01/2025
-https://StreamCdnG4-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25203022_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x1152.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - 11/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qNgrmssSlashjP7qwRYoZ899FTKAeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - La Confessione 11/01/2025
-https://StreamCdnG4-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25203022_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 10/01/2025
-https://vod2-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25210699_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod1-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25210699_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SOwHZSJWtFkeDkDycTcBVgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/03/21/1647863780558_2048x1152logo.jpg" group-title="VOD IT",Che tempo fa ore 08:30 del 10/01/2025
-https://vod2-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25210699_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod1-rai-it.akamaized.net/podcastmhp_world/replaytv_world/vod_nopers_data_orario/25210699_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - La Confessione 11/01/2025
+https://StreamCdnG4-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25203022_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x1152.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - 11/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qNgrmssSlashjP7qwRYoZ899FTKAeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736449695378_Lucarelli-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Carlo Lucarelli e il fascino irresistibile dei misteri - La Confessione 11/01/2025
+https://StreamCdnG4-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25203022_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2017/06/19/1497874619432_giorno%20e%20storia%20jp.jpg" group-title="VOD IT",10 gennaio 2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rkYaSPITJn237WiP0j1d8weeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 10/01/2025
-https://StreamCdnG1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/News_in_english/25216751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/News_in_english/25216751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=DGRfT3XEyAZQR6QB9pMfageeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2022/11/30/1669831222804_2048x1152_News%20in%20English.jpg" group-title="VOD IT",News in english del 10/01/2025
-https://StreamCdnG1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/News_in_english/25216751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG1-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/News_in_english/25216751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422486858_1736422570286.png" group-title="VOD IT",Radio2 Social Club - Puntata del 09/01/2025
-https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Radio_Due_Social_Club/25192778_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Radio_Due_Social_Club/25192778_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736422486858_1736422570286.png" group-title="VOD IT",Tancredi e Alessia Marcuzzi - 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=05fcpJPhpX7GabY7ECDB9geeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422486858_1736422570286.png" group-title="VOD IT",Radio2 Social Club - Puntata del 09/01/2025
 https://StreamCdnR5-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Radio_Due_Social_Club/25192778_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Mixerstoria - La storia siamo noi - Puntata del 09/01/2025
+https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/MixerStoria_La_storia_siamo_noi/25194427_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Puntata del 09/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HZZ4CXK89s0pLk5tevtH5AeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Mixerstoria - La storia siamo noi - Puntata del 09/01/2025
+https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/MixerStoria_La_storia_siamo_noi/25194427_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25212008.png" group-title="VOD IT",Lina Sastri canta "Napule è": il tributo a Pino Daniele - Splendida Cornice 09/01/2025
 https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Splendida_Cornice/25211989_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25212008.png" group-title="VOD IT",Lina Sastri canta "Napule è": il tributo a Pino Daniele - 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=zWqz0dssSlashRuzVYznDDaoN0uAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25212008.png" group-title="VOD IT",Lina Sastri canta "Napule è": il tributo a Pino Daniele - Splendida Cornice 09/01/2025
 https://StreamCdnG15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Splendida_Cornice/25211989_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Mixerstoria - La storia siamo noi - Puntata del 09/01/2025
-https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/MixerStoria_La_storia_siamo_noi/25194427_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Puntata del 09/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HZZ4CXK89s0pLk5tevtH5AeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/09/1736422695985_1736422685935.png" group-title="VOD IT",Mixerstoria - La storia siamo noi - Puntata del 09/01/2025
-https://StreamCdnG3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/MixerStoria_La_storia_siamo_noi/25194427_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2017/06/19/1497874619432_giorno%20e%20storia%20jp.jpg" group-title="VOD IT",10 gennaio 2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rkYaSPITJn237WiP0j1d8weeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25211741.png" group-title="VOD IT",Incendi in California - Unomattina 10/01/2025
 https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/raiuno/unomattina/Unomattina_2015/25211738_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25211741.png" group-title="VOD IT",Incendi in California - 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0rSXssSlashMDkzpPpPlussuGQbssSlashe3gwlSgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25211741.png" group-title="VOD IT",Incendi in California - Unomattina 10/01/2025
-https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/raiuno/unomattina/Unomattina_2015/25211738_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/raiuno/unomattina/Unomattina_2015/25211738_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736524970209_1736522542520.png" group-title="VOD IT",Gocce di Petrolio - Puntata del 10/01/2025
-https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Gocce_di_Petrolio/25219047_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Gocce_di_Petrolio/25219047_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736524970209_1736522542520.png" group-title="VOD IT",Puntata del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=7ssSlash0dWhVFK7GVagsHRssSlash4LZweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736524970209_1736522542520.png" group-title="VOD IT",Gocce di Petrolio - Puntata del 10/01/2025
-https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raitre/Gocce_di_Petrolio/25219047_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnM3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raitre/Gocce_di_Petrolio/25219047_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2023/03/31/1680272500388_TG1_LIS_per_RaiPlay_ORIZZONTALE.jpg" group-title="VOD IT",TG1 LIS ore 09:00 del 10/01/2025
-https://StreamCdnM8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg1/tg1_lis/25211401_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnM8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg1/tg1_lis/25211401_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2023/03/31/1680272500388_TG1_LIS_per_RaiPlay_ORIZZONTALE.jpg" group-title="VOD IT",TG1 LIS ore 09:00 del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0NFf2cIFKSTxdWF1qgaVKgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2023/03/31/1680272500388_TG1_LIS_per_RaiPlay_ORIZZONTALE.jpg" group-title="VOD IT",TG1 LIS ore 09:00 del 10/01/2025
-https://StreamCdnM8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg1/tg1_lis/25211401_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnM8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg1/tg1_lis/25211401_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736540906912_freestyle%20big%20air%20flora%20tabanelli%202025.jpg" group-title="VOD IT",Fenomenale Flora Tabanelli nel Big Air di Kreischberg
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=oipHnSwmmlPJ2zyqxPJusgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 07:00 del 10/01/2025
-https://vod3-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25209721_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25209721_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 07:00 del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=VLWN8vqAZuuGTYbISV6PpPpPlussweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 07:00 del 10/01/2025
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25209721_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25219760_1.jpg" group-title="VOD IT",Casa Italia del 10/01/2025
-https://StreamCdnG22-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/italia_con_voi_raiitalia/25219751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG22-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/italia_con_voi_raiitalia/25219751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25219760_1.jpg" group-title="VOD IT",Casa Italia del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=1IU246gfMrA83WpPpPluss7pPpPlussYdmNAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25219760_1.jpg" group-title="VOD IT",Casa Italia del 10/01/2025
 https://StreamCdnG22-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/italia_con_voi_raiitalia/25219751_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="N/A" group-title="VOD IT",TG2 Sì, Viaggiare
-https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg2/tg2_si_viaggiare/25216887_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg2/tg2_si_viaggiare/25216887_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/29/1617031114383_2048x1152logo.jpg" group-title="VOD IT",TG2 Sì, Viaggiare del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kcjgTDzdSfTqSmHTpPpPlusstNonAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="N/A" group-title="VOD IT",TG2 Sì, Viaggiare
-https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg2/tg2_si_viaggiare/25216887_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+https://StreamCdnR6-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg2/tg2_si_viaggiare/25216887_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736513913591_1736513995451.png" group-title="VOD IT",Sfincione - È sempre mezzogiorno 10/01/2025
-https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215759_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215759_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736513913591_1736513995451.png" group-title="VOD IT",Sfincione - 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=xbeygssSlashcYpGNX9FiIXm2OiQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736513913591_1736513995451.png" group-title="VOD IT",Sfincione - È sempre mezzogiorno 10/01/2025
 https://StreamCdnR9-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215759_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25198870.png" group-title="VOD IT",Carlo Verdone è l'ultimo garibaldino! - Come ridevamo - 09/01/2025
-https://StreamCdnG16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom6/podcastcdn/raidue/Come_ridevamo/25198867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG16-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Come_ridevamo/25198867_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25198870.png" group-title="VOD IT",Carlo Verdone è l'ultimo garibaldino!
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OOQdoFXZ0GCv2jqDXssSlashwssSlashVweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25198870.png" group-title="VOD IT",Carlo Verdone è l'ultimo garibaldino! - Come ridevamo - 09/01/2025
@@ -2607,56 +2590,50 @@ https://StreamCdnR7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/r
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=BI63PdAssSlashkmb69g57tyUpPpPlussnQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25217252.png" group-title="VOD IT",Donna trovata morta carbonizzata in campagna a Giulianova - Storie italiane 10/01/2025
 https://StreamCdnR7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/Storie_italiane/25217245_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25226041_1.jpg" group-title="VOD IT",Paparazzi del 10/01/2025
-https://StreamCdnR15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/paparazzi/25226037_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25226041_1.jpg" group-title="VOD IT",Paparazzi del 10/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qxx5BssSlashWNpPpPluss6BDoeavP5SaAQeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25226041_1.jpg" group-title="VOD IT",Paparazzi del 10/01/2025
-https://StreamCdnR15-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/paparazzi/25226037_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - Ore 14 10/01/2025
-https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25218246_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - 10/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=WTXbNkTTAqyTSXpuK6dQKgeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - Ore 14 10/01/2025
-https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25218246_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25215385.png" group-title="VOD IT",Risotto in minestra con fagioli dall'occhio - È sempre mezzogiorno 10/01/2025
 https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25215385.png" group-title="VOD IT",Risotto in minestra con fagioli dall'occhio - 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=p48PEYIAoK5Bed0pPpPlussjssSlashY4IAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25215385.png" group-title="VOD IT",Risotto in minestra con fagioli dall'occhio - È sempre mezzogiorno 10/01/2025
-https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - La Confessione 11/01/2025
-https://StreamCdnM7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25220638_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x1152.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - 11/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlash2fAzU83DeCOMVRc0jwssSlash1AeeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - La Confessione 11/01/2025
-https://StreamCdnM7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25220638_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736436570269_Altri_Mondi.png" group-title="VOD IT",Uscite, novità, trend: la nostra guida al 2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=IhgoV1jyOog3fFqeFe2F9AeeqqEEqualeeqqEEqual
+https://StreamCdnR8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215374_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25199332.png" group-title="VOD IT",il "Grammelot napoletano" di Gigi Proietti - Come ridevamo - 09/01/2025
 https://StreamCdnR3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Come_ridevamo/25199321_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25199332.png" group-title="VOD IT",Il "Grammelot napoletano" di Gigi Proietti 
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=T0Gq7lhq6cXSSYU045gnqgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25199332.png" group-title="VOD IT",il "Grammelot napoletano" di Gigi Proietti - Come ridevamo - 09/01/2025
 https://StreamCdnR3-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom7/podcastcdn/raidue/Come_ridevamo/25199321_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
-https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg2/tg2_flash/25213200_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
-https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=35UssSlashuvvz0o82ytQwHUrw3weeqqEEqualeeqqEEqual
-#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
-https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr9/podcastcdn/NewsVod/rubriche_tg2/tg2_flash/25213200_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - Ore 14 10/01/2025
+https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr2/podcastcdn/raidue/Ore_14/25218246_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - 10/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=WTXbNkTTAqyTSXpuK6dQKgeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25218249.png" group-title="VOD IT",Caso Resinovich, chiesta ancora una proroga per la seconda perizia - Ore 14 10/01/2025
+https://StreamCdnG12-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr1/podcastcdn/raidue/Ore_14/25218246_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - La Confessione 11/01/2025
+https://StreamCdnM7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr4/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25220638_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x1152.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - 11/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlash2fAzU83DeCOMVRc0jwssSlash1AeeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/10/1736529586436_Bindi-ANT-Confessione-2048x2048.jpg" group-title="VOD IT",Rosy Bindi ricorda il sacrificio di Vittorio Bachelet a quarant'anni di distanza - La Confessione 11/01/2025
+https://StreamCdnM7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr3/podcastcdn/Rai/prod_extra_raiplayftp_nogeo/25220638_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/09/1736436570269_Altri_Mondi.png" group-title="VOD IT",Uscite, novità, trend: la nostra guida al 2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=IhgoV1jyOog3fFqeFe2F9AeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25215305.png" group-title="VOD IT",Coscia di tacchino ripiena - È sempre mezzogiorno 10/01/2025
 https://StreamCdnR7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215292_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/25215305.png" group-title="VOD IT",Coscia di tacchino ripiena - 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hSyGRXYHbTPGExOycEbVJgeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/25215305.png" group-title="VOD IT",Coscia di tacchino ripiena - È sempre mezzogiorno 10/01/2025
-https://StreamCdnR7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom8/podcastcdn/raiuno/E_sempre_mezzogiorno/25215292_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR7-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom9/podcastcdn/raiuno/E_sempre_mezzogiorno/25215292_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
+https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg2/tg2_flash/25213200_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
+https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=35UssSlashuvvz0o82ytQwHUrw3weeqqEEqualeeqqEEqual
+#EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/02/02/1612263226607_1552933465773_Tg2_2048X1152_1.jpg" group-title="VOD IT",Tg2 Flash ore 10:55 del 10/01/2025
+https://StreamCdnG8-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/ostr8/podcastcdn/NewsVod/rubriche_tg2/tg2_flash/25213200_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736245754427_osn%20battistoni%20sinfonia%20per%20organo%20saint-saens%202048x1152.jpg" group-title="VOD IT",OSN: Andrea Battistoni e la grandiosa "Sinfonia per organo" di Saint-Saëns
 https://StreamCdnG19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Rai5/Musica_Classica/25205162_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2025/01/07/1736245754427_osn%20battistoni%20sinfonia%20per%20organo%20saint-saens%202048x1152.jpg" group-title="VOD IT",OSN: Andrea Battistoni e la grandiosa "Sinfonia per organo" di Saint-Saëns - 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=QBQ6fmRLBcbFxMpPpPlussVH1vxWweeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2025/01/07/1736245754427_osn%20battistoni%20sinfonia%20per%20organo%20saint-saens%202048x1152.jpg" group-title="VOD IT",OSN: Andrea Battistoni e la grandiosa "Sinfonia per organo" di Saint-Saëns
-https://StreamCdnG19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/Rai5/Musica_Classica/25205162_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnG19-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/Rai5/Musica_Classica/25205162_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2019/12/03/1575384917496_tg_sport_2048x1152.jpg" group-title="VOD IT",Tg Sport ore 07:00 del 10/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=6h1ZOrZxQyotUhlKbG0IqQeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 06:30 del 09/01/2025
@@ -2666,31 +2643,31 @@ https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qWssSlashpPpPluss
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616315208134_2048x1152.jpg" group-title="VOD IT",Tg1 ore 06:30 del 09/01/2025
 https://vod4-rai-it.akamaized.net/podcastcdn/Rai/TG1_RAIPLAY/25190685_,1800,2400/chunklist_b2344000_slita_t64MjQwMA==.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 20:30 del 09/01/2025
-https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/TG2_RAIPLAY/25204417_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/TG2_RAIPLAY/25204417_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/cropgd/640x360/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 20:30 del 09/01/2025
 https://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=c1OossSlashm2ncjcCKXpPpPlussjzuniYAeeqqEEqualeeqqEEqual
 #EXTINF:-1 tvg-logo="https://www.raiplay.it/dl/img/2021/03/21/1616314318833_2048x1152.jpg" group-title="VOD IT",Tg2 ore 20:30 del 09/01/2025
-https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom1/podcastcdn/Rai/TG2_RAIPLAY/25204417_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556927830&plid=f711f681-c3b9-405f-a450-7f72a7f539b8&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A55%3A27+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Mondo%2C+la+puntata+del+9+gennaio%22%2C%22duration%22%3A2269000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979035%2F979035_1736469779136_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979035%7D&pvid=f39a8f0c-6b50-4b59-9bc2-f1b3d78f6b5f&vsid=526b71af-9481-4696-a613-0dcd34425f07&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Mondo, la puntata del 9 gennaio | Video Sky
+https://StreamCdnR20-b70cb04c54ab478189e9d8ee45637b13.msvdn.net/dom2/podcastcdn/Rai/TG2_RAIPLAY/25204417_,1800,2400,.mp4.csmil/chunklist-f2-v1-a1.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562163863&plid=dee0b218-8023-422d-baf5-0a49fc1d647c&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A22%3A43+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Mondo%2C+la+puntata+del+9+gennaio%22%2C%22duration%22%3A2269000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979035%2F979035_1736469779136_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979035%7D&pvid=284a10e2-00de-4778-8638-d48057eb3034&vsid=3512e988-e75e-4b9e-b43d-4c07e05ee8ea&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Mondo, la puntata del 9 gennaio | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979035/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556938984&plid=3806e005-79c2-4630-95f1-e14e54f198ec&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-timeline-puntata-del-10-gennaio-2025-blocco-1500-1530-979200&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A55%3A38+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+10+Gennaio+2025%3A+blocco+15%3A00-15%3A30%22%2C%22duration%22%3A1554000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979200%2F979200_1736521925831_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979200%7D&pvid=7d78cf98-7030-4b46-b5f0-22e6e776d124&vsid=92b3d032-29f1-424a-ac9e-049717ce84e6&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 10 Gennaio 2025: blocco 15:00-15:30 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979200/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556950812&plid=82ad1b0a-344b-4f1d-b25d-90ace3530400&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-08-gennaio-2025-seconda-parte-978812&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A55%3A50+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+08+Gennaio+2025%3A+seconda+parte%22%2C%22duration%22%3A5099000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978812%2F978812_1736411727529_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978812%7D&pvid=db1edfb9-1f95-4b03-8792-a1b9415984d1&vsid=61e54a49-0784-4f26-8223-34b60d5fd3ab&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 08 Gennaio 2025: seconda parte | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562174393&plid=1dc2576a-0429-433f-a986-97e97166b6c2&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-08-gennaio-2025-seconda-parte-978812&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A22%3A54+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+08+Gennaio+2025%3A+seconda+parte%22%2C%22duration%22%3A5099000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978812%2F978812_1736411727529_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978812%7D&pvid=b86bf0f4-40be-4a29-9a06-b39e2d185761&vsid=17636fc9-e172-464d-a258-7a67860c4b15&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Timeline puntata del 08 Gennaio 2025: seconda parte | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/09/978812/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556963844&plid=5da0c17d-f24a-426c-9d5c-5b84d9c80cab&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fconnessi-la-puntata-integrale-del-5-gennaio-978167&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A56%3A03+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Connessi%2C+la+puntata+integrale+del+5+gennaio%22%2C%22duration%22%3A2457000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F05%2F978167%2F978167_1736112337979_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978167%7D&pvid=282688f1-45da-4fb6-9439-9ac5d5046a1c&vsid=6d0a0c44-1110-401f-8502-895fb12b9537&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Connessi, la puntata integrale del 5 gennaio | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562187410&plid=bcb41a83-2cfc-46b5-b1df-1fdf13694fc9&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-timeline-puntata-del-10-gennaio-2025-blocco-1500-1530-979200&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A23%3A07+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+10+Gennaio+2025%3A+blocco+15%3A00-15%3A30%22%2C%22duration%22%3A1554000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979200%2F979200_1736521925831_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979200%7D&pvid=fcaa0f55-5c50-4548-a920-37500143b6fb&vsid=4342c7be-7e40-4ec1-b7d3-b9753e9d69c9&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Timeline puntata del 10 Gennaio 2025: blocco 15:00-15:30 | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979200/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562199393&plid=81d19f1e-28dd-4d3b-9fc2-dee2119f44cc&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fconnessi-la-puntata-integrale-del-5-gennaio-978167&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A23%3A19+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Connessi%2C+la+puntata+integrale+del+5+gennaio%22%2C%22duration%22%3A2457000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F05%2F978167%2F978167_1736112337979_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978167%7D&pvid=ba281c8e-4579-4ba0-b382-7acbfb1a3547&vsid=869f3813-5149-4004-b9a2-8b30ddbbf87e&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Connessi, la puntata integrale del 5 gennaio | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/05/978167/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556975344&plid=9d621677-3348-4ecb-8b81-f536924e3a5c&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-08-gennaio-2025-prima-parte-978810&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A56%3A15+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+08+Gennaio+2025%3A+prima+parte%22%2C%22duration%22%3A1161000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978810%2F978810_1736409070049_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978810%7D&pvid=b90a57da-214d-427a-a68e-36902701b9a7&vsid=d2078fe0-d137-4b4c-8518-0ac28f1328c2&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 08 Gennaio 2025: prima parte | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562211081&plid=71c2501e-50d7-45f8-b15a-e9357d215651&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-08-gennaio-2025-prima-parte-978810&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A23%3A31+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+08+Gennaio+2025%3A+prima+parte%22%2C%22duration%22%3A1161000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978810%2F978810_1736409070049_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978810%7D&pvid=d0d60746-839e-4eaf-9cfd-bddf448ee0b5&vsid=e324104c-f536-41c2-bd59-295c61a2095a&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Timeline puntata del 08 Gennaio 2025: prima parte | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/09/978810/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736556987910&plid=246f5fa3-3372-40b9-9668-13bb8f6fed03&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fpolitica%2Fvideo%2Fsky-tg24-numeri-puntata-del-09012025-978987&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A56%3A27+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Numeri%2C+puntata+del+09.01.2025%22%2C%22duration%22%3A1490000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978987%2F978987_1736447102579_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978987%7D&pvid=b65402ed-cbdf-43f7-9d4b-148ed0305a47&vsid=1bfe2d2c-fc2f-4370-9793-b68a48b8205a&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Numeri, puntata del 09.01.2025 | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562223380&plid=1b6354cd-a54d-44a4-9168-b1d2aedfffde&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fpolitica%2Fvideo%2Fsky-tg24-numeri-puntata-del-09012025-978987&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A23%3A43+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Numeri%2C+puntata+del+09.01.2025%22%2C%22duration%22%3A1490000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978987%2F978987_1736447102579_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978987%7D&pvid=15aeb9b6-509b-4411-9197-6a62eb1cc9b8&vsid=bd2c93ee-14c8-4d00-b2ac-7141c5fd4132&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Numeri, puntata del 09.01.2025 | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/09/978987/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736557001953&plid=279294ae-9e80-47d8-840c-e157fdf3c015&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-10-gennaio-2025-blocco-1530-1600-979229&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A56%3A41+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+10+Gennaio+2025%3A+blocco+15%3A30-16%3A00%22%2C%22duration%22%3A1435000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979229%2F979229_1736523375107_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979229%7D&pvid=7152d78b-700c-4eba-9c34-1bddd85bb9ad&vsid=613c7201-de84-416d-bec2-dce52841f59f&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 10 Gennaio 2025: blocco 15:30-16:00 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979229/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736557013156&plid=c4b8565d-964b-4fb9-bcdd-e7f53a813342&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-07-gennaio-2025-978504&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A56%3A53+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+07+Gennaio+2025%22%2C%22duration%22%3A1599000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978504%2F978504_1736264728644_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978504%7D&pvid=f6d9784b-2340-4030-a1fc-75bd5e1e9f00&vsid=957a1ed8-ba00-40d1-8e18-57400c18bd6b&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 07 Gennaio 2025 | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562235769&plid=c54abfce-c6f9-44a8-9f8c-bf4f6acbf815&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-07-gennaio-2025-978504&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A23%3A55+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+07+Gennaio+2025%22%2C%22duration%22%3A1599000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978504%2F978504_1736264728644_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978504%7D&pvid=5e5c8f83-5c48-477a-9aed-dee1644cf168&vsid=d3fe86e1-5a2c-4302-9e08-8eec440a518f&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Timeline puntata del 07 Gennaio 2025 | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978504/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736557024280&plid=3e4bce44-240e-4621-9d8c-516a77acb2ea&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fcronaca%2Fvideo%2Fsky-tg24-timeline-puntata-del-07-gennaio-2025-978503&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A57%3A04+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Timeline+puntata+del+07+Gennaio+2025%22%2C%22duration%22%3A1647000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F07%2F978503%2F978503_1736264604420_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978503%7D&pvid=a8743449-109a-470f-b68b-722d8771bcf3&vsid=8df3340f-2f3c-48f1-9ef0-5a574ca99390&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Timeline puntata del 07 Gennaio 2025 | Video Sky
-https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/07/978503/master/720p/stream.m3u8
-#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736557036109&plid=5233fd94-f6b9-4eeb-a6f2-a17bae297318&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-economia-puntata-del-09012025-978983&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736556925070&slts=0&date=Sat+Jan+11+2025+00%3A57%3A16+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Economia%2C+puntata+del+09.01.2025%22%2C%22duration%22%3A2495000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978983%2F978983_1736446547240_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978983%7D&pvid=4401ab84-fccb-4296-b5ce-57e0a0ea7388&vsid=5077f521-2bc6-454b-be25-65d800e469e2&u=pid%3D511bfb92-bc06-401f-852b-ba82f5ac8349" group-title="VOD IT", Sky Tg24 Economia, puntata del 09.01.2025 | Video Sky
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562250159&plid=74067791-e6c4-406c-ada5-4add6a6656de&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-economia-puntata-del-10012025-979275&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A24%3A10+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Economia%2C+puntata+del+10.01.2025%22%2C%22duration%22%3A2556000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979275%2F979275_1736533542672_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979275%7D&pvid=d660ba72-5e79-409c-bdbb-13ecc1de769c&vsid=923cd677-ad73-4618-a767-39d039d84dad&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Economia, puntata del 10.01.2025 | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979275/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562261545&plid=bf2432bb-b514-43a0-8f7e-9fbf982f4bf2&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-economia-puntata-del-09012025-978983&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A24%3A21+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+Tg24+Economia%2C+puntata+del+09.01.2025%22%2C%22duration%22%3A2495000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F09%2F978983%2F978983_1736446547240_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A978983%7D&pvid=3b71adb3-b304-4411-ab9b-074b72668ca1&vsid=3c38a369-acd8-4dd4-bb31-1de82222cb0d&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky Tg24 Economia, puntata del 09.01.2025 | Video Sky
 https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/09/978983/master/720p/stream.m3u8
+#EXTINF:-1 tvg-logo="https://p1.parsely.com/px/?rand=1736562276394&plid=9ef38219-42f1-4f1d-9d6d-3a552cf5201a&idsite=video.sky.it&url=https%3A%2F%2Fvideo.sky.it%2Fnews%2Feconomia%2Fvideo%2Fsky-tg24-business-la-puntata-del-10-gennaio-979188&urlref=&screen=800x600%7C800x600%7C24&data=%7B%7D&sid=1&surl=https%3A%2F%2Fvideo.sky.it%2Fnews%2Fmondo%2Fvideo%2Fsky-tg24-mondo-la-puntata-del-9-gennaio-979035&sref=&sts=1736562160769&slts=0&date=Sat+Jan+11+2025+02%3A24%3A36+GMT%2B0000+(Coordinated+Universal+Time)&action=videostart&metadata=%7B%22title%22%3A%22Sky+TG24+Business%2C+la+puntata+del+10+gennaio%22%2C%22duration%22%3A1437000%2C%22image_url%22%3A%22https%3A%2F%2Fvideoplatform.sky.it%2Fcaptures%2F494%2F2025%2F01%2F10%2F979188%2F979188_1736522024792_thumb_494.0000001.jpg%22%2C%22video_platform%22%3A%22skyplayer%22%2C%22link%22%3A979188%7D&pvid=54e1603c-7ec2-47d8-84bf-2498bd36cb1a&vsid=db90abe1-ee0d-4e3a-8353-c2537fe1c9ae&u=pid%3D306214d7-9563-44b9-ba68-c7044ddf2266" group-title="VOD IT", Sky TG24 Business, la puntata del 10 gennaio | Video Sky
+https://acdn.ak-stream-videoplatform.sky.it/hls/2025/01/10/979188/master/720p/stream.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-id="AguacateTV.ve",Aguacate TV (1080p)
 https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8
@@ -3998,3 +3975,26 @@ https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxvanityfair/CDN/playlist.m3u
 #EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQn1eMC0IrEL9aqfMqdQ3Rfu13Ozsi1KvdjwScJCV7P_cphyJ08aVCXfH3qCM&s",Village of Hastings-On-Hudson NY (WHOH-TV) (360p)
 #EXTVLCOPT:network-caching=1000
 http://stream.swagit.com/live-edge/hastingsonhudsonny/smil:std-4x3-1-a/playlist.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRht7Thkh18jsNBpzNGAInns_feD9AgGZE4No2sqisvl6xbZah2DRo-wX5r9g&s",Voyager Documentaries (720p)
+#EXTVLCOPT:network-caching=1000
+https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxvoyager/CDN/playlist.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq0yWadjXDgHOUXiB8xoMhvPSLY1I_k-VipqlO8J5MoB_XswxX4kmrlJIVXAA&s",VSiN (720p)
+#EXTVLCOPT:network-caching=1000
+https://stream.rcncdn.com/live/vsinproxy.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfINgJ0tOdAfUb0oyI2_U-KW6c1k4mXRoCbHWT4BjPOK3Amy4KKm3B_Fwyrg&s",WeatherNation (KCKS-LD6) (480p) [Not 24/7]
+#EXTVLCOPT:network-caching=1000
+https://cdn.igocast.com/channel6_hls/channel6_master.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFmCP3slUDN4PcAcc1VLnQ3TIcO6ActXh3pEeTQOoDv_6V3JIc6isUZ66NWMs&s",WeatherSpy (720p)
+#EXTVLCOPT:network-caching=1000
+https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxweatherspy/CDN/playlist.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrCf8jeS_lCm_x3VOciRzD1as4nQJ1cnfYKGJH0oD4NKqQ4_8o8oJGkomRhcQ&s",WFMZ Bird Camera
+#EXTVLCOPT:network-caching=1000
+https://cdn.jaybirdtv.com/wfmz/13/live/master.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_BaTkSZLh2A9Qo0DgGlgX7KJbhb5ZiuToXdcBYmwJufvoshDksFQ0Awu4A&s",WFMZ Dorney Park Camera
+#EXTVLCOPT:network-caching=1000
+https://cdn.jaybirdtv.com/wfmz/5/live/master.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3ABvm2MnWkOJkoghhSlPkEB3Bp3ADtAxEgofyxM61RkRwes5VXxeasbv6Q&s",WFMZ PPL Tower Camera
+#EXTVLCOPT:network-caching=1000
+https://cdn.jaybirdtv.com/wfmz/channel/9/master.m3u8
+#EXTINF:-1 group-title="ESTADOS UNIDOS" tvg-id="Undefined" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBAEQHG3kQWHuO8dd8IYG9jch6N55BcLKp9B2pBOkdF3oB16fvWnPbzZ04d5c&s",WFMZ Traffic
+#EXTVLCOPT:network-caching=1000
