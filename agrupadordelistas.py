@@ -1,332 +1,623 @@
-import time
-import logging
-from logging.handlers import RotatingFileHandler
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-import requests
-import streamlink
+import time
+import youtube_dl
+import concurrent.futures
 
-# Configurando logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
 
-log_file = "log.txt"
-file_handler = RotatingFileHandler(log_file, maxBytes=10**6, backupCount=5)
-file_handler.setLevel(logging.DEBUG)
 
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-file_handler.setFormatter(formatter)
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
 
-logger.addHandler(file_handler)
+# URL of the desired page
+url_archive = "https://archive.org/details/tvarchive?query=TRUMP&sort=-publicdate"
 
-# Banner do M3U
-banner = r'''
-#EXTM3U
-'''
+# Open the desired page
+driver.get(url_archive)
 
-# Função para obter URL do stream usando Streamlink
-def grab(url):
+# Wait for the page to load
+time.sleep(5)
+
+# Scroll to the bottom of the page
+#for _ in range(1):
+#    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#    time.sleep(2)
+
+# Find all elements with the specified <a> tags
+elements = driver.find_elements(By.CSS_SELECTOR, 'a[title][data-event-click-tracking="GenericNonCollection|ItemTile"]')
+
+# Create a list to store the video URLs and thumbnails
+video_infos = []
+
+# Print the href attributes, thumbnails, and add them to video_infos
+for element in elements:
+    href = element.get_attribute("href")
+    if href:
+        # Extract the thumbnail URL
+        img_element = element.find_element(By.XPATH, './/img')
+        thumbnail_src = img_element.get_attribute('src') if img_element else ''
+        # Ensure the thumbnail URL is absolute
+        if thumbnail_src and not thumbnail_src.startswith('http'):
+            thumbnail_src = 'https://archive.org' + thumbnail_src
+        video_infos.append((href, thumbnail_src))
+        print("Adicionando URL:", href)
+        print("Thumbnail:", thumbnail_src)
+
+# Close the webdriver
+driver.quit()
+
+
+# Function to get the direct stream URL and title with error handling
+def get_stream_info(url):
+    ydl_opts = {
+        'quiet': True,
+        'format': 'best',
+        'noplaylist': True,
+        'outtmpl': '/dev/null',
+        'geturl': True
+    }
     try:
-        if url.endswith('.m3u') or url.endswith('.m3u8') or ".ts" in url:
-            return url
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            info_dict = ydl.extract_info(url, download=False)
+            video_title = info_dict.get('title', 'Video Desconhecido')
+            stream_url = info_dict.get('url', '')
+            return video_title, stream_url
+    except Exception as e:
+        print(f"Error fetching info for {url}: {e}")
+        return None, None  # Return None for failed entries
 
-        streams = streamlink.streams(url)
-        logger.debug("Streams disponíveis para %s: %s", url, streams)
-        if "best" in streams:
-            return streams["best"].url
-        return None
-    except streamlink.exceptions.NoPluginError as err:
-        logger.error("Plugin não encontrado para %s: %s", url, err)
-        return None
-    except streamlink.StreamlinkError as err:
-        logger.error("Erro do Streamlink para %s: %s", url, err)
-        return None
+# Generate the EXTINF lines with tvg-logo and URLs
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    results = list(executor.map(lambda info: get_stream_info(info[0]), video_infos))
 
-# Função para verificar URL
-def check_url(url):
-    try:
-        response = requests.head(url, timeout=15)
-        if response.status_code == 200:
-            logger.debug("URL válida: %s", url)
-            return True
-    except requests.RequestException as err:
-        logger.warning("Erro ao verificar URL %s: %s", url, err)
-    return False
+# Write the EXTINF formatted lines to a file
+with open('lista1.M3U', 'w') as file:
+    file.write('#EXTM3U\n')  # Add the EXT3MU header
+    for (url, thumbnail), (title, stream_url) in zip(video_infos, results):
+        if stream_url:
+            tvg_logo = f'tvg-logo="{thumbnail}"' if thumbnail else ''
+            file.write(f'#EXTINF:-1 group-title="VOD" {tvg_logo},{title}\n{stream_url}\n')
 
-# Configuração do Selenium
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu")
+print("A playlist M3U foi gerada com sucesso.")
 
-driver = None
-channel_data = []
-processed_channels = set()  # Usando um conjunto para armazenar IDs já processados
+import yt_dlp
 
-try:
-    driver = webdriver.Chrome(options=chrome_options)
+# Define a URL de pesquisa
+search_query = 'https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87'
 
-    # URLs de tags fornecidas (incluindo as novas URLs)
-    urls_twitch = [
-        "https://www.twitch.tv/directory/all/tags/BBB24HORAS",
-        "https://www.twitch.tv/directory/all/tags/GrandeFratello",  # Nova tag
-        "https://www.twitch.tv/directory/all/tags/bb18",  # Tag existente
-        "https://www.twitch.tv/directory/all/tags/GranHermano",  # Nova tag
-        "https://www.twitch.tv/directory/all/tags/granhermanoargentina",  # Nova tag
-    ]
-
-    for url_twitch in urls_twitch:
-        driver.get(url_twitch)
-
-        # Esperar até que os elementos dos canais estejam carregados
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'div[data-target="directory-game__card_container"]'))
-        )
-
-        while True:
-            soup = BeautifulSoup(driver.page_source, 'html.parser')
-            live_channels = soup.find_all('div', {'data-target': 'directory-game__card_container'})
-
-            for channel in live_channels:
-                # Dentro de cada item de canal, encontrar os detalhes do canal
-                article_tag = channel.find('article', {'data-a-target': True})
-                if not article_tag:
-                    continue
-
-                link_tag = article_tag.find('a', {'data-test-selector': 'TitleAndChannel'})
-                title_tag = article_tag.find('h3')
-                category_tag = article_tag.find('p', {'data-a-target': 'preview-card-game-link'})
-
-                # Alteração na extração da thumbnail para pegar da estrutura dada
-                thumb_tag = article_tag.find('div', {'class': 'Layout-sc-1xcs6mc-0 eFvOkl'})
-                if thumb_tag:
-                    img_tag = thumb_tag.find('img', class_='tw-image')
-                    thumb_url = img_tag['src'] if img_tag else ''
-                else:
-                    thumb_url = ''
-
-                # Extração do texto da tag extra (categoria/tag)
-                tag_tag = article_tag.find('div', {'class': 'ScTagContent-sc-14s7ciu-1 VkjPH'})
-                tag_text = tag_tag.find('span').text.strip() if tag_tag else 'Unknown'
-
-                # Verificar se o link e o título existem antes de continuar
-                if not link_tag or not title_tag:
-                    continue
-
-                tvg_id = link_tag['href'].strip('/').split('/')[-1]
-                channel_name = title_tag.text.strip()
-                group_title = category_tag.text.strip() if category_tag else "Reality Show's Live"
-
-                # Verificar se o canal já foi processado
-                if tvg_id in processed_channels:
-                    continue  # Ignorar canais duplicados
-
-                # Adicionar o canal ao conjunto de canais processados
-                processed_channels.add(tvg_id)
-
-                # Acumular os dados de cada canal
-                channel_data.append({
-                    'type': 'info',
-                    'ch_name': channel_name,
-                    'tvg_id': tvg_id,
-                    'url': f"https://www.twitch.tv/{tvg_id}",
-                    'thumb': thumb_url,
-                    'group_title': group_title,
-                    'tag_text': tag_text  # Adicionando o texto extra
-                })
-
-            # Verificar se há uma página seguinte e navegar para ela
-            try:
-                next_button = driver.find_element(By.CSS_SELECTOR, 'button[data-a-target="pagination-forward-button"]')
-                if next_button.is_enabled():
-                    next_button.click()
-                    time.sleep(3)  # Esperar carregar a próxima página
-                else:
-                    break  # Não há mais páginas
-            except Exception as e:
-                logger.error("Erro ao tentar navegar para a próxima página: %s", e)
-                break  # Se não houver próximo botão ou houver erro, saímos do loop
-
-except Exception as e:
-    logger.error("Erro geral: %s", e)
-
-finally:
-    if driver:
-        driver.quit()
-
-# Adicionar o canal 'universoreality_gh' manualmente se não aparecer nos resultados
-manual_channel = {
-    'type': 'info',
-    'ch_name': 'GHARGENTINA',
-    'tvg_id': 'Telecinco',
-    'url': 'https://kick.com/eljefe-m',
-    'thumb': 'https://static-cdn.jtvnw.net/previews-ttv/live_user_wesleycs95r-1920x1090.jpg',
-    'group_title': "Reality Show's Live",  # Modificado para o título correto
-    'tag_text': 'Reality Show',  # Tag personalizada
+# Define as opções para o yt-dlp
+ydl_opts = {
+    'format': 'best',  # Obtém a melhor qualidade
+    'write_all_thumbnails': False,  # Não faz download das thumbnails
+    'skip_download': True,  # Não faz download do vídeo
+    'extract_flat': True,  # Extrai apenas a informação sobre o vídeo
+    'force_generic_extractor': True,
 }
 
+# Função para obter as URLs dos vídeos a partir da pesquisa
+def get_video_urls(query_url, max_results=10):
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info_dict = ydl.extract_info(query_url, download=False)
+        videos = info_dict.get('entries', [])
+        # Filtra apenas links de vídeos, ignorando canais e playlists
+        video_entries = [entry for entry in videos if entry.get('_type') == 'video']
+        return video_entries[:max_results]
 
-# Verificar se o canal manual já foi adicionado (pelo 'tvg_id') e adicioná-lo manualmente se necessário
-if manual_channel['tvg_id'] not in processed_channels:
-    channel_data.append(manual_channel)
-    processed_channels.add(manual_channel['tvg_id'])
-    logger.info(f"Canal {manual_channel['url']} adicionado manualmente.")
+# Função para salvar os resultados em um arquivo M3U com tvg-logo
+def save_to_m3u(video_list, filename='YOUTUBEPLAY1.m3u'):
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write("#EXTM3U\n")
+            for video in video_list:
+                video_id = video.get('id', '')
+                url = video.get('url', '')
+                title = video.get('title', 'Unknown Title')
+                thumbnail = f'https://img.youtube.com/vi/{video_id}/hqdefault.jpg'
+                description = video.get('description', '')[:10]
 
-# Gerar arquivo M3U com thumbnails e texto extra
-with open("lista1.M3U", "w", encoding="utf-8") as m3u_file:
-    m3u_file.write(banner)
+                if not url:
+                    print(f"Erro ao gravar informações do vídeo {video_id}: 'url'")
+                    continue
 
-    for item in channel_data:
-        # Ignorar canais específicos
-        if item['url'] in ["https://www.twitch.tv/jibarook", "https://www.twitch.tv/daniveintiuno"]:
-            logger.info(f"Canal {item['url']} ignorado.")
-            continue  # Pular para o próximo canal
-        
-        link = grab(item['url'])
-        if link and check_url(link):
-            # Adicionando o texto extra (tag) antes do nome do canal
-            m3u_file.write(
-                f"\n#EXTINF:-1 tvg-logo=\"{item['thumb']}\" group-title=\"{item['group_title']}\" tvg-id=\"{item['tvg_id']}\",{item['tag_text']} - {item['ch_name']}"
-            )
-            m3u_file.write('\n')
-            m3u_file.write(link)
-            m3u_file.write('\n')
+                # Grava no arquivo M3U
+                f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail}\",{title} - {description}...\n")
+                f.write(f"{url}\n")
+                f.write("\n")
+    except Exception as e:
+        print(f"Erro ao criar o arquivo .m3u: {e}")
+
+# Obter vídeos e salvar no arquivo M3U
+videos = get_video_urls(search_query)
+save_to_m3u(videos)
+
+print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
+
+
+
+
+
+
+
+
 
 import time
-import logging
-from logging.handlers import RotatingFileHandler
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup
+import yt_dlp
+import re
+from concurrent.futures import ThreadPoolExecutor
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
-import requests
-import streamlink
 
-# Configuração de logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+# Configure Chrome options
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1280,720")
+options.add_argument("--disable-infobars")
 
-log_file = "log.txt"
-file_handler = RotatingFileHandler(log_file, maxBytes=10**6, backupCount=5)
-file_handler.setLevel(logging.DEBUG)
 
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-file_handler.setFormatter(formatter)
 
-logger.addHandler(file_handler)
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
 
-# Banner do M3U
-banner = r'''
-#EXTM3U
-'''
+# URL da página desejada
+url_youtube = "https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87"
 
-# Função para obter URL do stream usando Streamlink
-def grab(url):
+# Abrir a página desejada
+driver.get(url_youtube)
+
+# Aguardar alguns segundos para carregar todo o conteúdo da página
+time.sleep(5)
+
+from selenium.webdriver.common.keys import Keys
+for i in range(5):
     try:
-        if url.endswith('.m3u') or url.endswith('.m3u8') or ".ts" in url:
-            return url
+        # Find the last video on the page
+        last_video = driver.find_element(By.XPATH, "//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
+        # Scroll to the last video
+        actions = ActionChains(driver)
+        actions.move_to_element(last_video).perform()
+        time.sleep(2)
+    except:
+        # Press the down arrow key for 50 seconds
+        driver.execute_script("window.scrollBy(0, 10000)")
+        time.sleep(2)
 
-        streams = streamlink.streams(url)
-        logger.debug("Streams disponíveis para %s: %s", url, streams)
-        if "best" in streams:
-            return streams["best"].url
-        return None
-    except streamlink.exceptions.NoPluginError as err:
-        logger.error("Plugin não encontrado para %s: %s", url, err)
-        return None
-    except streamlink.StreamlinkError as err:
-        logger.error("Erro do Streamlink para %s: %s", url, err)
-        return None
+# Get the page source again after scrolling to the bottom
+html_content = driver.page_source
 
-# Função para verificar URL
-def check_url(url):
-    try:
-        response = requests.head(url, timeout=15)
-        if response.status_code == 200:
-            logger.debug("URL válida: %s", url)
-            return True
-    except requests.RequestException as err:
-        logger.warning("Erro ao verificar URL %s: %s", url, err)
-    return False
+time.sleep(5)
 
-# Configuração do Selenium
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu")
-
+# Find the links and titles of the videos found
 try:
-    driver = webdriver.Chrome(options=chrome_options)
-    url_twitch = "https://www.twitch.tv/search?term=bigbrotherbrasil"
-    driver.get(url_twitch)
-
-    # Esperar até que os elementos dos canais estejam carregados
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'div[data-a-target="search-result-live-channel"]'))
-    )
-
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-    live_channels = soup.find_all('div', {'data-a-target': 'search-result-live-channel'})
-
-    channel_data = []
-    channel_info_path = 'channel_twitch.txt'
-
-    with open(channel_info_path, 'a', encoding='utf-8') as file:
-        for channel in live_channels:
-            # Dentro de cada item de canal, encontrar os detalhes do canal
-            link_tag = channel.find('a', {'class': 'ScCoreLink-sc-16kq0mq-0 jLbNQX tw-link'})
-            title_tag = channel.find('p', {'data-test-selector': 'search-result-live-channel__title'})
-            category_tag = channel.find('p', {'data-test-selector': 'search-result-live-channel__category'})
-            thumb_tag = channel.find('img', {'class': 'search-result-card__img tw-image'})
-            viewers_tag = channel.find('p', {'data-test-selector': 'search-result-live-channel__viewer-count'})
-
-            if not link_tag or not title_tag:
-                continue
-
-            # Extrair dados do canal
-            tvg_id = link_tag['href'].strip('/')
-            channel_name = title_tag.text.strip()  # Aqui pegamos o título do canal
-            thumb_url = thumb_tag['src'] if thumb_tag else ''
-            group_title = category_tag.text.strip() if category_tag else 'Unknown'
-            viewers_count = viewers_tag.text.strip() if viewers_tag else 'Unknown'
-
-            # Grava os dados de cada canal no arquivo
-            output_line = f"{channel_name} | {group_title} | {viewers_count} viewers | Logo Not Found"
-            file.write(output_line + "\n")
-            file.write(f"https://www.twitch.tv/{tvg_id}\n\n")
-
-            channel_data.append({
-                'type': 'info',
-                'ch_name': channel_name,
-                'tvg_id': tvg_id,
-                'url': f"https://www.twitch.tv/{tvg_id}",
-                'thumb': thumb_url,
-                'group_title': group_title,
-                'viewers': viewers_count
-            })
-
-    # Gerar arquivo M3U com thumbnails
-    with open("lista1.M3U", "a", encoding="utf-8") as m3u_file:
-        m3u_file.write(banner)
-        
-        for item in channel_data:
-            link = grab(item['url'])
-            if link and check_url(link):
-                m3u_file.write(
-                    f"\n#EXTINF:-1 tvg-logo=\"{item['thumb']}\" group-title=\"Reality Show's Live\",{item['ch_name']}"
-                )
-                m3u_file.write('\n')
-                m3u_file.write(link)
-                m3u_file.write('\n')
-
+    soup = BeautifulSoup(html_content, "html.parser")
+    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
+    links = ["https://www.youtube.com" + video.get("href") for video in videos]
+    titles = [video.get("title") for video in videos]
 except Exception as e:
-    logger.error("Erro geral: %s", e)
-
+    print(f"Erro: {e}")
 finally:
-    if 'driver' in locals():
-        driver.quit()
+    # Close the driver
+    driver.quit()
+
+# Define as opções para o youtube-dl
+ydl_opts = {
+    'format': 'best',  # Obtém a melhor qualidade
+    'write_all_thumbnails': False,  # Não faz download das thumbnails
+    'skip_download': True,  # Não faz download do vídeo
+}
+
+# Get the playlist and write to file
+try:
+    with open('./YOUTUBEPLAY1.m3u', 'w', encoding='utf-8') as f:
+        f.write("#EXTM3U\n")
+        for i, link in enumerate(links):
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(link, download=False)
+            if 'url' not in info:
+                print(f"Erro ao gravar informações do vídeo {link}: 'url'")
+                continue
+            url = info['url']
+            thumbnail_url = info['thumbnail']
+            description = info.get('description', '')[:10]
+            title = info.get('title', '')
+            f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
+            f.write(f"{url}\n")
+            f.write("\n")
+except Exception as e:
+    print(f"Erro ao criar o arquivo .m3u8: {e}")
+
+
+
+
+
+
+
+
+import requests
+from datetime import datetime, timezone, timedelta
+
+
+
+
+
+# Defina o fuso horário do Brasil
+brazil_timezone = timezone(timedelta(hours=-3))
+
+def is_within_time_range(start_time, end_time):
+    current_time = datetime.now(brazil_timezone)
+    return start_time <= current_time <= end_time
+
+# Horários locais do Brasil para 17h30 e 23h00
+start_time_br = datetime.now(brazil_timezone).replace(hour=17, minute=30, second=0, microsecond=0)
+end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=0, second=0, microsecond=0)
+
+# Nome do arquivo de saída
+output_file = "lista1.M3U"
+
+if is_within_time_range(start_time_br, end_time_br):
+    m3upt_url = "https://github.com/LITUATUI/M3UPT/raw/main/M3U/M3UPT.m3u"
+    m3upt_response = requests.get(m3upt_url)
+
+    if m3upt_response.status_code == 200:
+        m3upt_lines = m3upt_response.text.split('\n')[:25]
+
+        with open(output_file, "a") as f:
+            for line in m3upt_lines:
+                f.write(line + '\n')
+else:
+    with open(output_file, "a") as f:
+        f.write("#EXTM3U\n")
+
+
+
+
+
+#GLOBO
+
+
+from datetime import datetime
+import pytz
+import requests
+
+# Definir o fuso horário do Brasil
+brazil_timezone = pytz.timezone('America/Sao_Paulo')
+
+def is_within_time_range(start_time, end_time):
+    current_time = datetime.now(brazil_timezone)
+    return start_time <= current_time <= end_time
+
+# Verificar o dia da semana (0 = segunda-feira, 6 = domingo)
+current_weekday = datetime.now(brazil_timezone).weekday()
+
+# Horários locais do Brasil para 11h30 e 13h30
+start_time_br_morning = datetime.now(brazil_timezone).replace(hour=11, minute=30, second=0, microsecond=0)
+end_time_br_morning = datetime.now(brazil_timezone).replace(hour=13, minute=30, second=0, microsecond=0)
+
+# Horários locais do Brasil para 19h00 e 19h45
+start_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=0, second=0, microsecond=0)
+end_time_br_evening = datetime.now(brazil_timezone).replace(hour=19, minute=45, second=0, microsecond=0)
+
+# Horários locais do Brasil para 17h30 e 23h00
+start_time_br_night = datetime.now(brazil_timezone).replace(hour=17, minute=30, second=0, microsecond=0)
+end_time_br_night = datetime.now(brazil_timezone).replace(hour=20, minute=0, second=0, microsecond=0)
+
+# Nome do arquivo de saída
+output_file = "lista1.M3U"
+
+# Verificar se o dia é de segunda a sábado (0 a 5)
+if current_weekday < 6:
+    if (is_within_time_range(start_time_br_morning, end_time_br_morning) or 
+        is_within_time_range(start_time_br_evening, end_time_br_evening) or
+        is_within_time_range(start_time_br_night, end_time_br_night)):
+
+        m3upt_url = "https://github.com/strikeinthehouse/1/raw/main/lista2.M3U"
+        m3upt_response = requests.get(m3upt_url)
+
+        if m3upt_response.status_code == 200:
+            m3upt_lines = m3upt_response.text.split('\n')[:422]
+
+            with open(output_file, "a") as f:
+                for line in m3upt_lines:
+                    f.write(line + '\n')
+    else:
+        with open(output_file, "a") as f:
+            f.write("#EXTM3U\n")
+
+
+
         
+import requests
+
+repo_urls = [
+    "https://github.com/punkstarbr/STR-YT/raw/main/REALITY'SLIVE.m3u",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u",
+    "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u"
+]
+
+
+
+lists = []
+for url in repo_urls:
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        if url.endswith(".m3u"):
+            lists.append((url.split("/")[-1], response.text))
+        else:
+            try:
+                contents = response.json()
+
+                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
+
+                for m3u_file in m3u_files:
+                    m3u_url = m3u_file["download_url"]
+                    m3u_response = requests.get(m3u_url)
+
+                    if m3u_response.status_code == 200:
+                        lists.append((m3u_file["name"], m3u_response.text))
+            except requests.exceptions.JSONDecodeError:
+                print(f"Error parsing JSON from {url}")
+    else:
+        print(f"Error retrieving contents from {url}")
+
+lists = sorted(lists, key=lambda x: x[0])
+
+lists = sorted(lists, key=lambda x: x[0])
+
+line_count = 0
+with open("lista1.M3U", "a") as f:
+    for l in lists:
+        lines = l[1].split("\n")
+        for line in lines:
+            if line_count >= 212:
+                break
+            if line.strip():  # Pule linhas em branco
+                f.write(line + "\n")
+                line_count += 1
+        if line_count >= 200:
+            break
+
+
+
+
+import requests
+from datetime import datetime, timezone, timedelta
+
+# Defina o fuso horário do Brasil
+brazil_timezone = timezone(timedelta(hours=-3))
+
+def is_within_time_range(start_time, end_time):
+    current_time = datetime.now(brazil_timezone)
+    return start_time <= current_time <= end_time
+
+# Horários locais do Brasil para 17h30 e 23h00
+start_time_br = datetime.now(brazil_timezone).replace(hour=6, minute=00, second=0, microsecond=0)
+end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=59, second=0, microsecond=0)
+
+# Nome do arquivo de saída
+output_file = "lista1.M3U"
+
+if is_within_time_range(start_time_br, end_time_br):
+    m3upt_url = "https://github.com/punkstarbr/STR-YT/raw/main/lista1.M3U"
+    m3upt_response = requests.get(m3upt_url)
+
+    if m3upt_response.status_code == 200:
+        m3upt_lines = m3upt_response.text.split('\n')[:500]
+
+        with open(output_file, "a") as f:
+            for line in m3upt_lines:
+                f.write(line + '\n')
+else:
+    with open(output_file, "a") as f:
+        f.write("#EXTM3U\n")
+
+import requests
+from datetime import datetime, timezone, timedelta
+
+# Defina o fuso horário do Brasil
+brazil_timezone = timezone(timedelta(hours=-3))
+
+def is_within_time_range(start_time, end_time):
+    current_time = datetime.now(brazil_timezone)
+    return start_time <= current_time <= end_time
+
+# Horários locais do Brasil para 17h30 e 23h00
+start_time_br = datetime.now(brazil_timezone).replace(hour=6, minute=00, second=0, microsecond=0)
+end_time_br = datetime.now(brazil_timezone).replace(hour=23, minute=59, second=0, microsecond=0)
+
+# Nome do arquivo de saída
+output_file = "lista1.M3U"
+
+if is_within_time_range(start_time_br, end_time_br):
+    m3upt_url = "https://github.com/strikeinthehouse/M3UPT/raw/main/M3U/M3UPT.m3u"
+    m3upt_response = requests.get(m3upt_url)
+
+    if m3upt_response.status_code == 200:
+        m3upt_lines = m3upt_response.text.split('\n')[:500]
+
+        with open(output_file, "a") as f:
+            for line in m3upt_lines:
+                f.write(line + '\n')
+else:
+    with open(output_file, "a") as f:
+        f.write("#EXTM3U\n")
+
+import requests
+
+# Lista de URLs dos repositórios do GitHub
+repo_urls = [
+    "https://api.github.com/repos/strikeinthehouse/JCTN/contents",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u"
+]
+
+# Função para obter os URLs dos arquivos .m3u de um repositório GitHub
+def get_m3u_urls(repo_url):
+    m3u_urls = []
+    try:
+        response = requests.get(repo_url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        content = response.json()
+        for item in content:
+            if item['name'].endswith('.m3u'):
+                m3u_urls.append(item['download_url'])
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {repo_url}: {e}")
+    return m3u_urls
+
+# Lista para armazenar todos os URLs dos arquivos .m3u
+all_m3u_urls = []
+
+# Itera sobre os URLs dos repositórios e coleta os URLs dos arquivos .m3u
+for url in repo_urls:
+    if "api.github.com" in url:
+        # Se for uma API do GitHub, obtenha os URLs dos arquivos .m3u
+        m3u_urls = get_m3u_urls(url)
+        all_m3u_urls.extend(m3u_urls)
+    elif url.endswith('.m3u'):
+        # Se for um arquivo .m3u diretamente, adiciona à lista
+        all_m3u_urls.append(url)
+
+# Lista para armazenar o conteúdo dos arquivos .m3u
+all_content = []
+
+# Itera sobre os URLs dos arquivos .m3u e coleta o conteúdo de cada um
+for url in all_m3u_urls:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        if response.status_code == 200:
+            content = response.text.strip()
+            all_content.append(content)
+            print(f"Conteúdo do arquivo {url} coletado com sucesso.")
+        else:
+            print(f"Erro ao acessar {url}: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {url}: {e}")
+
+# Verifica se há conteúdo para escrever no arquivo .m3u
+if all_content:
+    with open('lista1.M3U', 'a', encoding='utf-8') as f:
+        f.write('#EXTM3U\n')  # Cabeçalho obrigatório para arquivos .m3u
+        for content in all_content:
+            f.write(content + '\n')
+
+    print('Arquivo lista1.m3u foi criado com sucesso.')
+else:
+    print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
+
+import requests
+
+# Lista de URLs dos repositórios do GitHub
+repo_urls = [
+    "https://api.github.com/repos/punkstarbr/STR-YT/contents"
+]
+
+# Função para obter os URLs dos arquivos .m3u de um repositório GitHub
+def get_m3u_urls(repo_url):
+    m3u_urls = []
+    try:
+        response = requests.get(repo_url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        content = response.json()
+        for item in content:
+            if item['name'].endswith('.m3u'):
+                m3u_urls.append(item['download_url'])
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {repo_url}: {e}")
+    return m3u_urls
+
+# Lista para armazenar todos os URLs dos arquivos .m3u
+all_m3u_urls = []
+
+# Itera sobre os URLs dos repositórios e coleta os URLs dos arquivos .m3u
+for url in repo_urls:
+    if "api.github.com" in url:
+        # Se for uma API do GitHub, obtenha os URLs dos arquivos .m3u
+        m3u_urls = get_m3u_urls(url)
+        all_m3u_urls.extend(m3u_urls)
+    elif url.endswith('.m3u'):
+        # Se for um arquivo .m3u diretamente, adiciona à lista
+        all_m3u_urls.append(url)
+
+# Lista para armazenar o conteúdo dos arquivos .m3u
+all_content = []
+
+# Itera sobre os URLs dos arquivos .m3u e coleta o conteúdo de cada um
+for url in all_m3u_urls:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Lança uma exceção para erros HTTP
+        if response.status_code == 200:
+            content = response.text.strip()
+            all_content.append(content)
+            print(f"Conteúdo do arquivo {url} coletado com sucesso.")
+        else:
+            print(f"Erro ao acessar {url}: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao acessar {url}: {e}")
+
+# Verifica se há conteúdo para escrever no arquivo .m3u
+if all_content:
+    with open('lista1.M3U', 'a', encoding='utf-8') as f:
+        f.write('#EXTM3U\n')  # Cabeçalho obrigatório para arquivos .m3u
+        for content in all_content:
+            f.write(content + '\n')
+
+    print('Arquivo lista1.m3u foi criado com sucesso.')
+else:
+    print('Nenhum conteúdo de arquivo .m3u foi encontrado para escrever.')
+
+
+def limitar_arquivo_m3u(arquivo_original, arquivo_saida, limite_linhas=4000):
+    try:
+        # Abre o arquivo M3U original para leitura
+        with open(arquivo_original, 'r') as file:
+            # Lê todas as linhas do arquivo
+            linhas = file.readlines()
+
+        # Filtra as linhas para remover linhas vazias e linhas com certos padrões
+        linhas_filtradas = [
+            linha for linha in linhas 
+            if linha.strip() and 
+            '#EXTVLCOPT:http-user-agent=iPhone' not in linha and 
+            '####' not in linha and 
+            '_____' not in linha and 
+            '#EXTVLCOPT--http-reconnect=true' not in linha
+        ]
+
+        # Limita as linhas conforme o valor de limite_linhas
+        linhas_limitadas = linhas_filtradas[:limite_linhas]
+        
+        # Abre o arquivo de saída para escrita
+        with open(arquivo_saida, 'w') as file:
+            # Escreve as linhas limitadas no novo arquivo
+            file.writelines(linhas_limitadas)
+        
+        print(f"O arquivo {arquivo_original} foi limitado a {limite_linhas} linhas e salvo como {arquivo_saida}.")
+    
+    except FileNotFoundError:
+        print(f"Erro: O arquivo {arquivo_original} não foi encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
+# Nome do arquivo original e do arquivo de saída
+arquivo_original = 'lista1.M3U'
+arquivo_saida = 'lista1.M3U'
+
+# Chama a função para limitar o arquivo
+limitar_arquivo_m3u(arquivo_original, arquivo_saida)
