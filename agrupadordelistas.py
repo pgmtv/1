@@ -343,7 +343,6 @@ if current_weekday < 6:
 import requests
 
 repo_urls = [
-    "https://github.com/punkstarbr/STR-YT/raw/main/REALITY'SLIVE.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u",
     "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u"
