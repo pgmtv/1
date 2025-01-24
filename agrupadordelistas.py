@@ -26,7 +26,7 @@ driver.get(url_archive)
 # Wait for the page to load
 time.sleep(5)
 
- Scroll to the bottom of the page
+ #Scroll to the bottom of the page
 for _ in range(10):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(2)
