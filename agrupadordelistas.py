@@ -3,7 +3,7 @@ import requests
 repo_urls = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u",
-    "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u"
+    "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u",
 ]
 
 
