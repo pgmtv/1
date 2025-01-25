@@ -1,6 +1,7 @@
-import requests
 import os
+import requests
 
+# URLs dos repositórios que contêm os arquivos M3U
 repo_urls = [
     "https://github.com/strikeinthehouse/1/raw/refs/heads/main/lista3.M3U",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
@@ -8,18 +9,17 @@ repo_urls = [
     "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u",
 ]
 
-
-
 lists = []
+# Buscar arquivos M3U de cada URL
 for url in repo_urls:
     response = requests.get(url)
 
     if response.status_code == 200:
-        if url.endswith(".m3u"):
+        if url.endswith(".m3u"):  # Se a URL já for um arquivo M3U, adiciona diretamente
             lists.append((url.split("/")[-1], response.text))
         else:
             try:
-                contents = response.json()
+                contents = response.json()  # Tenta obter o conteúdo como JSON
 
                 m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
 
@@ -34,28 +34,27 @@ for url in repo_urls:
     else:
         print(f"Error retrieving contents from {url}")
 
+# Ordenação dos arquivos M3U pelo nome
 lists = sorted(lists, key=lambda x: x[0])
 
-lists = sorted(lists, key=lambda x: x[0])
-
+# Limitação das linhas a serem escritas no arquivo final
 line_count = 0
 with open("lista1.M3U", "w") as f:
     for l in lists:
         lines = l[1].split("\n")
         for line in lines:
-            if line_count >= 212:
+            if line_count >= 212:  # Limita a 212 linhas no máximo
                 break
             if line.strip():  # Pule linhas em branco
                 f.write(line + "\n")
                 line_count += 1
-        if line_count >= 200:
+        if line_count >= 200:  # Se já atingiu 200 linhas, para de escrever
             break
-         
-     
+
 import os
+import requests
 import logging
 from logging.handlers import RotatingFileHandler
-import requests
 import json
 from bs4 import BeautifulSoup
 
@@ -80,7 +79,7 @@ def check_url(url):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Firefox/89.0"
     }
     try:
-        response = requests.head(url, headers=headers, timeout=15)  # Usando HEAD para verificar a URL rapidamente
+        response = requests.get(url, headers=headers, timeout=15)  # Usando GET para verificar a URL
         if response.status_code == 200:
             logger.info("URL OK: %s", url)
             return True
@@ -155,7 +154,7 @@ def process_m3u_file(input_file, output_file):
         i += 1
 
     # Gera o arquivo de saída M3U
-    with open(output_file, "a") as f:
+    with open(output_file, "w") as f:  # Certifique-se de usar "w" e não "a" para sobrescrever
         f.write(banner)
         for channel in channel_data:
             extinf_line = (
@@ -199,6 +198,9 @@ output_file = "lista1.M3U"
 
 # Executa o processamento
 process_m3u_file(input_file, output_file)
+
+
+
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
