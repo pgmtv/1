@@ -1,4 +1,5 @@
 import requests
+import os
 
 repo_urls = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
@@ -50,7 +51,7 @@ with open("lista1.M3U", "w") as f:
             break
          
      
- import os
+import os
 import logging
 from logging.handlers import RotatingFileHandler
 import requests
