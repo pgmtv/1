@@ -31,11 +31,9 @@ jobs:
         python3 -m pip install --upgrade pip
         python3 -m pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
-        
     - name: Verificar versão do Python
       run: |
         python3 --version
-
 
     - name: Rodar script YT.py
       run: |
@@ -52,7 +50,14 @@ jobs:
       run: |
         git pull origin main || echo "Erro ao fazer pull, pode ser que já tenha as últimas alterações."
 
-    - name: Commit e Push
+    - name: Verificar se há mudanças para commit
       run: |
-        git commit -m "Atualizar lista baixada" || echo "Nenhuma mudança para commitar."
+        if [[ -n "$(git status --porcelain)" ]]; then
+          git commit -m "Atualizar lista baixada"
+        else
+          echo "Nenhuma mudança para commitar."
+        fi
+
+    - name: Push alterações
+      run: |
         git push origin main || echo "Erro ao fazer push. Pode ser necessário revisar conflitos."
