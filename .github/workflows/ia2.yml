@@ -40,7 +40,6 @@ jobs:
     - name: Rodar script YT.py
       run: |
         # Navega até a pasta scripts e executa o script YT.py
-        cd scripts
         python3 ia2.py
 
     - name: Adicionar Mudanças ao Controle de Versão
