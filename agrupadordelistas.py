@@ -1,3 +1,57 @@
+import requests
+
+repo_urls = [
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u",
+    "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u"
+]
+
+
+
+lists = []
+for url in repo_urls:
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        if url.endswith(".m3u"):
+            lists.append((url.split("/")[-1], response.text))
+        else:
+            try:
+                contents = response.json()
+
+                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
+
+                for m3u_file in m3u_files:
+                    m3u_url = m3u_file["download_url"]
+                    m3u_response = requests.get(m3u_url)
+
+                    if m3u_response.status_code == 200:
+                        lists.append((m3u_file["name"], m3u_response.text))
+            except requests.exceptions.JSONDecodeError:
+                print(f"Error parsing JSON from {url}")
+    else:
+        print(f"Error retrieving contents from {url}")
+
+lists = sorted(lists, key=lambda x: x[0])
+
+lists = sorted(lists, key=lambda x: x[0])
+
+line_count = 0
+with open("lista1.M3U", "w") as f:
+    for l in lists:
+        lines = l[1].split("\n")
+        for line in lines:
+            if line_count >= 212:
+                break
+            if line.strip():  # Pule linhas em branco
+                f.write(line + "\n")
+                line_count += 1
+        if line_count >= 200:
+            break
+         
+     
+ 
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -114,7 +168,7 @@ def get_video_urls(query_url, max_results=10):
 # Função para salvar os resultados em um arquivo M3U com tvg-logo
 def save_to_m3u(video_list, filename='YOUTUBEPLAY1.m3u'):
     try:
-        with open(filename, 'w', encoding='utf-8') as f:
+        with open(filename, 'a', encoding='utf-8') as f:
             f.write("#EXTM3U\n")
             for video in video_list:
                 video_id = video.get('id', '')
@@ -340,56 +394,7 @@ if current_weekday < 6:
 
 
         
-import requests
 
-repo_urls = [
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",    
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ve.m3u",
-    "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u"
-]
-
-
-
-lists = []
-for url in repo_urls:
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        if url.endswith(".m3u"):
-            lists.append((url.split("/")[-1], response.text))
-        else:
-            try:
-                contents = response.json()
-
-                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
-
-                for m3u_file in m3u_files:
-                    m3u_url = m3u_file["download_url"]
-                    m3u_response = requests.get(m3u_url)
-
-                    if m3u_response.status_code == 200:
-                        lists.append((m3u_file["name"], m3u_response.text))
-            except requests.exceptions.JSONDecodeError:
-                print(f"Error parsing JSON from {url}")
-    else:
-        print(f"Error retrieving contents from {url}")
-
-lists = sorted(lists, key=lambda x: x[0])
-
-lists = sorted(lists, key=lambda x: x[0])
-
-line_count = 0
-with open("lista1.M3U", "a") as f:
-    for l in lists:
-        lines = l[1].split("\n")
-        for line in lines:
-            if line_count >= 212:
-                break
-            if line.strip():  # Pule linhas em branco
-                f.write(line + "\n")
-                line_count += 1
-        if line_count >= 200:
-            break
 
 
 
