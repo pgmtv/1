@@ -39,7 +39,7 @@ lists = sorted(lists, key=lambda x: x[0])
 
 # Limitação das linhas a serem escritas no arquivo final
 line_count = 0
-with open("lista1.M3U", "w") as f:
+with open("lista01.M3U", "w") as f:
     for l in lists:
         lines = l[1].split("\n")
         for line in lines:
