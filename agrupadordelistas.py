@@ -39,7 +39,7 @@ lists = sorted(lists, key=lambda x: x[0])
 
 # Limitação das linhas a serem escritas no arquivo final
 line_count = 0
-with open("lista01.M3U", "w") as f:
+with open("lista1.M3U", "w") as f:
     for l in lists:
         lines = l[1].split("\n")
         for line in lines:
@@ -283,7 +283,7 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
     results = list(executor.map(lambda info: get_stream_info(info[0]), video_infos))
 
 # Write the EXTINF formatted lines to a file
-with open('lista1.M3U', 'w') as file:
+with open('lista1.M3U', 'a') as file:
     file.write('#EXTM3U\n')  # Add the EXT3MU header
     for (url, thumbnail), (title, stream_url) in zip(video_infos, results):
         if stream_url:
