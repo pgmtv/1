@@ -209,6 +209,7 @@ repo_urls = [
 ]
 
 lists = []
+
 # Buscar arquivos M3U de cada URL
 for url in repo_urls:
     response = requests.get(url)
@@ -219,7 +220,6 @@ for url in repo_urls:
         else:
             try:
                 contents = response.json()  # Tenta obter o conteúdo como JSON
-
                 m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
 
                 for m3u_file in m3u_files:
@@ -238,17 +238,20 @@ lists = sorted(lists, key=lambda x: x[0])
 
 # Limitação das linhas a serem escritas no arquivo final
 line_count = 0
-with open("lista1.M3U", "a") as f:
+
+with open("lista1.M3U", "a") as f:  # Abre o arquivo em modo de escrita (modo 'w' para criar um novo arquivo)
     for l in lists:
-        lines = l[1].split("\n")
+        lines = l[1].split("\n")  # Divide o conteúdo do arquivo M3U em linhas
         for line in lines:
             if line_count >= 212:  # Limita a 212 linhas no máximo
                 break
             if line.strip():  # Pule linhas em branco
-                f.write(line + "\n")
+                f.write(line + "\n")  # Escreve a linha no arquivo
                 line_count += 1
-        if line_count >= 200:  # Se já atingiu 200 linhas, para de escrever
+
+        if line_count >= 212:  # Se já atingiu 212 linhas, para de escrever
             break
+
 
 
 from selenium import webdriver
