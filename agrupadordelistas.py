@@ -205,7 +205,7 @@ import requests
 
 # URLs dos repositórios que contêm os arquivos M3U
 repo_urls = [
-    "https://github.com/strikeinthehouse/1/raw/refs/heads/main/lista_1.M3U",
+    "https://raw.githubusercontent.com/strikeinthehouse/1/master/lista_1.M3U",
 ]
 
 lists = []
