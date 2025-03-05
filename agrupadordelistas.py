@@ -199,27 +199,24 @@ output_file = "lista1.M3U"
 # Executa o processamento
 process_m3u_file(input_file, output_file)
 
-
-import os
 import requests
 
-# URLs dos repositórios que contêm os arquivos M3U
 repo_urls = [
     "https://raw.githubusercontent.com/strikeinthehouse/1/master/lista_1.M3U",
+    "https://raw.githubusercontent.com/strikeinthehouse/1/master/doc.m3u"
 ]
 
 lists = []
-
-# Buscar arquivos M3U de cada URL
 for url in repo_urls:
     response = requests.get(url)
 
     if response.status_code == 200:
-        if url.endswith(".m3u"):  # Se a URL já for um arquivo M3U, adiciona diretamente
+        if url.endswith(".m3u"):
             lists.append((url.split("/")[-1], response.text))
         else:
             try:
-                contents = response.json()  # Tenta obter o conteúdo como JSON
+                contents = response.json()
+
                 m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
 
                 for m3u_file in m3u_files:
@@ -233,24 +230,17 @@ for url in repo_urls:
     else:
         print(f"Error retrieving contents from {url}")
 
-# Ordenação dos arquivos M3U pelo nome
 lists = sorted(lists, key=lambda x: x[0])
 
-# Limitação das linhas a serem escritas no arquivo final
 line_count = 0
-
-with open("lista1.M3U", "a") as f:  # Abre o arquivo em modo de escrita (modo 'w' para criar um novo arquivo)
+with open("lista1.M3U", "a") as f:
     for l in lists:
-        lines = l[1].split("\n")  # Divide o conteúdo do arquivo M3U em linhas
-        for line in lines:
-            if line_count >= 212:  # Limita a 212 linhas no máximo
-                break
-            if line.strip():  # Pule linhas em branco
-                f.write(line + "\n")  # Escreve a linha no arquivo
-                line_count += 1
-
-        if line_count >= 212:  # Se já atingiu 212 linhas, para de escrever
+        f.write(l[1])
+        line_count += l[1].count("\n")
+        if line_count >= 200:  # Stop writing after 200 lines
             break
+
+
 
 
 
