@@ -38,13 +38,14 @@ def get_video_details(url):
 
 
 def select_best_video_format(formats):
-    """Seleciona o melhor formato entre .mkv, .ts, .mp4 ou qualquer outro disponível."""
+    """Seleciona o melhor formato entre .ts, .mkv, .mp4 ou qualquer outro disponível."""
     print("Verificando formatos disponíveis:")
+    # Prioridade de formatos: TS > MKV > MP4 > qualquer outro
     for fmt in formats:
         print(f"Formato encontrado: {fmt.get('ext')}")
-        if fmt.get('ext') == 'mkv':
+        if fmt.get('ext') == 'ts':
             return fmt.get('url')
-        elif fmt.get('ext') == 'ts':
+        elif fmt.get('ext') == 'mkv':
             return fmt.get('url')
         elif fmt.get('ext') == 'mp4':
             return fmt.get('url')
