@@ -39,17 +39,22 @@ def get_video_details(url):
 
 def select_best_video_format(formats):
     """Seleciona o melhor formato entre .mkv, .ts, .mp4 ou qualquer outro disponível."""
-    # Prioridade de formatos: MKV > TS > MP4 > qualquer outro
+    print("Verificando formatos disponíveis:")
     for fmt in formats:
+        print(f"Formato encontrado: {fmt.get('ext')}")
         if fmt.get('ext') == 'mkv':
             return fmt.get('url')
         elif fmt.get('ext') == 'ts':
             return fmt.get('url')
         elif fmt.get('ext') == 'mp4':
             return fmt.get('url')
+    
     # Caso não encontre nenhum dos formatos preferidos, retorna o primeiro formato disponível
     if formats:
+        print("Nenhum formato preferido encontrado, usando o primeiro disponível.")
         return formats[0].get('url')
+    
+    print("Nenhum formato disponível.")
     return None
 
 
@@ -101,9 +106,12 @@ def process_urls_from_file(input_file):
             print(f"Nenhum URL encontrado para a URL {url}.")
 
     # Escreve todos os detalhes acumulados em um único arquivo M3U
-    filename = 'lista300.M3U'
-    write_m3u_file(all_details, filename)
-    print(f"Arquivo {filename} criado com sucesso.")
+    if all_details:
+        filename = 'lista300.M3U'
+        write_m3u_file(all_details, filename)
+        print(f"Arquivo {filename} criado com sucesso.")
+    else:
+        print("Nenhum vídeo foi processado. O arquivo M3U não foi criado.")
 
 
 if __name__ == "__main__":
