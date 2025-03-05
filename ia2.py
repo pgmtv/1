@@ -1,34 +1,40 @@
-import os
+import subprocess
 import json
-import internetarchive
+import os
 
 def get_video_details(url):
-    """Obtém os detalhes dos vídeos armazenados no Internet Archive."""
+    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl e, se necessário, yt-dlp."""
     try:
-        # Usando a biblioteca internetarchive para buscar os metadados do vídeo
-        item = internetarchive.get_item(url.split('/')[-1])  # Obtém o item pelo identificador no URL
-        files = item.files  # Obtém os arquivos do item
-
-        details = []
-        
-        # Processa cada arquivo do item
-        for file in files:
-            if file['format'] == 'Video':  # Filtra arquivos do tipo vídeo
-                video_url = file['url']
-                title = item.metadata.get('title', 'No Title')  # Obtém o título do vídeo
-                thumbnail_url = item.metadata.get('image', 'N/A')  # Obtém a miniatura, se disponível
-
-                details.append({
-                    'url': video_url,
-                    'title': title,
-                    'thumbnail': thumbnail_url
-                })
-        
+        # Tenta usar youtube-dl
+        result = subprocess.run(
+            ['youtube-dl', '-j', '--flat-playlist', url],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        entries = result.stdout.strip().split('\n')
+        details = [json.loads(entry) for entry in entries]
         return details
 
-    except Exception as e:
-        print(f"Erro ao obter detalhes do vídeo: {e}")
-        return []
+    except subprocess.CalledProcessError as e:
+        print("youtube-dl falhou, tentando yt-dlp...")
+        
+        try:
+            # Tenta usar yt-dlp
+            result = subprocess.run(
+                ['yt-dlp', '-j', '--flat-playlist', url],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            entries = result.stdout.strip().split('\n')
+            details = [json.loads(entry) for entry in entries]
+            return details
+        
+        except subprocess.CalledProcessError as e:
+            print("yt-dlp também falhou.")
+            print(f"Erro: {e}")
+            return []
 
 def write_m3u_file(details, filename):
     """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
@@ -72,7 +78,7 @@ def process_urls_from_file(input_file):
             print(f"Nenhum URL encontrado para a URL {url}.")
     
     # Escreve todos os detalhes acumulados em um único arquivo M3U
-    filename = 'lista1.M3U'
+    filename = 'lista300.M3U'
     write_m3u_file(all_details, filename)
     print(f"Arquivo {filename} criado com sucesso.")
 
