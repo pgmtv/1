@@ -3,21 +3,23 @@ import json
 import os
 
 def get_video_details(url):
-    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando yt-dlp."""
+    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando yt-dlp para playlists e canais."""
     try:
         ydl_opts = {
             'quiet': True,  # Desativa a saída do terminal
-            'extract_flat': True,  # Obtém detalhes sem baixar o vídeo
-            'force_generic_extractor': True,  # Força um extrator genérico
+            'extract_flat': False,  # Não apenas extrair links, mas os detalhes completos dos vídeos
+            'force_generic_extractor': False,  # Tenta usar o extrator correto
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            # Extrai informações do URL fornecido (pode ser playlist, canal ou vídeo individual)
             result = ydl.extract_info(url, download=False)
             
-            # Verifica se o resultado tem uma lista de vídeos (playlist)
+            # Se for uma playlist ou canal, 'entries' contém todos os vídeos
             if 'entries' in result:
                 return result['entries']
             else:
+                # Se for um único vídeo, retornamos ele como uma lista com um único elemento
                 return [result]
     
     except Exception as e:
