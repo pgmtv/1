@@ -1,40 +1,28 @@
-import subprocess
+import yt_dlp
 import json
 import os
 
 def get_video_details(url):
-    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando youtube-dl e, se necessário, yt-dlp."""
+    """Obtém os detalhes dos vídeos, incluindo URLs, títulos e thumbnails, usando yt-dlp."""
     try:
-        # Tenta usar youtube-dl
-        result = subprocess.run(
-            ['youtube-dl', '-j', url],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        entries = result.stdout.strip().split('\n')
-        details = [json.loads(entry) for entry in entries]
-        return details
-
-    except subprocess.CalledProcessError as e:
-        print("youtube-dl falhou, tentando yt-dlp...")
+        ydl_opts = {
+            'quiet': True,  # Desativa a saída do terminal
+            'extract_flat': True,  # Obtém detalhes sem baixar o vídeo
+            'force_generic_extractor': True,  # Força um extrator genérico
+        }
         
-        try:
-            # Tenta usar yt-dlp
-            result = subprocess.run(
-                ['yt-dlp', '-j', url],
-                capture_output=True,
-                text=True,
-                check=True
-            )
-            entries = result.stdout.strip().split('\n')
-            details = [json.loads(entry) for entry in entries]
-            return details
-        
-        except subprocess.CalledProcessError as e:
-            print("yt-dlp também falhou.")
-            print(f"Erro: {e}")
-            return []
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            result = ydl.extract_info(url, download=False)
+            
+            # Verifica se o resultado tem uma lista de vídeos (playlist)
+            if 'entries' in result:
+                return result['entries']
+            else:
+                return [result]
+    
+    except Exception as e:
+        print(f"Erro ao obter detalhes: {e}")
+        return []
 
 def write_m3u_file(details, filename):
     """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
@@ -47,23 +35,13 @@ def write_m3u_file(details, filename):
             video_url = entry.get('url')
             thumbnail_url = entry.get('thumbnail', 'N/A')
             title = entry.get('title', 'No Title')  # Obtém o título do vídeo
-            formats = entry.get('formats', [])
 
             if video_url:
                 # Formata e escreve o título e o URL no formato #EXTINF
                 file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\",{title}\n")
                 file.write(f"{video_url}\n")
-            
-            # Inclui os formatos disponíveis
-            if formats:
-                for fmt in formats:
-                    fmt_url = fmt.get('url')
-                    fmt_quality = fmt.get('format_note', 'N/A')
-                    if fmt_url:
-                        file.write(f"#EXTINF:-1 tvg-logo=\"{thumbnail_url}\", {title} [{fmt_quality}]\n")
-                        file.write(f"{fmt_url}\n")
             else:
-                print("Nenhum formato encontrado para o vídeo.")
+                print("URL do vídeo não encontrada.")
 
 def process_urls_from_file(input_file):
     """Lê URLs de um arquivo e processa cada uma para criar um único arquivo M3U."""
