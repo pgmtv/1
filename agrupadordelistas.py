@@ -202,8 +202,8 @@ process_m3u_file(input_file, output_file)
 import requests
 
 repo_urls = [
-    "https://raw.githubusercontent.com/strikeinthehouse/1/master/lista_1.M3U",
-    "https://raw.githubusercontent.com/strikeinthehouse/1/master/doc.m3u"
+    "https://github.com/strikeinthehouse/1/raw/refs/heads/main/lista_1.M3U",
+    "https://github.com/strikeinthehouse/1/raw/refs/heads/main/lista_1.M3U"
 ]
 
 lists = []
