@@ -12,44 +12,94 @@ repo_urls = [
 lists = []
 # Buscar arquivos M3U de cada URL
 for url in repo_urls:
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        if url.endswith(".m3u"):  # Se a URL já for um arquivo M3U, adiciona diretamente
-            lists.append((url.split("/")[-1], response.text))
+    print(f"Processando URL: {url}")
+    try:
+        # Usar allow_redirects=True para seguir redirecionamentos
+        response = requests.get(url, allow_redirects=True)
+        
+        if response.status_code == 200:
+            content_type = response.headers.get('content-type', '').lower()
+            
+            # Verificar se o conteúdo parece ser um arquivo M3U
+            if url.lower().endswith(('.m3u', '.m3u8')) or '#EXTM3U' in response.text:
+                print(f"  Detectado arquivo M3U direto: {url}")
+                filename = url.split("/")[-1]
+                lists.append((filename, response.text))
+            elif 'application/json' in content_type:
+                # Tenta processar como JSON (para APIs do GitHub)
+                try:
+                    contents = response.json()
+                    print(f"  Processando resposta JSON com {len(contents)} itens")
+                    
+                    m3u_files = [content for content in contents if content.get("name", "").lower().endswith(('.m3u', '.m3u8'))]
+                    
+                    for m3u_file in m3u_files:
+                        m3u_url = m3u_file["download_url"]
+                        print(f"  Baixando arquivo M3U: {m3u_url}")
+                        m3u_response = requests.get(m3u_url, allow_redirects=True)
+                        
+                        if m3u_response.status_code == 200:
+                            lists.append((m3u_file["name"], m3u_response.text))
+                except ValueError:
+                    print(f"  Erro ao processar JSON de {url}, tratando como arquivo M3U direto")
+                    filename = url.split("/")[-1]
+                    lists.append((filename, response.text))
+            else:
+                # Se não for JSON nem tiver extensão M3U, verificar o conteúdo
+                if '#EXTM3U' in response.text:
+                    print(f"  Conteúdo detectado como M3U pelo cabeçalho #EXTM3U")
+                    filename = url.split("/")[-1]
+                    lists.append((filename, response.text))
+                else:
+                    print(f"  Tipo de conteúdo não reconhecido: {content_type}")
         else:
-            try:
-                contents = response.json()  # Tenta obter o conteúdo como JSON
-
-                m3u_files = [content for content in contents if content["name"].endswith(".m3u")]
-
-                for m3u_file in m3u_files:
-                    m3u_url = m3u_file["download_url"]
-                    m3u_response = requests.get(m3u_url)
-
-                    if m3u_response.status_code == 200:
-                        lists.append((m3u_file["name"], m3u_response.text))
-            except requests.exceptions.JSONDecodeError:
-                print(f"Error parsing JSON from {url}")
-    else:
-        print(f"Error retrieving contents from {url}")
+            print(f"  Erro ao acessar URL: {url}, código de status: {response.status_code}")
+            
+    except requests.exceptions.RequestException as e:
+        print(f"  Erro ao processar URL {url}: {e}")
 
 # Ordenação dos arquivos M3U pelo nome
 lists = sorted(lists, key=lambda x: x[0])
 
+print(f"\nTotal de listas M3U encontradas: {len(lists)}")
+for name, _ in lists:
+    print(f"  - {name}")
+
 # Limitação das linhas a serem escritas no arquivo final
 line_count = 0
-with open("lista1.M3U", "w") as f:
-    for l in lists:
-        lines = l[1].split("\n")
-        for line in lines:
+output_file = "lista1.M3U"
+
+with open(output_file, "w") as f:
+    # Escrever cabeçalho M3U se ainda não existir
+    f.write("#EXTM3U\n")
+    line_count += 1
+    
+    for list_name, list_content in lists:
+        print(f"Processando lista: {list_name}")
+        lines = list_content.split("\n")
+        
+        # Pular o cabeçalho #EXTM3U se já existir
+        start_idx = 0
+        if lines and lines[0].strip() == "#EXTM3U":
+            start_idx = 1
+        
+        for i in range(start_idx, len(lines)):
+            line = lines[i].strip()
+            if not line:  # Pular linhas em branco
+                continue
+                
+            f.write(line + "\n")
+            line_count += 1
+            
             if line_count >= 212:  # Limita a 212 linhas no máximo
+                print(f"Limite de 212 linhas atingido")
                 break
-            if line.strip():  # Pule linhas em branco
-                f.write(line + "\n")
-                line_count += 1
-        if line_count >= 200:  # Se já atingiu 200 linhas, para de escrever
+                
+        if line_count >= 212:
             break
+
+print(f"\nArquivo {output_file} criado com {line_count} linhas")
+
 
 import os
 import requests
