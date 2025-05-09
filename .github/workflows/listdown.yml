@@ -40,12 +40,17 @@ jobs:
 
     - name: Preparar Commit
       run: |
-        # Adiciona apenas arquivos relevantes, evitando conflito com venv/.pyc
+        # Adiciona todos os arquivos não ignorados
+        git add -u
         git add *.M3U log.txt || true
-        git diff --cached --quiet || git commit -m "Atualizar lista baixada"
+
+        # Faz commit só se houver mudanças
+        if ! git diff --cached --quiet; then
+          git commit -m "Atualizar lista baixada"
+        fi
 
     - name: Atualizar Repositório Remoto
       run: |
-        git rebase --abort || true
+        # Agora que não há mudanças não comitadas, o pull com rebase funciona
         git pull --rebase origin main
         git push origin main
