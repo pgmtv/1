@@ -2,7 +2,7 @@ name: Baixando Lista
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Executa a cada 30 minutos
+    - cron: '*/30 * * * *'
   pull_request:
     branches:
       - main
@@ -40,17 +40,12 @@ jobs:
 
     - name: Preparar Commit
       run: |
-        # Adiciona todos os arquivos não ignorados
-        git add -u
-        git add *.M3U log.txt || true
-
-        # Faz commit só se houver mudanças
+        git add lista1.M3U YOUTUBEPLAY1.m3u log.txt || true
         if ! git diff --cached --quiet; then
           git commit -m "Atualizar lista baixada"
         fi
 
     - name: Atualizar Repositório Remoto
       run: |
-        # Agora que não há mudanças não comitadas, o pull com rebase funciona
-        git pull --rebase origin main
+        git pull --rebase origin main || git rebase --abort
         git push origin main
