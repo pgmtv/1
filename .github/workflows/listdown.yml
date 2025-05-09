@@ -13,38 +13,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repositório
+    - name: Checkout do Repositório
       uses: actions/checkout@v4
 
-    - name: Configurar Ambiente Virtual
+    - name: Criar Ambiente Virtual e Instalar Dependências
       run: |
         python3 -m venv venv
         source venv/bin/activate
         pip install --upgrade pip
-
-    - name: Instalar Dependências Python
-      run: |
-        source venv/bin/activate
         pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
 
     - name: Instalar ffmpeg
       run: |
         sudo apt-get update
-        sudo apt-get install -y ffmpeg      
+        sudo apt-get install -y ffmpeg
 
-    - name: Executar script Python
+    - name: Executar Script Python
       run: |
         source venv/bin/activate
         python agrupadordelistas.py
 
-    - name: Commit e Push das Alterações
+    - name: Configurar Git
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        
-        git add -A
+
+    - name: Preparar Commit
+      run: |
+        # Adiciona apenas arquivos relevantes, evitando conflito com venv/.pyc
+        git add *.M3U log.txt || true
         git diff --cached --quiet || git commit -m "Atualizar lista baixada"
-        
+
+    - name: Atualizar Repositório Remoto
+      run: |
+        git rebase --abort || true
         git pull --rebase origin main
         git push origin main
-
