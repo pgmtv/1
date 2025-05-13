@@ -2,7 +2,7 @@ name: Baixando Lista
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Executa a cada 30 minutos
+    - cron: '*/30 * * * *'  # Schedule to run every 30 minutes
   pull_request:
     branches:
       - main
@@ -13,46 +13,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do Repositório
-      uses: actions/checkout@v4
+    - name: Checkout Repositório
+      uses: actions/checkout@v4  # Updated to use a newer version
 
-    - name: Criar Ambiente Virtual e Instalar Dependências
+    - name: Configurar Ambiente Virtual
       run: |
         python3 -m venv venv
         source venv/bin/activate
-        pip install --upgrade pip
-        pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
+        pip install --upgrade pip  # Upgrade pip within the virtual environment
 
-    - name: Instalar ffmpeg
+    - name: Instalando Dependências Python
+      run: |
+        source venv/bin/activate
+        pip install streamlink selenium requests beautifulsoup4 lxml python-dateutil yt-dlp youtube-dl pytz
+        python3 -m pip install requests streamlink beautifulsoup4 selenium yt_dlp
+
+    - name: Install ffmpeg
       run: |
         sudo apt-get update
-        sudo apt-get install -y ffmpeg
+        sudo apt-get install -y ffmpeg      
 
-    - name: Executar Script Python
+    - name: Executar script Python
       run: |
         source venv/bin/activate
         python agrupadordelistas.py
+        if [ $? -ne 0 ]; then
+          echo "Erro na execução do script Python."
+          exit 1
+        fi
 
-    - name: Configurar Git
+    - name: Adicionar arquivos ao controle de versão
+      run: |
+        git add -A
+        ls -la
+
+    - name: Commit & Push
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-
-    - name: Adicionar e Comitar Arquivos
-      run: |
-        # Adiciona apenas arquivos permitidos (evita venv e .pyc)
-        git add lista1.M3U YOUTUBEPLAY1.m3u log.txt || true
-
-        # Faz commit se houver mudanças
-        if ! git diff --cached --quiet; then
-          git commit -m "Atualizar lista baixada"
-        fi
-
-    - name: Atualizar e Subir para o Repositório
-      run: |
-        # Apenas faz pull se não houver mudanças pendentes
-        if git diff --quiet && git diff --cached --quiet; then
-          git pull --rebase origin main
-        fi
-
-        git push origin main || true
+        git pull --rebase origin main
+        git commit -m "Atualizar lista baixada" || echo "Nenhuma alteração para commitar"
+        git push origin main
