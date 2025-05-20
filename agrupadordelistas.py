@@ -9,34 +9,30 @@ repo_urls = [
 ]
 
 lists = []
+
 # Buscar arquivos M3U de cada URL
 for url in repo_urls:
     print(f"Processando URL: {url}")
     try:
-        # Usar allow_redirects=True para seguir redirecionamentos
         response = requests.get(url, allow_redirects=True)
-        
+
         if response.status_code == 200:
             content_type = response.headers.get('content-type', '').lower()
             
-            # Verificar se o conteúdo parece ser um arquivo M3U
             if url.lower().endswith(('.m3u', '.m3u8')) or '#EXTM3U' in response.text:
                 print(f"  Detectado arquivo M3U direto: {url}")
                 filename = url.split("/")[-1]
                 lists.append((filename, response.text))
             elif 'application/json' in content_type:
-                # Tenta processar como JSON (para APIs do GitHub)
                 try:
                     contents = response.json()
                     print(f"  Processando resposta JSON com {len(contents)} itens")
-                    
                     m3u_files = [content for content in contents if content.get("name", "").lower().endswith(('.m3u', '.m3u8'))]
-                    
+
                     for m3u_file in m3u_files:
                         m3u_url = m3u_file["download_url"]
                         print(f"  Baixando arquivo M3U: {m3u_url}")
                         m3u_response = requests.get(m3u_url, allow_redirects=True)
-                        
                         if m3u_response.status_code == 200:
                             lists.append((m3u_file["name"], m3u_response.text))
                 except ValueError:
@@ -44,7 +40,6 @@ for url in repo_urls:
                     filename = url.split("/")[-1]
                     lists.append((filename, response.text))
             else:
-                # Se não for JSON nem tiver extensão M3U, verificar o conteúdo
                 if '#EXTM3U' in response.text:
                     print(f"  Conteúdo detectado como M3U pelo cabeçalho #EXTM3U")
                     filename = url.split("/")[-1]
@@ -53,7 +48,6 @@ for url in repo_urls:
                     print(f"  Tipo de conteúdo não reconhecido: {content_type}")
         else:
             print(f"  Erro ao acessar URL: {url}, código de status: {response.status_code}")
-            
     except requests.exceptions.RequestException as e:
         print(f"  Erro ao processar URL {url}: {e}")
 
@@ -67,37 +61,45 @@ for name, _ in lists:
 # Limitação das linhas a serem escritas no arquivo final
 line_count = 0
 output_file = "lista1.M3U"
+wrote_header = False  # Para garantir que só escreva uma vez o cabeçalho
 
 with open(output_file, "w") as f:
-    # Escrever cabeçalho M3U se ainda não existir
-    f.write("#EXTM3U\n")
-    line_count += 1
-    
     for list_name, list_content in lists:
         print(f"Processando lista: {list_name}")
         lines = list_content.split("\n")
-        
-        # Pular o cabeçalho #EXTM3U se já existir
+
         start_idx = 0
-        if lines and lines[0].strip() == "#EXTM3U":
-            start_idx = 1
-        
+
+        # Verifica se a primeira linha é um cabeçalho #EXTM3U
+        if lines and lines[0].strip().startswith("#EXTM3U"):
+            if not wrote_header:
+                # Escreve o cabeçalho completo com atributos, se presente
+                f.write(lines[0].strip() + "\n")
+                line_count += 1
+                wrote_header = True
+            start_idx = 1  # Pular esta linha nas próximas listas
+
         for i in range(start_idx, len(lines)):
             line = lines[i].strip()
-            if not line:  # Pular linhas em branco
+            if not line:
+                continue  # Ignorar linhas em branco
+
+            # Ignora cabeçalhos duplicados
+            if line.startswith("#EXTM3U"):
                 continue
-                
+
             f.write(line + "\n")
             line_count += 1
-            
-            if line_count >= 212:  # Limita a 212 linhas no máximo
+
+            if line_count >= 212:
                 print(f"Limite de 212 linhas atingido")
                 break
-                
+
         if line_count >= 212:
             break
 
 print(f"\nArquivo {output_file} criado com {line_count} linhas")
+
 
 
 import os
