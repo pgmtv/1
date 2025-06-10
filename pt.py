@@ -16,7 +16,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_archive = "https://tviplayer.iol.pt/videos/ultimos/1/canal:"
+url_archive = "https://tviplayer.iol.pt/ultimos"
 
 # Open the desired page
 driver.get(url_archive)
@@ -25,16 +25,16 @@ driver.get(url_archive)
 time.sleep(5)  # Adjust the sleep time if needed to ensure page load
 
 # Find all relevant video links
-video_elements = driver.find_elements(By.CSS_SELECTOR, 'a.item')
+video_elements = driver.find_elements(By.CSS_SELECTOR, 'a[href*="/video/"]')
 
 # Prepare to write the links to a file
-with open('pt.txt', 'w') as file:
+with open("pt.txt", "w") as file:
     for element in video_elements:
-        link = element.get_attribute('href')
+        link = element.get_attribute("href")
         # Check if the link is valid and not empty
         if link:
             full_link = f"{link}"
-            file.write(full_link + '\n')
+            file.write(full_link + "\n")
 
 # Close the driver
 driver.quit()
@@ -51,12 +51,12 @@ def get_video_details_youtube(url):
     """Obtém os detalhes dos vídeos usando youtube-dl."""
     try:
         result = subprocess.run(
-            ['youtube-dl', '-j', '--flat-playlist', url],
+            ["youtube-dl", "-j", "--flat-playlist", url],
             capture_output=True,
             text=True,
             check=True
         )
-        entries = result.stdout.strip().split('\n')
+        entries = result.stdout.strip().split("\n")
         details = [json.loads(entry) for entry in entries]
         return details
 
@@ -67,12 +67,12 @@ def get_video_details_yt_dlp(url):
     """Obtém os detalhes dos vídeos usando yt-dlp."""
     try:
         result = subprocess.run(
-            ['yt-dlp', '-j', '--flat-playlist', url],
+            ["yt-dlp", "-j", "--flat-playlist", url],
             capture_output=True,
             text=True,
             check=True
         )
-        entries = result.stdout.strip().split('\n')
+        entries = result.stdout.strip().split("\n")
         details = [json.loads(entry) for entry in entries]
         return details
 
@@ -84,7 +84,7 @@ def get_video_details_streamlink(url):
     try:
         # Usa o streamlink para obter a URL do stream
         result = subprocess.run(
-            ['streamlink', '--stream-url', url, 'best'],
+            ["streamlink", "--stream-url", url, "best"],
             capture_output=True,
             text=True,
             check=True
@@ -93,11 +93,11 @@ def get_video_details_streamlink(url):
         
         # Faz uma requisição para obter o título da página
         response = requests.get(url)
-        soup = BeautifulSoup(response.text, 'html.parser')
+        soup = BeautifulSoup(response.text, "html.parser")
         title = get_title(soup)
         
         if stream_url and title:
-            return [{'url': stream_url, 'title': title, 'thumbnail': 'N/A'}]
+            return [{"url": stream_url, "title": title, "thumbnail": "N/A"}]
         else:
             return []
 
@@ -132,13 +132,13 @@ def get_video_details(url):
 
 def write_m3u_file(details, filename):
     """Escreve os detalhes dos vídeos no formato M3U em um arquivo."""
-    with open(filename, 'a', encoding='utf-8') as file:
+    with open(filename, "a", encoding="utf-8") as file:
         file.write("#EXTM3U\n")
         
         for entry in details:
-            video_url = entry.get('url')
-            thumbnail_url = entry.get('thumbnail', 'N/A')
-            title = entry.get('title', 'No Title')
+            video_url = entry.get("url")
+            thumbnail_url = entry.get("thumbnail", "N/A")
+            title = entry.get("title", "No Title")
 
             if video_url:
                 file.write(f'#EXTINF:-1 tvg-logo="{thumbnail_url}" group-title="VOD PT",{title}\n')
@@ -154,7 +154,7 @@ def process_urls_from_file(input_file):
     
     all_details = []
     
-    with open(input_file, 'r') as file:
+    with open(input_file, "r") as file:
         urls = file.readlines()
     
     urls = [url.strip() for url in urls if url.strip()]
@@ -168,10 +168,11 @@ def process_urls_from_file(input_file):
         else:
             print(f"Nenhum URL encontrado para a URL {url}.")
     
-    filename = 'lista1.M3U'
+    filename = "lista1.M3U"
     write_m3u_file(all_details, filename)
     print(f"Arquivo {filename} criado com sucesso.")
 
 if __name__ == "__main__":
-    input_file = 'pt.txt'
+    input_file = "pt.txt"
     process_urls_from_file(input_file)
+
