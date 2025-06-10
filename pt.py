@@ -101,7 +101,7 @@ for element in video_elements:
         video_links.add(link)
 
 # Prepare to write the links to a file
-with open("rtp_play_urls.txt", "w") as file:
+with open("pt.txt", "w") as file:
     for link in video_links:
         file.write(link + "\n")
 
@@ -111,43 +111,7 @@ driver.quit()
 print("Extração de URLs de páginas de vídeo da RTP Play concluída. As URLs foram salvas em rtp_play_urls.txt")
 
 
-import requests
-from bs4 import BeautifulSoup
-import re
-import time
 
-def extract_rtp_play_urls(url):
-    video_links = set()
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for HTTP errors
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        # Find all links that match the video pattern
-        for link_tag in soup.find_all('a', href=True):
-            link = link_tag['href']
-            if link and re.search(r'/play/p\d+/e\d+/', link):
-                # Ensure the link is absolute
-                if not link.startswith('http'):
-                    link = f"https://www.rtp.pt{link}"
-                video_links.add(link)
-    except requests.exceptions.RequestException as e:
-        print(f"Erro ao acessar a URL {url}: {e}")
-    return list(video_links)
-
-if __name__ == "__main__":
-    url_programs = "https://www.rtp.pt/play/programas"
-    print(f"Iniciando a extração de URLs da RTP Play em {url_programs}...")
-    
-    # Initial extraction from the main programs page
-    all_video_urls = set(extract_rtp_play_urls(url_programs))
-
-    # Prepare to write the links to a file
-    with open("pt.txt", "w") as file:
-        for link in sorted(list(all_video_urls)): # Sort for consistent output
-            file.write(link + "\n")
-
-    print(f"Extração de URLs de páginas de vídeo da RTP Play concluída. {len(all_video_urls)} URLs foram salvas em pt.txt")
 
 import subprocess
 import json
