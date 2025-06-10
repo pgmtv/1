@@ -3,6 +3,7 @@ import requests
 
 # URLs dos repositórios que contêm os arquivos M3U
 repo_urls = [
+    "https://thetivi.us/M3U/line.m3u",
     "https://raw.githubusercontent.com/strikeinthehouse/1/refs/heads/main/lista2.M3U",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uy.m3u",        
     "https://github.com/strikeinthehouse/Navez/raw/main/playlist.m3u",
