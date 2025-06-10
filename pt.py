@@ -46,7 +46,6 @@ print("Extração de URLs de páginas de vídeo concluída. As URLs foram salvas
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
 import re
@@ -59,8 +58,8 @@ options.add_argument("--disable-gpu")
 options.add_argument("--window-size=1280,720")
 options.add_argument("--disable-infobars")
 
-# Create the webdriver instance using ChromeDriverManager
-driver = webdriver.Chrome(service=webdriver.chrome.service.Service(ChromeDriverManager().install()), options=options)
+# Create the webdriver instance
+driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
 url_programs = "https://www.rtp.pt/play/programas"
