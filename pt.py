@@ -144,7 +144,7 @@ def process_urls_from_file(input_file):
         else:
             print(f"Nenhum detalhe encontrado para a URL: {url}")
     
-    filename = 'lista1.m3u'
+    filename = 'lista1.M3U'
     write_m3u_file(all_details, filename)
     print(f"\nArquivo {filename} criado com sucesso.")
 
