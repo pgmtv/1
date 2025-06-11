@@ -18,7 +18,7 @@ options.add_argument("--disable-infobars")
 driver = webdriver.Chrome(options=options)
 
 # URL of the desired page
-url_programs = "https://www.rtp.pt/play/direto"
+url_programs = "https://www.rtp.pt/play/programas/tema/rtpmemoria"
 
 # Open the desired page
 driver.get(url_programs)
