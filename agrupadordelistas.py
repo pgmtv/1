@@ -497,97 +497,7 @@ print(f"Arquivo M3U gerado com {len(videos)} vídeos.")
 
 
 
-import time
-import os
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
-import yt_dlp
-import re
-from concurrent.futures import ThreadPoolExecutor
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
-# Configure Chrome options
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-gpu")
-options.add_argument("--window-size=1280,720")
-options.add_argument("--disable-infobars")
-
-
-
-# Create the webdriver instance
-driver = webdriver.Chrome(options=options)
-
-# URL da página desejada
-url_youtube = "https://www.youtube.com/results?search_query=%E5%9C%B0%E9%9C%87"
-
-# Abrir a página desejada
-driver.get(url_youtube)
-
-# Aguardar alguns segundos para carregar todo o conteúdo da página
-time.sleep(5)
-
-from selenium.webdriver.common.keys import Keys
-for i in range(5):
-    try:
-        # Find the last video on the page
-        last_video = driver.find_element(By.XPATH, "//a[@class='ScCoreLink-sc-16kq0mq-0 jKBAWW tw-link'][last()]")
-        # Scroll to the last video
-        actions = ActionChains(driver)
-        actions.move_to_element(last_video).perform()
-        time.sleep(2)
-    except:
-        # Press the down arrow key for 50 seconds
-        driver.execute_script("window.scrollBy(0, 10000)")
-        time.sleep(2)
-
-# Get the page source again after scrolling to the bottom
-html_content = driver.page_source
-
-time.sleep(5)
-
-# Find the links and titles of the videos found
-try:
-    soup = BeautifulSoup(html_content, "html.parser")
-    videos = soup.find_all("a", id="video-title", class_="yt-simple-endpoint style-scope ytd-video-renderer")
-    links = ["https://www.youtube.com" + video.get("href") for video in videos]
-    titles = [video.get("title") for video in videos]
-except Exception as e:
-    print(f"Erro: {e}")
-finally:
-    # Close the driver
-    driver.quit()
-
-# Define as opções para o youtube-dl
-ydl_opts = {
-    'format': 'best',  # Obtém a melhor qualidade
-    'write_all_thumbnails': False,  # Não faz download das thumbnails
-    'skip_download': True,  # Não faz download do vídeo
-}
-
-# Get the playlist and write to file
-try:
-    with open('./YOUTUBEPLAY1.m3u', 'w', encoding='utf-8') as f:
-        f.write("#EXTM3U\n")
-        for i, link in enumerate(links):
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                info = ydl.extract_info(link, download=False)
-            if 'url' not in info:
-                print(f"Erro ao gravar informações do vídeo {link}: 'url'")
-                continue
-            url = info['url']
-            thumbnail_url = info['thumbnail']
-            description = info.get('description', '')[:10]
-            title = info.get('title', '')
-            f.write(f"#EXTINF:-1 group-title=\"YOUTUBE\" tvg-logo=\"{thumbnail_url}\",{title} - {description}...\n")
-            f.write(f"{url}\n")
-            f.write("\n")
-except Exception as e:
-    print(f"Erro ao criar o arquivo .m3u8: {e}")
 
 
 
@@ -761,6 +671,7 @@ import requests
 # Lista de URLs dos repositórios do GitHub
 repo_urls = [
     "https://api.github.com/repos/strikeinthehouse/JCTN/contents",
+    "https://api.github.com/repos/strikeinthehouse/YT-OK/contents",
 ]
 
 # Função para obter os URLs dos arquivos .m3u de um repositório GitHub
