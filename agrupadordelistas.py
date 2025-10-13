@@ -670,7 +670,7 @@ import requests
 
 # Lista de URLs dos repositórios do GitHub
 repo_urls = [
-    "https://api.github.com/repos/strikeinthehouse/JCTN/contents",
+    "https://api.github.com/repos/pgmtv/JCTV/contents",
     "https://api.github.com/repos/strikeinthehouse/YT-OK/contents",
 ]
 
