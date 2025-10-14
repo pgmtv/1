@@ -4,8 +4,23 @@ https://livedelta.cdn.antel.net.uy/out/u/url_canalu.m3u8
 #EXTINF:-1 group-title="Undefined" tvg-id="VIVOTV.uy" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhndrnI2gmKpIdYG-IQgRXMTjuGWVbej4nEJA1Yw7EvNGYL92_NoWca-n9Xw&s",VIVO TV (1080p)
 https://stream.vivotv.uy/hls/stream.m3u8
 #EXTM3U
-#EXTM3U
-#EXTM3U
+#EXTM3U url-tvg="https://github.com/LITUATUI/M3UPT/raw/refs/heads/main/EPG/epg-pt.xml.gz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rtp-pt.xml.gz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-rytec-pt.xml.xz,https://github.com/LITUATUI/M3UPT/raw/main/EPG/epg-mitv-br.xml.gz,http://www.xmltvepg.nl/rytecES_Basic.xz,http://www.xmltvepg.nl/rytecBE_FR_Basic.xz,http://www.xmltvepg.nl/rytecIT_Basic.xz,http://www.xmltvepg.nl/rytecUK_Basic.xz,https://www.tdtchannels.com/epg/TV.xml.gz"
+# M3UPT.com - IPTV playlist in M3U format with TV and radio stations in Portuguese. Public and official streams only.
+# 📺 TV
+#EXTINF:-1 group-title="TV" tvg-id="RTP1.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP1.png",RTP 1
+#EXTVLCOPT:http-user-agent=IE
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="RTP2.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/RTP2.png",RTP 2
+#EXTVLCOPT:http-user-agent=IE
+https://streaming-live.rtp.pt/liverepeater/rtp2HD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="SIC.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC.png",SIC
+https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="TVI.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/TVI.png",TVI
+https://video-auth6.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTQvMjAyNSA4Ojc6MjQgUE0maGFzaF92YWx1ZT1FSHZ0b2xvZ3o1NVE0VHpnUXc4aGpnPT0mdmFsaWRtaW51dGVzPTE0NDAmaWQ9NGQ0ZGNjNWUtN2I0Zi00MGE4LWE2M2QtMDcxZGMwNzU2NmU2/
+#EXTINF:-1 group-title="TV" tvg-id="RTP3.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/rtpnoticias.png",RTP Notícias
+#EXTVLCOPT:http-user-agent=IE
+https://streaming-live.rtp.pt/liverepeater/smil:rtpnHD.smil/playlist.m3u8
+#EXTINF:-1 group-title="TV" tvg-id="SICNoticias.pt" tvg-logo="https://raw.githubusercontent.com/LITUATUI/M3UPT/main/logos/SIC-Notícias.png",SIC Notícias
 #EXTM3U
 #EXTM3U x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_IL1.xml.gz"
 #EXTINF:-1 group-title="NEWS WORLD" tvg-chno="1302" tvg-id="ערוץ כאן 11 לצפייה ישירה" tvg-logo="data:image/webp;base64,UklGRnQEAABXRUJQVlA4IGgEAABQOACdASqQASwBPslksVCnpiUiorTY8PAZCWlu/HyY4OtQxv2MtH7RD7ivEWXuEPkWLO+Xtcu/7izvl7XLv+4s75e1y7/uLO+Xtcu/7izvl7XLv+4s75e1y7/uLO+Xtcu/7izvl7XLv+4s75e1y7g1SYAxBfVhe1y7/uGvpH3Hj3vUCtoW9cPKM9r5cY108faAWl8A9wbgNcsy4Jg6dZ5g2dXPrizvcsmUh+FF1+SMKI0flpT2wyqqljo3Qd4BAbhjAcpG1qD1u4YSmZkU2netaXEKWJzm7DvlXi6ViOyAFZLY6LFCtrQaftOpP1KZsjwuk764uUyR6sctF3/tIvcWbTSyBuMsibM3uY4JdpH3Itg7A2dQJZhBOxxDmOaCI5r3Dz1qINqajePWYcAI8Z6Hw+//Yk/dPGfT9Uy6A7uYNdszOGHyzto1IuYR1QgNMbR3p2cG568meMCKoSpziNDs4U5flu1kLaHmVy4/M6l39RRDizvl35Dz6rjC4JICl7izvl7XLv+4s75e1y7/uLO+Xtcu/7izvl7XLv+4s75e1y7/uLO+Xtcu/7izvl7XLv+4s75e1y7/uLO+Xtcu/7izvl7XLv+4s75exgAA/v3WoAAAAAkGkiqv6ooPLzy/+PHznLGBZYe7N5s4de3jVy4rK2k3wfBWVw2hwXsop3B6QMEhO8bGByMRaTLjdFC4A/mtTHmEcYr5CxN3aQBRbP5wSe9WhYhdQ3eGzISYZPbiyjiMuO4Esn8mUBQO5wr/wPdvRE4NAWIfRqjY33usKSEQxuPLPmgCINuK1fcFv+VXNtjFtD3GF35z4jfNH/jXCs9jc5Rj5BS7omtNEjpY2in3m0CD7wvD0nwW9pCxq2HU2KTFogTHyAGDJRbCJEATjBCgAFawDxZly7UZLj/dtBGLp8q2z/9aRqlEisdXqa4cWVkTVYY2Cx9yYcqq4A6ytZJ24qBREwTe+R21DxGSV8I6v+HTO/RLV9IRIw5+jbJicoD5pROY9nlqersZw9dWvbDt6K8epDQaMDXpJIzxJkGf3l5/K3lWzYNtPaipq/8LrGhs73ismqMPP+R78NT6CARoJk083bSRiPTx54/G4rIfe+PIleEPMUxm3STHrIcpc6P6kb4ZXMREQzgidSwkyCM4qVXoVLBXaZDQiCdTkx6VMm5gzm4r0CPemQMXHQVcFVYSTIpD/wB4Ca6lnH717uKwEz9W0H0otjfOzs3NM4jYz2Lb9qmay4mCbHPxT8bzprnG5lIIP5f9U+itwNUZcdd1+wbQ7fcSuCYcn408io+thz93ERX+jMfjWf41zEIZ9l7hmAkZqYbCurdxM40IlQDszIfwyop3y1+bIr76ym0qQirln2lcMX7MohIJ/iAQib5XnnqOT2uIGzIKTCaxqOebdUAKxF5kfD3fHzqXmw1mObRzajHqtwglWluSz4YHhvGLr1H4yhMZpv4cbSO25B2b/lUoU6S17YfM6PGz4vTAAAAAAAAAAAA=" , ערוץ כאן 11 לצפייה ישירה
@@ -2883,18 +2898,3 @@ http://newoneblack.site:80/888999/888999/235350
 http://newoneblack.site:80/888999/888999/235349
 #EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA MARIA FHD
 http://newoneblack.site:80/888999/888999/235355
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA MARIA HD
-http://newoneblack.site:80/888999/888999/235354
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA MARIA SD
-http://newoneblack.site:80/888999/888999/235353
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA ROSA FHD
-http://newoneblack.site:80/888999/888999/235359
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA ROSA HD
-http://newoneblack.site:80/888999/888999/235358
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV SANTA ROSA SD
-http://newoneblack.site:80/888999/888999/235357
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV URUGUAIANA FHD
-http://newoneblack.site:80/888999/888999/235363
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV URUGUAIANA HD
-http://newoneblack.site:80/888999/888999/235362
-#EXTINF:0 tvg-id="ext" group-title="⭐ GLOBO SUL",GLOBO RS - RBS TV URUGUAIANA SD
