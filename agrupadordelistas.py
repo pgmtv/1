@@ -3,7 +3,7 @@ import requests
 
 # URLs dos repositórios que contêm os arquivos M3U
 repo_urls = [
-    "https://api.github.com/repos//gmtv4/rastaf/contents",
+    "https://api.github.com/repos/gmtv4/rastaf/contents",
     "https://github.com/pgmtv/1/raw/refs/heads/main/lista2.M3U",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uy.m3u",     
 ]
